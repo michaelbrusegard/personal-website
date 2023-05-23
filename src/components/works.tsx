@@ -11,7 +11,7 @@ const ProjectCard = ({
   index,
   name,
   description,
-  tags,
+  techstack,
   image,
   prodLink,
   srcLink,
@@ -19,7 +19,7 @@ const ProjectCard = ({
   index: number;
   name: string;
   description: string;
-  tags: { name: string; color: string }[];
+  techstack: StaticImageData[];
   image: StaticImageData;
   prodLink: string;
   srcLink: string;
@@ -27,7 +27,7 @@ const ProjectCard = ({
   return (
     <motion.div variants={fadeIn('up', 'spring', index * 0.5, 1) as Variants}>
       <Tilt
-        className='pointer-events-auto w-full rounded-2xl from-primary to-accent p-5 bg-gradient-45 sm:w-[360px]'
+        className='pointer-events-auto w-full rounded-2xl from-accent to-primary p-5 bg-gradient-45 sm:w-[360px]'
         scale={1.05}
         transitionSpeed={450}
         tiltMaxAngleX={15}
@@ -38,13 +38,13 @@ const ProjectCard = ({
           <div className='absolute inset-0 m-2 flex justify-end'>
             <div
               onClick={() => window.open(prodLink, '_blank')}
-              className='m-1 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#434343] to-black transition-transform hover:scale-110'
+              className='m-1 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#434343] to-black transition-transform hover:scale-110 hover:bg-primary hover:bg-none'
             >
               <Image src={link} alt='link' className='object-contain' />
             </div>
             <div
               onClick={() => window.open(srcLink, '_blank')}
-              className='m-1 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#434343] to-black transition-transform hover:scale-110'
+              className='m-1 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#434343] to-black transition-transform hover:scale-110 hover:bg-primary hover:bg-none'
             >
               <Image src={github} alt='github' className='object-contain' />
             </div>
@@ -57,10 +57,10 @@ const ProjectCard = ({
         </div>
 
         <div className='mt-4 flex flex-wrap gap-2'>
-          {tags.map((tag) => (
-            <p key={tag.name} className={`text-[14px] text-${tag.color}`}>
-              #{tag.name}{' '}
-            </p>
+          {techstack.map((icon, i) => (
+            <div key={`tech-icon-${i}`} className='h-6 w-6'>
+              <Image src={icon} alt={icon.toString()} className='object-contain' />
+            </div>
           ))}
         </div>
       </Tilt>

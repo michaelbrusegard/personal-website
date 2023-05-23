@@ -5,16 +5,20 @@ import { services } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
 import SectionWrapper from '../components/sectionWrapper';
 
-const ServiceCard = ({ index, title, icon }: { index: number; title: string; icon: any }) => (
+const ServiceCard = ({ index, title, icons }: { index: number; title: string; icons: any }) => (
   <Tilt className='pointer-events-auto w-full xs:w-[250px]' scale={1.1} transitionSpeed={450} tiltMaxAngleX={15} tiltMaxAngleY={15}>
     <motion.div
       variants={fadeIn('right', 'spring', index * 0.5, 0.75) as Variants}
       className='w-full rounded-[20px] from-primary to-accent p-[2px] bg-gradient-90'
     >
-      <div className='flex min-h-[280px] flex-col items-center justify-evenly rounded-[20px] bg-secondary px-12 py-5'>
-        <Image src={icon} alt='web-development' className='h-16 w-16 object-contain' />
-
-        <h3 className='text-center text-[20px] font-bold text-text'>{title}</h3>
+      <h3 className='text-center font-mono text-[20px] font-bold text-text'>{title}</h3>
+      <div className='flex min-h-[280px] flex-col justify-evenly rounded-[20px] bg-secondary px-8 py-5'>
+        {icons.map((icon: any, iconIndex: number) => (
+          <div key={icon.name} className='flex items-center'>
+            <Image src={icon.icon} alt={icon.name} width={24} height={24} />
+            <span className='ml-2 py-1 font-mono text-sm font-medium text-text'>{icon.name}</span>
+          </div>
+        ))}
       </div>
     </motion.div>
   </Tilt>

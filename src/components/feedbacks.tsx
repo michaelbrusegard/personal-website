@@ -21,7 +21,7 @@ const FeedbackCard = ({
   phone: string;
   mail: string;
 }) => (
-  <motion.div variants={fadeIn('left', 'spring', index * 0.5, 0.75) as Variants} className='relative w-full rounded-3xl bg-text p-10 xs:w-[320px]'>
+  <motion.div variants={fadeIn('left', 'spring', index * 0.5, 0.75) as Variants} className='relative rounded-3xl bg-text p-10 xs:w-[320px]'>
     <div className='absolute right-10 top-10 flex justify-end'>
       <div
         onClick={() => (window.location.href = `tel:${phone}`)}
