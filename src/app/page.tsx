@@ -1,17 +1,29 @@
 'use client';
 import { useEffect, useRef } from 'react';
-import webGLFluidSimulation from 'webgl-fluid-simulation';
+import Hero from '../components/hero';
+import About from '../components/about';
+import Experience from '../components/experience';
+import './globals.css';
+import fluidAnimation from '../utils/fluidAnimation';
 
 const App = () => {
-  const canvasRef = useRef(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    webGLFluidSimulation(canvasRef.current!, {
-      COLOR_PALETTE: ['#cc211b', '#f1c593', '#e87e54', '#f193a7', '#ec6fa9'],
-    });
+    const canvas = canvasRef.current;
+    if (canvas) fluidAnimation.simulation(canvas);
   }, []);
 
-  return <canvas ref={canvasRef} className="w-screen h-screen" />;
+  return (
+    <>
+      <canvas ref={canvasRef} className='fixed left-0 top-0 z-0 h-screen-large w-full' />
+      <div className='pointer-events-none h-screen-small w-full'>
+        <Hero />
+        <About />
+        <Experience />
+      </div>
+    </>
+  );
 };
 
 export default App;

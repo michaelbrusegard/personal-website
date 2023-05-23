@@ -1,0 +1,190 @@
+.menuButton.open div:nth-child(2){
+    -webkit-animation: div2 1s forwards cubic-bezier(.8, .5, .2, 1.4);
+            animation: div2 1s forwards cubic-bezier(.8, .5, .2, 1.4);
+}
+
+@-webkit-keyframes div2 {
+    0%{
+        transform: translate(0,0) scale(1);
+    }
+    20%{
+        @apply w-[3px];
+        transform: translate(0,0) scale(1);
+    }
+    40%{
+        @apply w-[3px];
+        transform: translate(0,0) scale(1);
+    }
+    50%{
+        @apply w-[3px];
+        transform: translate(0,5px) scale(1); 
+    }
+    80%{
+        @apply w-[3px];
+        transform: translate(0,-5px) scale(1);
+    }
+    100%{
+        @apply w-[3px];
+        transform: translate(0,37px) scale(0);
+    }
+}
+
+@keyframes div2 {
+    0%{
+        transform: translate(0,0) scale(1);
+    }
+    20%{
+        @apply w-[3px];
+        transform: translate(0,0) scale(1);
+    }
+    40%{
+        @apply w-[3px];
+        transform: translate(0,0) scale(1);
+    }
+    50%{
+        @apply w-[3px];
+        transform: translate(0,5px) scale(1); 
+    }
+    80%{
+        @apply w-[3px];
+        transform: translate(0,-5px) scale(1);
+    }
+    100%{
+        @apply w-[3px];
+        transform: translate(0,37px) scale(0);
+    }
+}
+
+.menuButton.open div:nth-child(3){
+    -webkit-animation: div3 .53s forwards cubic-bezier(.8, .5, .2, 1.4);
+            animation: div3 .53s forwards cubic-bezier(.8, .5, .2, 1.4);
+    -webkit-animation-delay: .46s;
+            animation-delay: .46s;
+}
+
+@-webkit-keyframes div3 {
+    0%{
+        transform: translate(0,0);
+    }
+    60%{
+        transform: rotate(80deg) translate(-5px, -5px);
+    }
+    100%{
+        transform: rotate(45deg) translate(-5px, -5px);
+    }
+}
+
+@keyframes div3 {
+    0%{
+        transform: translate(0,0);
+    }
+    60%{
+        transform: rotate(80deg) translate(-5px, -5px);
+    }
+    100%{
+        transform: rotate(45deg) translate(-5px, -5px);
+    }
+}
+
+.menuButton.open div:nth-child(1){
+    -webkit-animation: div1 .53s forwards cubic-bezier(.8, .5, .2, 1.4);
+            animation: div1 .53s forwards cubic-bezier(.8, .5, .2, 1.4);
+    -webkit-animation-delay: .73s;
+            animation-delay: .73s;
+}
+
+@-webkit-keyframes div1 {
+    0%{
+        transform: translate(0,0);
+    }
+    60%{
+        transform: rotate(-110deg) translate(-5px, -5px);
+    }
+    100%{
+        transform: rotate(-45deg) translate(-7px, 7px);
+    }
+}
+
+@keyframes div1 {
+    0%{
+        transform: translate(0,0);
+    }
+    60%{
+        transform: rotate(-110deg) translate(-5px, -5px);
+        width: 100%;
+    }
+    100%{
+        transform: rotate(-45deg) translate(-7px, 7px);
+        width: 100%;
+    }
+}   
+
+.menuButton div:nth-child(1){
+    -webkit-animation: div1Close .53s forwards cubic-bezier(.8, .5, .2, 1.4);
+            animation: div1Close .53s forwards cubic-bezier(.8, .5, .2, 1.4);
+}
+
+@-webkit-keyframes div1Close {
+    0%{
+        transform: rotate(-45deg) translate(-7px, 7px);
+        width: 100%;
+    }
+    100%{
+        transform: rotate(0deg) translate(0, 0);
+    }
+}
+
+@keyframes div1Close {
+    0%{
+        transform: rotate(-45deg) translate(-7px, 7px);
+        width: 100%;
+    }
+    100%{
+        transform: rotate(0deg) translate(0, 0);
+    }
+}
+
+.menuButton div:nth-child(2){
+    -webkit-animation: div2Close .53s forwards cubic-bezier(.8, .5, .2, 1.4);
+            animation: div2Close .53s forwards cubic-bezier(.8, .5, .2, 1.4);
+}
+
+@-webkit-keyframes div2Close {
+    0%{
+        transform: translate(0, 7px) scale(0);
+    }
+    100%{
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+@keyframes div2Close {
+    0%{
+        transform: translate(0, 7px) scale(0);
+    }
+    100%{
+        transform: translate(0, 0) scale(1);
+    }
+}
+.menuButton div:nth-child(3){
+    -webkit-animation: div3Close .53s forwards cubic-bezier(.8, .5, .2, 1.4);
+            animation: div3Close .53s forwards cubic-bezier(.8, .5, .2, 1.4);
+}
+
+@-webkit-keyframes div3Close {
+    0%{
+        transform: rotate(45deg) translate(-5px, -5px);
+    }
+    100%{
+        transform: rotate(0deg) translate(0, 0);
+    }
+}
+
+@keyframes div3Close {
+    0%{
+        transform: rotate(45deg) translate(-5px, -5px);
+    }
+    100%{
+        transform: rotate(0deg) translate(0, 0);
+    }
+}

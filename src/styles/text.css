@@ -1,0 +1,42 @@
+.sectionTitle {
+    @apply text-[14px] uppercase tracking-wider text-text sm:text-[18px];
+}
+
+.sectionSubtitle {
+    @apply pointer-events-auto text-[30px] font-black text-text sm:text-[50px] md:text-[60px] xs:text-[40px];
+}
+
+.letterBounce {
+    -webkit-animation: letter 1s ease-out;
+            animation: letter 1s ease-out;
+}
+
+@-webkit-keyframes letter {
+    20%, 50%, 80%, to {
+        transform: scale(1, 1);
+    }
+    40%, 50% {
+        transform: scale(1.75, 0.65);
+    }
+    60% {
+        transform: scale(1.25, 0.75);
+    }
+    90% {
+        transform: scale(1.15, 0.85);
+    } 
+}
+
+@keyframes letter {
+    20%, 50%, 80%, to {
+        transform: scale(1, 1);
+    }
+    40%, 50% {
+        transform: scale(1.75, 0.65);
+    }
+    60% {
+        transform: scale(1.25, 0.75);
+    }
+    90% {
+        transform: scale(1.15, 0.85);
+    }
+}

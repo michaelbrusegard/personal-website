@@ -1,27 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import '../styles/menuButton.css';
+@import '../styles/text.css';
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: 'SF-Mono';
+  src: url('../../public/fonts/SF-Mono-Medium.otf') format('opentype');
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: 'SF-Pro';
+  src: url('../../public/fonts/SF-Pro.ttf') format('truetype');
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+.paddingX {
+  @apply sm:px-16 px-6;
+}
+
+.paddingY {
+  @apply sm:py-16 py-6;
+}
+
+.padding {
+  @apply sm:py-16 sm:px-16 py-6 px-6;
+}
+
+::-moz-selection {
+  @apply bg-accent;
+}
+
+::selection {
+  @apply bg-accent;
 }
