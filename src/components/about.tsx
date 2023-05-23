@@ -6,10 +6,10 @@ import { fadeIn, textVariant } from '../utils/motion';
 import SectionWrapper from '../components/sectionWrapper';
 
 const ServiceCard = ({ index, title, icon }: { index: number; title: string; icon: any }) => (
-  <Tilt className='pointer-events-auto w-full xs:w-[250px]' scale={1.15} transitionSpeed={450} tiltMaxAngleX={45} tiltMaxAngleY={45}>
+  <Tilt className='pointer-events-auto w-full xs:w-[250px]' scale={1.1} transitionSpeed={450} tiltMaxAngleX={15} tiltMaxAngleY={15}>
     <motion.div
       variants={fadeIn('right', 'spring', index * 0.5, 0.75) as Variants}
-      className='w-full rounded-[20px] from-primary to-accent p-[2px] shadow-card bg-gradient-90'
+      className='w-full rounded-[20px] from-primary to-accent p-[2px] bg-gradient-90'
     >
       <div className='flex min-h-[280px] flex-col items-center justify-evenly rounded-[20px] bg-secondary px-12 py-5'>
         <Image src={icon} alt='web-development' className='h-16 w-16 object-contain' />
@@ -24,8 +24,8 @@ const About = () => {
   return (
     <>
       <motion.div variants={textVariant() as Variants}>
-        <p className='sectionTitle'>Introduction</p>
-        <h2 className='sectionSubtitle'>Overview.</h2>
+        <p className='section-subtitle'>Introduction</p>
+        <h2 className='section-title'>Overview.</h2>
       </motion.div>
 
       <motion.p variants={fadeIn('', '', 0.1, 1) as Variants} className='pointer-events-auto mt-4 max-w-3xl text-[17px] leading-[30px] text-text'>

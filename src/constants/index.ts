@@ -4,7 +4,11 @@ import backend from '../../public/icons/titles/backend.png';
 import biltema from '../../public/icons/companies/biltema.svg';
 import hydro from '../../public/icons/companies/hydro.svg';
 import hackerspace from '../../public/icons/companies/hackerspace.svg';
-import niclas from '../../public/icons/companies/niclas.svg';
+import niclasNordlundPhotography from '../../public/icons/companies/niclasNordlundPhotography.svg';
+import niclasWebsitePhoto from '../../public/photos/projects/niclasnordlund.png';
+import hackerspaceWebsitePhoto from '../../public/photos/projects/hackerspace-ntnu.png';
+import niclasNordlund from '../../public/photos/people/niclasNordlund.jpg';
+import carlJohanGuzkow from '../../public/photos/people/carlJohanGuzkow.jpg';
 
 export const navLinks = [
   {
@@ -63,12 +67,12 @@ export const experiences = [
   },
   {
     title: 'Full stack Developer',
-    companyName: 'NiclasNordlundPhotography',
-    icon: niclas,
+    companyName: 'Niclas Nordlund Photography',
+    icon: niclasNordlundPhotography,
     date: 'Oct 2022 - Present (Currently maintaining)',
     points: [
       'Developing and maintaining a professional personal website for photographer Niclas Nordlund.',
-      'Scalable backend for photo storage using Google Cloud and payments using Stripe.',
+      'Scaleable backend for photo storage using Google Cloud and payments using Stripe.',
       'Implementing responsive design and ensuring cross-browser compatibility.',
       'Ensuring a seemless photo uploading and editing process for Niclas.',
     ],
@@ -84,6 +88,104 @@ export const experiences = [
       'Executing responsive design implementation and ensuring compatibility across language barriers.',
       'Creating a typescript game  for the 404 error page.',
     ],
+  },
+];
+
+export const projects = [
+  {
+    name: 'Niclas Nordlund Photography',
+    description:
+      'Photo website where users can browse selected photos by Niclas Nordlund and purchase photos from his library, providing a convenient way for him to sell to businesses.',
+    tags: [
+      {
+        name: 'HTML',
+        color: 'primary',
+      },
+      {
+        name: 'CSS',
+        color: 'primary',
+      },
+      {
+        name: 'Javascript',
+        color: 'primary',
+      },
+      {
+        name: 'Node.js',
+        color: 'accent',
+      },
+      {
+        name: 'Express.js',
+        color: 'accent',
+      },
+      {
+        name: 'Stripe',
+        color: 'secondary',
+      },
+      {
+        name: 'Google-Cloud',
+        color: 'secondary',
+      },
+    ],
+    image: niclasWebsitePhoto,
+    prodLink: 'https://www.niclasnordlund.com',
+    srcLink: 'https://github.com/michaelbrusegard/NiclasNordlundPhotography',
+  },
+  {
+    name: 'Hackerspace NTNU',
+    description:
+      'Web application that drives an arena for students to 3D-print, borrow tools or get help to realise any creative ideas. Providing a reservation system, inventory management, news, events and more. ',
+    tags: [
+      {
+        name: 'HTML',
+        color: 'primary',
+      },
+      {
+        name: 'CSS',
+        color: 'primary',
+      },
+      {
+        name: 'Javascript',
+        color: 'primary',
+      },
+      {
+        name: 'Typescript',
+        color: 'primary',
+      },
+      {
+        name: 'Django',
+        color: 'accent',
+      },
+      {
+        name: 'Python',
+        color: 'accent',
+      },
+      {
+        name: 'Ubuntu-Server',
+        color: 'secondary',
+      },
+    ],
+    image: hackerspaceWebsitePhoto,
+    prodLink: 'https://www.hackerspace-ntnu.no/',
+    srcLink: 'https://github.com/hackerspace-ntnu/website',
+  },
+];
+
+export const testimonials = [
+  {
+    testimonial: 'Best web developer ever',
+    name: 'Niclas Nordlund',
+    designation: 'Freelance photographer at Niclas Nordlund Photography',
+    image: niclasNordlund,
+    phone: '+358400193300',
+    mail: 'nic.nord@hotmail.com',
+  },
+  {
+    testimonial: 'He needs coffee, lots of coffee',
+    name: 'Carl Johan Güzkow',
+    designation: 'Deputy Commander at Hackerspace NTNU, Co-Founder and Backend Developer at EI Solutions',
+    image: carlJohanGuzkow,
+    phone: '+4741623507',
+    mail: 'cjgutzkow@gmail.com',
   },
 ];
 
@@ -139,95 +241,5 @@ export const experiences = [
 //   {
 //     name: 'docker',
 //     icon: docker,
-//   },
-// ];
-
-// const testimonials = [
-//   {
-//     testimonial: 'I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.',
-//     name: 'Sara Lee',
-//     designation: 'CFO',
-//     company: 'Acme Co',
-//     image: 'https://randomuser.me/api/portraits/women/4.jpg',
-//   },
-//   {
-//     testimonial: "I've never met a web developer who truly cares about their clients' success like Rick does.",
-//     name: 'Chris Brown',
-//     designation: 'COO',
-//     company: 'DEF Corp',
-//     image: 'https://randomuser.me/api/portraits/men/5.jpg',
-//   },
-//   {
-//     testimonial: "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-//     name: 'Lisa Wang',
-//     designation: 'CTO',
-//     company: '456 Enterprises',
-//     image: 'https://randomuser.me/api/portraits/women/6.jpg',
-//   },
-// ];
-
-// const projects = [
-//   {
-//     name: 'Car Rent',
-//     description:
-//       'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
-//     tags: [
-//       {
-//         name: 'react',
-//         color: 'blue-text-gradient',
-//       },
-//       {
-//         name: 'mongodb',
-//         color: 'green-text-gradient',
-//       },
-//       {
-//         name: 'tailwind',
-//         color: 'pink-text-gradient',
-//       },
-//     ],
-//     image: carrent,
-//     source_code_link: 'https://github.com/',
-//   },
-//   {
-//     name: 'Job IT',
-//     description:
-//       'Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.',
-//     tags: [
-//       {
-//         name: 'react',
-//         color: 'blue-text-gradient',
-//       },
-//       {
-//         name: 'restapi',
-//         color: 'green-text-gradient',
-//       },
-//       {
-//         name: 'scss',
-//         color: 'pink-text-gradient',
-//       },
-//     ],
-//     image: jobit,
-//     source_code_link: 'https://github.com/',
-//   },
-//   {
-//     name: 'Trip Guide',
-//     description:
-//       'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
-//     tags: [
-//       {
-//         name: 'nextjs',
-//         color: 'blue-text-gradient',
-//       },
-//       {
-//         name: 'supabase',
-//         color: 'green-text-gradient',
-//       },
-//       {
-//         name: 'css',
-//         color: 'pink-text-gradient',
-//       },
-//     ],
-//     image: tripguide,
-//     source_code_link: 'https://github.com/',
 //   },
 // ];

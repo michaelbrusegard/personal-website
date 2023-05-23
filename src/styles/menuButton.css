@@ -1,4 +1,4 @@
-.menuButton.open div:nth-child(2){
+.menu-button.open div:nth-child(2){
     -webkit-animation: div2 1s forwards cubic-bezier(.8, .5, .2, 1.4);
             animation: div2 1s forwards cubic-bezier(.8, .5, .2, 1.4);
 }
@@ -55,7 +55,7 @@
     }
 }
 
-.menuButton.open div:nth-child(3){
+.menu-button.open div:nth-child(3){
     -webkit-animation: div3 .53s forwards cubic-bezier(.8, .5, .2, 1.4);
             animation: div3 .53s forwards cubic-bezier(.8, .5, .2, 1.4);
     -webkit-animation-delay: .46s;
@@ -86,7 +86,7 @@
     }
 }
 
-.menuButton.open div:nth-child(1){
+.menu-button.open div:nth-child(1){
     -webkit-animation: div1 .53s forwards cubic-bezier(.8, .5, .2, 1.4);
             animation: div1 .53s forwards cubic-bezier(.8, .5, .2, 1.4);
     -webkit-animation-delay: .73s;
@@ -119,12 +119,12 @@
     }
 }   
 
-.menuButton div:nth-child(1){
-    -webkit-animation: div1Close .53s forwards cubic-bezier(.8, .5, .2, 1.4);
-            animation: div1Close .53s forwards cubic-bezier(.8, .5, .2, 1.4);
+.menu-button div:nth-child(1){
+    -webkit-animation: div1-close .53s forwards cubic-bezier(.8, .5, .2, 1.4);
+            animation: div1-close .53s forwards cubic-bezier(.8, .5, .2, 1.4);
 }
 
-@-webkit-keyframes div1Close {
+@-webkit-keyframes div1-close {
     0%{
         transform: rotate(-45deg) translate(-7px, 7px);
         width: 100%;
@@ -134,7 +134,7 @@
     }
 }
 
-@keyframes div1Close {
+@-webkit-keyframes div1-close {
     0%{
         transform: rotate(-45deg) translate(-7px, 7px);
         width: 100%;
@@ -144,12 +144,42 @@
     }
 }
 
-.menuButton div:nth-child(2){
-    -webkit-animation: div2Close .53s forwards cubic-bezier(.8, .5, .2, 1.4);
-            animation: div2Close .53s forwards cubic-bezier(.8, .5, .2, 1.4);
+@-webkit-keyframes div1-close {
+    0%{
+        transform: rotate(-45deg) translate(-7px, 7px);
+        width: 100%;
+    }
+    100%{
+        transform: rotate(0deg) translate(0, 0);
+    }
 }
 
-@-webkit-keyframes div2Close {
+@-webkit-keyframes div1-close {
+    0%{
+        transform: rotate(-45deg) translate(-7px, 7px);
+        width: 100%;
+    }
+    100%{
+        transform: rotate(0deg) translate(0, 0);
+    }
+}
+
+@keyframes div1-close {
+    0%{
+        transform: rotate(-45deg) translate(-7px, 7px);
+        width: 100%;
+    }
+    100%{
+        transform: rotate(0deg) translate(0, 0);
+    }
+}
+
+.menu-button div:nth-child(2){
+    -webkit-animation: div2-close .53s forwards cubic-bezier(.8, .5, .2, 1.4);
+            animation: div2-close .53s forwards cubic-bezier(.8, .5, .2, 1.4);
+}
+
+@-webkit-keyframes div2-close {
     0%{
         transform: translate(0, 7px) scale(0);
     }
@@ -158,7 +188,7 @@
     }
 }
 
-@keyframes div2Close {
+@-webkit-keyframes div2-close {
     0%{
         transform: translate(0, 7px) scale(0);
     }
@@ -166,12 +196,30 @@
         transform: translate(0, 0) scale(1);
     }
 }
-.menuButton div:nth-child(3){
-    -webkit-animation: div3Close .53s forwards cubic-bezier(.8, .5, .2, 1.4);
-            animation: div3Close .53s forwards cubic-bezier(.8, .5, .2, 1.4);
+
+@-webkit-keyframes div2-close {
+    0%{
+        transform: translate(0, 7px) scale(0);
+    }
+    100%{
+        transform: translate(0, 0) scale(1);
+    }
 }
 
-@-webkit-keyframes div3Close {
+@keyframes div2-close {
+    0%{
+        transform: translate(0, 7px) scale(0);
+    }
+    100%{
+        transform: translate(0, 0) scale(1);
+    }
+}
+.menu-button div:nth-child(3){
+    -webkit-animation: div3-close .53s forwards cubic-bezier(.8, .5, .2, 1.4);
+            animation: div3-close .53s forwards cubic-bezier(.8, .5, .2, 1.4);
+}
+
+@-webkit-keyframes div3-close {
     0%{
         transform: rotate(45deg) translate(-5px, -5px);
     }
@@ -180,7 +228,7 @@
     }
 }
 
-@keyframes div3Close {
+@keyframes div3-close {
     0%{
         transform: rotate(45deg) translate(-5px, -5px);
     }

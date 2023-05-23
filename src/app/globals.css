@@ -41,3 +41,11 @@
 ::selection {
   @apply bg-accent;
 }
+
+.icon-path:hover {
+ @apply fill-primary;
+}
+
+.icon-path {
+  @apply fill-accent;
+}

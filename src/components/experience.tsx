@@ -6,7 +6,6 @@ import SectionWrapper from '../components/sectionWrapper';
 import { textVariant } from '../utils/motion';
 import colors from '../utils/colors';
 import Image from 'next/image';
-import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal, PromiseLikeOfReactNode } from 'react';
 
 const ExperienceCard = ({ experience }: { experience: any }) => (
   <VerticalTimelineElement
@@ -18,7 +17,7 @@ const ExperienceCard = ({ experience }: { experience: any }) => (
   >
     <div>
       <h3 className='pointer-events-auto text-[24px] font-bold text-text'>{experience.title}</h3>
-      <p className='pointer-events-auto text-[16px] font-semibold text-text' style={{ margin: 0 }}>
+      <p className='pointer-events-auto text-[16px] font-semibold text-text opacity-75' style={{ margin: 0 }}>
         {experience.companyName}
       </p>
     </div>
@@ -36,8 +35,8 @@ const Experience = () => {
   return (
     <>
       <motion.div variants={textVariant() as Variants}>
-        <p className='sectionTitle'>What I have done so far</p>
-        <h2 className='sectionSubtitle'>Work Experience.</h2>
+        <p className='section-subtitle'>What I have done so far</p>
+        <h2 className='section-title'>Work Experience.</h2>
       </motion.div>
 
       <div className='mt-20 flex flex-col'>

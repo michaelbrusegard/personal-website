@@ -43,7 +43,7 @@ const Hero = () => {
               <span className='bouncer inline-block transition-colors hover:text-accent'>m&nbsp;</span>
             </div>
             <div className='flex'>
-              <span className='from-primary to-accent bg-clip-text text-transparent bg-gradient-120'>
+              <span className='gradient-animation from-primary to-accent bg-big bg-clip-text text-transparent bg-gradient-120'>
                 <span className='bouncer gradient-letter inline-block transition-colors hover:text-accent'> M</span>
                 <span className='bouncer gradient-letter inline-block transition-colors hover:text-accent'>i</span>
                 <span className='bouncer gradient-letter inline-block transition-colors hover:text-accent'>c</span>

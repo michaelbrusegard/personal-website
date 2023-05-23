@@ -12,15 +12,8 @@ module.exports = {
         primary: colors.primaryColor,
         secondary: colors.secondaryColor,
         accent: colors.accentColor,
-        primaryold: '#050816',
-        secondaryold: '#aaa6c3',
-        tertiaryold: '#151030',
-        'black-100': '#100d25',
-        'black-200': '#090325',
-        'white-100': '#f3f3f3',
       },
       boxShadow: {
-        card: '0px 35px 120px -15px #211e35',
         'timeline-border': `0 0 0 4px ${colors.textColor}`,
       },
       screens: {
@@ -36,6 +29,9 @@ module.exports = {
     fontFamily: {
       body: ['SF-Pro', 'sans-serif'],
       mono: ['SF-Mono', 'monospace'],
+    },
+    backgroundSize: {
+      big: '200%',
     },
   },
   plugins: [

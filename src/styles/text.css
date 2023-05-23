@@ -1,9 +1,32 @@
-.sectionTitle {
-    @apply text-[14px] uppercase tracking-wider text-text sm:text-[18px];
+.section-subtitle {
+    @apply text-[14px] uppercase tracking-wider text-text sm:text-[18px] opacity-75;
 }
 
-.sectionSubtitle {
+.section-title {
     @apply pointer-events-auto text-[30px] font-black text-text sm:text-[50px] md:text-[60px] xs:text-[40px];
+}
+
+.gradient-animation {
+    -webkit-animation: gradient 5s infinite alternate;
+            animation: gradient 5s infinite alternate;
+}
+
+@-webkit-keyframes gradient {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
 }
 
 .letterBounce {

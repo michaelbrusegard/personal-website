@@ -3,6 +3,8 @@ import { useEffect, useRef } from 'react';
 import Hero from '../components/hero';
 import About from '../components/about';
 import Experience from '../components/experience';
+import Works from '../components/works';
+import Feedbacks from '../components/feedbacks';
 import './globals.css';
 import fluidAnimation from '../utils/fluidAnimation';
 
@@ -21,6 +23,8 @@ const App = () => {
         <Hero />
         <About />
         <Experience />
+        <Works />
+        <Feedbacks />
       </div>
     </>
   );
