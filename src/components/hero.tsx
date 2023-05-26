@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import fluidHover from '../utils/fluidHover';
 import webGLFluidSimulation from 'webgl-fluid-simulation';
 import HeroImage from './heroImage';
+import HeroSocial from './heroSocial';
 
 const Hero = () => {
   useEffect(() => {
@@ -59,6 +60,7 @@ const Hero = () => {
               to contribute my skills and knowledge.
             </span>
           </p>
+          <HeroSocial />
         </div>
       </div>
       <div className='absolute bottom-24 flex w-full items-center justify-center landscape-mobile:bottom-6'>
