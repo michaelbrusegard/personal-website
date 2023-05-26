@@ -15,10 +15,11 @@ import tailwindcss from '../../public/icons/tech/frontend/tailwindcss.svg';
 import javascript from '../../public/icons/tech/frontend/javascript.svg';
 import typescript from '../../public/icons/tech/frontend/typescript.svg';
 import react from '../../public/icons/tech/frontend/react.svg';
+import framermotion from '../../public/icons/tech/frontend/framermotion.svg';
 import threejs from '../../public/icons/tech/frontend/threejs.svg';
-import googlecloudplatform from '../../public/icons/tech/apis/googlecloudplatform.svg';
-import stripe from '../../public/icons/tech/apis/stripe.svg';
-import firebase from '../../public/icons/tech/apis/firebase.svg';
+import googlecloudplatform from '../../public/icons/tech/integrations/googlecloudplatform.svg';
+import stripe from '../../public/icons/tech/integrations/stripe.svg';
+import firebase from '../../public/icons/tech/integrations/firebase.svg';
 import nodejs from '../../public/icons/tech/backend/nodejs.svg';
 import python from '../../public/icons/tech/backend/python.svg';
 import java from '../../public/icons/tech/backend/java.svg';
@@ -32,6 +33,7 @@ import vscode from '../../public/icons/tech/tools/vscode.svg';
 import affinityphoto from '../../public/icons/tech/tools/affinityphoto.svg';
 import affinitydesigner from '../../public/icons/tech/tools/affinitydesigner.svg';
 import shapr3d from '../../public/icons/tech/tools/shapr3d.svg';
+import chatgpt from '../../public/icons/tech/tools/chatgpt.svg';
 
 export const navLinks = [
   {
@@ -55,48 +57,62 @@ export const services = [
       {
         name: 'HTML',
         icon: html,
+        link: 'https://developer.mozilla.org/docs/Web/HTML/',
       },
       {
         name: 'CSS',
         icon: css,
+        link: 'https://developer.mozilla.org/docs/Web/CSS',
       },
       {
         name: 'Tailwind CSS',
         icon: tailwindcss,
+        link: 'https://tailwindcss.com/',
       },
       {
         name: 'Javascript',
         icon: javascript,
+        link: 'https://developer.mozilla.org/docs/Web/javascript',
       },
       {
         name: 'Typescript',
         icon: typescript,
+        link: 'https://www.typescriptlang.org/',
       },
       {
         name: 'React',
         icon: react,
+        link: 'https://react.dev/',
       },
-
+      {
+        name: 'Framer Motion',
+        icon: framermotion,
+        link: 'https://www.framer.com/motion/',
+      },
       {
         name: 'Three.js',
         icon: threejs,
+        link: 'https://threejs.org/',
       },
     ],
   },
   {
-    title: 'API',
+    title: 'INTEGRATIONS',
     icons: [
       {
         name: 'Google Cloud Platform',
         icon: googlecloudplatform,
+        link: 'https://cloud.google.com',
       },
       {
         name: 'Stripe',
         icon: stripe,
+        link: 'https://stripe.com/',
       },
       {
         name: 'Firebase',
         icon: firebase,
+        link: 'https://firebase.google.com',
       },
     ],
   },
@@ -106,26 +122,32 @@ export const services = [
       {
         name: 'Node.js',
         icon: nodejs,
+        link: 'https://nodejs.org/',
       },
       {
         name: 'Python',
         icon: python,
+        link: 'https://www.python.org/',
       },
       {
         name: 'Java',
         icon: java,
+        link: 'https://www.java.com/',
       },
       {
         name: 'Express',
         icon: express,
+        link: 'https://expressjs.com/',
       },
       {
         name: 'Django',
         icon: django,
+        link: 'https://www.djangoproject.com/',
       },
       {
         name: 'Next.js',
         icon: nextjs,
+        link: 'https://nextjs.org/',
       },
     ],
   },
@@ -135,30 +157,42 @@ export const services = [
       {
         name: 'Git',
         icon: git,
+        link: 'https://git-scm.com/',
       },
       {
         name: 'Figma',
         icon: figma,
+        link: 'https://www.figma.com/',
       },
       {
         name: 'Linux',
         icon: linux,
+        link: 'https://www.linux.org/',
       },
       {
         name: 'Visual Studio Code',
         icon: vscode,
+        link: 'https://code.visualstudio.com/',
       },
       {
         name: 'Affinity Photo',
         icon: affinityphoto,
+        link: 'https://affinity.serif.com/photo/',
       },
       {
         name: 'Affinity Designer',
         icon: affinitydesigner,
+        link: 'https://affinity.serif.com/designer/',
       },
       {
         name: 'Shapr3D',
         icon: shapr3d,
+        link: 'https://www.shapr3d.com/',
+      },
+      {
+        name: 'ChatGPT',
+        icon: chatgpt,
+        link: 'https://openai.com/blog/chatgpt/',
       },
     ],
   },
@@ -198,7 +232,7 @@ export const experiences = [
       'Developing and maintaining a professional personal website for photographer Niclas Nordlund.',
       'Scaleable backend for photo storage using Google Cloud and payments using Stripe.',
       'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Ensuring a seemless photo uploading and editing process for Niclas.',
+      'Ensuring a seamless and user-friendly photo uploading and downloading experience for Niclas on the website.',
     ],
   },
   {
@@ -208,8 +242,8 @@ export const experiences = [
     date: 'Feb 2023 - Present',
     points: [
       'Designing and managing web applications utilising JavaScript, Django, and other relevant technologies.',
-      'Collaborating with DevOps team to create high-quality products and providing constructive feedback for each other.',
-      'Executing responsive design implementation and ensuring compatibility across language barriers.',
+      'Collaborating closely in the DevOps team while fostering a culture of constructive feedback and continuous improvement.',
+      'Actively exploring and incorporating new features to enhance user experience.',
       'Creating a typescript game  for the 404 error page.',
     ],
   },
@@ -220,16 +254,88 @@ export const projects = [
     name: 'Niclas Nordlund Photography',
     description:
       'Photo website where users can browse selected photos by Niclas Nordlund and purchase photos from his library, providing a convenient way for him to sell to businesses.',
-    techstack: [html, css, javascript, nodejs, express, stripe, googlecloudplatform],
+    techstack: [
+      {
+        name: 'HTML',
+        icon: html,
+        link: 'https://developer.mozilla.org/docs/Web/HTML/',
+      },
+      {
+        name: 'CSS',
+        icon: css,
+        link: 'https://developer.mozilla.org/docs/Web/CSS',
+      },
+      {
+        name: 'Javascript',
+        icon: javascript,
+        link: 'https://developer.mozilla.org/docs/Web/javascript',
+      },
+      {
+        name: 'Node.js',
+        icon: nodejs,
+        link: 'https://nodejs.org/',
+      },
+      {
+        name: 'Express',
+        icon: express,
+        link: 'https://expressjs.com/',
+      },
+      {
+        name: 'Google Cloud Platform',
+        icon: googlecloudplatform,
+        link: 'https://cloud.google.com',
+      },
+      {
+        name: 'Stripe',
+        icon: stripe,
+        link: 'https://stripe.com/',
+      },
+    ],
     image: niclasWebsitePhoto,
-    prodLink: 'https://www.niclasnordlund.com',
+    prodLink: 'https://niclasnordlund.com',
     srcLink: 'https://github.com/michaelbrusegard/NiclasNordlundPhotography',
   },
   {
     name: 'Hackerspace NTNU',
     description:
       'Web application that drives an arena for students to 3D-print, borrow tools or get help to realise any creative ideas. Providing a reservation system, inventory management, news, events and more. ',
-    techstack: [html, css, javascript, typescript, django, python, linux],
+    techstack: [
+      {
+        name: 'HTML',
+        icon: html,
+        link: 'https://developer.mozilla.org/docs/Web/HTML/',
+      },
+      {
+        name: 'CSS',
+        icon: css,
+        link: 'https://developer.mozilla.org/docs/Web/CSS',
+      },
+      {
+        name: 'Javascript',
+        icon: javascript,
+        link: 'https://developer.mozilla.org/docs/Web/javascript',
+      },
+      {
+        name: 'Typescript',
+        icon: typescript,
+        link: 'https://www.typescriptlang.org/',
+      },
+      {
+        name: 'Python',
+        icon: python,
+        link: 'https://www.python.org/',
+      },
+      {
+        name: 'Django',
+        icon: django,
+        link: 'https://www.djangoproject.com/',
+      },
+      {
+        name: 'Linux',
+        icon: linux,
+        link: 'https://www.linux.org/',
+      },
+    ],
     image: hackerspaceWebsitePhoto,
     prodLink: 'https://www.hackerspace-ntnu.no/',
     srcLink: 'https://github.com/hackerspace-ntnu/website',
@@ -246,7 +352,7 @@ export const testimonials = [
     mail: 'nic.nord@hotmail.com',
   },
   {
-    testimonial: 'He needs coffee, lots of coffee',
+    testimonial: 'Currently aliasing ‘nano’ to ‘sudo rm -rf / —no-preserve-root’',
     name: 'Carl Johan Güzkow',
     designation: 'Deputy Commander at Hackerspace NTNU, Co-Founder and Backend Developer at EI Solutions',
     image: carlJohanGuzkow,

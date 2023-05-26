@@ -19,7 +19,7 @@ const ProjectCard = ({
   index: number;
   name: string;
   description: string;
-  techstack: StaticImageData[];
+  techstack: { name: string; icon: StaticImageData; link: string }[];
   image: StaticImageData;
   prodLink: string;
   srcLink: string;
@@ -40,13 +40,13 @@ const ProjectCard = ({
               onClick={() => window.open(prodLink, '_blank')}
               className='m-1 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#434343] to-black transition-transform hover:scale-110 hover:bg-primary hover:bg-none'
             >
-              <Image src={link} alt='link' className='object-contain' />
+              <Image src={link} alt='Open link' className='object-contain' />
             </div>
             <div
               onClick={() => window.open(srcLink, '_blank')}
               className='m-1 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#434343] to-black transition-transform hover:scale-110 hover:bg-primary hover:bg-none'
             >
-              <Image src={github} alt='github' className='object-contain' />
+              <Image src={github} alt='GitHub' className='object-contain' />
             </div>
           </div>
         </div>
@@ -57,9 +57,9 @@ const ProjectCard = ({
         </div>
 
         <div className='mt-4 flex flex-wrap gap-2'>
-          {techstack.map((icon, i) => (
-            <div key={`tech-icon-${i}`} className='h-6 w-6'>
-              <Image src={icon} alt={icon.toString()} className='object-contain' />
+          {techstack.map((icon) => (
+            <div key={icon.name} className='h-6 w-6 cursor-pointer transition-transform hover:scale-110' onClick={() => window.open(icon.link, '_blank')}>
+              <Image src={icon.icon} alt={icon.name} className='object-contain' />
             </div>
           ))}
         </div>
@@ -87,7 +87,7 @@ const Works = () => {
 
       <div className='mt-20 flex flex-wrap gap-7'>
         {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
+          <ProjectCard key={index} index={index} {...project} />
         ))}
       </div>
     </>

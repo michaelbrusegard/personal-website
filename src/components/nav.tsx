@@ -1,23 +1,28 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { navLinks } from '../constants';
 import MenuButton from '../components/menuButton';
-import fluidAnimation from '../utils/fluidAnimation';
+import webGLFluidSimulation from 'webgl-fluid-simulation';
 
 const Nav = () => {
   const [active, setActive] = useState('');
 
-  const navigationClick = () => {
-    fluidAnimation.splats();
-  };
+  useEffect(() => {
+    const navElements = document.querySelectorAll('.nav-element');
+    for (let i = 0; i < navElements.length; i++) {
+      navElements[i].addEventListener('click', () => {
+        webGLFluidSimulation.splats();
+      });
+    }
+  }, []);
 
   return (
     <nav className='paddingX fixed top-0 z-20 flex w-full items-center bg-secondary py-5'>
       <div className='mx-auto flex w-full max-w-7xl select-none items-center justify-between'>
         <Link
           href='/'
-          className='flex items-center gap-2'
+          className='nav-element flex items-center gap-2'
           onClick={() => {
             setActive('');
             window.scrollTo(0, 0);
@@ -44,10 +49,9 @@ const Nav = () => {
               key={link.id}
               className={`${
                 active === link.title ? 'text-primary' : 'text-text'
-              } transform cursor-pointer font-mono text-[18px] font-medium transition-transform duration-200 hover:-translate-y-[2px] hover:text-primary`}
+              } nav-element transform cursor-pointer font-mono text-[18px] font-medium transition-transform duration-200 hover:-translate-y-[2px] hover:text-primary`}
               onClick={() => {
                 setActive(link.title);
-                navigationClick();
               }}
             >
               <a href={`#${link.id}`}>{link.title}</a>

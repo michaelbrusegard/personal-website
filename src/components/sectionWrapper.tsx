@@ -8,7 +8,7 @@ const SectionWrapper = (Component: ComponentType, idName: string) => {
       variants={staggerContainer() as Variants}
       initial='hidden'
       whileInView='show'
-      viewport={{ once: true, amount: 0.25 }}
+      viewport={{ once: true, amount: 0.15 }}
       className='padding relative z-10 mx-auto max-w-7xl'
     >
       <span className='mt-[-100px] block select-none pt-[100px]' id={idName}>

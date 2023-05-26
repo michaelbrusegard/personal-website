@@ -1,4 +1,4 @@
-import fluidAnimation from '../utils/fluidAnimation';
+import webGLFluidSimulation from 'webgl-fluid-simulation';
 
 let hoverTimer: NodeJS.Timeout | null = null;
 let isHovered = false;
@@ -10,7 +10,7 @@ function resetHoverTimer() {
 
   hoverTimer = setTimeout(() => {
     if (!isHovered) {
-      fluidAnimation.config({
+      webGLFluidSimulation.config({
         BRIGHTNESS: 0.5,
       });
     }
@@ -20,7 +20,7 @@ function resetHoverTimer() {
 export default function fluidHover(element: HTMLElement) {
   function handleMouseEnter() {
     isHovered = true;
-    fluidAnimation.config({
+    webGLFluidSimulation.config({
       BRIGHTNESS: 0.1,
     });
     resetHoverTimer();

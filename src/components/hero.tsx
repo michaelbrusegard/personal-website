@@ -1,30 +1,24 @@
 import React, { useEffect } from 'react';
-import HeroCanvas from './heroCanvas';
 import letterBounce from '../utils/letterBounce';
 import { motion } from 'framer-motion';
 import fluidHover from '../utils/fluidHover';
-import fluidAnimation from '../utils/fluidAnimation';
+import webGLFluidSimulation from 'webgl-fluid-simulation';
+import HeroImage from './heroImage';
 
 const Hero = () => {
   useEffect(() => {
     const scrollButton = document.querySelector('.scrollButton') as HTMLElement;
     if (scrollButton) fluidHover(scrollButton);
-    window.addEventListener('keydown', (event) => {
-      if (event.code === 'KeyS') {
-        console.log('som');
-        fluidAnimation.splats();
-      }
+    scrollButton.addEventListener('click', () => {
+      webGLFluidSimulation.splats();
     });
+
     return letterBounce('span.bouncer');
   }, []);
 
-  const scrollButtonClick = () => {
-    console.log('test');
-    fluidAnimation.splats();
-  };
-
   return (
-    <section className='relative z-10 mx-auto h-full w-full select-none'>
+    <section className='relative z-10 mx-auto h-screen-large w-full select-none'>
+      <HeroImage />
       <div className='paddingX absolute inset-0 top-[80px] mx-auto flex max-w-7xl flex-row items-start gap-5 xs:top-[120px] '>
         <div className='pointer-events-auto mt-5 flex flex-col items-center justify-center'>
           <div className='h-5 w-5 rounded-full bg-primary' />
@@ -56,20 +50,19 @@ const Hero = () => {
             </div>
           </h1>
           <p className='leading[20px] mt-0 text-[16px] font-medium text-text sm:text-[26px] lg:text-[30px] lg:leading-[40px] xs:mt-[2] xs:text-[20px] xs:leading-normal'>
-            I&apos;m a <span className='from-primary to-accent bg-clip-text text-transparent bg-gradient-120'>Full-stack Developer</span> based in&nbsp;
+            I&apos;m a <span className='from-primary to-accent bg-clip-text text-transparent bg-gradient-120'>Software Developer</span> residing in&nbsp;
             <br className='hidden sm:block' />
-            Trondheim, Norway<span className='xs:hidden'>.</span>
-            <span className='hidden xs:inline'>
-              , specialising in building&nbsp;
+            Trondheim, Norway<span className='xs:hidden landscape-mobile:inline'>.</span>
+            <span className='hidden xs:inline landscape-mobile:hidden'>
+              , seeking new opportunities&nbsp;
               <br className='hidden sm:block' />
-              premium tailormade websites and applications.
+              to contribute my skills and knowledge.
             </span>
           </p>
         </div>
       </div>
-      {/* <HeroCanvas /> */}
-      <div className='absolute bottom-10 flex w-full items-center justify-center sm:bottom-32 landscape-mobile:bottom-5'>
-        <a href='#about' onClick={scrollButtonClick} className='scrollButton group pointer-events-auto transition-transform duration-200 hover:translate-y-2'>
+      <div className='absolute bottom-24 flex w-full items-center justify-center landscape-mobile:bottom-6'>
+        <a href='#about' className='scrollButton group pointer-events-auto transition-transform duration-200 hover:translate-y-2'>
           <div className='flex h-[64px] w-[35px] items-start justify-center rounded-3xl border-4 border-text p-2 transition-colors group-hover:border-primary'>
             <motion.div
               animate={{

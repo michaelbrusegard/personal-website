@@ -1,0 +1,292 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 47506,
+      "max": [
+        3.0766870975494385,
+        19.961139678955078,
+        1.8731739521026611
+      ],
+      "min": [
+        -3.788662910461426,
+        13.061117172241211,
+        -1.562690019607544
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 570072,
+      "componentType": 5126,
+      "count": 47506,
+      "max": [
+        0.9999527335166931,
+        0.999839186668396,
+        0.9998049736022949
+      ],
+      "min": [
+        -0.9999843835830688,
+        -0.9999706149101257,
+        -0.9892770648002625
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 47506,
+      "max": [
+        0.9966610074043274,
+        1.0016369819641113
+      ],
+      "min": [
+        0.003727999981492758,
+        0.0013429999817162752
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 255630,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 1140144,
+      "componentType": 5126,
+      "count": 46613,
+      "max": [
+        2.208636999130249,
+        19.906694412231445,
+        1.8439480066299438
+      ],
+      "min": [
+        -4.015765190124512,
+        13.039274215698242,
+        -1.5732719898223877
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 1699500,
+      "componentType": 5126,
+      "count": 46613,
+      "max": [
+        0.9999336004257202,
+        0.9997747540473938,
+        0.9999527931213379
+      ],
+      "min": [
+        -0.9998986124992371,
+        -0.9984835982322693,
+        -0.9990605711936951
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 380048,
+      "componentType": 5126,
+      "count": 46613,
+      "max": [
+        0.9988549947738647,
+        1.0001829862594604
+      ],
+      "min": [
+        -0.00024300000222865492,
+        0.0023040000814944506
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 1022520,
+      "componentType": 5125,
+      "count": 194367,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "sv.stats (https://sketchfab.com/sv.stats)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/dog-3a5c0b06db3d4fbea9af691827081043",
+      "title": "Dog"
+    },
+    "generator": "Sketchfab-14.35.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 1799988,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 752952,
+      "byteOffset": 1799988,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2258856,
+      "byteOffset": 2552940,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 4811796,
+      "uri": "scene.bin"
+    }
+  ],
+  "extensionsUsed": [
+    "KHR_materials_unlit"
+  ],
+  "images": [
+    {
+      "uri": "textures/material_baseColor.jpeg"
+    },
+    {
+      "uri": "textures/Dog1_baseColor.jpeg"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_unlit": {}
+      },
+      "name": "material",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0
+      }
+    },
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_unlit": {}
+      },
+      "name": "Dog1",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 1
+        },
+        "metallicFactor": 0.0
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Object_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Object_1",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 5,
+            "POSITION": 4,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        0.24519267392087407,
+        -6.203191470926545e-05,
+        0.11491905401091174,
+        0.0,
+        0.10260577597360676,
+        -0.12183075127565773,
+        -0.21898667116952455,
+        0.0,
+        0.051753723833622534,
+        0.24183280292613143,
+        -0.1102918311161955,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2,
+        3
+      ],
+      "name": "Dog.obj.cleaner.materialmerger.gles"
+    },
+    {
+      "mesh": 0,
+      "name": "Object_2"
+    },
+    {
+      "mesh": 1,
+      "name": "Object_3"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    }
+  ]
+}
