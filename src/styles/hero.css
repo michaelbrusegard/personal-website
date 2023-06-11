@@ -3,11 +3,6 @@
     transition: opacity 3000ms linear;
 }
 
-.hero-gradient {
-    opacity: 0;
-    transition: opacity 3000ms linear 1500ms;
-}
-
 .hero-image {
     opacity: 0;
     transition: opacity 3000ms linear 3000ms;
@@ -15,7 +10,12 @@
 
 .hero-curve {
     opacity: 0;
-    transition: opacity 3000ms linear;
+    fill-opacity: 0;
+    transition: all 3000ms linear;
+}
+
+.hero-gradient {
+    fill-opacity: 1;
 }
 
 .hero-opacity {
