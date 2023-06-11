@@ -1,12 +1,20 @@
+import { motion, Variants } from 'framer-motion';
+import { fadeIn } from '../utils/motion';
+
 const HeroSocial = () => {
   return (
     <div className='mt-5 flex gap-3'>
       <a href='https://www.linkedin.com/in/michaelbrusegard/' target='_blank' rel='noreferrer' className='h-9 w-9 cursor-pointer'>
-        <svg
+        <motion.svg
           width='100%'
           height='100%'
           viewBox='0 0 256 256'
-          className='text-texttransition-transform duration-200 hover:-translate-y-[2px] hover:text-primary'
+          className='text-text hover:text-primary'
+          variants={fadeIn('left', '', 0.5, 0.5) as Variants}
+          initial='hidden'
+          animate='show'
+          whileHover={{ translateY: '-2px' }}
+          transition={{ duration: 0.2 }}
         >
           <path
             d='M58.4,80.571C46.229,80.571 36.4,70.686 36.4,58.571C36.4,46.457 46.229,36.571 58.4,36.571C70.514,36.571 80.4,46.457 80.4,58.571C80.4,70.743 70.571,80.571 58.4,80.571Z'
@@ -23,14 +31,19 @@ const HeroSocial = () => {
               fill='currentColor'
             />
           </g>
-        </svg>
+        </motion.svg>
       </a>
       <a href='https://github.com/michaelbrusegard/' target='_blank' rel='noreferrer' className='h-9 w-9 cursor-pointer'>
-        <svg
+        <motion.svg
           width='100%'
           height='100%'
           viewBox='0 0 256 256'
-          className='text-texttransition-transform duration-200 hover:-translate-y-[2px] hover:text-primary'
+          className='text-text hover:text-primary'
+          variants={fadeIn('left', '', 1, 0.5) as Variants}
+          initial='hidden'
+          animate='show'
+          whileHover={{ translateY: '-2px' }}
+          transition={{ duration: 0.2 }}
         >
           <g transform='matrix(0.571429,0,0,0.571429,1.4988e-14,-18.2857)'>
             <path
@@ -86,7 +99,7 @@ const HeroSocial = () => {
               fill='currentColor'
             />
           </g>
-        </svg>
+        </motion.svg>
       </a>
     </div>
   );

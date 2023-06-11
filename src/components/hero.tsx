@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import letterBounce from '../utils/letterBounce';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import fluidHover from '../utils/fluidHover';
 import webGLFluidSimulation from 'webgl-fluid-simulation';
+import { fadeIn } from '../utils/motion';
 import HeroImage from './heroImage';
 import HeroSocial from './heroSocial';
 
@@ -50,7 +51,12 @@ const Hero = () => {
               <span className='bouncer inline-block transition-colors hover:text-accent'>.</span>
             </div>
           </h1>
-          <p className='leading[20px] mt-0 text-[16px] font-medium text-text sm:text-[26px] lg:text-[30px] lg:leading-[40px] xs:mt-[2] xs:text-[20px] xs:leading-normal'>
+          <motion.p
+            className='leading[20px] mt-0 text-[16px] font-medium text-text sm:text-[26px] lg:text-[30px] lg:leading-[40px] xs:mt-[2] xs:text-[20px] xs:leading-normal'
+            variants={fadeIn('', '', 0.1, 1) as Variants}
+            initial='hidden'
+            animate='show'
+          >
             I&apos;m a <span className='from-primary to-accent bg-clip-text text-transparent bg-gradient-120'>Software Developer</span> residing in&nbsp;
             <br className='hidden sm:block' />
             Trondheim, Norway<span className='xs:hidden landscape-mobile:inline'>.</span>
@@ -59,7 +65,7 @@ const Hero = () => {
               <br className='hidden sm:block' />
               to contribute my skills and knowledge.
             </span>
-          </p>
+          </motion.p>
           <HeroSocial />
         </div>
       </div>

@@ -1,8 +1,8 @@
 const colors = {
-  textColor: '#000000',
-  backgroundColor: '#FFFFFF',
+  textColor: '#FFFFFF',
+  backgroundColor: '#000000',
   primaryColor: '#4685ff',
-  secondaryColor: '#f2f2f2',
+  secondaryColor: '#585858',
   accentColor: '#ffb084',
 };
 
