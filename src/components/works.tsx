@@ -1,7 +1,5 @@
 import Tilt from 'react-parallax-tilt';
 import { Variants, motion } from 'framer-motion';
-import github from '../../public/icons/links/github.svg';
-import link from '../../public/icons/links/link.svg';
 import SectionWrapper from '../components/sectionWrapper';
 import { projects } from '../constants/index';
 import { fadeIn, textVariant } from '../utils/motion';
@@ -39,15 +37,11 @@ const ProjectCard = ({
             <div
               onClick={() => window.open(prodLink, '_blank')}
               className='m-1 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#434343] to-black transition-transform hover:scale-110 hover:bg-primary hover:bg-none'
-            >
-              <Image src={link} alt='Open link' className='object-contain' />
-            </div>
+            ></div>
             <div
               onClick={() => window.open(srcLink, '_blank')}
               className='m-1 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#434343] to-black transition-transform hover:scale-110 hover:bg-primary hover:bg-none'
-            >
-              <Image src={github} alt='GitHub' className='object-contain' />
-            </div>
+            ></div>
           </div>
         </div>
 

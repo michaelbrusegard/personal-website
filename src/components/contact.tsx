@@ -68,7 +68,7 @@ const Contact = () => {
       </motion.div>
 
       <motion.div variants={slideIn('right', 'tween', 0.2, 1) as Variants} className='h-[350px] md:h-[550px] xl:h-auto xl:flex-1'>
-        {/* <DogCanvas /> */}
+        <DogCanvas />
       </motion.div>
     </div>
   );

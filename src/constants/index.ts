@@ -212,12 +212,12 @@ export const experiences = [
     ],
   },
   {
-    title: 'Truck Driver and maintanence',
+    title: 'Logistics holiday substitute',
     companyName: 'Hydro Aluminium',
     icon: hydro,
-    date: 'Jun 2022 - Present',
+    date: 'Jun 2022 - Aug 2023',
     points: [
-      'Truck driving for the relocation of aluminium anodes on cargo bins, general cleanup and sorting materials for storage. ',
+      'Forklift driving and terminal tractor driving for the relocation of aluminium anodes on cargo bins, general cleanup and sorting materials for storage.',
       'Securing containers, locks, and anodes/roll blocks using cargo straps.',
       'Mooring ships and ensuring the safe handling of cargo bins during loading operations.',
       'Diligent focus on maintaining a high standard of health, environment, and safety through comprehensive training.',
@@ -292,7 +292,7 @@ export const projects = [
       },
     ],
     image: niclasWebsitePhoto,
-    prodLink: 'https://niclasnordlund.com',
+    prodLink: 'https://www.niclasnordlund.com',
     srcLink: 'https://github.com/michaelbrusegard/NiclasNordlundPhotography',
   },
   {

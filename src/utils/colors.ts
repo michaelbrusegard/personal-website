@@ -1,8 +1,8 @@
 const colors = {
-  textColor: '#FFFFFF',
-  backgroundColor: '#000000',
+  textColor: '#000000',
+  backgroundColor: '#FFFFFF',
   primaryColor: '#4685ff',
-  secondaryColor: '#585858',
+  secondaryColor: '#f2f2f2',
   accentColor: '#ffb084',
 };
 
@@ -18,6 +18,12 @@ export default colors;
 // backgroundColor: '#FFFFFF',
 // primaryColor: '#4685ff',
 // secondaryColor: '#f2f2f2',
+// accentColor: '#ffb084',
+
+// textColor: '#FFFFFF',
+// backgroundColor: '#000000',
+// primaryColor: '#4685ff',
+// secondaryColor: '#424244',
 // accentColor: '#ffb084',
 
 // textColor: '#FFFFFF',
