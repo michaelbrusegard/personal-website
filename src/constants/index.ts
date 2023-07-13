@@ -185,11 +185,6 @@ export const services = [
         link: 'https://affinity.serif.com/designer/',
       },
       {
-        name: 'Shapr3D',
-        icon: shapr3d,
-        link: 'https://www.shapr3d.com/',
-      },
-      {
         name: 'ChatGPT',
         icon: chatgpt,
         link: 'https://openai.com/blog/chatgpt/',
