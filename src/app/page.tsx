@@ -7,6 +7,7 @@ import Experience from '../components/experience';
 import Works from '../components/works';
 import Feedbacks from '../components/feedbacks';
 import Contact from '../components/contact';
+import StarsCanvas from '../components/stars';
 import webGLFluidSimulation from 'webgl-fluid-simulation';
 import colors from '../utils/colors';
 
@@ -32,7 +33,10 @@ const App = () => {
         <Experience />
         <Works />
         <Feedbacks />
-        <Contact />
+        <div className='relative z-0'>
+          <Contact />
+          <StarsCanvas />
+        </div>
       </div>
     </>
   );

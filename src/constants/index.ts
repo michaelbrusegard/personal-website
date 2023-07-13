@@ -212,7 +212,7 @@ export const experiences = [
     ],
   },
   {
-    title: 'Logistics holiday substitute',
+    title: 'Logistics summer substitute',
     companyName: 'Hydro Aluminium',
     icon: hydro,
     date: 'Jun 2022 - Aug 2023',
