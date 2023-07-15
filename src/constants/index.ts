@@ -3,8 +3,8 @@ import hydro from '../../public/icons/companies/hydro.svg';
 
 import hackerspace from '../../public/icons/companies/hackerspace.svg';
 import niclasNordlundPhotography from '../../public/icons/companies/niclasNordlundPhotography.svg';
-import niclasWebsitePhoto from '../../public/photos/projects/niclasnordlund.png';
-import hackerspaceWebsitePhoto from '../../public/photos/projects/hackerspace-ntnu.png';
+import niclasWebsitePhoto from '../../public/photos/projects/niclasnordlund.jpg';
+import hackerspaceWebsitePhoto from '../../public/photos/projects/hackerspace-ntnu.jpg';
 
 import niclasNordlund from '../../public/photos/people/niclasNordlund.jpg';
 import carlJohanGuzkow from '../../public/photos/people/carlJohanGuzkow.jpg';
@@ -212,7 +212,7 @@ export const experiences = [
     icon: hydro,
     date: 'Jun 2022 - Aug 2023',
     points: [
-      'Forklift driving and terminal tractor driving for the relocation of aluminium anodes on cargo bins, general cleanup and sorting materials for storage.',
+      'Forklift driving for the relocation of anodes on cargo bins, general cleanup and sorting materials for storage. Terminal tractor driving for the relocation/loading ships with cargo bins with aluminium blocks, containers or anodes.',
       'Securing containers, locks, and anodes/roll blocks using cargo straps.',
       'Mooring ships and ensuring the safe handling of cargo bins during loading operations.',
       'Diligent focus on maintaining a high standard of health, environment, and safety through comprehensive training.',
@@ -248,7 +248,7 @@ export const projects = [
   {
     name: 'Niclas Nordlund Photography',
     description:
-      'Photo website where users can browse selected photos by Niclas Nordlund and purchase photos from his library, providing a convenient way for him to sell to businesses.',
+      'A photography website where users can look at photos curated by Niclas Nordlund, and purchase photos from his extensive library. The platform also provides a convenient way to connect with clients.',
     techstack: [
       {
         name: 'HTML',

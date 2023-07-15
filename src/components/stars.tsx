@@ -1,12 +1,36 @@
-import React, { useRef } from 'react';
+import React, { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
+import { Mesh } from 'three';
 import { Suspense } from 'react';
 import { Preload } from '@react-three/drei';
 import colors from '../utils/colors';
 
 const StarsCanvas = () => {
+  interface Star {
+    position: [number, number, number];
+    color: string;
+    mesh: Mesh | null;
+  }
+
   const Stars = () => {
     const starsRef = useRef<THREE.Group>(null);
+
+    const starPool = useMemo(() => {
+      const pool = [];
+
+      for (let i = 0; i < 500; i++) {
+        const isAccentColor = Math.random() < 0.2;
+        const color = isAccentColor ? colors.accentColor : colors.textColor;
+        const star: Star = {
+          position: [Math.random() * 100 - 50, Math.random() * 100 - 50, Math.random() * 100 - 50],
+          color: color,
+          mesh: null,
+        };
+        pool.push(star);
+      }
+
+      return pool;
+    }, []);
 
     useFrame((state, delta) => {
       if (starsRef.current) {
@@ -17,12 +41,16 @@ const StarsCanvas = () => {
 
     return (
       <group ref={starsRef}>
-        {Array.from(Array(550)).map((_, index) => (
-          <mesh key={index} position={[Math.random() * 100 - 50, Math.random() * 100 - 50, Math.random() * 100 - 50]}>
-            <sphereGeometry args={[0.1, 8, 8]} />
-            <meshBasicMaterial color={colors.textColor} />
-          </mesh>
-        ))}
+        {starPool.map((star, index) => {
+          const { position, color } = star;
+
+          return (
+            <mesh key={index} position={position} ref={(mesh) => (star.mesh = mesh)}>
+              <sphereGeometry args={[0.1, 8, 8]} attach='geometry' />
+              <meshBasicMaterial color={color} />
+            </mesh>
+          );
+        })}
       </group>
     );
   };

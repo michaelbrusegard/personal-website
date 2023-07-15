@@ -71,6 +71,7 @@ const Nav = () => {
           ))}
           <motion.li
             className='h-7 w-7 cursor-pointer object-contain text-text hover:text-primary'
+            tabIndex={0}
             variants={fadeIn('down', '', navLinks.length * 0.25, 1) as Variants}
             initial='hidden'
             animate='show'

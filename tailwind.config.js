@@ -14,7 +14,8 @@ module.exports = {
         accent: colors.accentColor,
       },
       boxShadow: {
-        'timeline-border': `0 0 0 4px ${colors.textColor}`,
+        'timeline-border': `0 0 0 4px ${colors.accentColor}`,
+        card: `0 0 5px 1px ${colors.textColor}`,
       },
       screens: {
         xs: '448px',

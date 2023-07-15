@@ -18,6 +18,7 @@ const ServiceCard = ({ index, title, icons }: { index: number; title: string; ic
             key={icon.name}
             onClick={() => window.open(icon.link, '_blank')}
             className='flex cursor-pointer items-center transition-transform hover:scale-110'
+            tabIndex={0}
           >
             <Image className='h-6 w-6' src={icon.icon} alt={icon.name} />
             <span className='ml-2 py-1 font-mono text-sm font-medium text-text'>{icon.name}</span>
