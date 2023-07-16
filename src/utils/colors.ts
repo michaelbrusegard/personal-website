@@ -1,9 +1,9 @@
 const colors = {
-  textColor: '#050505',
-  backgroundColor: '#fafafa',
+  textColor: '#fafafa',
+  backgroundColor: '#050505',
   primaryColor: '#8fb3ff',
-  secondaryColor: '#ebf1ff',
-  accentColor: '#d41d6d',
+  secondaryColor: '#000f33',
+  accentColor: '#ed78ab',
 };
 
 export default colors;

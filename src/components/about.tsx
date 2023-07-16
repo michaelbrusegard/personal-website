@@ -17,6 +17,11 @@ const ServiceCard = ({ index, title, icons }: { index: number; title: string; ic
           <div
             key={icon.name}
             onClick={() => window.open(icon.link, '_blank')}
+            onKeyDown={(event) => {
+              if (event.key === 'Enter') {
+                window.open(icon.link, '_blank');
+              }
+            }}
             className='flex cursor-pointer items-center transition-transform hover:scale-110'
             tabIndex={0}
           >

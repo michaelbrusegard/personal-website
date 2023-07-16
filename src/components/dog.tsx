@@ -51,7 +51,7 @@ const DogCanvas = () => {
   return (
     <Canvas>
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls autoRotate autoRotateSpeed={-4} enableZoom={false} maxPolarAngle={Math.PI / 4} minPolarAngle={Math.PI / 4} />
+        <OrbitControls autoRotate autoRotateSpeed={-4} enablePan={false} enableZoom={false} maxPolarAngle={Math.PI / 4} minPolarAngle={Math.PI / 4} />
         <pointLight position={[15, 10, 15]} intensity={1.5} />
         <pointLight position={[-15, 10, -15]} intensity={1.5} />
         <pointLight position={[-15, 0, 0]} intensity={1.5} />

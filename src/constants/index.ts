@@ -212,7 +212,7 @@ export const experiences = [
     icon: hydro,
     date: 'Jun 2022 - Aug 2023',
     points: [
-      'Forklift driving for the relocation of anodes on cargo bins, general cleanup and sorting materials for storage. Terminal tractor driving for the relocation/loading ships with cargo bins with aluminium blocks, containers or anodes.',
+      'Forklift driving for the relocation of anodes on cargo bins, general cleanup and sorting materials for storage. Terminal tractor driving for loading ships with cargo bins with aluminium blocks, containers or anodes.',
       'Securing containers, locks, and anodes/roll blocks using cargo straps.',
       'Mooring ships and ensuring the safe handling of cargo bins during loading operations.',
       'Diligent focus on maintaining a high standard of health, environment, and safety through comprehensive training.',
@@ -248,7 +248,7 @@ export const projects = [
   {
     name: 'Niclas Nordlund Photography',
     description:
-      'A photography website where users can look at photos curated by Niclas Nordlund, and purchase photos from his extensive library. The platform also provides a convenient way to connect with clients.',
+      'A photography website that provides a convenient way for Niclas Nordlund to showcase his photos and connect with clients. It also provides a shop to sell photos from his extensive library.',
     techstack: [
       {
         name: 'HTML',

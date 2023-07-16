@@ -69,7 +69,7 @@ const Hero = () => {
           <HeroSocial />
         </div>
       </div>
-      <div className='absolute bottom-24 flex w-full items-center justify-center landscape-mobile:bottom-6'>
+      <div className='absolute bottom-12 flex w-full items-center justify-center xs:bottom-24 landscape-mobile:bottom-6'>
         <a href='#about' className='scrollButton group pointer-events-auto transition-transform duration-200 hover:translate-y-2'>
           <div className='flex h-[64px] w-[35px] items-start justify-center rounded-3xl border-4 border-text p-2 transition-colors group-hover:border-primary'>
             <motion.div

@@ -25,16 +25,15 @@ const FeedbackCard = ({
     <div className='absolute right-10 top-10 flex justify-end'>
       <div
         onClick={() => (window.location.href = `tel:${phone}`)}
+        onKeyDown={(event) => {
+          if (event.key === 'Enter') {
+            window.location.href = `tel:${phone}`;
+          }
+        }}
         className='m-1 flex h-7 w-7 cursor-pointer items-center justify-center transition-transform duration-200 hover:-translate-y-[2px]'
         tabIndex={0}
       >
-        <svg
-          width='100%'
-          height='100%'
-          viewBox='0 0 256 256'
-          className='object-contain text-background opacity-80 hover:text-primary hover:opacity-100'
-          tabIndex={0}
-        >
+        <svg width='100%' height='100%' viewBox='0 0 256 256' className='object-contain text-background opacity-80 hover:text-primary hover:opacity-100'>
           <g transform='matrix(1,0,0,1,12.125,2.9375)'>
             <path
               d='M63.5,177.125C99.625,213.25 143.5,241.125 179.375,241.125C195.5,241.125 209.625,235.5 221,223C227.625,215.625 231.75,207 231.75,198.5C231.75,192.25 229.375,186.25 223.5,182L185.125,154.75C179.25,150.75 174.375,148.75 169.875,148.75C164.25,148.75 159.125,152 153.375,157.625L144.5,166.375C143.125,167.75 141.375,168.375 139.75,168.375C137.875,168.375 136,167.625 134.75,167C127,162.875 113.75,151.5 101.375,139.25C89.125,127 77.75,113.75 73.75,106C73.125,104.625 72.375,102.875 72.375,101C72.375,99.375 72.875,97.75 74.25,96.375L83.125,87.25C88.625,81.5 92,76.5 92,70.75C92,66.25 89.875,61.375 85.75,55.5L58.875,17.625C54.5,11.625 48.375,9 41.625,9C33.375,9 24.875,12.75 17.5,19.875C5.375,31.5 0,45.875 0,61.75C0,97.625 27.375,141.125 63.5,177.125Z'
@@ -45,7 +44,13 @@ const FeedbackCard = ({
       </div>
       <div
         onClick={() => (window.location.href = `mailto:${mail}`)}
+        onKeyDown={(event) => {
+          if (event.key === 'Enter') {
+            window.location.href = `mailto:${mail}`;
+          }
+        }}
         className='m-1 flex h-7 w-7 cursor-pointer items-center justify-center transition-transform duration-200 hover:-translate-y-[2px]'
+        tabIndex={0}
       >
         <svg width='100%' height='100%' viewBox='0 0 256 256' className='object-contain text-background opacity-80 hover:text-primary hover:opacity-100'>
           <g transform='matrix(0.927536,0,0,0.986509,0,21.5187)'>
