@@ -24,15 +24,15 @@
 }
 
 .paddingX {
-  @apply px-6 sm:px-16;
+  @apply px-6 sm:px-11 md:px-16;
 }
 
 .paddingY {
-  @apply py-6 sm:py-16;
+  @apply py-6 sm:py-11 md:py-16;
 }
 
 .padding {
-  @apply px-6 py-6 sm:px-16 sm:py-16;
+  @apply px-6 py-6 sm:px-11 sm:py-11 md:px-16 md:py-16;
 }
 
 ::-moz-selection {

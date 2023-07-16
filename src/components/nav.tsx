@@ -1,13 +1,24 @@
 'use client';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { navLinks } from '../constants';
 import MenuButton from '../components/menuButton';
+import MobileMenu from '../components/mobileMenu';
 import webGLFluidSimulation from 'webgl-fluid-simulation';
 import { motion, Variants } from 'framer-motion';
 import { fadeIn } from '../utils/motion';
 
 const Nav = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleMenuItemClick = () => {
+    setIsOpen(false);
+  };
+
   useEffect(() => {
     const navElements = document.querySelectorAll('.nav-link');
     for (let i = 0; i < navElements.length; i++) {
@@ -77,7 +88,7 @@ const Nav = () => {
             </motion.li>
           ))}
           <motion.li
-            className='h-7 w-7 cursor-pointer object-contain text-text hover:text-primary'
+            className='w-full cursor-pointer object-contain text-text hover:text-primary'
             tabIndex={0}
             variants={fadeIn('down', '', navLinks.length * 0.25, 1) as Variants}
             initial='hidden'
@@ -85,7 +96,7 @@ const Nav = () => {
             whileHover={{ translateY: '-2px' }}
             transition={{ duration: 0.2 }}
           >
-            <svg width='100%' height='100%' viewBox='0 0 256 256'>
+            <svg width='100%' height='100%' viewBox='0 0 256 256' className='h-7 w-7'>
               <g transform='matrix(10.882,0,0,10.882,0,21.5682)'>
                 <path
                   d='M12.637,19.561C16.748,19.561 19.492,18.106 19.492,15.957C19.492,14.033 17.852,13.604 17.852,12.471C17.852,10.908 23.525,10.596 23.525,6.582C23.525,2.617 19.434,0 13.359,0C5.381,0 0,3.984 0,9.951C0,15.693 5.107,19.561 12.637,19.561ZM12.637,17.891C6.025,17.891 1.67,14.707 1.67,9.951C1.67,4.971 6.299,1.67 13.359,1.67C18.486,1.67 21.856,3.662 21.856,6.582C21.856,9.99 16.143,9.531 16.143,12.48C16.143,14.15 17.822,14.678 17.822,15.83C17.822,17.07 15.781,17.891 12.637,17.891ZM11.836,15.586C13.32,15.586 14.541,14.365 14.541,12.871C14.541,11.397 13.32,10.176 11.836,10.176C10.352,10.176 9.131,11.397 9.131,12.871C9.131,14.365 10.352,15.586 11.836,15.586ZM11.836,14.453C10.967,14.453 10.264,13.75 10.264,12.871C10.264,11.904 11.006,11.328 11.816,11.318C12.647,11.309 13.408,11.875 13.408,12.871C13.408,13.75 12.715,14.453 11.836,14.453Z'
@@ -117,9 +128,10 @@ const Nav = () => {
           initial='hidden'
           animate='show'
         >
-          <MenuButton />
+          <MenuButton onClick={handleClick} isOpen={isOpen} />
         </motion.div>
       </div>
+      <MobileMenu isOpen={isOpen} onClose={handleMenuItemClick} />
     </nav>
   );
 };

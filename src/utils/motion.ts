@@ -18,6 +18,22 @@ export const textVariant = (delay?: number): Transition => {
   };
 };
 
+export const foldOut = (delay: number, duration: number): Transition => {
+  return {
+    hidden: {
+      height: 0,
+    },
+    show: {
+      height: 'auto',
+      transition: {
+        delay: delay,
+        duration: duration,
+        ease: 'easeOut',
+      },
+    },
+  };
+};
+
 export const fadeIn = (direction: string, type: string, delay: number, duration: number): Transition => {
   return {
     hidden: {
@@ -58,7 +74,7 @@ export const slideIn = (direction: string, type: string, delay: number, duration
   };
 };
 
-export const appear = (delay: number, onAnimationComplete: () => void): Transition => {
+export const appear = (delay: number, duration: number, onAnimationComplete: () => void): Transition => {
   return {
     hidden: {
       opacity: 0,
@@ -66,7 +82,7 @@ export const appear = (delay: number, onAnimationComplete: () => void): Transiti
     show: {
       opacity: 1,
       transition: {
-        duration: 0.5,
+        duration: duration,
         delay: delay,
         onComplete: onAnimationComplete,
       },

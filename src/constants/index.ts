@@ -338,7 +338,8 @@ export const projects = [
 
 export const testimonials = [
   {
-    testimonial: 'Best web developer ever',
+    testimonial:
+      "Honestly, it's the nicest website I've seen and I mean it.....I don't know how to thank you!? I'll be back with some more feedback and some questions tomorrow, but as I said, I'm very impressed with what you've come up with 🙂 !",
     name: 'Niclas Nordlund',
     designation: 'Freelance photographer at Niclas Nordlund Photography',
     image: niclasNordlund,

@@ -44,7 +44,7 @@ const Hero = () => {
               <motion.span
                 ref={handleSpanRef}
                 className='bouncer inline-block transition-colors hover:text-accent'
-                variants={appear(0.1, () => handleAppearComplete(spanRefs.current[0])) as Variants}
+                variants={appear(0.1, 0.5, () => handleAppearComplete(spanRefs.current[0])) as Variants}
                 initial='hidden'
                 animate='show'
               >
@@ -53,7 +53,7 @@ const Hero = () => {
               <motion.span
                 ref={handleSpanRef}
                 className='bouncer inline-block transition-colors hover:text-accent'
-                variants={appear(0.2, () => handleAppearComplete(spanRefs.current[1])) as Variants}
+                variants={appear(0.2, 0.5, () => handleAppearComplete(spanRefs.current[1])) as Variants}
                 initial='hidden'
                 animate='show'
               >
@@ -62,7 +62,7 @@ const Hero = () => {
               <motion.span
                 ref={handleSpanRef}
                 className='bouncer inline-block transition-colors hover:text-accent'
-                variants={appear(0.3, () => handleAppearComplete(spanRefs.current[2])) as Variants}
+                variants={appear(0.3, 0.5, () => handleAppearComplete(spanRefs.current[2])) as Variants}
                 initial='hidden'
                 animate='show'
               >
@@ -73,7 +73,7 @@ const Hero = () => {
               <motion.span
                 ref={handleSpanRef}
                 className='bouncer inline-block transition-colors hover:text-accent'
-                variants={appear(0.4, () => handleAppearComplete(spanRefs.current[3])) as Variants}
+                variants={appear(0.4, 0.5, () => handleAppearComplete(spanRefs.current[3])) as Variants}
                 initial='hidden'
                 animate='show'
               >
@@ -82,7 +82,7 @@ const Hero = () => {
               <motion.span
                 ref={handleSpanRef}
                 className='bouncer inline-block transition-colors hover:text-accent'
-                variants={appear(0.5, () => handleAppearComplete(spanRefs.current[4])) as Variants}
+                variants={appear(0.5, 0.5, () => handleAppearComplete(spanRefs.current[4])) as Variants}
                 initial='hidden'
                 animate='show'
               >
@@ -91,7 +91,7 @@ const Hero = () => {
               <motion.span
                 ref={handleSpanRef}
                 className='bouncer inline-block transition-colors hover:text-accent'
-                variants={appear(0.6, () => handleAppearComplete(spanRefs.current[5])) as Variants}
+                variants={appear(0.6, 0.5, () => handleAppearComplete(spanRefs.current[5])) as Variants}
                 initial='hidden'
                 animate='show'
               >
@@ -103,7 +103,7 @@ const Hero = () => {
                 <motion.span
                   ref={handleSpanRef}
                   className='bouncer gradient-letter inline-block transition-colors hover:text-accent'
-                  variants={appear(0.5, () => handleAppearComplete(spanRefs.current[6])) as Variants}
+                  variants={appear(0.5, 0.5, () => handleAppearComplete(spanRefs.current[6])) as Variants}
                   initial='hidden'
                   animate='show'
                 >
@@ -112,7 +112,7 @@ const Hero = () => {
                 <motion.span
                   ref={handleSpanRef}
                   className='bouncer gradient-letter inline-block transition-colors hover:text-accent'
-                  variants={appear(0.6, () => handleAppearComplete(spanRefs.current[7])) as Variants}
+                  variants={appear(0.6, 0.5, () => handleAppearComplete(spanRefs.current[7])) as Variants}
                   initial='hidden'
                   animate='show'
                 >
@@ -121,7 +121,7 @@ const Hero = () => {
                 <motion.span
                   ref={handleSpanRef}
                   className='bouncer gradient-letter inline-block transition-colors hover:text-accent'
-                  variants={appear(0.7, () => handleAppearComplete(spanRefs.current[8])) as Variants}
+                  variants={appear(0.7, 0.5, () => handleAppearComplete(spanRefs.current[8])) as Variants}
                   initial='hidden'
                   animate='show'
                 >
@@ -130,7 +130,7 @@ const Hero = () => {
                 <motion.span
                   ref={handleSpanRef}
                   className='bouncer gradient-letter inline-block transition-colors hover:text-accent'
-                  variants={appear(0.8, () => handleAppearComplete(spanRefs.current[9])) as Variants}
+                  variants={appear(0.8, 0.5, () => handleAppearComplete(spanRefs.current[9])) as Variants}
                   initial='hidden'
                   animate='show'
                 >
@@ -139,7 +139,7 @@ const Hero = () => {
                 <motion.span
                   ref={handleSpanRef}
                   className='bouncer gradient-letter inline-block transition-colors hover:text-accent'
-                  variants={appear(0.9, () => handleAppearComplete(spanRefs.current[10])) as Variants}
+                  variants={appear(0.9, 0.5, () => handleAppearComplete(spanRefs.current[10])) as Variants}
                   initial='hidden'
                   animate='show'
                 >
@@ -148,7 +148,7 @@ const Hero = () => {
                 <motion.span
                   ref={handleSpanRef}
                   className='bouncer gradient-letter inline-block transition-colors hover:text-accent'
-                  variants={appear(1.0, () => handleAppearComplete(spanRefs.current[11])) as Variants}
+                  variants={appear(1.0, 0.5, () => handleAppearComplete(spanRefs.current[11])) as Variants}
                   initial='hidden'
                   animate='show'
                 >
@@ -157,7 +157,7 @@ const Hero = () => {
                 <motion.span
                   ref={handleSpanRef}
                   className='bouncer gradient-letter inline-block transition-colors hover:text-accent'
-                  variants={appear(1.1, () => handleAppearComplete(spanRefs.current[12])) as Variants}
+                  variants={appear(1.1, 0.5, () => handleAppearComplete(spanRefs.current[12])) as Variants}
                   initial='hidden'
                   animate='show'
                 >
@@ -167,7 +167,7 @@ const Hero = () => {
               <motion.span
                 ref={handleSpanRef}
                 className='bouncer inline-block transition-colors hover:text-accent'
-                variants={appear(1.4, () => handleAppearComplete(spanRefs.current[13])) as Variants}
+                variants={appear(1.9, 0, () => handleAppearComplete(spanRefs.current[13])) as Variants}
                 initial='hidden'
                 animate='show'
               >
