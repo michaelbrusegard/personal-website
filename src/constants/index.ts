@@ -32,7 +32,6 @@ import linux from '../../public/icons/tech/tools/linux.svg';
 import vscode from '../../public/icons/tech/tools/vscode.svg';
 import affinityphoto from '../../public/icons/tech/tools/affinityphoto.svg';
 import affinitydesigner from '../../public/icons/tech/tools/affinitydesigner.svg';
-import shapr3d from '../../public/icons/tech/tools/shapr3d.svg';
 import chatgpt from '../../public/icons/tech/tools/chatgpt.svg';
 
 export const navLinks = [
@@ -97,26 +96,6 @@ export const services = [
     ],
   },
   {
-    title: 'INTEGRATIONS',
-    icons: [
-      {
-        name: 'Google Cloud Platform',
-        icon: googlecloudplatform,
-        link: 'https://cloud.google.com',
-      },
-      {
-        name: 'Stripe',
-        icon: stripe,
-        link: 'https://stripe.com/',
-      },
-      {
-        name: 'Firebase',
-        icon: firebase,
-        link: 'https://firebase.google.com',
-      },
-    ],
-  },
-  {
     title: 'BACKEND',
     icons: [
       {
@@ -148,6 +127,26 @@ export const services = [
         name: 'Next.js',
         icon: nextjs,
         link: 'https://nextjs.org/',
+      },
+    ],
+  },
+  {
+    title: 'INTEGRATIONS',
+    icons: [
+      {
+        name: 'Google Cloud Platform',
+        icon: googlecloudplatform,
+        link: 'https://cloud.google.com',
+      },
+      {
+        name: 'Stripe',
+        icon: stripe,
+        link: 'https://stripe.com/',
+      },
+      {
+        name: 'Firebase',
+        icon: firebase,
+        link: 'https://firebase.google.com',
       },
     ],
   },

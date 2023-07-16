@@ -65,8 +65,9 @@ const Nav = () => {
               animate='show'
               whileHover={{ translateY: '-2px' }}
               transition={{ duration: 0.2 }}
+              onClick={() => (window.location.href = `#${link.id}`)}
             >
-              <a href={`#${link.id}`}>{link.title}</a>
+              {link.title}
             </motion.li>
           ))}
           <motion.li
