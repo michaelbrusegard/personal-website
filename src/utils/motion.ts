@@ -39,25 +39,6 @@ export const fadeIn = (direction: string, type: string, delay: number, duration:
   };
 };
 
-export const zoomIn = (delay: number, duration: number): Transition => {
-  return {
-    hidden: {
-      scale: 0,
-      opacity: 0,
-    },
-    show: {
-      scale: 1,
-      opacity: 1,
-      transition: {
-        type: 'tween',
-        delay: delay,
-        duration: duration,
-        ease: 'easeOut',
-      },
-    },
-  };
-};
-
 export const slideIn = (direction: string, type: string, delay: number, duration: number): Transition => {
   return {
     hidden: {
@@ -72,6 +53,22 @@ export const slideIn = (direction: string, type: string, delay: number, duration
         delay: delay,
         duration: duration,
         ease: 'easeOut',
+      },
+    },
+  };
+};
+
+export const appear = (delay: number, onAnimationComplete: () => void): Transition => {
+  return {
+    hidden: {
+      opacity: 0,
+    },
+    show: {
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        delay: delay,
+        onComplete: onAnimationComplete,
       },
     },
   };

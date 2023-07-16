@@ -10,7 +10,7 @@ const HeroSocial = () => {
           height='100%'
           viewBox='0 0 256 256'
           className='text-text hover:text-primary'
-          variants={fadeIn('left', '', 0.5, 0.5) as Variants}
+          variants={fadeIn('left', '', 2.0, 0.5) as Variants}
           initial='hidden'
           animate='show'
           whileHover={{ translateY: '-2px' }}
@@ -39,7 +39,7 @@ const HeroSocial = () => {
           height='100%'
           viewBox='0 0 256 256'
           className='text-text hover:text-primary'
-          variants={fadeIn('left', '', 1, 0.5) as Variants}
+          variants={fadeIn('left', '', 2.5, 0.5) as Variants}
           initial='hidden'
           animate='show'
           whileHover={{ translateY: '-2px' }}

@@ -32,7 +32,7 @@ const Nav = () => {
             height='100%'
             viewBox='0 0 256 256'
             className='h-9 w-9 object-contain text-text'
-            variants={fadeIn('', '', 0.25, 1) as Variants}
+            variants={fadeIn('', '', 0, 1) as Variants}
             initial='hidden'
             animate='show'
           >

@@ -20,7 +20,6 @@ const App = () => {
       webGLFluidSimulation.simulation(canvas, {
         COLOR_PALETTE: [colors.primaryColor, colors.secondaryColor, colors.accentColor],
         BACK_COLOR: colors.backgroundColor,
-        INITIAL: true,
       });
   }, []);
 

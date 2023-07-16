@@ -50,7 +50,7 @@ const ProjectCard = ({
           />
         </div>
 
-        <div className='px-2 py-5 text-center lg:px-5 lg:py-2'>
+        <div className='px-2 py-5 text-center lg:px-5 lg:py-2 xl:px-10 xl:py-8'>
           <h3 className='text-[24px] font-bold text-text'>{name}</h3>
           <p className='mt-2 text-[17px] text-text opacity-75'>{description}</p>
           <div className='mt-3 flex flex-wrap justify-center gap-2'>

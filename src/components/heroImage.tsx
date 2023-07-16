@@ -2,6 +2,7 @@ import colors from '../utils/colors';
 import heroPhoto from '../../public/photos/hero/hero.png';
 import heroDraw from '../../public/photos/hero/draw.png';
 import Image from 'next/image';
+import webGLFluidSimulation from 'webgl-fluid-simulation';
 import { motion, Variants } from 'framer-motion';
 
 const HeroImage = () => {
@@ -26,11 +27,16 @@ const HeroImage = () => {
     heroImage.classList.add('hero-opacity');
     heroCurve.classList.add('hero-gradient');
 
-    heroDraw.addEventListener('transitionend', () => {
-      heroDraw.classList.remove('hero-opacity');
-      heroCurve.classList.remove('hero-gradient');
-      heroCurve.classList.remove('hero-opacity');
-    });
+    heroDraw.addEventListener(
+      'transitionend',
+      () => {
+        heroDraw.classList.remove('hero-opacity');
+        heroCurve.classList.remove('hero-gradient');
+        heroCurve.classList.remove('hero-opacity');
+        webGLFluidSimulation.splats();
+      },
+      { once: true }
+    );
   };
 
   return (
