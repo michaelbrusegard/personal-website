@@ -19,7 +19,7 @@ module.exports = {
       },
       screens: {
         xs: '448px',
-        'landscape-mobile': { raw: '(max-width: 768px) and (orientation: landscape)' },
+        'landscape-small': { raw: '(max-width: 1024px) and (orientation: landscape)' },
       },
       height: {
         screen: '100dvh',

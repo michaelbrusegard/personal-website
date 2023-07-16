@@ -59,7 +59,7 @@ const Contact = () => {
 
           <button
             type='submit'
-            className='w-fit rounded-xl bg-primary px-8 py-3 font-semibold text-text outline-none transition-all duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary'
+            className='w-fit rounded-xl bg-primary px-8 py-3 font-semibold text-background outline-none transition-all duration-200 hover:-translate-y-1 hover:from-primary hover:to-accent hover:text-text hover:shadow-xl hover:shadow-primary hover:bg-gradient-30'
           >
             {loading ? 'Sending...' : 'Send Message'}
           </button>

@@ -40,7 +40,7 @@ const HeroImage = () => {
   };
 
   return (
-    <div className='relative left-0 h-full w-full overflow-hidden md:left-[100px] md:w-[calc(100%-100px)] xl:left-[200px] xl:w-[calc(100%-200px)] landscape-mobile:left-[400px] landscape-mobile:w-[calc(100%-400px)]'>
+    <div className='relative left-0 h-full w-full overflow-hidden md:left-[100px] md:w-[calc(100%-100px)] xl:left-[200px] xl:w-[calc(100%-200px)] landscape-small:left-[400px] landscape-small:w-[calc(100%-400px)]'>
       <motion.svg
         width='100%'
         height='100%'

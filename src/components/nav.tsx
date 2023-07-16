@@ -60,12 +60,18 @@ const Nav = () => {
             <motion.li
               key={link.id}
               className='nav-link cursor-pointer font-mono text-[18px] font-medium hover:text-primary'
+              tabIndex={0}
               variants={fadeIn('down', '', index * 0.25, 1) as Variants}
               initial='hidden'
               animate='show'
               whileHover={{ translateY: '-2px' }}
               transition={{ duration: 0.2 }}
               onClick={() => (window.location.href = `#${link.id}`)}
+              onKeyDown={(event) => {
+                if (event.key === 'Enter') {
+                  window.location.href = `#${link.id}`;
+                }
+              }}
             >
               {link.title}
             </motion.li>

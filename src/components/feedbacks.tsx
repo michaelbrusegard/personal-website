@@ -21,7 +21,7 @@ const FeedbackCard = ({
   phone: string;
   mail: string;
 }) => (
-  <motion.div variants={fadeIn('down', 'spring', index * 0.5, 0.75) as Variants} className='relative rounded-3xl bg-text p-10 xs:w-[320px]'>
+  <motion.div variants={fadeIn('down', 'spring', index * 0.5, 0.75) as Variants} className='relative rounded-3xl bg-text p-10 shadow-card xs:w-[320px]'>
     <div className='absolute right-10 top-10 flex justify-end'>
       <div
         onClick={() => (window.location.href = `tel:${phone}`)}
@@ -85,7 +85,7 @@ const FeedbackCard = ({
 const Feedbacks = () => {
   return (
     <div className='pointer-events-auto mt-12 rounded-[20px] bg-secondary'>
-      <div className='padding min-h-[300px] rounded-2xl bg-primary'>
+      <div className='padding min-h-[300px] rounded-2xl bg-gradient-to-b from-primary to-accent md:bg-gradient-to-r'>
         <motion.div variants={textVariant() as Variants}>
           <p className='section-subtitle'>What others say</p>
           <h2 className='section-title pointer-events-none'>Testimonials.</h2>

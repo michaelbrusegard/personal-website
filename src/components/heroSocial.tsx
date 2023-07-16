@@ -3,19 +3,19 @@ import { fadeIn } from '../utils/motion';
 
 const HeroSocial = () => {
   return (
-    <div className='mt-5 flex gap-3'>
-      <a href='https://www.linkedin.com/in/michaelbrusegard/' target='_blank' rel='noreferrer' className='h-9 w-9 cursor-pointer'>
-        <motion.svg
-          width='100%'
-          height='100%'
-          viewBox='0 0 256 256'
-          className='text-text hover:text-primary'
-          variants={fadeIn('left', '', 2.0, 0.5) as Variants}
-          initial='hidden'
-          animate='show'
-          whileHover={{ translateY: '-2px' }}
-          transition={{ duration: 0.2 }}
-        >
+    <div className='mt-5 flex flex-row gap-3'>
+      <motion.a
+        href='https://www.linkedin.com/in/michaelbrusegard/'
+        target='_blank'
+        rel='noreferrer'
+        className='h-9 w-9 cursor-pointer text-text hover:text-primary'
+        variants={fadeIn('left', '', 2.0, 0.5) as Variants}
+        initial='hidden'
+        animate='show'
+        whileHover={{ translateY: '-2px' }}
+        transition={{ duration: 0.2 }}
+      >
+        <svg width='100%' height='100%' viewBox='0 0 256 256' className='text-current'>
           <path
             d='M58.4,80.571C46.229,80.571 36.4,70.686 36.4,58.571C36.4,46.457 46.229,36.571 58.4,36.571C70.514,36.571 80.4,46.457 80.4,58.571C80.4,70.743 70.571,80.571 58.4,80.571Z'
             className='fill-background'
@@ -31,20 +31,20 @@ const HeroSocial = () => {
               fill='currentColor'
             />
           </g>
-        </motion.svg>
-      </a>
-      <a href='https://github.com/michaelbrusegard/' target='_blank' rel='noreferrer' className='h-9 w-9 cursor-pointer'>
-        <motion.svg
-          width='100%'
-          height='100%'
-          viewBox='0 0 256 256'
-          className='text-text hover:text-primary'
-          variants={fadeIn('left', '', 2.5, 0.5) as Variants}
-          initial='hidden'
-          animate='show'
-          whileHover={{ translateY: '-2px' }}
-          transition={{ duration: 0.2 }}
-        >
+        </svg>
+      </motion.a>
+      <motion.a
+        href='https://github.com/michaelbrusegard/'
+        target='_blank'
+        rel='noreferrer'
+        className='h-9 w-9 cursor-pointer text-text hover:text-primary'
+        variants={fadeIn('left', '', 2.5, 0.5) as Variants}
+        initial='hidden'
+        animate='show'
+        whileHover={{ translateY: '-2px' }}
+        transition={{ duration: 0.2 }}
+      >
+        <svg width='100%' height='100%' viewBox='0 0 256 256' className='text-current'>
           <g transform='matrix(0.571429,0,0,0.571429,1.4988e-14,-18.2857)'>
             <path
               d='M277.3,415.7C268.9,417.2 265.8,412 265.8,407.7C265.8,402.3 266,374.7 266,352.4C266,336.8 260.8,326.9 254.7,321.7C291.7,317.6 330.7,312.5 330.7,248.6C330.7,230.4 324.2,221.3 313.6,209.6C315.3,205.3 321,187.6 311.9,164.6C298,160.3 266.2,182.5 266.2,182.5C253,178.8 238.7,176.9 224.6,176.9C210.5,176.9 196.2,178.8 183,182.5C183,182.5 151.2,160.3 137.3,164.6C128.2,187.5 133.8,205.2 135.6,209.6C125,221.3 120,230.4 120,248.6C120,312.2 157.3,317.6 194.3,321.7C189.5,326 185.2,333.4 183.7,344C174.2,348.3 149.9,355.7 135.4,330.1C126.3,314.3 109.9,313 109.9,313C93.7,312.8 108.8,323.2 108.8,323.2C119.6,328.2 127.2,347.4 127.2,347.4C136.9,377.1 183.3,367.1 183.3,367.1C183.3,381 183.5,403.6 183.5,407.7C183.5,412 180.5,417.2 172,415.7C106,393.6 59.8,330.8 59.8,257.4C59.8,165.6 130,95.9 221.8,95.9C313.6,95.9 388,165.6 388,257.4C388.1,330.8 343.3,393.7 277.3,415.7Z'
@@ -99,8 +99,19 @@ const HeroSocial = () => {
               fill='currentColor'
             />
           </g>
-        </motion.svg>
-      </a>
+        </svg>
+      </motion.a>
+      <motion.a
+        href='#contact'
+        className='ml-auto h-9 w-fit cursor-pointer rounded-[3px] bg-primary px-4 py-[6px] font-semibold text-background transition-[color,box-shadow] duration-200 hover:from-primary hover:to-accent hover:text-text hover:shadow-xl hover:shadow-primary hover:bg-gradient-30 xs:ml-0'
+        variants={fadeIn('left', '', 3.0, 0.5) as Variants}
+        initial='hidden'
+        animate='show'
+        whileHover={{ translateY: '-2px' }}
+        transition={{ duration: 0.2 }}
+      >
+        Let&apos;s Talk
+      </motion.a>
     </div>
   );
 };

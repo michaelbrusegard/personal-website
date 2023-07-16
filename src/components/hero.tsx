@@ -183,8 +183,8 @@ const Hero = () => {
           >
             I&apos;m a <span className='from-primary to-accent bg-clip-text text-transparent bg-gradient-120'>Software Developer</span> residing in&nbsp;
             <br className='hidden sm:block' />
-            Trondheim, Norway<span className='xs:hidden landscape-mobile:inline'>.</span>
-            <span className='hidden xs:inline landscape-mobile:hidden'>
+            Trondheim, Norway<span className='xs:hidden landscape-small:inline'>.</span>
+            <span className='hidden xs:inline landscape-small:hidden'>
               , seeking new opportunities&nbsp;
               <br className='hidden sm:block' />
               to contribute my skills and knowledge.
@@ -193,7 +193,7 @@ const Hero = () => {
           <HeroSocial />
         </div>
       </div>
-      <div className='absolute bottom-24 flex w-full items-center justify-center landscape-mobile:bottom-6'>
+      <div className='absolute bottom-24 flex w-full items-center justify-center landscape-small:bottom-6'>
         <a href='#about' className='scrollButton group pointer-events-auto transition-transform duration-200 hover:translate-y-2'>
           <div className='flex h-[64px] w-[35px] items-start justify-center rounded-3xl border-4 border-text p-2 transition-colors group-hover:border-primary'>
             <motion.div
