@@ -9,17 +9,18 @@ import Feedbacks from '../components/feedbacks';
 import Contact from '../components/contact';
 import StarsCanvas from '../components/stars';
 import webGLFluidSimulation from 'webgl-fluid-simulation';
-import colors from '../utils/colors';
 
 const App = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
+    const root = getComputedStyle(document.documentElement);
+
     if (canvas)
       webGLFluidSimulation.simulation(canvas, {
-        COLOR_PALETTE: [colors.primaryColor, colors.secondaryColor, colors.accentColor],
-        BACK_COLOR: colors.backgroundColor,
+        COLOR_PALETTE: [root.getPropertyValue('--color-primary'), root.getPropertyValue('--color-secondary'), root.getPropertyValue('--color-accent')],
+        BACK_COLOR: root.getPropertyValue('--color-background'),
       });
   }, []);
 

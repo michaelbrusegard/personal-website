@@ -15,6 +15,14 @@
   src: url('../../public/fonts/SF-Pro.ttf') format('truetype');
 }
 
+:root {
+  --color-text: #000000;
+  --color-background: #ffffff;
+  --color-primary: #4685ff;
+  --color-secondary: #f2f2f2;
+  --color-accent: #ffb084;
+}
+
 * {
   margin: 0;
   padding: 0;

@@ -1,18 +1,18 @@
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+import { useState, useEffect } from 'react';
 import { Variants, motion } from 'framer-motion';
 import 'react-vertical-timeline-component/style.min.css';
 import { experiences } from '../constants';
 import SectionWrapper from '../components/sectionWrapper';
 import { textVariant } from '../utils/motion';
-import colors from '../utils/colors';
 import Image from 'next/image';
 
-const ExperienceCard = ({ experience }: { experience: any }) => (
+const ExperienceCard = ({ experience, currentColors }: { experience: any; currentColors: any }) => (
   <VerticalTimelineElement
-    contentStyle={{ background: colors.secondaryColor, color: colors.textColor }}
-    contentArrowStyle={{ borderRight: `7px solid ${colors.secondaryColor}` }}
+    contentStyle={{ background: currentColors.secondaryColor, color: currentColors.textColor }}
+    contentArrowStyle={{ borderRight: `7px solid var(--color-secondary)` }}
     date={experience.date}
-    iconStyle={{ background: colors.accentColor }}
+    iconStyle={{ background: currentColors.accentColor }}
     icon={<Image src={experience.icon} alt={experience.companyName} className='rounded-full object-contain shadow-timeline-border' />}
   >
     <div>
@@ -32,6 +32,35 @@ const ExperienceCard = ({ experience }: { experience: any }) => (
 );
 
 const Experience = () => {
+  const [currentColors, setCurrentColors] = useState({
+    secondaryColor: '',
+    textColor: '',
+    accentColor: '',
+  });
+
+  const changeColors = () => {
+    const root = getComputedStyle(document.documentElement);
+    setCurrentColors({
+      secondaryColor: root.getPropertyValue('--color-secondary'),
+      textColor: root.getPropertyValue('--color-text'),
+      accentColor: root.getPropertyValue('--color-accent'),
+    });
+  };
+
+  useEffect(() => {
+    changeColors();
+    const observer = new MutationObserver(changeColors);
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['style'],
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <>
       <motion.div variants={textVariant() as Variants}>
@@ -40,9 +69,9 @@ const Experience = () => {
       </motion.div>
 
       <div className='mt-20 flex flex-col'>
-        <VerticalTimeline lineColor={colors.accentColor}>
+        <VerticalTimeline lineColor={currentColors.accentColor}>
           {experiences.map((experience, index) => (
-            <ExperienceCard key={index} experience={experience} />
+            <ExperienceCard key={index} experience={experience} currentColors={currentColors} />
           ))}
         </VerticalTimeline>
       </div>

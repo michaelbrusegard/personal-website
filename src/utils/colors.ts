@@ -1,77 +1,122 @@
-const colors = {
-  textColor: '#FFFFFF',
-  backgroundColor: '#000000',
-  primaryColor: '#4685ff',
-  secondaryColor: '#1a1a1a',
-  accentColor: '#ffb084',
-};
+import webGLFluidSimulation from 'webgl-fluid-simulation';
+interface Color {
+  textColor: string;
+  backgroundColor: string;
+  primaryColor: string;
+  secondaryColor: string;
+  accentColor: string;
+}
 
-export default colors;
+interface Palette {
+  [key: string]: Color;
+}
 
-// textColor: '#FFFFFF',
-// backgroundColor: '#000000',
-// primaryColor: '#ff2600',
-// secondaryColor: '#ff9752',
-// accentColor: '#2ee0ff',
+const palettes: Palette[] = [
+  {
+    light: {
+      textColor: '#000000',
+      backgroundColor: '#FFFFFF',
+      primaryColor: '#4685FF',
+      secondaryColor: '#F2F2F2',
+      accentColor: '#FFB084',
+    },
+    dark: {
+      textColor: '#FFFFFF',
+      backgroundColor: '#000000',
+      primaryColor: '#4685FF',
+      secondaryColor: '#1A1A1A',
+      accentColor: '#FFB084',
+    },
+  },
+  {
+    light: {
+      textColor: '#050505',
+      backgroundColor: '#FAFAFA',
+      primaryColor: '#8FB3FF',
+      secondaryColor: '#EBF1FF',
+      accentColor: '#D41D6D',
+    },
+    dark: {
+      textColor: '#FAFAFA',
+      backgroundColor: '#050505',
+      primaryColor: '#8FB3FF',
+      secondaryColor: '#000F33',
+      accentColor: '#ED78AB',
+    },
+  },
+  {
+    light: {
+      textColor: '#050505',
+      backgroundColor: '#FAFAFA',
+      primaryColor: '#F1F1F1',
+      secondaryColor: '#E6E6E6',
+      accentColor: '#FF0000',
+    },
+    dark: {
+      textColor: '#FAFAFA',
+      backgroundColor: '#050505',
+      primaryColor: '#F1F1F1',
+      secondaryColor: '#272727',
+      accentColor: '#FF0000',
+    },
+  },
+  {
+    light: {
+      textColor: '#000000',
+      backgroundColor: '#FFFFFF',
+      primaryColor: '#FF8BFF',
+      secondaryColor: '#E9FFE8',
+      accentColor: '#52B14E',
+    },
+    dark: {
+      textColor: '#FFFFFF',
+      backgroundColor: '#000000',
+      primaryColor: '#FF8BFF',
+      secondaryColor: '#193718',
+      accentColor: '#E9FFE8',
+    },
+  },
+];
 
-// textColor: '#FFFFFF',
-// backgroundColor: '#000000',
-// primaryColor: '#161617',
-// secondaryColor: '#434344',
-// accentColor: '#FFFFFF',
+let currentPaletteIndex = 0;
+let currentVariant = 'light';
 
-// youtube light
-// textColor: '#050505',
-// backgroundColor: '#FAFAFA',
-// primaryColor: '#F1F1F1',
-// secondaryColor: '#E6E6E6',
-// accentColor: '#FF0000',
+function changeVariant() {
+  if (currentVariant === 'light') {
+    currentVariant = 'dark';
+  } else {
+    currentVariant = 'light';
+  }
 
-// youtube dark
-// textColor: '#FAFAFA',
-// backgroundColor: '#050505',
-// primaryColor: '#F1F1F1',
-// secondaryColor: '#272727',
-// accentColor: '#FF0000',
+  updateColors();
+}
 
-// Chill light
-// textColor: '#000000',
-// backgroundColor: '#FFFFFF',
-// primaryColor: '#4685ff',
-// secondaryColor: '#f2f2f2',
-// accentColor: '#ffb084',
+function changePalette() {
+  if (currentPaletteIndex === palettes.length - 1) {
+    currentPaletteIndex = 0;
+  } else {
+    currentPaletteIndex += 1;
+  }
 
-// Chill dark
-// textColor: '#FFFFFF',
-// backgroundColor: '#000000',
-// primaryColor: '#4685ff',
-// secondaryColor: '#1a1a1a',
-// accentColor: '#ffb084',
+  updateColors();
+}
 
-// Pink marshmellow light
-// textColor: '#050505',
-// backgroundColor: '#fafafa',
-// primaryColor: '#8fb3ff',
-// secondaryColor: '#ebf1ff',
-// accentColor: '#d41d6d',
+let colors = palettes[currentPaletteIndex][currentVariant];
 
-// Pink marshmellow dark
-// textColor: '#fafafa',
-// backgroundColor: '#050505',
-// primaryColor: '#8fb3ff',
-// secondaryColor: '#000f33',
-// accentColor: '#ed78ab',
+function updateColors(): void {
+  colors = palettes[currentPaletteIndex][currentVariant];
 
-//chatgpt light
-// textColor: '#000000',
-// backgroundColor: '#ffffff',
-// primaryColor: '#FF8BFF',
-// secondaryColor: '#E9FFE8',
-// accentColor: '#52b14e',
+  const root = getComputedStyle(document.documentElement);
+  document.documentElement.style.setProperty('--color-text', colors.textColor);
+  document.documentElement.style.setProperty('--color-background', colors.backgroundColor);
+  document.documentElement.style.setProperty('--color-primary', colors.primaryColor);
+  document.documentElement.style.setProperty('--color-secondary', colors.secondaryColor);
+  document.documentElement.style.setProperty('--color-accent', colors.accentColor);
 
-//chatgpt dark
-// textColor: '#FFFFFF',
-// backgroundColor: '#000000',
-// primaryColor: '#FF8BFF',
-// secondaryColor: '#193718',
-// accentColor: '#E9FFE8',
+  webGLFluidSimulation.config({
+    COLOR_PALETTE: [root.getPropertyValue('--color-primary'), root.getPropertyValue('--color-secondary'), root.getPropertyValue('--color-accent')],
+    BACK_COLOR: root.getPropertyValue('--color-background'),
+  });
+}
+
+export { colors as default, changeVariant, changePalette };

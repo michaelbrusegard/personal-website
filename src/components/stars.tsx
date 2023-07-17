@@ -1,9 +1,8 @@
-import React, { useRef, useMemo } from 'react';
+import React, { useRef, useMemo, useEffect } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Mesh } from 'three';
+import { Mesh, MeshBasicMaterial } from 'three';
 import { Suspense } from 'react';
 import { Preload } from '@react-three/drei';
-import colors from '../utils/colors';
 
 const StarsCanvas = () => {
   interface Star {
@@ -14,13 +13,14 @@ const StarsCanvas = () => {
 
   const Stars = () => {
     const starsRef = useRef<THREE.Group>(null);
+    const root = getComputedStyle(document.documentElement);
 
     const starPool = useMemo(() => {
       const pool = [];
 
       for (let i = 0; i < 500; i++) {
-        const isAccentColor = Math.random() < 0.2;
-        const color = isAccentColor ? colors.accentColor : colors.textColor;
+        const isAccentColor = Math.random() < 0.3;
+        const color = isAccentColor ? root.getPropertyValue('--color-accent') : root.getPropertyValue('--color-text');
         const star: Star = {
           position: [Math.random() * 100 - 50, Math.random() * 100 - 50, Math.random() * 100 - 50],
           color: color,
@@ -30,7 +30,7 @@ const StarsCanvas = () => {
       }
 
       return pool;
-    }, []);
+    }, [root]);
 
     useFrame((state, delta) => {
       if (starsRef.current) {
@@ -38,6 +38,33 @@ const StarsCanvas = () => {
         starsRef.current.rotation.y += delta / 15;
       }
     });
+
+    useEffect(() => {
+      const handleColorChange = () => {
+        starPool.forEach((star) => {
+          const isAccentColor = Math.random() < 0.3;
+          const color = isAccentColor ? root.getPropertyValue('--color-accent') : root.getPropertyValue('--color-text');
+          star.color = color;
+
+          if (star.mesh) {
+            const material = star.mesh.material as MeshBasicMaterial;
+            material.color.set(color);
+          }
+        });
+      };
+
+      handleColorChange();
+
+      const observer = new MutationObserver(handleColorChange);
+      observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ['style'],
+      });
+
+      return () => {
+        observer.disconnect();
+      };
+    }, [starPool, root]);
 
     return (
       <group ref={starsRef}>

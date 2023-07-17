@@ -1,21 +1,20 @@
 /** @type {import('tailwindcss').Config} */
 import plugin from 'tailwindcss/plugin';
-import colors from './src/utils/colors';
 
 module.exports = {
   content: ['./src/pages/**/*.{js,ts,jsx,tsx,mdx}', './src/components/**/*.{js,ts,jsx,tsx,mdx}', './src/app/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
       colors: {
-        text: colors.textColor,
-        background: colors.backgroundColor,
-        primary: colors.primaryColor,
-        secondary: colors.secondaryColor,
-        accent: colors.accentColor,
+        text: 'var(--color-text)',
+        background: 'var(--color-background)',
+        primary: 'var(--color-primary)',
+        secondary: 'var(--color-secondary)',
+        accent: 'var(--color-accent)',
       },
       boxShadow: {
-        'timeline-border': `0 0 0 4px ${colors.accentColor}`,
-        card: `0 0 5px 1px ${colors.textColor}`,
+        'timeline-border': `0 0 0 4px var(--color-accent)`,
+        card: `0 0 5px 1px var(--color-text)`,
       },
       screens: {
         xs: '448px',
