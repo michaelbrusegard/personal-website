@@ -7,9 +7,9 @@ type MobileMenuProps = {
   isOpen: boolean;
   onClose: () => void;
   isDarkMode: boolean;
-  PaletteIcon: () => JSX.Element;
-  SunIcon: () => JSX.Element;
-  MoonIcon: () => JSX.Element;
+  PaletteIcon: React.FC<{ tabIndex: number }>;
+  SunIcon: React.FC<{ tabIndex: number }>;
+  MoonIcon: React.FC<{ tabIndex: number }>;
 };
 
 const MobileMenu = ({ isOpen, onClose, isDarkMode, PaletteIcon, SunIcon, MoonIcon }: MobileMenuProps) => {
@@ -43,7 +43,7 @@ const MobileMenu = ({ isOpen, onClose, isDarkMode, PaletteIcon, SunIcon, MoonIco
           <motion.li
             key={link.id}
             className='nav-link cursor-pointer font-mono text-[18px] font-medium text-text hover:text-primary'
-            tabIndex={0}
+            tabIndex={isOpen ? 0 : -1}
             variants={fadeIn('down', '', 0.8, 0.2) as Variants}
             initial='hidden'
             animate={isOpen ? 'show' : 'hidden'}
@@ -67,8 +67,8 @@ const MobileMenu = ({ isOpen, onClose, isDarkMode, PaletteIcon, SunIcon, MoonIco
           initial='hidden'
           animate={isOpen ? 'show' : 'hidden'}
         >
-          {isDarkMode ? <SunIcon /> : <MoonIcon />}
-          <PaletteIcon />
+          {isDarkMode ? <SunIcon tabIndex={isOpen ? 0 : -1} /> : <MoonIcon tabIndex={isOpen ? 0 : -1} />}
+          <PaletteIcon tabIndex={isOpen ? 0 : -1} />
         </motion.li>
       </ul>
     </motion.div>

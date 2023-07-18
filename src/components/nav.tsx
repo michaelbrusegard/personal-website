@@ -21,16 +21,21 @@ const Nav = () => {
     setIsDarkMode(!isDarkMode);
   };
 
-  const PaletteIcon = () => (
+  const PaletteIcon = ({ tabIndex }: { tabIndex: number }) => (
     <motion.svg
       width='100%'
       height='100%'
       viewBox='0 0 256 256'
       className='h-6 w-6 text-text hover:text-primary'
-      tabIndex={0}
+      tabIndex={tabIndex}
       whileHover={{ translateY: '-2px' }}
       transition={{ duration: 0.2 }}
       onClick={changeTheme}
+      onKeyDown={(event) => {
+        if (event.key === 'Enter') {
+          changeTheme();
+        }
+      }}
     >
       <g transform='matrix(10.882,0,0,10.882,0,21.5682)'>
         <path
@@ -57,16 +62,21 @@ const Nav = () => {
     </motion.svg>
   );
 
-  const SunIcon = () => (
+  const SunIcon = ({ tabIndex }: { tabIndex: number }) => (
     <motion.svg
       width='100%'
       height='100%'
       viewBox='0 0 256 256'
       className='h-6 w-6 text-text hover:text-primary'
-      tabIndex={0}
+      tabIndex={tabIndex}
       whileHover={{ translateY: '-2px' }}
       transition={{ duration: 0.2 }}
       onClick={toggleDarkMode}
+      onKeyDown={(event) => {
+        if (event.key === 'Enter') {
+          toggleDarkMode();
+        }
+      }}
     >
       <g transform='matrix(12.1195,0,0,12.086,0,0)'>
         <path
@@ -81,16 +91,21 @@ const Nav = () => {
     </motion.svg>
   );
 
-  const MoonIcon = () => (
+  const MoonIcon = ({ tabIndex }: { tabIndex: number }) => (
     <motion.svg
       width='100%'
       height='100%'
       viewBox='0 0 256 256'
       className='h-6 w-6 text-text hover:text-primary'
-      tabIndex={0}
+      tabIndex={tabIndex}
       whileHover={{ translateY: '-2px' }}
       transition={{ duration: 0.2 }}
       onClick={toggleDarkMode}
+      onKeyDown={(event) => {
+        if (event.key === 'Enter') {
+          toggleDarkMode();
+        }
+      }}
     >
       <g transform='matrix(13.0291,0,0,12.9582,0,0)'>
         <path
@@ -183,8 +198,8 @@ const Nav = () => {
             initial='hidden'
             animate='show'
           >
-            {isDarkMode ? <SunIcon /> : <MoonIcon />}
-            <PaletteIcon />
+            {isDarkMode ? <SunIcon tabIndex={0} /> : <MoonIcon tabIndex={0} />}
+            <PaletteIcon tabIndex={0} />
           </motion.li>
         </ul>
         <motion.div
