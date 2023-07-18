@@ -7,10 +7,10 @@ import MobileMenu from '../components/mobileMenu';
 import webGLFluidSimulation from 'webgl-fluid-simulation';
 import { motion, Variants } from 'framer-motion';
 import { fadeIn } from '../utils/motion';
-import { changeVariant, changePalette } from '../utils/colors';
+import { changeVariant, changePalette, isDarkVariant } from '../utils/colors';
 
 const Nav = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(isDarkVariant);
   const [isOpen, setIsOpen] = useState(false);
 
   const changeTheme = () => {

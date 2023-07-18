@@ -48,14 +48,14 @@ const palettes: Palette[] = [
     light: {
       textColor: '#050505',
       backgroundColor: '#FAFAFA',
-      primaryColor: '#F1F1F1',
+      primaryColor: '#cbc7c3',
       secondaryColor: '#E6E6E6',
       accentColor: '#FF0000',
     },
     dark: {
       textColor: '#FAFAFA',
       backgroundColor: '#050505',
-      primaryColor: '#F1F1F1',
+      primaryColor: '#cbc7c3',
       secondaryColor: '#272727',
       accentColor: '#FF0000',
     },
@@ -78,8 +78,9 @@ const palettes: Palette[] = [
   },
 ];
 
-let currentPaletteIndex = 0;
-let currentVariant = 'light';
+function isDarkVariant(): boolean {
+  return currentVariant === 'dark';
+}
 
 function changeVariant() {
   if (currentVariant === 'light') {
@@ -88,6 +89,7 @@ function changeVariant() {
     currentVariant = 'light';
   }
 
+  localStorage.setItem('variant', currentVariant);
   updateColors();
 }
 
@@ -98,10 +100,9 @@ function changePalette() {
     currentPaletteIndex += 1;
   }
 
+  localStorage.setItem('colorPalette', String(currentPaletteIndex));
   updateColors();
 }
-
-let colors = palettes[currentPaletteIndex][currentVariant];
 
 function updateColors(): void {
   colors = palettes[currentPaletteIndex][currentVariant];
@@ -119,4 +120,12 @@ function updateColors(): void {
   });
 }
 
-export { colors as default, changeVariant, changePalette };
+let storedPalette = localStorage.getItem('colorPalette');
+let storedVariant = localStorage.getItem('variant');
+
+let currentPaletteIndex = storedPalette ? parseInt(storedPalette) : 0;
+let currentVariant = storedVariant || 'light';
+
+let colors = palettes[currentPaletteIndex][currentVariant];
+
+export { colors as default, updateColors, isDarkVariant, changeVariant, changePalette };

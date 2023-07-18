@@ -16,11 +16,11 @@
 }
 
 :root {
-  --color-text: #000000;
-  --color-background: #ffffff;
-  --color-primary: #4685ff;
-  --color-secondary: #f2f2f2;
-  --color-accent: #ffb084;
+  --color-text: rgba(0, 0, 0, 0);
+  --color-background: rgba(0, 0, 0, 0);
+  --color-primary: rgba(0, 0, 0, 0);
+  --color-secondary: rgba(0, 0, 0, 0);
+  --color-accent: rgba(0, 0, 0, 0);
 }
 
 * {

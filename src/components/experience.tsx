@@ -33,9 +33,9 @@ const ExperienceCard = ({ experience, currentColors }: { experience: any; curren
 
 const Experience = () => {
   const [currentColors, setCurrentColors] = useState({
-    secondaryColor: '',
-    textColor: '',
-    accentColor: '',
+    secondaryColor: 'rgba(0, 0, 0, 0)',
+    textColor: 'rgba(0, 0, 0, 0)',
+    accentColor: 'rgba(0, 0, 0, 0)',
   });
 
   const changeColors = () => {

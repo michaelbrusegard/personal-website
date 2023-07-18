@@ -9,11 +9,13 @@ import Feedbacks from '../components/feedbacks';
 import Contact from '../components/contact';
 import StarsCanvas from '../components/stars';
 import webGLFluidSimulation from 'webgl-fluid-simulation';
+import { updateColors } from '../utils/colors';
 
 const App = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
+    updateColors();
     const canvas = canvasRef.current;
     const root = getComputedStyle(document.documentElement);
 
