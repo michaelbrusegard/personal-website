@@ -355,3 +355,41 @@ export const testimonials = [
     mail: 'cjgutzkow@gmail.com',
   },
 ];
+
+export const techUsed = [
+ {
+        name: 'CSS',
+        icon: css,
+        link: 'https://developer.mozilla.org/docs/Web/CSS',
+      },
+      {
+        name: 'Tailwind CSS',
+        icon: tailwindcss,
+        link: 'https://tailwindcss.com/',
+      },
+      {
+        name: 'Typescript',
+        icon: typescript,
+        link: 'https://www.typescriptlang.org/',
+      },
+      {
+        name: 'React',
+        icon: react,
+        link: 'https://react.dev/',
+      },
+      {
+        name: 'Framer Motion',
+        icon: framermotion,
+        link: 'https://www.framer.com/motion/',
+      },
+      {
+        name: 'Three.js',
+        icon: threejs,
+        link: 'https://threejs.org/',
+      },
+      {
+        name: 'Next.js',
+        icon: nextjs,
+        link: 'https://nextjs.org/',
+      },
+];

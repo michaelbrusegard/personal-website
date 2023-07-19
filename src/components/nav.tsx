@@ -134,7 +134,7 @@ const Nav = () => {
   }, []);
 
   return (
-    <nav className='paddingX fixed top-0 z-20 flex w-full items-center bg-secondary py-5'>
+    <nav className='paddingX fixed top-0 z-20 flex w-full items-center bg-secondary py-5 shadow-xl'>
       <div className='mx-auto flex w-full max-w-7xl select-none items-center justify-between'>
         <Link
           href='/'

@@ -33,7 +33,7 @@ const MobileMenu = ({ isOpen, onClose, isDarkMode, PaletteIcon, SunIcon, MoonIco
 
   return (
     <motion.div
-      className={`paddingX fixed left-0 top-[76px] w-full select-none bg-secondary ${isOpen ? '' : 'pointer-events-none'}`}
+      className={`paddingX fixed left-0 top-[76px] w-full select-none bg-secondary shadow-xl ${isOpen ? '' : 'pointer-events-none'}`}
       variants={foldOut(0.8, 0.2) as Variants}
       initial='hidden'
       animate={isOpen ? 'show' : 'hidden'}

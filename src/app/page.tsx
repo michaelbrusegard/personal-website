@@ -8,6 +8,7 @@ import Works from '../components/works';
 import Feedbacks from '../components/feedbacks';
 import Contact from '../components/contact';
 import StarsCanvas from '../components/stars';
+import Foot from '../components/foot';
 import webGLFluidSimulation from 'webgl-fluid-simulation';
 import { updateColors } from '../utils/colors';
 
@@ -39,6 +40,7 @@ const App = () => {
           <Contact />
           <StarsCanvas />
         </div>
+        <Foot />
       </div>
     </>
   );
