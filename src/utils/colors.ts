@@ -76,6 +76,102 @@ const palettes: Palette[] = [
       accentColor: '#E9FFE8',
     },
   },
+  {
+    light: {
+      textColor: '#1D1C1D',
+      backgroundColor: '#FFFFFF',
+      primaryColor: '#683371',
+      secondaryColor: '#F4EDE4',
+      accentColor: '#ECB22E',
+    },
+    dark: {
+      textColor: '#FFFFFF',
+      backgroundColor: '#1D1C1D',
+      primaryColor: '#683371',
+      secondaryColor: '#241B0F',
+      accentColor: '#ECB22E',
+    },
+  },
+  {
+    light: {
+      textColor: '#131417',
+      backgroundColor: '#FFFFFF',
+      primaryColor: '#47CF73',
+      secondaryColor: '#E2E4E9',
+      accentColor: '#E4D944',
+    },
+    dark: {
+      textColor: '#FFFFFF',
+      backgroundColor: '#131417',
+      primaryColor: '#47CF73',
+      secondaryColor: '#2C303A',
+      accentColor: '#E4D944',
+    },
+  },
+  {
+    light: {
+      textColor: '#161315',
+      backgroundColor: '#F1EEF0',
+      primaryColor: '#95D8F9',
+      secondaryColor: '#D3D9D8',
+      accentColor: '#6B7967',
+    },
+    dark: {
+      textColor: '#F1EEF0',
+      backgroundColor: '#161315',
+      primaryColor: '#95D8F9',
+      secondaryColor: '#181B1B',
+      accentColor: '#AFB9AC',
+    },
+  },
+  {
+    light: {
+      textColor: '#130111',
+      backgroundColor: '#FEE7FB',
+      primaryColor: '#B40847',
+      secondaryColor: '#FCD4CF',
+      accentColor: '#F42A0B',
+    },
+    dark: {
+      textColor: '#FEE7FB',
+      backgroundColor: '#130111',
+      primaryColor: '#B40847',
+      secondaryColor: '#360903',
+      accentColor: '#F42F10',
+    },
+  },
+  {
+    light: {
+      textColor: '#1E1012',
+      backgroundColor: '#F4EBEC',
+      primaryColor: '#EA445A',
+      secondaryColor: '#DAECE9',
+      accentColor: '#19E6E3',
+    },
+    dark: {
+      textColor: '#F4EBEC',
+      backgroundColor: '#1E1012',
+      primaryColor: '#EA445A',
+      secondaryColor: '#11221F',
+      accentColor: '#19E6E3',
+    },
+  },
+    {
+    light: {
+      textColor: '#0F0218',
+      backgroundColor: '#EBD0FB',
+      primaryColor: '#530A7F',
+      secondaryColor: '#DAAAF8',
+      accentColor: '#C271F4',
+    },
+    dark: {
+      textColor: '#EBD0FB',
+      backgroundColor: '#0F0218',
+      primaryColor: '#530A7F',
+      secondaryColor: '#1F042F',
+      accentColor: '#C271F4',
+    },
+  },
 ];
 
 function isDarkVariant(): boolean {
