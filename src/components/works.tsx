@@ -115,7 +115,10 @@ const Works = () => {
       </motion.div>
 
       <div className='flex w-full'>
-        <motion.p variants={fadeIn('', '', 0.1, 1) as Variants} className='pointer-events-auto mt-3 max-w-3xl text-[17px] leading-[30px] text-text'>
+        <motion.p
+          variants={fadeIn('', '', 0.1, 1) as Variants}
+          className='section-text pointer-events-auto mt-3 max-w-3xl text-[17px] leading-[30px] text-text'
+        >
           I have a collection of projects that effectively demonstrate my skills and experience, showcasing real-world examples of my work. Each project has
           live production links as well as repositories containing the source code. These projects serve as a testament to my proficiency in tackling different
           challenges, adeptness with diverse technologies, and ability to efficiently manage projects.

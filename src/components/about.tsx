@@ -42,7 +42,7 @@ const About = () => {
         <h2 className='section-title'>Overview.</h2>
       </motion.div>
 
-      <motion.p variants={fadeIn('', '', 0.1, 1) as Variants} className='pointer-events-auto mt-4 max-w-3xl text-[17px] leading-[30px] text-text'>
+      <motion.p variants={fadeIn('', '', 0.1, 1) as Variants} className='section-text pointer-events-auto mt-4 max-w-3xl text-[17px] leading-[30px] text-text'>
         As a junior software developer and a computer science student, I bring a strong foundation in TypeScript, JavaScript, Python, and Java. Throughout my
         journey, I&apos;ve worked with frameworks like Django, Next.js, and Express.js. I&apos;m a quick learner, I thrive on collaboration and enjoy creating
         efficient, scalable, and user-friendly solutions to tackle real-world problems. I&apos;m eager to work together and contribute my skills to bring your

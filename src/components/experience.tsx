@@ -48,18 +48,12 @@ const Experience = () => {
   };
 
   useEffect(() => {
-    changeColors();
-    const observer = new MutationObserver(changeColors);
-
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ['style'],
-    });
+    window.addEventListener('colorsUpdated', changeColors);
 
     return () => {
-      observer.disconnect();
+      window.removeEventListener('colorsUpdated', changeColors);
     };
-  }, []);
+  });
 
   return (
     <>

@@ -156,7 +156,7 @@ const palettes: Palette[] = [
       accentColor: '#19E6E3',
     },
   },
-    {
+  {
     light: {
       textColor: '#0F0218',
       backgroundColor: '#EBD0FB',
@@ -173,6 +173,8 @@ const palettes: Palette[] = [
     },
   },
 ];
+
+const colorsUpdateEvent = new Event('colorsUpdated');
 
 function isDarkVariant(): boolean {
   return currentVariant === 'dark';
@@ -209,6 +211,8 @@ function updateColors(): void {
   document.documentElement.style.setProperty('--color-primary', colors.primaryColor);
   document.documentElement.style.setProperty('--color-secondary', colors.secondaryColor);
   document.documentElement.style.setProperty('--color-accent', colors.accentColor);
+
+  window.dispatchEvent(colorsUpdateEvent);
 
   webGLFluidSimulation.config({
     COLOR_PALETTE: [root.getPropertyValue('--color-primary'), root.getPropertyValue('--color-secondary'), root.getPropertyValue('--color-accent')],

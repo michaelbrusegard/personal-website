@@ -53,16 +53,10 @@ const StarsCanvas = () => {
         });
       };
 
-      handleColorChange();
-
-      const observer = new MutationObserver(handleColorChange);
-      observer.observe(document.documentElement, {
-        attributes: true,
-        attributeFilter: ['style'],
-      });
+      window.addEventListener('colorsUpdated', handleColorChange);
 
       return () => {
-        observer.disconnect();
+        window.removeEventListener('colorsUpdated', handleColorChange);
       };
     }, [starPool, root]);
 

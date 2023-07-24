@@ -17,15 +17,16 @@ import typescript from '../../public/icons/tech/frontend/typescript.svg';
 import react from '../../public/icons/tech/frontend/react.svg';
 import framermotion from '../../public/icons/tech/frontend/framermotion.svg';
 import threejs from '../../public/icons/tech/frontend/threejs.svg';
-import googlecloudplatform from '../../public/icons/tech/integrations/googlecloudplatform.svg';
-import stripe from '../../public/icons/tech/integrations/stripe.svg';
-import firebase from '../../public/icons/tech/integrations/firebase.svg';
 import nodejs from '../../public/icons/tech/backend/nodejs.svg';
 import python from '../../public/icons/tech/backend/python.svg';
 import java from '../../public/icons/tech/backend/java.svg';
 import express from '../../public/icons/tech/backend/express.svg';
 import django from '../../public/icons/tech/backend/django.svg';
 import nextjs from '../../public/icons/tech/backend/nextjs.svg';
+import googlecloudplatform from '../../public/icons/tech/integrations/googlecloudplatform.svg';
+import firebase from '../../public/icons/tech/integrations/firebase.svg';
+import github from '../../public/icons/tech/integrations/github.svg';
+import stripe from '../../public/icons/tech/integrations/stripe.svg';
 import git from '../../public/icons/tech/tools/git.svg';
 import figma from '../../public/icons/tech/tools/figma.svg';
 import linux from '../../public/icons/tech/tools/linux.svg';
@@ -139,14 +140,19 @@ export const services = [
         link: 'https://cloud.google.com',
       },
       {
-        name: 'Stripe',
-        icon: stripe,
-        link: 'https://stripe.com/',
-      },
-      {
         name: 'Firebase',
         icon: firebase,
         link: 'https://firebase.google.com',
+      },
+      {
+        name: 'GitHub CI/CD and DevOps',
+        icon: github,
+        link: 'https://docs.github.com/',
+      },
+      {
+        name: 'Stripe',
+        icon: stripe,
+        link: 'https://stripe.com/',
       },
     ],
   },
@@ -357,39 +363,44 @@ export const testimonials = [
 ];
 
 export const techUsed = [
- {
-        name: 'CSS',
-        icon: css,
-        link: 'https://developer.mozilla.org/docs/Web/CSS',
-      },
-      {
-        name: 'Tailwind CSS',
-        icon: tailwindcss,
-        link: 'https://tailwindcss.com/',
-      },
-      {
-        name: 'Typescript',
-        icon: typescript,
-        link: 'https://www.typescriptlang.org/',
-      },
-      {
-        name: 'React',
-        icon: react,
-        link: 'https://react.dev/',
-      },
-      {
-        name: 'Framer Motion',
-        icon: framermotion,
-        link: 'https://www.framer.com/motion/',
-      },
-      {
-        name: 'Three.js',
-        icon: threejs,
-        link: 'https://threejs.org/',
-      },
-      {
-        name: 'Next.js',
-        icon: nextjs,
-        link: 'https://nextjs.org/',
-      },
+  {
+    name: 'CSS',
+    icon: css,
+    link: 'https://developer.mozilla.org/docs/Web/CSS',
+  },
+  {
+    name: 'Tailwind CSS',
+    icon: tailwindcss,
+    link: 'https://tailwindcss.com/',
+  },
+  {
+    name: 'Typescript',
+    icon: typescript,
+    link: 'https://www.typescriptlang.org/',
+  },
+  {
+    name: 'React',
+    icon: react,
+    link: 'https://react.dev/',
+  },
+  {
+    name: 'Framer Motion',
+    icon: framermotion,
+    link: 'https://www.framer.com/motion/',
+  },
+  {
+    name: 'Three.js',
+    icon: threejs,
+    link: 'https://threejs.org/',
+  },
+  {
+    name: 'Next.js',
+    icon: nextjs,
+    link: 'https://nextjs.org/',
+  },
+  {
+    name: 'GitHub CI/CD and DevOps',
+    icon: github,
+    link: 'https://docs.github.com/',
+  },
 ];

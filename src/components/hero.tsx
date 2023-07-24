@@ -11,11 +11,14 @@ const Hero = () => {
   const spanRefs = useRef<Array<HTMLSpanElement>>([]);
 
   useEffect(() => {
-    const scrollButton = document.querySelector('.scrollButton') as HTMLElement;
+    const scrollButton = document.querySelector('.scroll-button') as HTMLElement;
     if (scrollButton) fluidHover(scrollButton);
     scrollButton.addEventListener('click', () => {
       webGLFluidSimulation.splats();
     });
+
+    const aboutText = document.querySelector('.about-text') as HTMLElement;
+    if (aboutText) fluidHover(aboutText);
 
     return letterBounce('span.bouncer');
   }, []);
@@ -176,7 +179,7 @@ const Hero = () => {
             </div>
           </h1>
           <motion.p
-            className='leading[20px] mt-0 text-[16px] font-medium text-text sm:text-[26px] lg:text-[30px] lg:leading-[40px] xs:mt-[2] xs:text-[20px] xs:leading-normal'
+            className='about-text leading[20px] mt-0 text-[16px] font-medium text-text sm:text-[26px] lg:text-[30px] lg:leading-[40px] xs:mt-[2] xs:text-[20px] xs:leading-normal'
             variants={fadeIn('', '', 1.5, 1) as Variants}
             initial='hidden'
             animate='show'
@@ -194,7 +197,7 @@ const Hero = () => {
         </div>
       </div>
       <div className='absolute bottom-24 flex w-full items-center justify-center landscape-md:bottom-6'>
-        <a href='#about' className='scrollButton group pointer-events-auto transition-transform duration-200 hover:translate-y-2'>
+        <a href='#about' className='scroll-button group pointer-events-auto transition-transform duration-200 hover:translate-y-2'>
           <div className='flex h-[64px] w-[35px] items-start justify-center rounded-3xl border-4 border-text p-2 transition-colors group-hover:border-primary'>
             <motion.div
               animate={{

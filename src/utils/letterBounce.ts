@@ -2,11 +2,11 @@ import fluidHover from '../utils/fluidHover';
 
 function bounce(letter: HTMLElement) {
   if (!letter.classList.contains('letterBounce')) {
-    letter.classList.add('letterBounce');
     if (letter.classList.contains('gradient-letter')) {
       const root = getComputedStyle(document.documentElement);
       letter.style.color = root.getPropertyValue('--color-accent');
     }
+    letter.classList.add('letterBounce');
     fluidHover(letter);
     setTimeout(function () {
       letter.classList.remove('letterBounce');
