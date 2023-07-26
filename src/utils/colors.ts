@@ -220,8 +220,13 @@ function updateColors(): void {
   });
 }
 
-let storedPalette = localStorage.getItem('colorPalette');
-let storedVariant = localStorage.getItem('variant');
+let storedPalette;
+let storedVariant;
+
+if (typeof window !== 'undefined') {
+  storedPalette = localStorage.getItem('colorPalette');
+  storedVariant = localStorage.getItem('variant');
+}
 
 let currentPaletteIndex = storedPalette ? parseInt(storedPalette) : 0;
 let currentVariant = storedVariant || 'light';

@@ -15,8 +15,9 @@ const CanvasLoader = () => {
         flexDirection: 'column',
       }}
     >
-      <span className='translate-z-0 relative h-4 w-4 transform rounded-full'></span>
-      <p className='section-subtitle'>{progress.toFixed(2)}%</p>
+      <p className='section-subtitle pointer-events-none rounded-xl bg-secondary px-1 pt-[1px] opacity-100'>
+        {progress ? `${(progress * 100).toFixed(2)}%` : 'Loading...'}
+      </p>
     </Html>
   );
 };
