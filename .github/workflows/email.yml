@@ -29,7 +29,7 @@ jobs:
                     --region=europe-north1 \
                     --runtime=nodejs18 \
                     --source=${{ github.workspace }}/email_function \
-                    --entry-point=emailSender \
+                    --entry-point=sendEmail \
                     --trigger-http \
                     --project=${{ secrets.GCP_PROJECT_ID }} \
-                    --set-env-vars SENDING_EMAIL=${{ secrets.SENDING_EMAIL }},SENDING_PASS=${{ secrets.SENDING_PASS }},RECEIVING_EMAIL=${{ secrets.RECEIVING_EMAIL }} \
+                    --set-env-vars SENDING_EMAIL=${{ secrets.SENDING_EMAIL }},SENDING_PASS=${{ secrets.SENDING_PASS }},RECEIVING_EMAIL=${{ secrets.RECEIVING_EMAIL }}
