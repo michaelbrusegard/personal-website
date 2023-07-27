@@ -2,6 +2,7 @@ require('dotenv').config();
 const nodemailer = require('nodemailer');
 
 exports.sendEmail = (req, res) => {
+  console.log('HELLO FROM EMAIL FUNCTION');
   const { name, email, message } = req.body;
 
   const transporter = nodemailer.createTransport({
@@ -24,10 +25,10 @@ exports.sendEmail = (req, res) => {
       console.error('Error sending email:', error);
       res.status(500).send('Error sending email');
     } else {
-      console.log('Email sent: ' + info.response);
       res.set('Access-Control-Allow-Origin', process.env.DOMAIN_URL);
       res.set('Access-Control-Allow-Methods', 'POST');
       res.set('Access-Control-Allow-Headers', 'Content-Type');
+      console.log('Email sent: ' + info.response);
       res.status(200).send('Email sent successfully');
     }
   });
