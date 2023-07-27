@@ -1,0 +1,11 @@
+{
+    "name": "email_function",
+    "description": "Function that sends emails",
+    "main": "emailSender.js",
+    "author": "Michael Brusegard",
+    "license": "Apache-2.0",
+    "dependencies": {
+        "@google-cloud/storage": "^6.9.5",
+        "nodemailer": "^6.9.4"
+    }
+}
