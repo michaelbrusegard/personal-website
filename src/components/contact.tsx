@@ -14,8 +14,38 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e: any) => {};
-  const handleSubmit = (e: any) => {};
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setForm((prevForm) => ({ ...prevForm, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const response = await fetch('https://europe-north1-michaelbrusegard.cloudfunctions.net/emailSender', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(form),
+      });
+
+      if (response.ok) {
+        setLoading(false);
+        alert('Email sent successfully');
+        setForm({ name: '', email: '', message: '' });
+      } else {
+        setLoading(false);
+        alert('Error sending email');
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      setLoading(false);
+      alert('Error sending email');
+    }
+  };
 
   return (
     <div className='pointer-events-auto flex flex-col-reverse gap-10 overflow-hidden xl:mt-12 xl:flex-row'>
