@@ -42,8 +42,9 @@ const Contact = () => {
       }
     } catch (error) {
       console.error('Error sending email:', error);
+      console.log('Error details:', error);
       setLoading(false);
-      alert('Error sending email');
+      alert('Error sending');
     }
   };
 

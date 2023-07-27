@@ -25,6 +25,9 @@ exports.sendEmail = (req, res) => {
       res.status(500).send('Error sending email');
     } else {
       console.log('Email sent: ' + info.response);
+      res.set('Access-Control-Allow-Origin', process.env.DOMAIN_URL);
+      res.set('Access-Control-Allow-Methods', 'POST');
+      res.set('Access-Control-Allow-Headers', 'Content-Type');
       res.status(200).send('Email sent successfully');
     }
   });

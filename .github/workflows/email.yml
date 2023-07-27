@@ -32,5 +32,5 @@ jobs:
                     --entry-point=sendEmail \
                     --trigger-http \
                     --project=${{ secrets.GCP_PROJECT_ID }} \
-                    --set-env-vars SENDING_EMAIL=${{ secrets.SENDING_EMAIL }},SENDING_PASS=${{ secrets.SENDING_PASS }},RECEIVING_EMAIL=${{ secrets.RECEIVING_EMAIL }} \
+                    --set-env-vars SENDING_EMAIL=${{ secrets.SENDING_EMAIL }},SENDING_PASS=${{ secrets.SENDING_PASS }},RECEIVING_EMAIL=${{ secrets.RECEIVING_EMAIL }},DOMAIN_URL=${{ secrets.DOMAIN_URL }} \
                     --allow-unauthenticated
