@@ -6,6 +6,7 @@
     "license": "Apache-2.0",
     "dependencies": {
         "@google-cloud/storage": "^6.9.5",
+        "dotenv": "^16.3.1",
         "nodemailer": "^6.9.4"
     }
 }
