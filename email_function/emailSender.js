@@ -1,7 +1,8 @@
 require('dotenv').config();
 const nodemailer = require('nodemailer');
+const cors = require('cors');
 
-exports.sendEmail = (req, res) => {
+exports.processEmail = (req, res) => {
   const { name, email, message } = req.body;
 
   const transporter = nodemailer.createTransport({
@@ -24,11 +25,15 @@ exports.sendEmail = (req, res) => {
       console.error('Error sending email:', error);
       res.status(500).send('Error sending email');
     } else {
-      res.set('Access-Control-Allow-Origin', process.env.DOMAIN_URL);
-      res.set('Access-Control-Allow-Methods', 'POST');
-      res.set('Access-Control-Allow-Headers', 'Content-Type');
       console.log('Email sent: ' + info.response);
       res.status(200).send('Email sent successfully');
     }
+  });
+};
+
+const corsMiddleware = cors({ origin: process.env.DOMAIN_URL });
+exports.sendEmail = (req, res) => {
+  corsMiddleware(req, res, () => {
+    exports.processEmail(req, res);
   });
 };

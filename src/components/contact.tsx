@@ -63,6 +63,8 @@ const Contact = () => {
               onChange={handleChange}
               placeholder="What's your name?"
               className='outlined-none rounded-lg border-none bg-background px-6 py-4 font-medium text-text placeholder:opacity-75'
+              required
+              disabled={loading}
             />
           </label>
           <label className='flex flex-col'>
@@ -74,6 +76,8 @@ const Contact = () => {
               onChange={handleChange}
               placeholder="What's your Email?"
               className='outlined-none rounded-lg border-none bg-background px-6 py-4 font-medium text-text placeholder:opacity-75'
+              required
+              disabled={loading}
             />
           </label>
           <label className='flex flex-col'>
@@ -85,12 +89,19 @@ const Contact = () => {
               onChange={handleChange}
               placeholder='What do you want to say?'
               className='outlined-none resize-none rounded-lg border-none bg-background px-6 py-4 font-medium text-text placeholder:opacity-75'
+              required
+              disabled={loading}
             />
           </label>
 
           <button
             type='submit'
-            className='w-fit rounded-xl bg-primary px-8 py-3 font-semibold text-background outline-none transition-all duration-200 hover:-translate-y-1 hover:from-primary hover:to-accent hover:text-text hover:shadow-xl hover:shadow-primary hover:bg-gradient-30'
+            className={`w-fit rounded-xl bg-primary px-8 py-3 font-semibold text-background outline-none transition-all duration-200 ${
+              loading
+                ? 'pointer-events-none'
+                : 'hover:-translate-y-1 hover:from-primary hover:to-accent hover:text-text hover:shadow-xl hover:shadow-primary hover:bg-gradient-30'
+            }`}
+            disabled={loading}
           >
             {loading ? 'Sending...' : 'Send Message'}
           </button>
