@@ -1,11 +1,13 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Variants, motion } from 'framer-motion';
 import SectionWrapper from './sectionWrapper';
 import { slideIn } from '../utils/motion';
 import DogCanvas from './dog';
+import webGLFluidSimulation from 'webgl-fluid-simulation';
 
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -13,6 +15,15 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
+  const [feedbackMessage, setFeedbackMessage] = useState('');
+
+  useEffect(() => {
+    const button = buttonRef.current;
+    if (button)
+      button.addEventListener('click', () => {
+        webGLFluidSimulation.splats();
+      });
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -33,18 +44,19 @@ const Contact = () => {
       });
 
       if (response.ok) {
-        setLoading(false);
-        alert('Email sent successfully');
+        setFeedbackMessage('Email sent successfully');
         setForm({ name: '', email: '', message: '' });
       } else {
-        setLoading(false);
-        alert('Error sending email');
+        setFeedbackMessage('Error sending email');
       }
     } catch (error) {
       console.error('Error sending email:', error);
-      console.log('Error details:', error);
+      setFeedbackMessage('Error sending email');
+    } finally {
       setLoading(false);
-      alert('Error sending');
+      setTimeout(() => {
+        setFeedbackMessage('');
+      }, 5000);
     }
   };
 
@@ -95,8 +107,9 @@ const Contact = () => {
           </label>
 
           <button
+            ref={buttonRef}
             type='submit'
-            className={`w-fit rounded-xl bg-primary px-8 py-3 font-semibold text-background outline-none transition-all duration-200 ${
+            className={`w-fit select-none rounded-xl bg-primary px-8 py-3 font-semibold text-background transition-all duration-200 ${
               loading
                 ? 'pointer-events-none'
                 : 'hover:-translate-y-1 hover:from-primary hover:to-accent hover:text-text hover:shadow-xl hover:shadow-primary hover:bg-gradient-30'
@@ -105,6 +118,9 @@ const Contact = () => {
           >
             {loading ? 'Sending...' : 'Send Message'}
           </button>
+          {feedbackMessage && (
+            <p className={`ml-1 font-semibold ${feedbackMessage === 'Email sent successfully' ? 'text-green-600' : 'text-red-600'}`}>{feedbackMessage}</p>
+          )}
         </form>
       </motion.div>
 
