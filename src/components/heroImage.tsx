@@ -4,6 +4,7 @@ import heroDraw from '../../public/photos/hero/draw.png';
 import Image from 'next/image';
 import webGLFluidSimulation from 'webgl-fluid-simulation';
 import { motion, Variants } from 'framer-motion';
+import { useEffect } from 'react';
 
 const HeroImage = () => {
   const drawVariants = {
@@ -38,6 +39,25 @@ const HeroImage = () => {
       { once: true }
     );
   };
+
+  useEffect(() => {
+    const updateGradientColors = () => {
+      const linearGradient = document.getElementById('gradient');
+      if (linearGradient) {
+        linearGradient.querySelector('stop[offset="0%"]')?.setAttribute('stopColor', colors.accentColor);
+        linearGradient.querySelector('stop[offset="100%"]')?.setAttribute('stopColor', colors.primaryColor);
+      }
+    };
+
+    const handleColorsUpdated = () => {
+      updateGradientColors();
+    };
+
+    window.addEventListener('colorsUpdated', handleColorsUpdated);
+    return () => {
+      window.removeEventListener('colorsUpdated', handleColorsUpdated);
+    };
+  }, []);
 
   return (
     <div className='relative left-0 h-full w-full overflow-hidden md:left-[100px] md:w-[calc(100%-100px)] xl:left-[200px] xl:w-[calc(100%-200px)] landscape-md:left-[400px] landscape-md:w-[calc(100%-400px)]'>
