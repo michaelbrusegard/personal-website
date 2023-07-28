@@ -16,8 +16,8 @@ exports.processEmail = (req, res) => {
   const mailOptions = {
     from: email,
     to: process.env.RECEIVING_EMAIL,
-    subject: 'New contact message from ' + name,
-    text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+    subject: 'New message from ' + name,
+    text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
