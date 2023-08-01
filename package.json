@@ -25,7 +25,7 @@
     "prettier-plugin-tailwindcss": "^0.3.0",
     "react": "^18.2.0",
     "react-dom": "18.2.0",
-    "react-parallax-tilt": "^1.7.154",
+    "react-parallax-tilt": "^1.7.155",
     "react-three-fiber": "^6.0.13",
     "react-vertical-timeline-component": "^3.6.0",
     "tailwindcss": "3.3.2",
