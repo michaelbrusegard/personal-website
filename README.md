@@ -1,5 +1,6 @@
-# Michael Brusegard's personal website
-This project showcases my tech skills, work experience and projects as a website. It servs as a central hub for anyone interested in knowing more about me and my work. This repository contains the source code and assets for the website. It is live and accessible at [https://www.michaelbrusegard.com](https://www.michaelbrusegard.com).
+# Personal website
+<img width="1792" alt="portifolio" src="https://github.com/michaelbrusegard/personal-website/assets/56915010/09494597-30db-4e93-afa0-8d81b7f32e00">
+This project showcases my tech skills, work experience and projects as a website. It serves as a central hub for anyone interested in knowing more about me and my work. This repository contains the source code and assets for the website. It is live and accessible at https://www.michaelbrusegard.com.
 
 ## Table of Contents
 - [Sections](#sections)
@@ -26,7 +27,6 @@ This project showcases my tech skills, work experience and projects as a website
 - **Responsive Design:** The website is designed to work well on various devices and screen sizes.
 
 ## Technologies Used
-
 - CSS: Cascading Style Sheets to fill in gaps for where Tailwind coukldn't do the job, mostly regarding CSS animations.
 - Tailwind CSS: Utility-first CSS framework for faster and easier UI development.
 - TypeScript: A typed superset of JavaScript that enhances code quality and tooling.
@@ -43,7 +43,6 @@ Feel free to explore the website to learn more about me and my projects. The web
 If you encounter any issues, have suggestions, or want to report bugs, please open an issue on this GitHub repository.
 
 ## License
-
 This project is licensed under the Apache License, Version 2.0. See the [LICENSE](LICENSE) file for details.
 
 
