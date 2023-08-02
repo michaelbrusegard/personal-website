@@ -8,7 +8,7 @@ const HeroSocial = () => {
         href='https://www.linkedin.com/in/michaelbrusegard/'
         target='_blank'
         rel='noreferrer'
-        className='h-9 w-9 cursor-pointer text-text hover:text-primary'
+        className='h-9 w-9 cursor-pointer text-text hover:text-primary focus:text-primary'
         variants={fadeIn('left', '', 2.0, 0.5) as Variants}
         initial='hidden'
         animate='show'
@@ -37,7 +37,7 @@ const HeroSocial = () => {
         href='https://github.com/michaelbrusegard/'
         target='_blank'
         rel='noreferrer'
-        className='h-9 w-9 cursor-pointer text-text hover:text-primary'
+        className='h-9 w-9 cursor-pointer text-text hover:text-primary focus:text-primary'
         variants={fadeIn('left', '', 2.5, 0.5) as Variants}
         initial='hidden'
         animate='show'
@@ -103,7 +103,7 @@ const HeroSocial = () => {
       </motion.a>
       <motion.a
         href='#contact'
-        className='ml-auto h-9 w-fit cursor-pointer rounded-[3px] bg-primary px-4 py-[6px] font-semibold text-background transition-[color,box-shadow] duration-200 hover:from-primary hover:to-accent hover:text-text hover:shadow-xl hover:shadow-primary hover:bg-gradient-30 xs:ml-0'
+        className='ml-auto h-9 w-fit cursor-pointer rounded-[3px] bg-primary px-4 py-[6px] font-semibold text-background transition-[color,box-shadow] duration-200 hover:from-primary hover:to-accent hover:text-text hover:shadow-xl hover:shadow-primary hover:bg-gradient-30 focus:from-primary focus:to-accent focus:text-text focus:shadow-xl focus:shadow-primary focus:bg-gradient-30 xs:ml-0'
         variants={fadeIn('left', '', 3.0, 0.5) as Variants}
         initial='hidden'
         animate='show'
