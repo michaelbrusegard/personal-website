@@ -224,18 +224,6 @@ export const experiences = [
     ],
   },
   {
-    title: 'Shop assistant',
-    companyName: 'Biltema',
-    icon: biltema,
-    date: 'Apr 2020 - Aug 2021',
-    points: [
-      'Expedition and customer service (Mostly regarding auto detailing).',
-      'Replenishment of goods, maintenance and cleaning.',
-      'Assembling bikes and other products.',
-      "Usage and operation of the company's IT systems.",
-    ],
-  },
-  {
     title: 'Logistics summer substitute',
     companyName: 'Hydro Aluminium',
     icon: hydro,
@@ -245,6 +233,18 @@ export const experiences = [
       'Securing containers, locks, and anodes/roll blocks using cargo straps.',
       'Mooring ships and ensuring the safe handling of cargo bins during loading operations.',
       'Diligent focus on maintaining a high standard of health, environment, and safety through comprehensive training.',
+    ],
+  },
+  {
+    title: 'Shop assistant',
+    companyName: 'Biltema',
+    icon: biltema,
+    date: 'Apr 2020 - Aug 2021',
+    points: [
+      'Expedition and customer service (Mostly regarding auto detailing).',
+      'Replenishment of goods, maintenance and cleaning.',
+      'Assembling bikes and other products.',
+      "Usage and operation of the company's IT systems.",
     ],
   },
 ];
