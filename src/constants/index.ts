@@ -200,6 +200,30 @@ export const services = [
 
 export const experiences = [
   {
+    title: 'DevOps Engineer',
+    companyName: 'Hackerspace NTNU',
+    icon: hackerspace,
+    date: 'Feb 2023 - Present',
+    points: [
+      'Designing and managing web applications utilising JavaScript, Django, and other relevant technologies.',
+      'Collaborating closely in the DevOps team while fostering a culture of constructive feedback and continuous improvement.',
+      'Actively exploring and incorporating new features to enhance user experience.',
+      'Creating a typescript game  for the 404 error page.',
+    ],
+  },
+  {
+    title: 'Full stack Developer',
+    companyName: 'Niclas Nordlund Photography',
+    icon: niclasNordlundPhotography,
+    date: 'Oct 2022 - Present (Currently maintaining)',
+    points: [
+      'Developing and maintaining a professional personal website for photographer Niclas Nordlund.',
+      'Scaleable backend for photo storage using Google Cloud and payments using Stripe.',
+      'Implementing responsive design and ensuring cross-browser compatibility.',
+      'Ensuring a seamless and user-friendly photo uploading and downloading experience for Niclas on the website.',
+    ],
+  },
+  {
     title: 'Shop assistant',
     companyName: 'Biltema',
     icon: biltema,
@@ -221,30 +245,6 @@ export const experiences = [
       'Securing containers, locks, and anodes/roll blocks using cargo straps.',
       'Mooring ships and ensuring the safe handling of cargo bins during loading operations.',
       'Diligent focus on maintaining a high standard of health, environment, and safety through comprehensive training.',
-    ],
-  },
-  {
-    title: 'Full stack Developer',
-    companyName: 'Niclas Nordlund Photography',
-    icon: niclasNordlundPhotography,
-    date: 'Oct 2022 - Present (Currently maintaining)',
-    points: [
-      'Developing and maintaining a professional personal website for photographer Niclas Nordlund.',
-      'Scaleable backend for photo storage using Google Cloud and payments using Stripe.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Ensuring a seamless and user-friendly photo uploading and downloading experience for Niclas on the website.',
-    ],
-  },
-  {
-    title: 'DevOps Engineer',
-    companyName: 'Hackerspace NTNU',
-    icon: hackerspace,
-    date: 'Feb 2023 - Present',
-    points: [
-      'Designing and managing web applications utilising JavaScript, Django, and other relevant technologies.',
-      'Collaborating closely in the DevOps team while fostering a culture of constructive feedback and continuous improvement.',
-      'Actively exploring and incorporating new features to enhance user experience.',
-      'Creating a typescript game  for the 404 error page.',
     ],
   },
 ];

@@ -18,7 +18,7 @@ This project showcases my tech skills, work experience and projects as a website
 - **Contact:** A way for visitors to get in touch with me.
 
 ## Features
-- **WebGL Fluid Simulation:** The hero section contains a WebGL fluid simulation that is rendered using my [Fluid Simulation](https://github.com/michaelbrusegard/WebGL-Fluid-Simulation) library.
+- **WebGL Fluid Simulation:** The background has a WebGL fluid simulation that is rendered using my [Fluid Simulation](https://github.com/michaelbrusegard/WebGL-Fluid-Simulation) library.
 - **React Parallax Tilt:** The info cards on the website tilt in response to mouse movement using the [Parallax Tilt](https://github.com/mkosir/react-parallax-tilt) library.
 - **React Vertical Timeline Component:** The work experience section uses the [Vertical Timeline Component](https://github.com/stephane-monnot/react-vertical-timeline) to display my work experience.
 - **Navigation:** The navigation bar is fixed to the top of the page and contains links to sections on the page.
