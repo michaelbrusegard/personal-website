@@ -2,7 +2,7 @@ import colors from '../utils/colors';
 import heroPhoto from '../../public/photos/hero/hero.png';
 import heroDraw from '../../public/photos/hero/draw.png';
 import Image from 'next/image';
-import webGLFluidSimulation from 'webgl-fluid-simulation';
+import webGLFluidEnhanced from 'webgl-fluid-enhanced';
 import { motion, Variants } from 'framer-motion';
 import { useEffect } from 'react';
 
@@ -34,7 +34,7 @@ const HeroImage = () => {
         heroDraw.classList.remove('hero-opacity');
         heroCurve.classList.remove('hero-gradient');
         heroCurve.classList.remove('hero-opacity');
-        webGLFluidSimulation.splats();
+        webGLFluidEnhanced.splats();
       },
       { once: true }
     );

@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import letterBounce, { bounce } from '../utils/letterBounce';
 import { motion, Variants } from 'framer-motion';
 import fluidHover from '../utils/fluidHover';
-import webGLFluidSimulation from 'webgl-fluid-simulation';
+import webGLFluidEnhanced from 'webgl-fluid-enhanced';
 import { fadeIn, appear } from '../utils/motion';
 import HeroImage from './heroImage';
 import HeroSocial from './heroSocial';
@@ -14,7 +14,7 @@ const Hero = () => {
     const scrollButton = document.querySelector('.scroll-button') as HTMLElement;
     if (scrollButton) fluidHover(scrollButton);
     scrollButton.addEventListener('click', () => {
-      webGLFluidSimulation.splats();
+      webGLFluidEnhanced.splats();
     });
 
     const aboutText = document.querySelector('.about-text') as HTMLElement;

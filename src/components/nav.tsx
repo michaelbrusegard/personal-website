@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { navLinks } from '../constants';
 import MenuButton from '../components/menuButton';
 import MobileMenu from '../components/mobileMenu';
-import webGLFluidSimulation from 'webgl-fluid-simulation';
+import webGLFluidEnhanced from 'webgl-fluid-enhanced';
 import { motion, Variants } from 'framer-motion';
 import { fadeIn } from '../utils/motion';
 import { changeVariant, changePalette, isDarkVariant } from '../utils/colors';
@@ -128,7 +128,7 @@ const Nav = () => {
     const navElements = document.querySelectorAll('.nav-link');
     for (let i = 0; i < navElements.length; i++) {
       navElements[i].addEventListener('click', () => {
-        webGLFluidSimulation.splats();
+        webGLFluidEnhanced.splats();
       });
     }
   }, []);

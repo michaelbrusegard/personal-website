@@ -3,7 +3,7 @@ import { Variants, motion } from 'framer-motion';
 import SectionWrapper from './sectionWrapper';
 import { slideIn } from '../utils/motion';
 import DogCanvas from './dog';
-import webGLFluidSimulation from 'webgl-fluid-simulation';
+import webGLFluidEnhanced from 'webgl-fluid-enhanced';
 
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
@@ -21,7 +21,7 @@ const Contact = () => {
     const button = buttonRef.current;
     if (button)
       button.addEventListener('click', () => {
-        webGLFluidSimulation.splats();
+        webGLFluidEnhanced.splats();
       });
   }, []);
 
