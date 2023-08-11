@@ -29,7 +29,7 @@ import firebase from '../../public/icons/tech/integrations/firebase.svg';
 import github from '../../public/icons/tech/integrations/github.svg';
 import stripe from '../../public/icons/tech/integrations/stripe.svg';
 import git from '../../public/icons/tech/tools/git.svg';
-import npm from '../../public/icons/tech/tools/npm.svg';
+import nodepackagemanager from '../../public/icons/tech/tools/nodepackagemanager.svg';
 import vite from '../../public/icons/tech/tools/vite.svg';
 import linux from '../../public/icons/tech/tools/linux.svg';
 import vscode from '../../public/icons/tech/tools/vscode.svg';
@@ -169,7 +169,7 @@ export const services = [
       },
       {
         name: 'Node Package Manager',
-        icon: npm,
+        icon: nodepackagemanager,
         link: 'https://www.npmjs.com/',
       },
       {
@@ -340,7 +340,7 @@ export const projects = [
       },
       {
         name: 'Node Package Manager',
-        icon: npm,
+        icon: nodepackagemanager,
         link: 'https://www.npmjs.com/',
       },
     ],
