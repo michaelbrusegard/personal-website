@@ -4,6 +4,7 @@ import hydro from '../../public/icons/companies/hydro.svg';
 import hackerspace from '../../public/icons/companies/hackerspace.svg';
 import niclasNordlundPhotography from '../../public/icons/companies/niclasNordlundPhotography.svg';
 import niclasWebsitePhoto from '../../public/photos/projects/niclasnordlund.jpg';
+import webGLFluidEnhancedWebsitePhoto from '../../public/photos/projects/webgl-fluid-enhanced.jpg';
 import hackerspaceWebsitePhoto from '../../public/photos/projects/hackerspace-ntnu.jpg';
 
 import niclasNordlund from '../../public/photos/people/niclasNordlund.jpg';
@@ -28,12 +29,14 @@ import firebase from '../../public/icons/tech/integrations/firebase.svg';
 import github from '../../public/icons/tech/integrations/github.svg';
 import stripe from '../../public/icons/tech/integrations/stripe.svg';
 import git from '../../public/icons/tech/tools/git.svg';
-import figma from '../../public/icons/tech/tools/figma.svg';
+import npm from '../../public/icons/tech/tools/npm.svg';
+import vite from '../../public/icons/tech/tools/vite.svg';
 import linux from '../../public/icons/tech/tools/linux.svg';
 import vscode from '../../public/icons/tech/tools/vscode.svg';
-import affinityphoto from '../../public/icons/tech/tools/affinityphoto.svg';
-import affinitydesigner from '../../public/icons/tech/tools/affinitydesigner.svg';
 import chatgpt from '../../public/icons/tech/tools/chatgpt.svg';
+import figma from '../../public/icons/tech/design/figma.svg';
+import affinityphoto from '../../public/icons/tech/design/affinityphoto.svg';
+import affinitydesigner from '../../public/icons/tech/design/affinitydesigner.svg';
 
 export const navLinks = [
   {
@@ -62,7 +65,7 @@ export const services = [
       {
         name: 'CSS',
         icon: css,
-        link: 'https://developer.mozilla.org/docs/Web/CSS',
+        link: 'https://developer.mozilla.org/docs/Web/CSS/',
       },
       {
         name: 'Tailwind CSS',
@@ -72,7 +75,7 @@ export const services = [
       {
         name: 'Javascript',
         icon: javascript,
-        link: 'https://developer.mozilla.org/docs/Web/javascript',
+        link: 'https://developer.mozilla.org/docs/Web/javascript/',
       },
       {
         name: 'Typescript',
@@ -137,12 +140,12 @@ export const services = [
       {
         name: 'Google Cloud Platform',
         icon: googlecloudplatform,
-        link: 'https://cloud.google.com',
+        link: 'https://cloud.google.com/',
       },
       {
         name: 'Firebase',
         icon: firebase,
-        link: 'https://firebase.google.com',
+        link: 'https://firebase.google.com/',
       },
       {
         name: 'GitHub CI/CD and DevOps',
@@ -165,9 +168,14 @@ export const services = [
         link: 'https://git-scm.com/',
       },
       {
-        name: 'Figma',
-        icon: figma,
-        link: 'https://www.figma.com/',
+        name: 'Node Package Manager',
+        icon: npm,
+        link: 'https://www.npmjs.com/',
+      },
+      {
+        name: 'Vite',
+        icon: vite,
+        link: 'https://vitejs.dev/',
       },
       {
         name: 'Linux',
@@ -180,6 +188,21 @@ export const services = [
         link: 'https://code.visualstudio.com/',
       },
       {
+        name: 'ChatGPT',
+        icon: chatgpt,
+        link: 'https://openai.com/blog/chatgpt/',
+      },
+    ],
+  },
+  {
+    title: 'DESIGN',
+    icons: [
+      {
+        name: 'Figma',
+        icon: figma,
+        link: 'https://www.figma.com/',
+      },
+      {
         name: 'Affinity Photo',
         icon: affinityphoto,
         link: 'https://affinity.serif.com/photo/',
@@ -188,11 +211,6 @@ export const services = [
         name: 'Affinity Designer',
         icon: affinitydesigner,
         link: 'https://affinity.serif.com/designer/',
-      },
-      {
-        name: 'ChatGPT',
-        icon: chatgpt,
-        link: 'https://openai.com/blog/chatgpt/',
       },
     ],
   },
@@ -263,12 +281,12 @@ export const projects = [
       {
         name: 'CSS',
         icon: css,
-        link: 'https://developer.mozilla.org/docs/Web/CSS',
+        link: 'https://developer.mozilla.org/docs/Web/CSS/',
       },
       {
         name: 'Javascript',
         icon: javascript,
-        link: 'https://developer.mozilla.org/docs/Web/javascript',
+        link: 'https://developer.mozilla.org/docs/Web/javascript/',
       },
       {
         name: 'Node.js',
@@ -283,7 +301,7 @@ export const projects = [
       {
         name: 'Google Cloud Platform',
         icon: googlecloudplatform,
-        link: 'https://cloud.google.com',
+        link: 'https://cloud.google.com/',
       },
       {
         name: 'Stripe',
@@ -292,8 +310,43 @@ export const projects = [
       },
     ],
     image: niclasWebsitePhoto,
-    prodLink: 'https://www.niclasnordlund.com',
-    srcLink: 'https://github.com/michaelbrusegard/NiclasNordlundPhotography',
+    prodLink: 'https://www.niclasnordlund.com/',
+    srcLink: 'https://github.com/michaelbrusegard/NiclasNordlundPhotography/',
+  },
+  {
+    name: 'WebGL Fluid Enhanced',
+    description:
+      'WebGL Fluid Enhanced is a fluid simulation that runs in your browser. It is based on WebGL Fluid Simulation by Pavel Dobryakov. The simulation is enhanced with ES module support, custom colors, and a few other features.',
+    techstack: [
+      {
+        name: 'HTML',
+        icon: html,
+        link: 'https://developer.mozilla.org/docs/Web/HTML/',
+      },
+      {
+        name: 'CSS',
+        icon: css,
+        link: 'https://developer.mozilla.org/docs/Web/CSS/',
+      },
+      {
+        name: 'Javascript',
+        icon: javascript,
+        link: 'https://developer.mozilla.org/docs/Web/javascript/',
+      },
+      {
+        name: 'Vite',
+        icon: vite,
+        link: 'https://vitejs.dev/',
+      },
+      {
+        name: 'Node Package Manager',
+        icon: npm,
+        link: 'https://www.npmjs.com/',
+      },
+    ],
+    image: webGLFluidEnhancedWebsitePhoto,
+    prodLink: 'https://michaelbrusegard.github.io/WebGL-Fluid-Enhanced/',
+    srcLink: 'https://github.com/michaelbrusegard/WebGL-Fluid-Enhanced/',
   },
   {
     name: 'Hackerspace NTNU',
@@ -308,12 +361,12 @@ export const projects = [
       {
         name: 'CSS',
         icon: css,
-        link: 'https://developer.mozilla.org/docs/Web/CSS',
+        link: 'https://developer.mozilla.org/docs/Web/CSS/',
       },
       {
         name: 'Javascript',
         icon: javascript,
-        link: 'https://developer.mozilla.org/docs/Web/javascript',
+        link: 'https://developer.mozilla.org/docs/Web/javascript/',
       },
       {
         name: 'Typescript',
@@ -338,7 +391,7 @@ export const projects = [
     ],
     image: hackerspaceWebsitePhoto,
     prodLink: 'https://www.hackerspace-ntnu.no/',
-    srcLink: 'https://github.com/hackerspace-ntnu/website',
+    srcLink: 'https://github.com/hackerspace-ntnu/website/',
   },
 ];
 
@@ -366,7 +419,7 @@ export const techUsed = [
   {
     name: 'CSS',
     icon: css,
-    link: 'https://developer.mozilla.org/docs/Web/CSS',
+    link: 'https://developer.mozilla.org/docs/Web/CSS/',
   },
   {
     name: 'Tailwind CSS',
