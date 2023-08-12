@@ -73,12 +73,12 @@ export const services = [
         link: 'https://tailwindcss.com/',
       },
       {
-        name: 'Javascript',
+        name: 'JavaScript',
         icon: javascript,
         link: 'https://developer.mozilla.org/docs/Web/javascript/',
       },
       {
-        name: 'Typescript',
+        name: 'TypeScript',
         icon: typescript,
         link: 'https://www.typescriptlang.org/',
       },
@@ -284,7 +284,7 @@ export const projects = [
         link: 'https://developer.mozilla.org/docs/Web/CSS/',
       },
       {
-        name: 'Javascript',
+        name: 'JavaScript',
         icon: javascript,
         link: 'https://developer.mozilla.org/docs/Web/javascript/',
       },
@@ -329,7 +329,7 @@ export const projects = [
         link: 'https://developer.mozilla.org/docs/Web/CSS/',
       },
       {
-        name: 'Javascript',
+        name: 'JavaScript',
         icon: javascript,
         link: 'https://developer.mozilla.org/docs/Web/javascript/',
       },
@@ -364,12 +364,12 @@ export const projects = [
         link: 'https://developer.mozilla.org/docs/Web/CSS/',
       },
       {
-        name: 'Javascript',
+        name: 'JavaScript',
         icon: javascript,
         link: 'https://developer.mozilla.org/docs/Web/javascript/',
       },
       {
-        name: 'Typescript',
+        name: 'TypeScript',
         icon: typescript,
         link: 'https://www.typescriptlang.org/',
       },
@@ -427,7 +427,7 @@ export const techUsed = [
     link: 'https://tailwindcss.com/',
   },
   {
-    name: 'Typescript',
+    name: 'TypeScript',
     icon: typescript,
     link: 'https://www.typescriptlang.org/',
   },
