@@ -27,6 +27,7 @@ import nextjs from '../../public/icons/tech/backend/nextjs.svg';
 import googlecloudplatform from '../../public/icons/tech/integrations/googlecloudplatform.svg';
 import firebase from '../../public/icons/tech/integrations/firebase.svg';
 import github from '../../public/icons/tech/integrations/github.svg';
+import gitlab from '../../public/icons/tech/integrations/gitlab.svg';
 import stripe from '../../public/icons/tech/integrations/stripe.svg';
 import git from '../../public/icons/tech/tools/git.svg';
 import nodepackagemanager from '../../public/icons/tech/tools/nodepackagemanager.svg';
@@ -153,6 +154,11 @@ export const services = [
         link: 'https://docs.github.com/',
       },
       {
+        name: 'GitLab CI/CD',
+        icon: gitlab,
+        link: 'https://docs.gitlab.com/ee/topics/build_your_application.html',
+      },
+      {
         name: 'Stripe',
         icon: stripe,
         link: 'https://stripe.com/',
@@ -218,13 +224,13 @@ export const services = [
 
 export const experiences = [
   {
-    title: 'DevOps Engineer',
+    title: 'DevOps Deputy Manager',
     companyName: 'Hackerspace NTNU',
     icon: hackerspace,
     date: 'Feb 2023 - Present',
     points: [
       'Designing and managing web applications utilising JavaScript, Django, and other relevant technologies.',
-      'Collaborating closely in the DevOps team while fostering a culture of constructive feedback and continuous improvement.',
+      'Managing the DevOps team while fostering a culture of constructive feedback and continuous improvement.',
       'Actively exploring and incorporating new features to enhance user experience.',
       'Creating a typescript game  for the 404 error page.',
     ],
