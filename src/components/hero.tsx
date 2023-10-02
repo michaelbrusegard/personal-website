@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import letterBounce, { bounce } from '../utils/letterBounce';
 import { motion, Variants } from 'framer-motion';
 import fluidHover from '../utils/fluidHover';
-import webGLFluidSimulation from 'webgl-fluid-simulation';
+import webGLFluidEnhanced from 'webgl-fluid-enhanced';
 import { fadeIn, appear } from '../utils/motion';
 import HeroImage from './heroImage';
 import HeroSocial from './heroSocial';
@@ -14,7 +14,7 @@ const Hero = () => {
     const scrollButton = document.querySelector('.scroll-button') as HTMLElement;
     if (scrollButton) fluidHover(scrollButton);
     scrollButton.addEventListener('click', () => {
-      webGLFluidSimulation.splats();
+      webGLFluidEnhanced.splats();
     });
 
     const aboutText = document.querySelector('.about-text') as HTMLElement;
@@ -197,8 +197,8 @@ const Hero = () => {
         </div>
       </div>
       <div className='absolute bottom-24 flex w-full items-center justify-center landscape-md:bottom-6'>
-        <a href='#about' className='scroll-button group pointer-events-auto transition-transform duration-200 hover:translate-y-2'>
-          <div className='flex h-[64px] w-[35px] items-start justify-center rounded-3xl border-4 border-text p-2 transition-colors group-hover:border-primary'>
+        <a href='#about' className='scroll-button group pointer-events-auto transition-transform duration-200 hover:translate-y-2 focus:translate-y-2'>
+          <div className='flex h-[64px] w-[35px] items-start justify-center rounded-3xl border-4 border-text p-2 transition-colors group-hover:border-primary group-focus:border-primary'>
             <motion.div
               animate={{
                 y: [0, 24, 0],
@@ -208,7 +208,7 @@ const Hero = () => {
                 repeat: Infinity,
                 repeatType: 'loop',
               }}
-              className='mb-1 h-3 w-3 rounded-full bg-text transition-colors group-hover:bg-primary'
+              className='mb-1 h-3 w-3 rounded-full bg-text transition-colors group-hover:bg-primary group-focus:bg-primary'
             />
           </div>
         </a>

@@ -9,7 +9,7 @@ import Feedbacks from '../components/feedbacks';
 import Contact from '../components/contact';
 import StarsCanvas from '../components/stars';
 import Foot from '../components/foot';
-import webGLFluidSimulation from 'webgl-fluid-simulation';
+import webGLFluidEnhanced from 'webgl-fluid-enhanced';
 import { updateColors } from '../utils/colors';
 import propagateMouseEvent from '../utils/mouseEventPropagation';
 
@@ -37,7 +37,7 @@ const App = () => {
     }
 
     if (canvas) {
-      webGLFluidSimulation.simulation(canvas, {
+      webGLFluidEnhanced.simulation(canvas, {
         COLOR_PALETTE: [
           root.getPropertyValue('--color-primary'),
           root.getPropertyValue('--color-secondary'),

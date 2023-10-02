@@ -22,7 +22,7 @@ const ServiceCard = ({ index, title, icons }: { index: number; title: string; ic
                 window.open(icon.link, '_blank');
               }
             }}
-            className='flex cursor-pointer items-center transition-transform hover:scale-110'
+            className='flex cursor-pointer items-center transition-transform hover:scale-110 focus:scale-110'
             tabIndex={0}
           >
             <Image className='h-6 w-6' src={icon.icon} alt={icon.name} />

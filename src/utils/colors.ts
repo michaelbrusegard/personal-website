@@ -1,4 +1,4 @@
-import webGLFluidSimulation from 'webgl-fluid-simulation';
+import webGLFluidEnhanced from 'webgl-fluid-enhanced';
 interface Color {
   textColor: string;
   backgroundColor: string;
@@ -140,38 +140,6 @@ const palettes: Palette[] = [
       accentColor: '#F42F10',
     },
   },
-  {
-    light: {
-      textColor: '#1E1012',
-      backgroundColor: '#F4EBEC',
-      primaryColor: '#EA445A',
-      secondaryColor: '#DAECE9',
-      accentColor: '#19E6E3',
-    },
-    dark: {
-      textColor: '#F4EBEC',
-      backgroundColor: '#1E1012',
-      primaryColor: '#EA445A',
-      secondaryColor: '#11221F',
-      accentColor: '#19E6E3',
-    },
-  },
-  {
-    light: {
-      textColor: '#0F0218',
-      backgroundColor: '#EBD0FB',
-      primaryColor: '#530A7F',
-      secondaryColor: '#DAAAF8',
-      accentColor: '#C271F4',
-    },
-    dark: {
-      textColor: '#EBD0FB',
-      backgroundColor: '#0F0218',
-      primaryColor: '#530A7F',
-      secondaryColor: '#1F042F',
-      accentColor: '#C271F4',
-    },
-  },
 ];
 
 const colorsUpdateEvent = new Event('colorsUpdated');
@@ -214,7 +182,7 @@ function updateColors(): void {
 
   window.dispatchEvent(colorsUpdateEvent);
 
-  webGLFluidSimulation.config({
+  webGLFluidEnhanced.config({
     COLOR_PALETTE: [root.getPropertyValue('--color-primary'), root.getPropertyValue('--color-secondary'), root.getPropertyValue('--color-accent')],
     BACK_COLOR: root.getPropertyValue('--color-background'),
   });

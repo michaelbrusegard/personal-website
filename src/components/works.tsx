@@ -57,7 +57,7 @@ const ProjectCard = ({
             {techstack.map((icon) => (
               <div
                 key={icon.name}
-                className='h-6 w-6 cursor-pointer transition-transform hover:scale-110'
+                className='h-6 w-6 cursor-pointer transition-transform hover:scale-110 focus:scale-110'
                 tabIndex={0}
                 onClick={() => window.open(icon.link, '_blank')}
                 onKeyDown={(event) => {
@@ -75,7 +75,7 @@ const ProjectCard = ({
               href={srcLink}
               target='_blank'
               rel='noreferrer'
-              className='flex cursor-pointer items-center gap-1 text-text transition-transform duration-200 hover:-translate-y-[2px] hover:text-primary'
+              className='flex cursor-pointer items-center gap-1 text-text transition-transform duration-200 hover:-translate-y-[2px] hover:text-primary focus:-translate-y-[2px] focus:text-primary'
             >
               Code
               <svg height='1em' viewBox='0 0 496 512' className='text-current'>
@@ -89,7 +89,7 @@ const ProjectCard = ({
               href={prodLink}
               target='_blank'
               rel='noreferrer'
-              className='flex cursor-pointer items-center gap-1 text-text transition-transform duration-200 hover:-translate-y-[2px] hover:text-primary'
+              className='flex cursor-pointer items-center gap-1 text-text transition-transform duration-200 hover:-translate-y-[2px] hover:text-primary focus:-translate-y-[2px] focus:text-primary'
             >
               Live
               <svg height='1em' viewBox='0 0 512 512' className='text-current'>

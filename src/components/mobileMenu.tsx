@@ -42,7 +42,7 @@ const MobileMenu = ({ isOpen, onClose, isDarkMode, PaletteIcon, SunIcon, MoonIco
         {navLinks.map((link) => (
           <motion.li
             key={link.id}
-            className='nav-link cursor-pointer font-mono text-[18px] font-medium text-text hover:text-primary'
+            className='nav-link cursor-pointer font-mono text-[18px] font-medium text-text hover:text-primary focus:text-primary'
             tabIndex={isOpen ? 0 : -1}
             variants={fadeIn('down', '', 0.8, 0.2) as Variants}
             initial='hidden'

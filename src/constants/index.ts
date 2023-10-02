@@ -4,6 +4,7 @@ import hydro from '../../public/icons/companies/hydro.svg';
 import hackerspace from '../../public/icons/companies/hackerspace.svg';
 import niclasNordlundPhotography from '../../public/icons/companies/niclasNordlundPhotography.svg';
 import niclasWebsitePhoto from '../../public/photos/projects/niclasnordlund.jpg';
+import webGLFluidEnhancedWebsitePhoto from '../../public/photos/projects/webgl-fluid-enhanced.jpg';
 import hackerspaceWebsitePhoto from '../../public/photos/projects/hackerspace-ntnu.jpg';
 
 import niclasNordlund from '../../public/photos/people/niclasNordlund.jpg';
@@ -26,14 +27,17 @@ import nextjs from '../../public/icons/tech/backend/nextjs.svg';
 import googlecloudplatform from '../../public/icons/tech/integrations/googlecloudplatform.svg';
 import firebase from '../../public/icons/tech/integrations/firebase.svg';
 import github from '../../public/icons/tech/integrations/github.svg';
+import gitlab from '../../public/icons/tech/integrations/gitlab.svg';
 import stripe from '../../public/icons/tech/integrations/stripe.svg';
 import git from '../../public/icons/tech/tools/git.svg';
-import figma from '../../public/icons/tech/tools/figma.svg';
+import nodepackagemanager from '../../public/icons/tech/tools/nodepackagemanager.svg';
+import vite from '../../public/icons/tech/tools/vite.svg';
 import linux from '../../public/icons/tech/tools/linux.svg';
 import vscode from '../../public/icons/tech/tools/vscode.svg';
-import affinityphoto from '../../public/icons/tech/tools/affinityphoto.svg';
-import affinitydesigner from '../../public/icons/tech/tools/affinitydesigner.svg';
 import chatgpt from '../../public/icons/tech/tools/chatgpt.svg';
+import figma from '../../public/icons/tech/design/figma.svg';
+import affinityphoto from '../../public/icons/tech/design/affinityphoto.svg';
+import affinitydesigner from '../../public/icons/tech/design/affinitydesigner.svg';
 
 export const navLinks = [
   {
@@ -62,7 +66,7 @@ export const services = [
       {
         name: 'CSS',
         icon: css,
-        link: 'https://developer.mozilla.org/docs/Web/CSS',
+        link: 'https://developer.mozilla.org/docs/Web/CSS/',
       },
       {
         name: 'Tailwind CSS',
@@ -70,12 +74,12 @@ export const services = [
         link: 'https://tailwindcss.com/',
       },
       {
-        name: 'Javascript',
+        name: 'JavaScript',
         icon: javascript,
-        link: 'https://developer.mozilla.org/docs/Web/javascript',
+        link: 'https://developer.mozilla.org/docs/Web/javascript/',
       },
       {
-        name: 'Typescript',
+        name: 'TypeScript',
         icon: typescript,
         link: 'https://www.typescriptlang.org/',
       },
@@ -137,17 +141,22 @@ export const services = [
       {
         name: 'Google Cloud Platform',
         icon: googlecloudplatform,
-        link: 'https://cloud.google.com',
+        link: 'https://cloud.google.com/',
       },
       {
         name: 'Firebase',
         icon: firebase,
-        link: 'https://firebase.google.com',
+        link: 'https://firebase.google.com/',
       },
       {
         name: 'GitHub CI/CD and DevOps',
         icon: github,
         link: 'https://docs.github.com/',
+      },
+      {
+        name: 'GitLab CI/CD',
+        icon: gitlab,
+        link: 'https://docs.gitlab.com/ee/topics/build_your_application.html',
       },
       {
         name: 'Stripe',
@@ -165,9 +174,14 @@ export const services = [
         link: 'https://git-scm.com/',
       },
       {
-        name: 'Figma',
-        icon: figma,
-        link: 'https://www.figma.com/',
+        name: 'Node Package Manager',
+        icon: nodepackagemanager,
+        link: 'https://www.npmjs.com/',
+      },
+      {
+        name: 'Vite',
+        icon: vite,
+        link: 'https://vitejs.dev/',
       },
       {
         name: 'Linux',
@@ -180,6 +194,21 @@ export const services = [
         link: 'https://code.visualstudio.com/',
       },
       {
+        name: 'ChatGPT',
+        icon: chatgpt,
+        link: 'https://openai.com/blog/chatgpt/',
+      },
+    ],
+  },
+  {
+    title: 'DESIGN',
+    icons: [
+      {
+        name: 'Figma',
+        icon: figma,
+        link: 'https://www.figma.com/',
+      },
+      {
         name: 'Affinity Photo',
         icon: affinityphoto,
         link: 'https://affinity.serif.com/photo/',
@@ -189,38 +218,21 @@ export const services = [
         icon: affinitydesigner,
         link: 'https://affinity.serif.com/designer/',
       },
-      {
-        name: 'ChatGPT',
-        icon: chatgpt,
-        link: 'https://openai.com/blog/chatgpt/',
-      },
     ],
   },
 ];
 
 export const experiences = [
   {
-    title: 'Shop assistant',
-    companyName: 'Biltema',
-    icon: biltema,
-    date: 'Apr 2020 - Aug 2021',
+    title: 'DevOps Deputy Manager',
+    companyName: 'Hackerspace NTNU',
+    icon: hackerspace,
+    date: 'Feb 2023 - Present',
     points: [
-      'Expedition and customer service (Mostly regarding auto detailing).',
-      'Replenishment of goods, maintenance and cleaning.',
-      'Assembling bikes and other products.',
-      "Usage and operation of the company's IT systems.",
-    ],
-  },
-  {
-    title: 'Logistics summer substitute',
-    companyName: 'Hydro Aluminium',
-    icon: hydro,
-    date: 'Jun 2022 - Aug 2023',
-    points: [
-      'Forklift driving for the relocation of anodes on cargo bins, general cleanup and sorting materials for storage. Terminal tractor driving for loading ships with cargo bins with aluminium blocks, containers or anodes.',
-      'Securing containers, locks, and anodes/roll blocks using cargo straps.',
-      'Mooring ships and ensuring the safe handling of cargo bins during loading operations.',
-      'Diligent focus on maintaining a high standard of health, environment, and safety through comprehensive training.',
+      'Designing and managing web applications utilising JavaScript, Django, and other relevant technologies.',
+      'Managing the DevOps team while fostering a culture of constructive feedback and continuous improvement.',
+      'Actively exploring and incorporating new features to enhance user experience.',
+      'Creating a typescript game  for the 404 error page.',
     ],
   },
   {
@@ -236,15 +248,27 @@ export const experiences = [
     ],
   },
   {
-    title: 'DevOps Engineer',
-    companyName: 'Hackerspace NTNU',
-    icon: hackerspace,
-    date: 'Feb 2023 - Present',
+    title: 'Logistics summer substitute',
+    companyName: 'Hydro Aluminium',
+    icon: hydro,
+    date: 'Jun 2022 - Aug 2023',
     points: [
-      'Designing and managing web applications utilising JavaScript, Django, and other relevant technologies.',
-      'Collaborating closely in the DevOps team while fostering a culture of constructive feedback and continuous improvement.',
-      'Actively exploring and incorporating new features to enhance user experience.',
-      'Creating a typescript game  for the 404 error page.',
+      'Forklift driving for the relocation of anodes on cargo bins, general cleanup and sorting materials for storage. Terminal tractor driving for loading ships with cargo bins with aluminium blocks, containers or anodes.',
+      'Securing containers, locks, and anodes/roll blocks using cargo straps.',
+      'Mooring ships and ensuring the safe handling of cargo bins during loading operations.',
+      'Diligent focus on maintaining a high standard of health, environment, and safety through comprehensive training.',
+    ],
+  },
+  {
+    title: 'Shop assistant',
+    companyName: 'Biltema',
+    icon: biltema,
+    date: 'Apr 2020 - Aug 2021',
+    points: [
+      'Expedition and customer service (Mostly regarding auto detailing).',
+      'Replenishment of goods, maintenance and cleaning.',
+      'Assembling bikes and other products.',
+      "Usage and operation of the company's IT systems.",
     ],
   },
 ];
@@ -263,12 +287,12 @@ export const projects = [
       {
         name: 'CSS',
         icon: css,
-        link: 'https://developer.mozilla.org/docs/Web/CSS',
+        link: 'https://developer.mozilla.org/docs/Web/CSS/',
       },
       {
-        name: 'Javascript',
+        name: 'JavaScript',
         icon: javascript,
-        link: 'https://developer.mozilla.org/docs/Web/javascript',
+        link: 'https://developer.mozilla.org/docs/Web/javascript/',
       },
       {
         name: 'Node.js',
@@ -283,7 +307,7 @@ export const projects = [
       {
         name: 'Google Cloud Platform',
         icon: googlecloudplatform,
-        link: 'https://cloud.google.com',
+        link: 'https://cloud.google.com/',
       },
       {
         name: 'Stripe',
@@ -292,8 +316,43 @@ export const projects = [
       },
     ],
     image: niclasWebsitePhoto,
-    prodLink: 'https://www.niclasnordlund.com',
-    srcLink: 'https://github.com/michaelbrusegard/NiclasNordlundPhotography',
+    prodLink: 'https://www.niclasnordlund.com/',
+    srcLink: 'https://github.com/michaelbrusegard/NiclasNordlundPhotography/',
+  },
+  {
+    name: 'WebGL Fluid Enhanced',
+    description:
+      'WebGL Fluid Enhanced is a fluid simulation that runs in your browser. It is based on WebGL Fluid Simulation by Pavel Dobryakov. The simulation is enhanced with ES module support, custom colors, and a few other features.',
+    techstack: [
+      {
+        name: 'HTML',
+        icon: html,
+        link: 'https://developer.mozilla.org/docs/Web/HTML/',
+      },
+      {
+        name: 'CSS',
+        icon: css,
+        link: 'https://developer.mozilla.org/docs/Web/CSS/',
+      },
+      {
+        name: 'JavaScript',
+        icon: javascript,
+        link: 'https://developer.mozilla.org/docs/Web/javascript/',
+      },
+      {
+        name: 'Vite',
+        icon: vite,
+        link: 'https://vitejs.dev/',
+      },
+      {
+        name: 'Node Package Manager',
+        icon: nodepackagemanager,
+        link: 'https://www.npmjs.com/',
+      },
+    ],
+    image: webGLFluidEnhancedWebsitePhoto,
+    prodLink: 'https://michaelbrusegard.github.io/WebGL-Fluid-Enhanced/',
+    srcLink: 'https://github.com/michaelbrusegard/WebGL-Fluid-Enhanced/',
   },
   {
     name: 'Hackerspace NTNU',
@@ -308,15 +367,15 @@ export const projects = [
       {
         name: 'CSS',
         icon: css,
-        link: 'https://developer.mozilla.org/docs/Web/CSS',
+        link: 'https://developer.mozilla.org/docs/Web/CSS/',
       },
       {
-        name: 'Javascript',
+        name: 'JavaScript',
         icon: javascript,
-        link: 'https://developer.mozilla.org/docs/Web/javascript',
+        link: 'https://developer.mozilla.org/docs/Web/javascript/',
       },
       {
-        name: 'Typescript',
+        name: 'TypeScript',
         icon: typescript,
         link: 'https://www.typescriptlang.org/',
       },
@@ -338,7 +397,7 @@ export const projects = [
     ],
     image: hackerspaceWebsitePhoto,
     prodLink: 'https://www.hackerspace-ntnu.no/',
-    srcLink: 'https://github.com/hackerspace-ntnu/website',
+    srcLink: 'https://github.com/hackerspace-ntnu/website/',
   },
 ];
 
@@ -366,7 +425,7 @@ export const techUsed = [
   {
     name: 'CSS',
     icon: css,
-    link: 'https://developer.mozilla.org/docs/Web/CSS',
+    link: 'https://developer.mozilla.org/docs/Web/CSS/',
   },
   {
     name: 'Tailwind CSS',
@@ -374,7 +433,7 @@ export const techUsed = [
     link: 'https://tailwindcss.com/',
   },
   {
-    name: 'Typescript',
+    name: 'TypeScript',
     icon: typescript,
     link: 'https://www.typescriptlang.org/',
   },

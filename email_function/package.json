@@ -5,10 +5,10 @@
     "author": "Michael Brusegard",
     "license": "Apache-2.0",
     "dependencies": {
-        "@google-cloud/storage": "^6.9.5",
+        "@google-cloud/storage": "^7.1.0",
         "cors": "^2.8.5",
         "dotenv": "^16.3.1",
         "google-auth-library": "^9.0.0",
-        "nodemailer": "^6.9.4"
+        "nodemailer": "^6.9.5"
     }
 }

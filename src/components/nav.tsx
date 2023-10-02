@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { navLinks } from '../constants';
 import MenuButton from '../components/menuButton';
 import MobileMenu from '../components/mobileMenu';
-import webGLFluidSimulation from 'webgl-fluid-simulation';
+import webGLFluidEnhanced from 'webgl-fluid-enhanced';
 import { motion, Variants } from 'framer-motion';
 import { fadeIn } from '../utils/motion';
 import { changeVariant, changePalette, isDarkVariant } from '../utils/colors';
@@ -26,7 +26,7 @@ const Nav = () => {
       width='100%'
       height='100%'
       viewBox='0 0 256 256'
-      className='h-6 w-6 text-text hover:text-primary'
+      className='h-6 w-6 text-text hover:text-primary focus:text-primary'
       tabIndex={tabIndex}
       whileHover={{ translateY: '-2px' }}
       transition={{ duration: 0.2 }}
@@ -67,7 +67,7 @@ const Nav = () => {
       width='100%'
       height='100%'
       viewBox='0 0 256 256'
-      className='h-6 w-6 text-text hover:text-primary'
+      className='h-6 w-6 text-text hover:text-primary focus:text-primary'
       tabIndex={tabIndex}
       whileHover={{ translateY: '-2px' }}
       transition={{ duration: 0.2 }}
@@ -96,7 +96,7 @@ const Nav = () => {
       width='100%'
       height='100%'
       viewBox='0 0 256 256'
-      className='h-6 w-6 text-text hover:text-primary'
+      className='h-6 w-6 text-text hover:text-primary focus:text-primary'
       tabIndex={tabIndex}
       whileHover={{ translateY: '-2px' }}
       transition={{ duration: 0.2 }}
@@ -128,7 +128,7 @@ const Nav = () => {
     const navElements = document.querySelectorAll('.nav-link');
     for (let i = 0; i < navElements.length; i++) {
       navElements[i].addEventListener('click', () => {
-        webGLFluidSimulation.splats();
+        webGLFluidEnhanced.splats();
       });
     }
   }, []);
@@ -175,7 +175,7 @@ const Nav = () => {
           {navLinks.map((link, index) => (
             <motion.li
               key={link.id}
-              className='nav-link cursor-pointer font-mono text-[18px] font-medium text-text hover:text-primary'
+              className='nav-link cursor-pointer font-mono text-[18px] font-medium text-text hover:text-primary focus:text-primary'
               tabIndex={0}
               variants={fadeIn('down', '', index * 0.25, 1) as Variants}
               initial='hidden'
