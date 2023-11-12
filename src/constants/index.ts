@@ -239,7 +239,7 @@ export const experiences = [
     title: 'Full stack Developer',
     companyName: 'Niclas Nordlund Photography',
     icon: niclasNordlundPhotography,
-    date: 'Oct 2022 - Present (Currently maintaining)',
+    date: 'Oct 2022 - Oct 2023 (Currently maintaining)',
     points: [
       'Developing and maintaining a professional personal website for photographer Niclas Nordlund.',
       'Scaleable backend for photo storage using Google Cloud and payments using Stripe.',
