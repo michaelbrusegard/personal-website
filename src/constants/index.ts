@@ -10,34 +10,45 @@ import hackerspaceWebsitePhoto from '../../public/photos/projects/hackerspace-nt
 import niclasNordlund from '../../public/photos/people/niclasNordlund.jpg';
 import carlJohanGuzkow from '../../public/photos/people/carlJohanGuzkow.jpg';
 
-import html from '../../public/icons/tech/frontend/html.svg';
-import css from '../../public/icons/tech/frontend/css.svg';
-import tailwindcss from '../../public/icons/tech/frontend/tailwindcss.svg';
-import javascript from '../../public/icons/tech/frontend/javascript.svg';
-import typescript from '../../public/icons/tech/frontend/typescript.svg';
-import react from '../../public/icons/tech/frontend/react.svg';
-import framermotion from '../../public/icons/tech/frontend/framermotion.svg';
-import threejs from '../../public/icons/tech/frontend/threejs.svg';
-import nodejs from '../../public/icons/tech/backend/nodejs.svg';
-import python from '../../public/icons/tech/backend/python.svg';
-import java from '../../public/icons/tech/backend/java.svg';
-import express from '../../public/icons/tech/backend/express.svg';
-import django from '../../public/icons/tech/backend/django.svg';
-import nextjs from '../../public/icons/tech/backend/nextjs.svg';
-import googlecloudplatform from '../../public/icons/tech/integrations/googlecloudplatform.svg';
-import firebase from '../../public/icons/tech/integrations/firebase.svg';
-import github from '../../public/icons/tech/integrations/github.svg';
-import gitlab from '../../public/icons/tech/integrations/gitlab.svg';
-import stripe from '../../public/icons/tech/integrations/stripe.svg';
-import git from '../../public/icons/tech/tools/git.svg';
-import nodepackagemanager from '../../public/icons/tech/tools/nodepackagemanager.svg';
-import vite from '../../public/icons/tech/tools/vite.svg';
-import linux from '../../public/icons/tech/tools/linux.svg';
-import vscode from '../../public/icons/tech/tools/vscode.svg';
-import chatgpt from '../../public/icons/tech/tools/chatgpt.svg';
-import figma from '../../public/icons/tech/design/figma.svg';
-import affinityphoto from '../../public/icons/tech/design/affinityphoto.svg';
-import affinitydesigner from '../../public/icons/tech/design/affinitydesigner.svg';
+import html from '../../public/icons/tech/html.svg';
+import javascript from '../../public/icons/tech/javascript.svg';
+import typescript from '../../public/icons/tech/typescript.svg';
+import python from '../../public/icons/tech/python.svg';
+import java from '../../public/icons/tech/java.svg';
+import css from '../../public/icons/tech/css.svg';
+import tailwindcss from '../../public/icons/tech/tailwindcss.svg';
+import headlessui from '../../public/icons/tech/headlessui.svg';
+import radixui from '../../public/icons/tech/radixui.svg';
+import react from '../../public/icons/tech/react.svg';
+import vite from '../../public/icons/tech/vite.svg';
+import framermotion from '../../public/icons/tech/framermotion.svg';
+import threejs from '../../public/icons/tech/threejs.svg';
+import javafx from '../../public/icons/tech/javafx.svg';
+import expressjs from '../../public/icons/tech/expressjs.svg';
+import django from '../../public/icons/tech/django.svg';
+import spring from '../../public/icons/tech/spring.svg';
+import nextjs from '../../public/icons/tech/nextjs.svg';
+import trpc from '../../public/icons/tech/trpc.svg';
+import firebase from '../../public/icons/tech/firebase.svg';
+import authjs from '../../public/icons/tech/authjs.svg';
+import postgresql from '../../public/icons/tech/postgresql.svg';
+import mysql from '../../public/icons/tech/mysql.svg';
+import firestore from '../../public/icons/tech/firestore.svg';
+import drizzleorm from '../../public/icons/tech/drizzleorm.svg';
+import googlecloudplatform from '../../public/icons/tech/googlecloudplatform.svg';
+import docker from '../../public/icons/tech/docker.svg';
+import github from '../../public/icons/tech/github.svg';
+import gitlab from '../../public/icons/tech/gitlab.svg';
+import vercel from '../../public/icons/tech/vercel.svg';
+import stripe from '../../public/icons/tech/stripe.svg';
+import vscode from '../../public/icons/tech/vscode.svg';
+import chatgpt from '../../public/icons/tech/chatgpt.svg';
+import excalidraw from '../../public/icons/tech/excalidraw.svg';
+import figma from '../../public/icons/tech/figma.svg';
+import affinityphoto from '../../public/icons/tech/affinityphoto.svg';
+import affinitydesigner from '../../public/icons/tech/affinitydesigner.svg';
+import losslesscut from '../../public/icons/tech/losslesscut.svg';
+import git from '../../public/icons/tech/git.svg';
 
 export const navLinks = [
   {
@@ -56,22 +67,12 @@ export const navLinks = [
 
 export const services = [
   {
-    title: 'FRONTEND',
+    title: 'LANGUAGES',
     icons: [
       {
         name: 'HTML',
         icon: html,
         link: 'https://developer.mozilla.org/docs/Web/HTML/',
-      },
-      {
-        name: 'CSS',
-        icon: css,
-        link: 'https://developer.mozilla.org/docs/Web/CSS/',
-      },
-      {
-        name: 'Tailwind CSS',
-        icon: tailwindcss,
-        link: 'https://tailwindcss.com/',
       },
       {
         name: 'JavaScript',
@@ -84,9 +85,49 @@ export const services = [
         link: 'https://www.typescriptlang.org/',
       },
       {
+        name: 'Python',
+        icon: python,
+        link: 'https://www.python.org/',
+      },
+      {
+        name: 'Java',
+        icon: java,
+        link: 'https://www.java.com/',
+      },
+    ],
+  },
+  {
+    title: 'FRONTEND',
+    icons: [
+      {
+        name: 'CSS',
+        icon: css,
+        link: 'https://developer.mozilla.org/docs/Web/CSS/',
+      },
+      {
+        name: 'Tailwind CSS',
+        icon: tailwindcss,
+        link: 'https://tailwindcss.com/',
+      },
+      {
+        name: 'Headless UI',
+        icon: headlessui,
+        link: 'https://headlessui.com/',
+      },
+      {
+        name: 'Radix UI',
+        icon: radixui,
+        link: 'https://www.radix-ui.com/',
+      },
+      {
         name: 'React',
         icon: react,
         link: 'https://react.dev/',
+      },
+      {
+        name: 'Vite',
+        icon: vite,
+        link: 'https://vitejs.dev/',
       },
       {
         name: 'Framer Motion',
@@ -98,29 +139,19 @@ export const services = [
         icon: threejs,
         link: 'https://threejs.org/',
       },
+      {
+        name: 'JavaFX',
+        icon: javafx,
+        link: 'https://openjfx.io/',
+      },
     ],
   },
   {
     title: 'BACKEND',
     icons: [
       {
-        name: 'Node.js',
-        icon: nodejs,
-        link: 'https://nodejs.org/',
-      },
-      {
-        name: 'Python',
-        icon: python,
-        link: 'https://www.python.org/',
-      },
-      {
-        name: 'Java',
-        icon: java,
-        link: 'https://www.java.com/',
-      },
-      {
-        name: 'Express',
-        icon: express,
+        name: 'Express.js',
+        icon: expressjs,
         link: 'https://expressjs.com/',
       },
       {
@@ -129,19 +160,19 @@ export const services = [
         link: 'https://www.djangoproject.com/',
       },
       {
+        name: 'Spring',
+        icon: spring,
+        link: 'https://spring.io/',
+      },
+      {
         name: 'Next.js',
         icon: nextjs,
         link: 'https://nextjs.org/',
       },
-    ],
-  },
-  {
-    title: 'INTEGRATIONS',
-    icons: [
       {
-        name: 'Google Cloud Platform',
-        icon: googlecloudplatform,
-        link: 'https://cloud.google.com/',
+        name: 'tRPC',
+        icon: trpc,
+        link: 'https://trpc.io/',
       },
       {
         name: 'Firebase',
@@ -149,14 +180,64 @@ export const services = [
         link: 'https://firebase.google.com/',
       },
       {
-        name: 'GitHub CI/CD and DevOps',
+        name: 'Auth.js',
+        icon: authjs,
+        link: 'https://authjs.dev/',
+      },
+    ],
+  },
+  {
+    title: 'DATABASES',
+    icons: [
+      {
+        name: 'PostgreSQL',
+        icon: postgresql,
+        link: 'https://www.postgresql.org/',
+      },
+      {
+        name: 'MySQL',
+        icon: mysql,
+        link: 'https://www.mysql.com/',
+      },
+      {
+        name: 'Firestore',
+        icon: firestore,
+        link: 'https://cloud.google.com/firestore/',
+      },
+      {
+        name: 'Drizzle ORM',
+        icon: drizzleorm,
+        link: 'ttps://orm.drizzle.team/',
+      },
+    ],
+  },
+  {
+    title: 'INFRASTRUCTURE',
+    icons: [
+      {
+        name: 'Google Cloud Platform',
+        icon: googlecloudplatform,
+        link: 'https://cloud.google.com/',
+      },
+      {
+        name: 'Docker',
+        icon: docker,
+        link: 'https://www.docker.com/',
+      },
+      {
+        name: 'GitHub',
         icon: github,
         link: 'https://docs.github.com/',
       },
       {
-        name: 'GitLab CI/CD',
+        name: 'GitLab',
         icon: gitlab,
-        link: 'https://docs.gitlab.com/ee/topics/build_your_application.html',
+        link: 'https://docs.gitlab.com/',
+      },
+      {
+        name: 'Vercel',
+        icon: vercel,
+        link: 'https://vercel.com/',
       },
       {
         name: 'Stripe',
@@ -169,26 +250,6 @@ export const services = [
     title: 'TOOLS',
     icons: [
       {
-        name: 'Git',
-        icon: git,
-        link: 'https://git-scm.com/',
-      },
-      {
-        name: 'Node Package Manager',
-        icon: nodepackagemanager,
-        link: 'https://www.npmjs.com/',
-      },
-      {
-        name: 'Vite',
-        icon: vite,
-        link: 'https://vitejs.dev/',
-      },
-      {
-        name: 'Linux',
-        icon: linux,
-        link: 'https://www.linux.org/',
-      },
-      {
         name: 'Visual Studio Code',
         icon: vscode,
         link: 'https://code.visualstudio.com/',
@@ -198,11 +259,11 @@ export const services = [
         icon: chatgpt,
         link: 'https://openai.com/blog/chatgpt/',
       },
-    ],
-  },
-  {
-    title: 'DESIGN',
-    icons: [
+      {
+        name: 'Excalidraw',
+        icon: excalidraw,
+        link: 'https://excalidraw.com/',
+      },
       {
         name: 'Figma',
         icon: figma,
@@ -217,6 +278,16 @@ export const services = [
         name: 'Affinity Designer',
         icon: affinitydesigner,
         link: 'https://affinity.serif.com/designer/',
+      },
+      {
+        name: 'Lossless Cut',
+        icon: losslesscut,
+        link: 'https://github.com/mifi/lossless-cut/',
+      },
+      {
+        name: 'Git',
+        icon: git,
+        link: 'https://git-scm.com/',
       },
     ],
   },
@@ -295,13 +366,8 @@ export const projects = [
         link: 'https://developer.mozilla.org/docs/Web/javascript/',
       },
       {
-        name: 'Node.js',
-        icon: nodejs,
-        link: 'https://nodejs.org/',
-      },
-      {
-        name: 'Express',
-        icon: express,
+        name: 'Express.js',
+        icon: expressjs,
         link: 'https://expressjs.com/',
       },
       {
@@ -344,11 +410,6 @@ export const projects = [
         icon: vite,
         link: 'https://vitejs.dev/',
       },
-      {
-        name: 'Node Package Manager',
-        icon: nodepackagemanager,
-        link: 'https://www.npmjs.com/',
-      },
     ],
     image: webGLFluidEnhancedWebsitePhoto,
     prodLink: 'https://michaelbrusegard.github.io/WebGL-Fluid-Enhanced/',
@@ -390,9 +451,9 @@ export const projects = [
         link: 'https://www.djangoproject.com/',
       },
       {
-        name: 'Linux',
-        icon: linux,
-        link: 'https://www.linux.org/',
+        name: 'Docker',
+        icon: docker,
+        link: 'https://www.docker.com/',
       },
     ],
     image: hackerspaceWebsitePhoto,
@@ -458,7 +519,7 @@ export const techUsed = [
     link: 'https://nextjs.org/',
   },
   {
-    name: 'GitHub CI/CD and DevOps',
+    name: 'GitHub',
     icon: github,
     link: 'https://docs.github.com/',
   },
