@@ -32,7 +32,7 @@ This project showcases my tech skills, work experience and projects as a website
 
 ## Technologies Used
 
-- CSS: Cascading Style Sheets to fill in gaps for where Tailwind coukldn't do the job, mostly regarding CSS animations.
+- CSS: Cascading Style Sheets to fill in gaps for where Tailwind couldn't do the job, mostly regarding CSS animations.
 - Tailwind CSS: Utility-first CSS framework for faster and easier UI development.
 - TypeScript: A typed superset of JavaScript that enhances code quality and tooling.
 - React: A JavaScript library for building user interfaces.
