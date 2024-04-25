@@ -27,7 +27,7 @@ jobs:
                   gcloud functions deploy emailSender \
                     --gen2 \
                     --region=europe-north1 \
-                    --runtime=nodejs18 \
+                    --runtime=nodejs20 \
                     --source=${{ github.workspace }}/email_function \
                     --entry-point=sendEmail \
                     --trigger-http \
