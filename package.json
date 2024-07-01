@@ -19,7 +19,7 @@
     "eslint": "8.50.0",
     "eslint-config-next": "13.4.2",
     "framer-motion": "^10.12.12",
-    "next": "^13.5.4",
+    "next": "^14.2.4",
     "postcss": "8.4.31",
     "prettier": "^3.0.3",
     "prettier-plugin-tailwindcss": "^0.4.1",
