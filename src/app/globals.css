@@ -21,35 +21,35 @@
   }
 
   :root {
-    --foreground: 0, 0%, 0%;
-    --background: 0, 0%, 100%;
-    --primary: 219.57, 100%, 63.73%;
-    --secondary: 0, 0%, 94.9%;
-    --accent: 21.46, 100%, 75.88%;
+    --foreground: 0 0% 0%;
+    --background: 0 0% 100%;
+    --primary: 219.57 100% 63.73%;
+    --secondary: 0 0% 94.9%;
+    --accent: 21.46 100% 75.88%;
   }
 
   .dark {
-    --foreground: 0, 0%, 100%;
-    --background: 0, 0%, 0%;
-    --primary: 219.57, 100%, 63.73%;
-    --secondary: 0, 0%, 10.2%;
-    --accent: 21.46, 100%, 75.88%;
+    --foreground: 0 0% 100%;
+    --background: 0 0% 0%;
+    --primary: 219.57 100% 63.73%;
+    --secondary: 0 0% 10.2%;
+    --accent: 21.46 100% 75.88%;
   }
 
   .light-pink {
-    --foreground: 0, 0%, 1.96%;
-    --background: 0, 0%, 98.04%;
-    --primary: 220.71, 100%, 78.04%;
-    --secondary: 222, 100%, 96.08%;
-    --accent: 333.77, 75.93%, 47.25%;
+    --foreground: 0 0% 1.96%;
+    --background: 0 0% 98.04%;
+    --primary: 220.71 100% 78.04%;
+    --secondary: 222 100% 96.08%;
+    --accent: 333.77 75.93% 47.25%;
   }
 
   .dark-pink {
-    --foreground: 0, 0%, 98.04%;
-    --background: 0, 0%, 1.96%;
-    --primary: 219.57, 100%, 63.73%;
-    --secondary: 222.35, 100%, 10;
-    --accent: 333.85, 76.47%, 70%;
+    --foreground: 0 0% 98.04%;
+    --background: 0 0% 1.96%;
+    --primary: 219.57 100% 63.73%;
+    --secondary: 222.35 100% 10;
+    --accent: 333.85 76.47% 70%;
   }
 
   .paddingX {

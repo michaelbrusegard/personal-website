@@ -173,11 +173,17 @@ function updateColors(): void {
   colors = palettes[currentPaletteIndex][currentVariant];
 
   const root = getComputedStyle(document.documentElement);
-  document.documentElement.style.setProperty('--color-foreground', colors.textColor);
-  document.documentElement.style.setProperty('--color-background', colors.backgroundColor);
-  document.documentElement.style.setProperty('--color-primary', colors.primaryColor);
-  document.documentElement.style.setProperty('--color-secondary', colors.secondaryColor);
-  document.documentElement.style.setProperty('--color-accent', colors.accentColor);
+  document.documentElement.style.setProperty('--foreground', colors.textColor);
+  document.documentElement.style.setProperty(
+    '--background',
+    colors.backgroundColor,
+  );
+  document.documentElement.style.setProperty('--primary', colors.primaryColor);
+  document.documentElement.style.setProperty(
+    '--secondary',
+    colors.secondaryColor,
+  );
+  document.documentElement.style.setProperty('--accent', colors.accentColor);
 
   window.dispatchEvent(colorsUpdateEvent);
 
@@ -200,4 +206,10 @@ let currentVariant = storedVariant || 'light';
 
 let colors = palettes[currentPaletteIndex][currentVariant];
 
-export { colors as default, updateColors, isDarkVariant, changeVariant, changePalette };
+export {
+  colors as default,
+  updateColors,
+  isDarkVariant,
+  changeVariant,
+  changePalette,
+};
