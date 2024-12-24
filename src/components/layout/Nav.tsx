@@ -2,12 +2,12 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { navLinks } from '../constants';
-import MenuButton from './menuButton';
-import MobileMenu from './mobileMenu';
+import { navLinks } from '../../constants';
+import MenuButton from '../menuButton';
+import MobileMenu from '../mobileMenu';
 import { motion, Variants } from 'motion/react';
-import { fadeIn } from '../utils/motion';
-import { changeVariant, changePalette, isDarkVariant } from '../utils/colors';
+import { fadeIn } from '../../utils/motion';
+import { changeVariant, changePalette, isDarkVariant } from '../../utils/colors';
 
 const Nav = () => {
   const [isDarkMode, setIsDarkMode] = useState(isDarkVariant);

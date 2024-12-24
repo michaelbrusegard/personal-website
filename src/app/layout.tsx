@@ -1,4 +1,6 @@
-import Nav from '../components/nav';
+import './globals.css';
+import { Nav } from '@/components/layout/Nav';
+import { SimulationProvider } from '@/components/providers/SimulationProvider';
 
 export const metadata = {
   title: 'Michael | Portifolio',
@@ -30,12 +32,14 @@ export const metadata = {
   ],
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en' dir='ltr' className='h-full w-full'>
-      <body className='relative bg-background font-body text-text'>
-        <Nav />
-        {children}
+      <body className='relative h-full w-full bg-background font-body text-text'>
+        <SimulationProvider>
+          <Nav />
+          {children}
+        </SimulationProvider>
       </body>
     </html>
   );
