@@ -3,10 +3,10 @@ import Image from 'next/image';
 
 const Foot = () => {
   return (
-    <footer className='pointer-events-auto relative z-20 flex flex-col items-center justify-center bg-secondary px-4 py-6 text-center text-text'>
+    <footer className='pointer-events-auto relative z-20 flex flex-col items-center justify-center bg-secondary px-4 py-6 text-center'>
       <div className='flex flex-col items-center xs:flex-row'>
         Made with
-        <div className='ml-3 mt-2 flex gap-2 text-[17px] xs:mt-0 '>
+        <div className='ml-3 mt-2 flex gap-2 text-[17px] xs:mt-0'>
           {techUsed.map((icon) => (
             <div
               key={icon.name}
@@ -25,7 +25,7 @@ const Foot = () => {
         </div>
         <span className='ml-3 mt-2 xs:mt-0'>&amp; lots of ❤️ !</span>
       </div>
-      <p className='mt-5 text-[14px] opacity-75 '>
+      <p className='mt-5 text-[14px] opacity-75'>
         &copy; {new Date().getFullYear()} Michael Brusegard. All rights reserved. <br />
         Licensed under the Apache-2.0 License.
       </p>
@@ -33,7 +33,7 @@ const Foot = () => {
         href='https://github.com/michaelbrusegard/personal-website'
         target='_blank'
         rel='noreferrer'
-        className='mt-4 flex cursor-pointer items-center gap-1 text-[18px] font-medium text-text transition-transform duration-200 hover:-translate-y-[2px] focus:-translate-y-[2px] hover:text-primary focus:text-primary'
+        className='mt-4 flex cursor-pointer items-center gap-1 text-[18px] font-medium transition-transform duration-200 hover:-translate-y-[2px] hover:text-primary focus:-translate-y-[2px] focus:text-primary'
       >
         Code
         <svg height='1em' viewBox='0 0 496 512' className='text-current'>

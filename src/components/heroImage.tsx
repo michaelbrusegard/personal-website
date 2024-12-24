@@ -64,7 +64,7 @@ const HeroImage = () => {
         width='100%'
         height='100%'
         viewBox='0 0 1813 2468'
-        className='hero-curve hero-opacity absolute bottom-0 h-[60%] w-full fill-none stroke-[14px] object-contain text-text xs:h-[75%]'
+        className='hero-curve hero-opacity absolute bottom-0 h-[60%] w-full fill-none stroke-[14px] object-contain xs:h-[75%]'
         initial='hidden'
         animate='visible'
         onAnimationComplete={() => heroCurveDone()}
@@ -82,7 +82,7 @@ const HeroImage = () => {
       </motion.svg>
       <Image src={heroPhoto} alt='Michael' className='hero-image absolute bottom-0 h-[60%] w-full object-contain xs:h-[75%]' />
       <div
-        className='hero-draw absolute bottom-0 h-[60%] w-full bg-text object-contain xs:h-[75%]'
+        className='hero-draw absolute bottom-0 h-[60%] w-full bg-foreground object-contain xs:h-[75%]'
         style={{
           maskImage: `url(${heroDraw.src})`,
           WebkitMaskImage: `url(${heroDraw.src})`,

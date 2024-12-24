@@ -16,14 +16,14 @@ const ExperienceCard = ({ experience, currentColors }: { experience: any; curren
     icon={<Image src={experience.icon} alt={experience.companyName} className='rounded-full object-contain shadow-timeline-border' />}
   >
     <div>
-      <h3 className='pointer-events-auto text-[24px] font-bold text-text'>{experience.title}</h3>
-      <p className='pointer-events-auto text-[16px] font-semibold text-text opacity-75' style={{ margin: 0 }}>
+      <h3 className='pointer-events-auto text-[24px] font-bold'>{experience.title}</h3>
+      <p className='pointer-events-auto text-[16px] font-semibold opacity-75' style={{ margin: 0 }}>
         {experience.companyName}
       </p>
     </div>
     <ul className='pointer-events-auto ml-5 mt-5 list-disc space-y-2'>
       {experience.points.map((point: string, index: number) => (
-        <li key={`experience-point-${index}`} className=' pl-1 text-[14px] tracking-wider text-text'>
+        <li key={`experience-point-${index}`} className='pl-1 text-[14px] tracking-wider'>
           {point}
         </li>
       ))}
@@ -41,9 +41,9 @@ const Experience = () => {
   const changeColors = () => {
     const root = getComputedStyle(document.documentElement);
     setCurrentColors({
-      secondaryColor: root.getPropertyValue('--color-secondary'),
-      textColor: root.getPropertyValue('--color-text'),
-      accentColor: root.getPropertyValue('--color-accent'),
+      secondaryColor: root.getPropertyValue('--secondary'),
+      textColor: root.getPropertyValue('--foreground'),
+      accentColor: root.getPropertyValue('--accent'),
     });
   };
 

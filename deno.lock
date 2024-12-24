@@ -11,6 +11,7 @@
     "npm:autoprefixer@^10.4.20": "10.4.20_postcss@8.4.49",
     "npm:eslint-config-next@15.1.2": "15.1.2_eslint@9.17.0_typescript@5.7.2_@typescript-eslint+parser@8.18.2__eslint@9.17.0__typescript@5.7.2_eslint-plugin-import@2.31.0__eslint@9.17.0",
     "npm:eslint@9": "9.17.0",
+    "npm:next-themes@1.0.0-beta.0": "1.0.0-beta.0_next@15.1.2__react@19.0.0__react-dom@19.0.0___react@19.0.0_react@19.0.0_react-dom@19.0.0__react@19.0.0",
     "npm:next@15.1.2": "15.1.2_react@19.0.0_react-dom@19.0.0__react@19.0.0",
     "npm:postcss@8": "8.4.49",
     "npm:react-dom@19": "19.0.0_react@19.0.0",
@@ -2494,6 +2495,14 @@
     "natural-compare@1.4.0": {
       "integrity": "sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw=="
     },
+    "next-themes@1.0.0-beta.0_next@15.1.2__react@19.0.0__react-dom@19.0.0___react@19.0.0_react@19.0.0_react-dom@19.0.0__react@19.0.0": {
+      "integrity": "sha512-DitiYQqduW+m/e6WF7LjuIlvh1O8z0tgStGdwGZa27+R47v9xz/4tgq1NH0y6xQqhbm9/ao3yZQS4Hbcy3/OFw==",
+      "dependencies": [
+        "next",
+        "react@19.0.0",
+        "react-dom"
+      ]
+    },
     "next@15.1.2_react@19.0.0_react-dom@19.0.0__react@19.0.0": {
       "integrity": "sha512-nLJDV7peNy+0oHlmY2JZjzMfJ8Aj0/dd3jCwSZS8ZiO5nkQfcZRqDrRN3U5rJtqVTQneIOGZzb6LCNrk7trMCQ==",
       "dependencies": [
@@ -3572,6 +3581,7 @@
         "npm:autoprefixer@^10.4.20",
         "npm:eslint-config-next@15.1.2",
         "npm:eslint@9",
+        "npm:next-themes@1.0.0-beta.0",
         "npm:next@15.1.2",
         "npm:postcss@8",
         "npm:react-dom@19",

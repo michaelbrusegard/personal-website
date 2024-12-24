@@ -173,7 +173,7 @@ function updateColors(): void {
   colors = palettes[currentPaletteIndex][currentVariant];
 
   const root = getComputedStyle(document.documentElement);
-  document.documentElement.style.setProperty('--color-text', colors.textColor);
+  document.documentElement.style.setProperty('--color-foreground', colors.textColor);
   document.documentElement.style.setProperty('--color-background', colors.backgroundColor);
   document.documentElement.style.setProperty('--color-primary', colors.primaryColor);
   document.documentElement.style.setProperty('--color-secondary', colors.secondaryColor);

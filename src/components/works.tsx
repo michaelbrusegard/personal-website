@@ -51,8 +51,8 @@ const ProjectCard = ({
         </div>
 
         <div className='px-2 py-5 text-center lg:px-5 lg:py-2 xl:px-10 xl:py-8'>
-          <h3 className='text-[24px] font-bold text-text'>{name}</h3>
-          <p className='mt-2 text-[17px] text-text opacity-75'>{description}</p>
+          <h3 className='text-[24px] font-bold'>{name}</h3>
+          <p className='mt-2 text-[17px] opacity-75'>{description}</p>
           <div className='mt-3 flex flex-wrap justify-center gap-2'>
             {techstack.map((icon) => (
               <div
@@ -75,7 +75,7 @@ const ProjectCard = ({
               href={srcLink}
               target='_blank'
               rel='noreferrer'
-              className='flex cursor-pointer items-center gap-1 text-text transition-transform duration-200 hover:-translate-y-[2px] hover:text-primary focus:-translate-y-[2px] focus:text-primary'
+              className='flex cursor-pointer items-center gap-1 transition-transform duration-200 hover:-translate-y-[2px] hover:text-primary focus:-translate-y-[2px] focus:text-primary'
             >
               Code
               <svg height='1em' viewBox='0 0 496 512' className='text-current'>
@@ -89,7 +89,7 @@ const ProjectCard = ({
               href={prodLink}
               target='_blank'
               rel='noreferrer'
-              className='flex cursor-pointer items-center gap-1 text-text transition-transform duration-200 hover:-translate-y-[2px] hover:text-primary focus:-translate-y-[2px] focus:text-primary'
+              className='flex cursor-pointer items-center gap-1 transition-transform duration-200 hover:-translate-y-[2px] hover:text-primary focus:-translate-y-[2px] focus:text-primary'
             >
               Live
               <svg height='1em' viewBox='0 0 512 512' className='text-current'>
@@ -115,10 +115,7 @@ const Works = () => {
       </motion.div>
 
       <div className='flex w-full'>
-        <motion.p
-          variants={fadeIn('', '', 0.1, 1) as Variants}
-          className='section-text pointer-events-auto mt-3 max-w-3xl text-[17px] leading-[30px] text-text'
-        >
+        <motion.p variants={fadeIn('', '', 0.1, 1) as Variants} className='section-text pointer-events-auto mt-3 max-w-3xl text-[17px] leading-[30px]'>
           I have a collection of projects that effectively demonstrate my skills and experience, showcasing real-world examples of my work. Each project has
           live production links as well as repositories containing the source code. These projects serve as a testament to my proficiency in tackling different
           challenges, adeptness with diverse technologies, and ability to efficiently manage projects.

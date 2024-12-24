@@ -66,40 +66,40 @@ const Contact = () => {
         <h3 className='section-title'>Contact.</h3>
         <form ref={formRef} onSubmit={handleSubmit} className='mt-12 flex flex-col gap-8'>
           <label className='flex flex-col'>
-            <span className='mb-4 font-medium text-text'>Your Name</span>
+            <span className='mb-4 font-medium'>Your Name</span>
             <input
               type='text'
               name='name'
               value={form.name}
               onChange={handleChange}
               placeholder="What's your name?"
-              className='outlined-none rounded-lg border-none bg-background px-6 py-4 font-medium text-text placeholder:opacity-75'
+              className='outlined-none rounded-lg border-none bg-background px-6 py-4 font-medium placeholder:opacity-75'
               required
               disabled={loading}
             />
           </label>
           <label className='flex flex-col'>
-            <span className='mb-4 font-medium text-text'>Your Email</span>
+            <span className='mb-4 font-medium'>Your Email</span>
             <input
               type='email'
               name='email'
               value={form.email}
               onChange={handleChange}
               placeholder="What's your Email?"
-              className='outlined-none rounded-lg border-none bg-background px-6 py-4 font-medium text-text placeholder:opacity-75'
+              className='outlined-none rounded-lg border-none bg-background px-6 py-4 font-medium placeholder:opacity-75'
               required
               disabled={loading}
             />
           </label>
           <label className='flex flex-col'>
-            <span className='mb-4 font-medium text-text'>Your Message</span>
+            <span className='mb-4 font-medium'>Your Message</span>
             <textarea
               rows={7}
               name='message'
               value={form.message}
               onChange={handleChange}
               placeholder='What do you want to say?'
-              className='outlined-none resize-none rounded-lg border-none bg-background px-6 py-4 font-medium text-text placeholder:opacity-75'
+              className='outlined-none resize-none rounded-lg border-none bg-background px-6 py-4 font-medium placeholder:opacity-75'
               required
               disabled={loading}
             />
@@ -111,7 +111,7 @@ const Contact = () => {
             className={`w-fit select-none rounded-xl bg-primary px-8 py-3 font-semibold text-background transition-all duration-200 ${
               loading
                 ? 'pointer-events-none'
-                : 'hover:-translate-y-1 hover:from-primary hover:to-accent hover:text-text hover:shadow-xl hover:shadow-primary hover:bg-gradient-30 focus:-translate-y-1 focus:from-primary focus:to-accent focus:text-text focus:shadow-xl focus:shadow-primary focus:bg-gradient-30'
+                : 'hover:-translate-y-1 hover:from-primary hover:to-accent hover:text-foreground hover:shadow-xl hover:shadow-primary hover:bg-gradient-30 focus:-translate-y-1 focus:from-primary focus:to-accent focus:text-foreground focus:shadow-xl focus:shadow-primary focus:bg-gradient-30'
             }`}
             disabled={loading}
           >

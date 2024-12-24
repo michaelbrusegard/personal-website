@@ -3,18 +3,19 @@ import plugin from 'tailwindcss/plugin';
 
 const config = {
   content: ['./src/**/*.tsx'],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        text: 'var(--color-text)',
-        background: 'var(--color-background)',
-        primary: 'var(--color-primary)',
-        secondary: 'var(--color-secondary)',
-        accent: 'var(--color-accent)',
+        foreground: 'hsl(var(--foreground))',
+        background: 'hsl(var(--background))',
+        primary: 'hsl(var(--primary))',
+        secondary: 'hsl(var(--secondary))',
+        accent: 'hsl(var(--accent))',
       },
       boxShadow: {
-        'timeline-border': `0 0 0 4px var(--color-accent)`,
-        card: `0 0 5px 1px var(--color-text)`,
+        'timeline-border': `0 0 0 4px hsl(var(--accent))`,
+        card: `0 0 5px 1px hsl(var(--foreground))`,
       },
       screens: {
         xs: '448px',

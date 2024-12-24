@@ -15,46 +15,68 @@
   src: url('../../public/fonts/SF-Pro.ttf') format('truetype');
 }
 
-:root {
-  --color-text: rgba(0, 0, 0, 0);
-  --color-background: rgba(0, 0, 0, 0);
-  --color-primary: rgba(0, 0, 0, 0);
-  --color-secondary: rgba(0, 0, 0, 0);
-  --color-accent: rgba(0, 0, 0, 0);
-}
+@layer base {
+  * {
+    @apply min-w-0;
+  }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-  color-scheme: dark;
-}
+  :root {
+    --foreground: 0, 0%, 0%;
+    --background: 0, 0%, 100%;
+    --primary: 219.57, 100%, 63.73%;
+    --secondary: 0, 0%, 94.9%;
+    --accent: 21.46, 100%, 75.88%;
+  }
 
-.paddingX {
-  @apply px-6 sm:px-11 md:px-16;
-}
+  .dark {
+    --foreground: 0, 0%, 100%;
+    --background: 0, 0%, 0%;
+    --primary: 219.57, 100%, 63.73%;
+    --secondary: 0, 0%, 10.2%;
+    --accent: 21.46, 100%, 75.88%;
+  }
 
-.paddingY {
-  @apply py-6 sm:py-11 md:py-16;
-}
+  .light-pink {
+    --foreground: 0, 0%, 1.96%;
+    --background: 0, 0%, 98.04%;
+    --primary: 220.71, 100%, 78.04%;
+    --secondary: 222, 100%, 96.08%;
+    --accent: 333.77, 75.93%, 47.25%;
+  }
 
-.padding {
-  @apply px-6 py-6 sm:px-11 sm:py-11 md:px-16 md:py-16;
-}
+  .dark-pink {
+    --foreground: 0, 0%, 98.04%;
+    --background: 0, 0%, 1.96%;
+    --primary: 219.57, 100%, 63.73%;
+    --secondary: 222.35, 100%, 10;
+    --accent: 333.85, 76.47%, 70%;
+  }
 
-::-moz-selection {
-  @apply bg-accent;
-}
+  .paddingX {
+    @apply px-6 sm:px-11 md:px-16;
+  }
 
-::selection {
-  @apply bg-accent;
-}
+  .paddingY {
+    @apply py-6 sm:py-11 md:py-16;
+  }
 
-.icon-path:hover {
-  @apply fill-primary;
-}
+  .padding {
+    @apply px-6 py-6 sm:px-11 sm:py-11 md:px-16 md:py-16;
+  }
 
-.icon-path {
-  @apply fill-accent;
+  ::-moz-selection {
+    @apply bg-accent;
+  }
+
+  ::selection {
+    @apply bg-accent;
+  }
+
+  .icon-path:hover {
+    @apply fill-primary;
+  }
+
+  .icon-path {
+    @apply fill-accent;
+  }
 }

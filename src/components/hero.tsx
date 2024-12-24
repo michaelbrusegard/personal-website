@@ -41,7 +41,7 @@ const Hero = () => {
           <div className='h-40 w-1 bg-gradient-to-b from-primary via-secondary to-transparent sm:h-80' />
         </div>
         <div className='pointer-events-auto'>
-          <h1 className='mt-2 flex flex-wrap text-[40px] font-black text-text sm:text-[60px] lg:text-[80px] lg:leading-[98px] xs:text-[50px]'>
+          <h1 className='mt-2 flex flex-wrap text-[40px] font-black sm:text-[60px] lg:text-[80px] lg:leading-[98px] xs:text-[50px]'>
             <div>
               <motion.span
                 ref={handleSpanRef}
@@ -178,7 +178,7 @@ const Hero = () => {
             </div>
           </h1>
           <motion.p
-            className='about-text leading[20px] mt-0 text-[16px] font-medium text-text sm:text-[26px] lg:text-[30px] lg:leading-[40px] xs:mt-[2] xs:text-[20px] xs:leading-normal'
+            className='about-text leading[20px] mt-0 text-[16px] font-medium sm:text-[26px] lg:text-[30px] lg:leading-[40px] xs:mt-[2] xs:text-[20px] xs:leading-normal'
             variants={fadeIn('', '', 1.5, 1) as Variants}
             initial='hidden'
             animate='show'
@@ -197,7 +197,7 @@ const Hero = () => {
       </div>
       <div className='absolute bottom-24 flex w-full items-center justify-center landscape-md:bottom-6'>
         <a href='#about' className='scroll-button group pointer-events-auto transition-transform duration-200 hover:translate-y-2 focus:translate-y-2'>
-          <div className='flex h-[64px] w-[35px] items-start justify-center rounded-3xl border-4 border-text p-2 transition-colors group-hover:border-primary group-focus:border-primary'>
+          <div className='flex h-[64px] w-[35px] items-start justify-center rounded-3xl border-4 border-foreground p-2 transition-colors group-hover:border-primary group-focus:border-primary'>
             <motion.div
               animate={{
                 y: [0, 24, 0],
@@ -207,7 +207,7 @@ const Hero = () => {
                 repeat: Infinity,
                 repeatType: 'loop',
               }}
-              className='mb-1 h-3 w-3 rounded-full bg-text transition-colors group-hover:bg-primary group-focus:bg-primary'
+              className='mb-1 h-3 w-3 rounded-full bg-foreground transition-colors group-hover:bg-primary group-focus:bg-primary'
             />
           </div>
         </a>

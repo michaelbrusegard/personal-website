@@ -26,7 +26,7 @@ const Nav = () => {
       width='100%'
       height='100%'
       viewBox='0 0 256 256'
-      className='h-6 w-6 text-text hover:text-primary focus:text-primary'
+      className='h-6 w-6 hover:text-primary focus:text-primary'
       tabIndex={tabIndex}
       whileHover={{ translateY: '-2px' }}
       transition={{ duration: 0.2 }}
@@ -67,7 +67,7 @@ const Nav = () => {
       width='100%'
       height='100%'
       viewBox='0 0 256 256'
-      className='h-6 w-6 text-text hover:text-primary focus:text-primary'
+      className='h-6 w-6 hover:text-primary focus:text-primary'
       tabIndex={tabIndex}
       whileHover={{ translateY: '-2px' }}
       transition={{ duration: 0.2 }}
@@ -96,7 +96,7 @@ const Nav = () => {
       width='100%'
       height='100%'
       viewBox='0 0 256 256'
-      className='h-6 w-6 text-text hover:text-primary focus:text-primary'
+      className='h-6 w-6 hover:text-primary focus:text-primary'
       tabIndex={tabIndex}
       whileHover={{ translateY: '-2px' }}
       transition={{ duration: 0.2 }}
@@ -147,7 +147,7 @@ const Nav = () => {
             width='100%'
             height='100%'
             viewBox='0 0 256 256'
-            className='h-9 w-9 object-contain text-text'
+            className='h-9 w-9 object-contain'
             variants={fadeIn('', '', 0, 1) as Variants}
             initial='hidden'
             animate='show'
@@ -162,7 +162,7 @@ const Nav = () => {
           </motion.svg>
 
           <motion.p
-            className='flex cursor-pointer font-mono text-[18px] font-bold text-text'
+            className='flex cursor-pointer font-mono text-[18px] font-bold'
             variants={fadeIn('', '', 0, 1) as Variants}
             initial='hidden'
             animate='show'
@@ -175,7 +175,7 @@ const Nav = () => {
           {navLinks.map((link, index) => (
             <motion.li
               key={link.id}
-              className='nav-link cursor-pointer font-mono text-[18px] font-medium text-text hover:text-primary focus:text-primary'
+              className='nav-link cursor-pointer font-mono text-[18px] font-medium hover:text-primary focus:text-primary'
               tabIndex={0}
               variants={fadeIn('down', '', index * 0.25, 1) as Variants}
               initial='hidden'

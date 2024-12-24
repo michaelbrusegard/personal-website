@@ -35,7 +35,7 @@ export const metadata = {
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en' dir='ltr' className='h-full w-full'>
-      <body className='relative h-full w-full bg-background font-body text-text'>
+      <body className='relative h-full w-full bg-background font-body text-foreground antialiased'>
         <SimulationProvider>
           <Nav />
           {children}

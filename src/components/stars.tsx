@@ -20,7 +20,7 @@ const StarsCanvas = () => {
 
       for (let i = 0; i < 500; i++) {
         const isAccentColor = Math.random() < 0.3;
-        const color = isAccentColor ? root.getPropertyValue('--color-accent') : root.getPropertyValue('--color-text');
+        const color = isAccentColor ? root.getPropertyValue('--accent') : root.getPropertyValue('--foreground');
         const star: Star = {
           position: [Math.random() * 100 - 50, Math.random() * 100 - 50, Math.random() * 100 - 50],
           color: color,
@@ -43,7 +43,7 @@ const StarsCanvas = () => {
       const handleColorChange = () => {
         starPool.forEach((star) => {
           const isAccentColor = Math.random() < 0.3;
-          const color = isAccentColor ? root.getPropertyValue('--color-accent') : root.getPropertyValue('--color-text');
+          const color = isAccentColor ? root.getPropertyValue('--accent') : root.getPropertyValue('--foreground');
           star.color = color;
 
           if (star.mesh) {
