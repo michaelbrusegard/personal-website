@@ -18,7 +18,6 @@ function useSimulation() {
 }
 
 function hslToHex(h: number, s: number, l: number) {
-  console.log('Input HSL:', h, s, l); // Debug input values
   l /= 100;
   const a = (s * Math.min(l, 1 - l)) / 100;
   const f = (n: number) => {
@@ -29,13 +28,13 @@ function hslToHex(h: number, s: number, l: number) {
       .padStart(2, '0');
   };
   const result = `#${f(0)}${f(8)}${f(4)}`;
-  console.log('Output hex:', result); // Debug output
   return result;
 }
 
 function SimulationProvider({ children }: { children: React.ReactNode }) {
   const simulation = useRef<WebGLFluidEnhanced | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const mainRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (containerRef.current) {
@@ -85,16 +84,51 @@ function SimulationProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
+  useEffect(() => {
+    const mainElement = mainRef.current;
+    if (!mainElement) return;
+
+    const eventTypes = [
+      'mousemove',
+      'mousedown',
+      'mouseup',
+      'touchstart',
+      'touchmove',
+      'touchend',
+    ];
+
+    function handleMouseEvent(event: Event) {
+      if (event instanceof MouseEvent && containerRef.current) {
+        const canvas = containerRef.current.querySelector('canvas');
+        if (canvas) {
+          canvas.dispatchEvent(new MouseEvent(event.type, event));
+        }
+      }
+    }
+
+    eventTypes.forEach((eventType) => {
+      mainElement.addEventListener(eventType, handleMouseEvent);
+    });
+
+    return () => {
+      eventTypes.forEach((eventType) => {
+        mainElement.removeEventListener(eventType, handleMouseEvent);
+      });
+    };
+  }, []);
+
   function multipleSplats(amount: number) {
     simulation.current?.multipleSplats(amount);
   }
 
   return (
     <SimulationContext.Provider value={{ multipleSplats }}>
-      <div className='fixed left-0 top-0 z-0 h-full w-full'>
+      <div className='fixed left-0 top-0 h-full w-full'>
         <div ref={containerRef} className='h-full w-full' />
       </div>
-      {children}
+      <main ref={mainRef} className='h-full w-full'>
+        {children}
+      </main>
     </SimulationContext.Provider>
   );
 }

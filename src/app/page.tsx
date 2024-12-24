@@ -11,7 +11,7 @@ import Foot from '../components/foot';
 function Page() {
   return (
     <>
-      <div className='pointer-events-none h-screen-small w-full'>
+      <div className='h-screen-small w-full'>
         <Hero />
         <About />
         <Experience />
