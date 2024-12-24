@@ -1,4 +1,4 @@
-import webGLFluidEnhanced from 'webgl-fluid-enhanced';
+// import webGLFluidEnhanced from 'webgl-fluid-enhanced';
 
 let hoverTimer: NodeJS.Timeout | null = null;
 let isHovered = false;
@@ -10,9 +10,9 @@ function resetHoverTimer() {
 
   hoverTimer = setTimeout(() => {
     if (!isHovered) {
-      webGLFluidEnhanced.config({
-        BRIGHTNESS: 0.5,
-      });
+      // webGLFluidEnhanced.config({
+      //   BRIGHTNESS: 0.5,
+      // });
     }
   }, 1000);
 }
@@ -20,9 +20,9 @@ function resetHoverTimer() {
 export default function fluidHover(element: HTMLElement) {
   function handleMouseEnter() {
     isHovered = true;
-    webGLFluidEnhanced.config({
-      BRIGHTNESS: 0.1,
-    });
+    // webGLFluidEnhanced.config({
+    //   BRIGHTNESS: 0.1,
+    // });
     resetHoverTimer();
   }
 

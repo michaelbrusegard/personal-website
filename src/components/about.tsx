@@ -1,5 +1,5 @@
 import Tilt from 'react-parallax-tilt';
-import { motion, Variants } from 'framer-motion';
+import { motion, Variants } from 'motion/react';
 import Image from 'next/image';
 import { services } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';

@@ -1,9 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
-import { Variants, motion } from 'framer-motion';
+import { Variants, motion } from 'motion/react';
 import SectionWrapper from './sectionWrapper';
 import { slideIn } from '../utils/motion';
 import DogCanvas from './dog';
-import webGLFluidEnhanced from 'webgl-fluid-enhanced';
 
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
@@ -21,7 +20,7 @@ const Contact = () => {
     const button = buttonRef.current;
     if (button)
       button.addEventListener('click', () => {
-        webGLFluidEnhanced.splats();
+        // webGLFluidEnhanced.splats();
       });
   }, []);
 
@@ -112,7 +111,7 @@ const Contact = () => {
             className={`w-fit select-none rounded-xl bg-primary px-8 py-3 font-semibold text-background transition-all duration-200 ${
               loading
                 ? 'pointer-events-none'
-                : 'hover:-translate-y-1 focus:-translate-y-1 hover:from-primary focus:from-primary hover:to-accent focus:to-accent hover:text-text focus:text-text hover:shadow-xl focus:shadow-xl hover:shadow-primary focus:shadow-primary hover:bg-gradient-30 focus:bg-gradient-30'
+                : 'hover:-translate-y-1 hover:from-primary hover:to-accent hover:text-text hover:shadow-xl hover:shadow-primary hover:bg-gradient-30 focus:-translate-y-1 focus:from-primary focus:to-accent focus:text-text focus:shadow-xl focus:shadow-primary focus:bg-gradient-30'
             }`}
             disabled={loading}
           >

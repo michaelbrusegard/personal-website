@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import letterBounce, { bounce } from '../utils/letterBounce';
-import { motion, Variants } from 'framer-motion';
+import { motion, Variants } from 'motion/react';
 import fluidHover from '../utils/fluidHover';
-import webGLFluidEnhanced from 'webgl-fluid-enhanced';
 import { fadeIn, appear } from '../utils/motion';
 import HeroImage from './heroImage';
 import HeroSocial from './heroSocial';
@@ -14,7 +13,7 @@ const Hero = () => {
     const scrollButton = document.querySelector('.scroll-button') as HTMLElement;
     if (scrollButton) fluidHover(scrollButton);
     scrollButton.addEventListener('click', () => {
-      webGLFluidEnhanced.splats();
+      // webGLFluidEnhanced.splats();
     });
 
     const aboutText = document.querySelector('.about-text') as HTMLElement;
@@ -36,7 +35,7 @@ const Hero = () => {
   return (
     <section className='relative z-10 mx-auto h-screen-large w-full select-none'>
       <HeroImage />
-      <div className='paddingX absolute inset-0 top-[80px] mx-auto flex max-w-7xl flex-row items-start gap-5 xs:top-[120px] '>
+      <div className='paddingX absolute inset-0 top-[80px] mx-auto flex max-w-7xl flex-row items-start gap-5 xs:top-[120px]'>
         <div className='pointer-events-auto mt-5 flex flex-col items-center justify-center'>
           <div className='h-5 w-5 rounded-full bg-primary' />
           <div className='h-40 w-1 bg-gradient-to-b from-primary via-secondary to-transparent sm:h-80' />

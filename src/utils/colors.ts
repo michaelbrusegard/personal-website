@@ -1,4 +1,3 @@
-import webGLFluidEnhanced from 'webgl-fluid-enhanced';
 interface Color {
   textColor: string;
   backgroundColor: string;
@@ -182,10 +181,10 @@ function updateColors(): void {
 
   window.dispatchEvent(colorsUpdateEvent);
 
-  webGLFluidEnhanced.config({
-    COLOR_PALETTE: [root.getPropertyValue('--color-primary'), root.getPropertyValue('--color-secondary'), root.getPropertyValue('--color-accent')],
-    BACK_COLOR: root.getPropertyValue('--color-background'),
-  });
+  // webGLFluidEnhanced.config({
+  //   COLOR_PALETTE: [root.getPropertyValue('--color-primary'), root.getPropertyValue('--color-secondary'), root.getPropertyValue('--color-accent')],
+  //   BACK_COLOR: root.getPropertyValue('--color-background'),
+  // });
 }
 
 let storedPalette;

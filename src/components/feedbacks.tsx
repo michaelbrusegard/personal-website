@@ -1,4 +1,4 @@
-import { Variants, motion } from 'framer-motion';
+import { Variants, motion } from 'motion/react';
 import SectionWrapper from './sectionWrapper';
 import { fadeIn, textVariant } from '../utils/motion';
 import { testimonials } from '../constants/index';

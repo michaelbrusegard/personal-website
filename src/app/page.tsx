@@ -9,21 +9,21 @@ import Feedbacks from '../components/feedbacks';
 import Contact from '../components/contact';
 import StarsCanvas from '../components/stars';
 import Foot from '../components/foot';
-import webGLFluidEnhanced from 'webgl-fluid-enhanced';
+import WebGLFluidEnhanced from 'webgl-fluid-enhanced';
 import { updateColors } from '../utils/colors';
 import propagateMouseEvent from '../utils/mouseEventPropagation';
 
 const App = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const divRef = useRef<HTMLDivElement>(null);
 
   const handleMouseEvent = (event: MouseEvent) => {
-    propagateMouseEvent(event, canvasRef);
+    propagateMouseEvent(event, containerRef);
   };
 
   useEffect(() => {
     updateColors();
-    const canvas = canvasRef.current;
+    const container = containerRef.current;
     const div = divRef.current;
     const root = getComputedStyle(document.documentElement);
 
@@ -36,16 +36,12 @@ const App = () => {
       div.addEventListener('mouseout', handleMouseEvent);
     }
 
-    if (canvas) {
-      webGLFluidEnhanced.simulation(canvas, {
-        COLOR_PALETTE: [
-          root.getPropertyValue('--color-primary'),
-          root.getPropertyValue('--color-secondary'),
-          root.getPropertyValue('--color-accent'),
-        ],
-        BACK_COLOR: root.getPropertyValue('--color-background'),
-      });
-    }
+    const simulation = new WebGLFluidEnhanced(container!);
+    simulation.setConfig({
+      colorPalette: [root.getPropertyValue('--color-primary'), root.getPropertyValue('--color-secondary'), root.getPropertyValue('--color-accent')],
+      transparent: true,
+    });
+    simulation.start();
 
     return () => {
       if (div) {
@@ -56,22 +52,25 @@ const App = () => {
         div.removeEventListener('mouseover', handleMouseEvent);
         div.removeEventListener('mouseout', handleMouseEvent);
       }
+      simulation.stop();
     };
-  }, [canvasRef]);
+  }, [containerRef]);
 
   return (
     <>
-      <canvas ref={canvasRef} className='fixed left-0 top-0 z-0 h-screen-large w-full' />
+      <div className='fixed left-0 top-0 z-0 h-full w-full'>
+        <div ref={containerRef} className='h-full w-full' />
+      </div>
       <div ref={divRef} className='pointer-events-none h-screen-small w-full'>
         <Hero />
         <About />
         <Experience />
         <Works />
         <Feedbacks />
-        <div className='relative z-0'>
-          <Contact />
-          <StarsCanvas />
-        </div>
+        {/* <div className='relative z-0'> */}
+        {/*   <Contact /> */}
+        {/*   <StarsCanvas /> */}
+        {/* </div> */}
         <Foot />
       </div>
     </>

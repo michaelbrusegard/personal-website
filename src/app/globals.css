@@ -1,9 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 @import '../styles/menuButton.css';
 @import '../styles/text.css';
 @import '../styles/hero.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @font-face {
   font-family: 'SF-Mono';

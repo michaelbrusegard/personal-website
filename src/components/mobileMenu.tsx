@@ -1,5 +1,5 @@
 import { navLinks } from '../constants';
-import { motion, Variants } from 'framer-motion';
+import { motion, Variants } from 'motion/react';
 import { fadeIn, foldOut } from '../utils/motion';
 import { useEffect } from 'react';
 

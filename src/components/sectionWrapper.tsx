@@ -1,4 +1,4 @@
-import { Variants, motion } from 'framer-motion';
+import { Variants, motion } from 'motion/react';
 import { ComponentType } from 'react';
 import { staggerContainer } from '../utils/motion';
 import { useEffect } from 'react';

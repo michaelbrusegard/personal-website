@@ -1,5 +1,5 @@
 import Tilt from 'react-parallax-tilt';
-import { Variants, motion } from 'framer-motion';
+import { Variants, motion } from 'motion/react';
 import SectionWrapper from '../components/sectionWrapper';
 import { projects } from '../constants/index';
 import { fadeIn, textVariant } from '../utils/motion';
