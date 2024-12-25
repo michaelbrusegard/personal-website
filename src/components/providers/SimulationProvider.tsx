@@ -31,6 +31,14 @@ function hslToHex(h: number, s: number, l: number) {
   return result;
 }
 
+function getCSSColorValue(propertyName: string): [number, number, number] {
+  const root = getComputedStyle(document.documentElement);
+  return (root
+    .getPropertyValue(propertyName)
+    .match(/[\d.]+/g)
+    ?.map((v) => Number(v)) ?? [0, 0, 0]) as [number, number, number];
+}
+
 function SimulationProvider({ children }: { children: React.ReactNode }) {
   const simulation = useRef<WebGLFluidEnhanced | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -38,40 +46,12 @@ function SimulationProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     if (containerRef.current) {
-      const root = getComputedStyle(document.documentElement);
       simulation.current = new WebGLFluidEnhanced(containerRef.current);
       simulation.current.setConfig({
         colorPalette: [
-          hslToHex(
-            ...((root
-              .getPropertyValue('--primary')
-              .match(/[\d.]+/g)
-              ?.map((v) => Number(v)) ?? [0, 0, 0]) as [
-              number,
-              number,
-              number,
-            ]),
-          ),
-          hslToHex(
-            ...((root
-              .getPropertyValue('--secondary')
-              .match(/[\d.]+/g)
-              ?.map((v) => Number(v)) ?? [0, 0, 0]) as [
-              number,
-              number,
-              number,
-            ]),
-          ),
-          hslToHex(
-            ...((root
-              .getPropertyValue('--accent')
-              .match(/[\d.]+/g)
-              ?.map((v) => Number(v)) ?? [0, 0, 0]) as [
-              number,
-              number,
-              number,
-            ]),
-          ),
+          hslToHex(...getCSSColorValue('--primary')),
+          hslToHex(...getCSSColorValue('--secondary')),
+          hslToHex(...getCSSColorValue('--accent')),
         ],
         transparent: true,
       });

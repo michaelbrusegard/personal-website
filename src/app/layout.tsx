@@ -1,10 +1,12 @@
 import './globals.css';
-import { Nav } from '@/components/layout/Nav';
+import { ThemeProvider } from '@/components/providers/ThemeProvider';
+import { Header } from '@/components/layout/Header';
 import { SimulationProvider } from '@/components/providers/SimulationProvider';
 
 export const metadata = {
   title: 'Michael | Portifolio',
-  description: 'My first website built with React. Showcasing some of my experience and projects.',
+  description:
+    'My first website built with React. Showcasing some of my experience and projects.',
   icons: [
     {
       rel: 'icon',
@@ -36,10 +38,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en' dir='ltr' className='h-full w-full'>
       <body className='relative h-full w-full bg-background font-body text-foreground antialiased'>
-        <SimulationProvider>
-          <Nav />
-          {children}
-        </SimulationProvider>
+        <ThemeProvider>
+          <SimulationProvider>
+            <Header />
+            {children}
+          </SimulationProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

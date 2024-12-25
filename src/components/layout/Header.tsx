@@ -7,9 +7,13 @@ import MenuButton from '../menuButton';
 import MobileMenu from '../mobileMenu';
 import { motion, Variants } from 'motion/react';
 import { fadeIn } from '../../utils/motion';
-import { changeVariant, changePalette, isDarkVariant } from '../../utils/colors';
+import {
+  changeVariant,
+  changePalette,
+  isDarkVariant,
+} from '../../utils/colors';
 
-const Nav = () => {
+const Header = () => {
   const [isDarkMode, setIsDarkMode] = useState(isDarkVariant);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -153,15 +157,35 @@ const Nav = () => {
             animate='show'
           >
             <g transform='matrix(0.851114,0,0,0.826603,-212.779,-120.429)'>
-              <path d='M250,395.723L250,232.026L372.656,313.76L354.862,326.041L270.071,271.005L270.071,395.723L250,395.723Z' fill='currentColor' />
-              <path d='M499,205.318L499,395.672L478.205,395.672L478.205,244.373L446.141,264.874L428.353,252.457L499,205.318Z' fill='currentColor' />
-              <path d='M302,205.462L446.102,301.366L446,325.734L302.261,229.578L302,205.462Z' fill='currentColor' />
-              <path d='M531,395.726L530.942,245.574L550.782,232.164L550.782,395.726L531,395.726Z' fill='currentColor' />
-              <path d='M302,395.766L302,328.095L322.911,342.056L323,395.766L302,395.766Z' fill='currentColor' />
+              <path
+                d='M250,395.723L250,232.026L372.656,313.76L354.862,326.041L270.071,271.005L270.071,395.723L250,395.723Z'
+                fill='currentColor'
+              />
+              <path
+                d='M499,205.318L499,395.672L478.205,395.672L478.205,244.373L446.141,264.874L428.353,252.457L499,205.318Z'
+                fill='currentColor'
+              />
+              <path
+                d='M302,205.462L446.102,301.366L446,325.734L302.261,229.578L302,205.462Z'
+                fill='currentColor'
+              />
+              <path
+                d='M531,395.726L530.942,245.574L550.782,232.164L550.782,395.726L531,395.726Z'
+                fill='currentColor'
+              />
+              <path
+                d='M302,395.766L302,328.095L322.911,342.056L323,395.766L302,395.766Z'
+                fill='currentColor'
+              />
             </g>
           </motion.svg>
 
-          <motion.p className='flex cursor-pointer font-mono text-[18px] font-bold' variants={fadeIn('', '', 0, 1) as Variants} initial='hidden' animate='show'>
+          <motion.p
+            className='flex cursor-pointer font-mono text-[18px] font-bold'
+            variants={fadeIn('', '', 0, 1) as Variants}
+            initial='hidden'
+            animate='show'
+          >
             Brusegard.&nbsp;
             <span className='hidden md:block'>Michael</span>
           </motion.p>
@@ -206,9 +230,16 @@ const Nav = () => {
           <MenuButton onClick={handleClick} isOpen={isOpen} />
         </motion.div>
       </div>
-      <MobileMenu isOpen={isOpen} onClose={handleMenuItemClick} isDarkMode={isDarkMode} PaletteIcon={PaletteIcon} SunIcon={SunIcon} MoonIcon={MoonIcon} />
+      <MobileMenu
+        isOpen={isOpen}
+        onClose={handleMenuItemClick}
+        isDarkMode={isDarkMode}
+        PaletteIcon={PaletteIcon}
+        SunIcon={SunIcon}
+        MoonIcon={MoonIcon}
+      />
     </nav>
   );
 };
 
-export { Nav };
+export { Header };
