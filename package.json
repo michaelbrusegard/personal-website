@@ -21,6 +21,7 @@
     "three": "^0.171.0"
   },
   "devDependencies": {
+    "@types/eslint__eslintrc": "^2.1.2",
     "@types/three": "^0.171.0",
     "autoprefixer": "^10.4.20",
     "typescript": "^5",

@@ -1,7 +1,9 @@
 import './globals.css';
+import { sfProDisplay, sfProText, sfMono } from '@/styles/fonts';
 import { ThemeProvider } from '@/components/providers/ThemeProvider';
 import { Header } from '@/components/layout/Header';
 import { SimulationProvider } from '@/components/providers/SimulationProvider';
+import { MotionProvider } from '@/components/providers/MotionProvider';
 
 export const metadata = {
   title: 'Michael | Portifolio',
@@ -36,13 +38,20 @@ export const metadata = {
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang='en' dir='ltr' className='h-full w-full'>
-      <body className='relative h-full w-full bg-background font-body text-foreground antialiased'>
+    <html
+      lang='en'
+      dir='ltr'
+      className={`h-full w-full ${sfProDisplay.variable} ${sfProText.variable} ${sfMono.variable}`}
+      suppressHydrationWarning
+    >
+      <body className='relative h-full w-full bg-background font-sf-pro-text text-foreground antialiased'>
         <ThemeProvider>
-          <SimulationProvider>
-            <Header />
-            {children}
-          </SimulationProvider>
+          <MotionProvider>
+            <SimulationProvider>
+              <Header />
+              {children}
+            </SimulationProvider>
+          </MotionProvider>
         </ThemeProvider>
       </body>
     </html>

@@ -2,20 +2,23 @@ import { Variants, motion } from 'motion/react';
 import { ComponentType } from 'react';
 import { staggerContainer } from '../utils/motion';
 import { useEffect } from 'react';
-import fluidHover from '../utils/fluidHover';
 
 const SectionWrapper = (Component: ComponentType, idName: string) => {
   const WrappedComponent = (props: any) => {
     useEffect(() => {
-      const sectionTitles = document.querySelectorAll('.section-title') as NodeListOf<HTMLElement>;
-      const sectionTexts = document.querySelectorAll('.section-text') as NodeListOf<HTMLElement>;
+      const sectionTitles = document.querySelectorAll(
+        '.section-title',
+      ) as NodeListOf<HTMLElement>;
+      const sectionTexts = document.querySelectorAll(
+        '.section-text',
+      ) as NodeListOf<HTMLElement>;
 
       sectionTitles.forEach((sectionTitle) => {
-        fluidHover(sectionTitle);
+        // fluidHover(sectionTitle);
       });
 
       sectionTexts.forEach((sectionText) => {
-        fluidHover(sectionText);
+        // fluidHover(sectionText);
       });
     }, []);
     return (

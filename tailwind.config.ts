@@ -1,5 +1,6 @@
 import type { Config } from 'tailwindcss';
 import plugin from 'tailwindcss/plugin';
+import { fontFamily } from 'tailwindcss/defaultTheme';
 
 const config = {
   content: ['./src/**/*.tsx'],
@@ -19,8 +20,12 @@ const config = {
       },
       screens: {
         xs: '448px',
-        'landscape-sm': { raw: '(max-width: 768px) and (orientation: landscape)' },
-        'landscape-md': { raw: '(max-width: 1024px) and (orientation: landscape)' },
+        'landscape-sm': {
+          raw: '(max-width: 768px) and (orientation: landscape)',
+        },
+        'landscape-md': {
+          raw: '(max-width: 1024px) and (orientation: landscape)',
+        },
       },
       height: {
         screen: '100dvh',
@@ -29,8 +34,9 @@ const config = {
       },
     },
     fontFamily: {
-      body: ['SF-Pro', 'sans-serif'],
-      mono: ['SF-Mono', 'monospace'],
+      'sf-pro-display': ['var(--font-sf-pro-display)', ...fontFamily.sans],
+      'sf-pro-text': ['var(--font-sf-pro-text)', ...fontFamily.sans],
+      'sf-mono': ['var(--font-sf-mono)', ...fontFamily.mono],
     },
     backgroundSize: {
       big: '200%',

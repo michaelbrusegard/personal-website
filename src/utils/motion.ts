@@ -1,6 +1,4 @@
-import { Transition } from 'framer-motion';
-
-export const textVariant = (delay?: number): Transition => {
+function textVariant(delay?: number) {
   return {
     hidden: {
       y: -50,
@@ -16,9 +14,9 @@ export const textVariant = (delay?: number): Transition => {
       },
     },
   };
-};
+}
 
-export const foldOut = (delay: number, duration: number): Transition => {
+function foldOut(delay: number, duration: number) {
   return {
     hidden: {
       height: 0,
@@ -32,9 +30,14 @@ export const foldOut = (delay: number, duration: number): Transition => {
       },
     },
   };
-};
+}
 
-export const fadeIn = (direction: string, type: string, delay: number, duration: number): Transition => {
+function fadeIn(
+  direction: string,
+  type: string,
+  delay: number,
+  duration: number,
+) {
   return {
     hidden: {
       x: direction === 'left' ? 100 : direction === 'right' ? -100 : 0,
@@ -53,9 +56,14 @@ export const fadeIn = (direction: string, type: string, delay: number, duration:
       },
     },
   };
-};
+}
 
-export const slideIn = (direction: string, type: string, delay: number, duration: number): Transition => {
+function slideIn(
+  direction: string,
+  type: string,
+  delay: number,
+  duration: number,
+) {
   return {
     hidden: {
       x: direction === 'left' ? '-100%' : direction === 'right' ? '100%' : 0,
@@ -72,9 +80,13 @@ export const slideIn = (direction: string, type: string, delay: number, duration
       },
     },
   };
-};
+}
 
-export const appear = (delay: number, duration: number, onAnimationComplete: () => void): Transition => {
+function appear(
+  delay: number,
+  duration: number,
+  onAnimationComplete: () => void,
+) {
   return {
     hidden: {
       opacity: 0,
@@ -88,9 +100,9 @@ export const appear = (delay: number, duration: number, onAnimationComplete: () 
       },
     },
   };
-};
+}
 
-export const staggerContainer = (staggerChildren?: number, delayChildren?: number): Transition => {
+function staggerContainer(staggerChildren?: number, delayChildren?: number) {
   return {
     hidden: {},
     show: {
@@ -100,4 +112,6 @@ export const staggerContainer = (staggerChildren?: number, delayChildren?: numbe
       },
     },
   };
-};
+}
+
+export { textVariant, fadeIn, slideIn, appear, foldOut, staggerContainer };

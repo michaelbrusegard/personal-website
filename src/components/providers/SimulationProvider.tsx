@@ -5,6 +5,7 @@ import { createContext, useContext, useEffect, useRef } from 'react';
 
 type SimulationContextType = {
   multipleSplats: (amount: number) => void;
+  lowerBrightnessHover: (element: HTMLElement) => void;
 };
 
 const SimulationContext = createContext<SimulationContextType | null>(null);
@@ -101,8 +102,57 @@ function SimulationProvider({ children }: { children: React.ReactNode }) {
     simulation.current?.multipleSplats(amount);
   }
 
+  function lowerBrightnessHover(element: HTMLElement) {
+    let hoverTimer: NodeJS.Timeout | null = null;
+    let isHovered = false;
+
+    function resetHoverTimer() {
+      if (hoverTimer) {
+        clearTimeout(hoverTimer);
+      }
+
+      hoverTimer = setTimeout(() => {
+        if (!isHovered && simulation.current) {
+          simulation.current.setConfig({
+            brightness: 0.5,
+          });
+        }
+      }, 1000);
+    }
+
+    function handleMouseEnter() {
+      isHovered = true;
+      if (simulation.current) {
+        simulation.current.setConfig({
+          brightness: 0.1,
+        });
+      }
+      resetHoverTimer();
+    }
+
+    function handleMouseLeave() {
+      isHovered = false;
+      resetHoverTimer();
+    }
+
+    element.addEventListener('mouseenter', handleMouseEnter);
+    element.addEventListener('mouseleave', handleMouseLeave);
+
+    return () => {
+      element.removeEventListener('mouseenter', handleMouseEnter);
+      element.removeEventListener('mouseleave', handleMouseLeave);
+
+      if (hoverTimer) {
+        clearTimeout(hoverTimer);
+        hoverTimer = null;
+      }
+    };
+  }
+
   return (
-    <SimulationContext.Provider value={{ multipleSplats }}>
+    <SimulationContext.Provider
+      value={{ multipleSplats, lowerBrightnessHover }}
+    >
       <div className='fixed left-0 top-0 h-full w-full'>
         <div ref={containerRef} className='h-full w-full' />
       </div>

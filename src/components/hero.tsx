@@ -1,23 +1,26 @@
 import React, { useEffect, useRef } from 'react';
 import letterBounce, { bounce } from '../utils/letterBounce';
+import { useSimulation } from '@/components/providers/SimulationProvider';
 import { motion, Variants } from 'motion/react';
-import fluidHover from '../utils/fluidHover';
 import { fadeIn, appear } from '../utils/motion';
 import HeroImage from './heroImage';
 import HeroSocial from './heroSocial';
 
 const Hero = () => {
   const spanRefs = useRef<Array<HTMLSpanElement>>([]);
+  const { multipleSplats, lowerBrightnessHover } = useSimulation();
 
   useEffect(() => {
-    const scrollButton = document.querySelector('.scroll-button') as HTMLElement;
-    if (scrollButton) fluidHover(scrollButton);
+    const scrollButton = document.querySelector(
+      '.scroll-button',
+    ) as HTMLElement;
+    if (scrollButton) lowerBrightnessHover(scrollButton);
     scrollButton.addEventListener('click', () => {
-      // webGLFluidEnhanced.splats();
+      multipleSplats(5);
     });
 
     const aboutText = document.querySelector('.about-text') as HTMLElement;
-    if (aboutText) fluidHover(aboutText);
+    if (aboutText) lowerBrightnessHover(aboutText);
 
     return letterBounce('span.bouncer');
   }, []);
@@ -41,12 +44,16 @@ const Hero = () => {
           <div className='h-40 w-1 bg-gradient-to-b from-primary via-secondary to-transparent sm:h-80' />
         </div>
         <div className='pointer-events-auto'>
-          <h1 className='mt-2 flex flex-wrap text-[40px] font-black sm:text-[60px] lg:text-[80px] lg:leading-[98px] xs:text-[50px]'>
+          <h1 className='mt-2 flex flex-wrap font-sf-pro-display text-[40px] font-black sm:text-[60px] lg:text-[80px] lg:leading-[98px] xs:text-[50px]'>
             <div>
               <motion.span
                 ref={handleSpanRef}
                 className='bouncer inline-block transition-colors hover:text-accent'
-                variants={appear(0.1, 0.5, () => handleAppearComplete(spanRefs.current[0])) as Variants}
+                variants={
+                  appear(0.1, 0.5, () =>
+                    handleAppearComplete(spanRefs.current[0]),
+                  ) as Variants
+                }
                 initial='hidden'
                 animate='show'
               >
@@ -55,7 +62,11 @@ const Hero = () => {
               <motion.span
                 ref={handleSpanRef}
                 className='bouncer inline-block transition-colors hover:text-accent'
-                variants={appear(0.2, 0.5, () => handleAppearComplete(spanRefs.current[1])) as Variants}
+                variants={
+                  appear(0.2, 0.5, () =>
+                    handleAppearComplete(spanRefs.current[1]),
+                  ) as Variants
+                }
                 initial='hidden'
                 animate='show'
               >
@@ -64,7 +75,11 @@ const Hero = () => {
               <motion.span
                 ref={handleSpanRef}
                 className='bouncer inline-block transition-colors hover:text-accent'
-                variants={appear(0.3, 0.5, () => handleAppearComplete(spanRefs.current[2])) as Variants}
+                variants={
+                  appear(0.3, 0.5, () =>
+                    handleAppearComplete(spanRefs.current[2]),
+                  ) as Variants
+                }
                 initial='hidden'
                 animate='show'
               >
@@ -75,7 +90,11 @@ const Hero = () => {
               <motion.span
                 ref={handleSpanRef}
                 className='bouncer inline-block transition-colors hover:text-accent'
-                variants={appear(0.4, 0.5, () => handleAppearComplete(spanRefs.current[3])) as Variants}
+                variants={
+                  appear(0.4, 0.5, () =>
+                    handleAppearComplete(spanRefs.current[3]),
+                  ) as Variants
+                }
                 initial='hidden'
                 animate='show'
               >
@@ -84,7 +103,11 @@ const Hero = () => {
               <motion.span
                 ref={handleSpanRef}
                 className='bouncer inline-block transition-colors hover:text-accent'
-                variants={appear(0.5, 0.5, () => handleAppearComplete(spanRefs.current[4])) as Variants}
+                variants={
+                  appear(0.5, 0.5, () =>
+                    handleAppearComplete(spanRefs.current[4]),
+                  ) as Variants
+                }
                 initial='hidden'
                 animate='show'
               >
@@ -93,7 +116,11 @@ const Hero = () => {
               <motion.span
                 ref={handleSpanRef}
                 className='bouncer inline-block transition-colors hover:text-accent'
-                variants={appear(0.6, 0.5, () => handleAppearComplete(spanRefs.current[5])) as Variants}
+                variants={
+                  appear(0.6, 0.5, () =>
+                    handleAppearComplete(spanRefs.current[5]),
+                  ) as Variants
+                }
                 initial='hidden'
                 animate='show'
               >
@@ -105,7 +132,11 @@ const Hero = () => {
                 <motion.span
                   ref={handleSpanRef}
                   className='bouncer gradient-letter inline-block transition-colors hover:text-accent'
-                  variants={appear(0.5, 0.5, () => handleAppearComplete(spanRefs.current[6])) as Variants}
+                  variants={
+                    appear(0.5, 0.5, () =>
+                      handleAppearComplete(spanRefs.current[6]),
+                    ) as Variants
+                  }
                   initial='hidden'
                   animate='show'
                 >
@@ -114,7 +145,11 @@ const Hero = () => {
                 <motion.span
                   ref={handleSpanRef}
                   className='bouncer gradient-letter inline-block transition-colors hover:text-accent'
-                  variants={appear(0.6, 0.5, () => handleAppearComplete(spanRefs.current[7])) as Variants}
+                  variants={
+                    appear(0.6, 0.5, () =>
+                      handleAppearComplete(spanRefs.current[7]),
+                    ) as Variants
+                  }
                   initial='hidden'
                   animate='show'
                 >
@@ -123,7 +158,11 @@ const Hero = () => {
                 <motion.span
                   ref={handleSpanRef}
                   className='bouncer gradient-letter inline-block transition-colors hover:text-accent'
-                  variants={appear(0.7, 0.5, () => handleAppearComplete(spanRefs.current[8])) as Variants}
+                  variants={
+                    appear(0.7, 0.5, () =>
+                      handleAppearComplete(spanRefs.current[8]),
+                    ) as Variants
+                  }
                   initial='hidden'
                   animate='show'
                 >
@@ -132,7 +171,11 @@ const Hero = () => {
                 <motion.span
                   ref={handleSpanRef}
                   className='bouncer gradient-letter inline-block transition-colors hover:text-accent'
-                  variants={appear(0.8, 0.5, () => handleAppearComplete(spanRefs.current[9])) as Variants}
+                  variants={
+                    appear(0.8, 0.5, () =>
+                      handleAppearComplete(spanRefs.current[9]),
+                    ) as Variants
+                  }
                   initial='hidden'
                   animate='show'
                 >
@@ -141,7 +184,11 @@ const Hero = () => {
                 <motion.span
                   ref={handleSpanRef}
                   className='bouncer gradient-letter inline-block transition-colors hover:text-accent'
-                  variants={appear(0.9, 0.5, () => handleAppearComplete(spanRefs.current[10])) as Variants}
+                  variants={
+                    appear(0.9, 0.5, () =>
+                      handleAppearComplete(spanRefs.current[10]),
+                    ) as Variants
+                  }
                   initial='hidden'
                   animate='show'
                 >
@@ -150,7 +197,11 @@ const Hero = () => {
                 <motion.span
                   ref={handleSpanRef}
                   className='bouncer gradient-letter inline-block transition-colors hover:text-accent'
-                  variants={appear(1.0, 0.5, () => handleAppearComplete(spanRefs.current[11])) as Variants}
+                  variants={
+                    appear(1.0, 0.5, () =>
+                      handleAppearComplete(spanRefs.current[11]),
+                    ) as Variants
+                  }
                   initial='hidden'
                   animate='show'
                 >
@@ -159,7 +210,11 @@ const Hero = () => {
                 <motion.span
                   ref={handleSpanRef}
                   className='bouncer gradient-letter inline-block transition-colors hover:text-accent'
-                  variants={appear(1.1, 0.5, () => handleAppearComplete(spanRefs.current[12])) as Variants}
+                  variants={
+                    appear(1.1, 0.5, () =>
+                      handleAppearComplete(spanRefs.current[12]),
+                    ) as Variants
+                  }
                   initial='hidden'
                   animate='show'
                 >
@@ -169,7 +224,11 @@ const Hero = () => {
               <motion.span
                 ref={handleSpanRef}
                 className='bouncer inline-block transition-colors hover:text-accent'
-                variants={appear(1.9, 0, () => handleAppearComplete(spanRefs.current[13])) as Variants}
+                variants={
+                  appear(1.9, 0, () =>
+                    handleAppearComplete(spanRefs.current[13]),
+                  ) as Variants
+                }
                 initial='hidden'
                 animate='show'
               >
@@ -183,9 +242,14 @@ const Hero = () => {
             initial='hidden'
             animate='show'
           >
-            I&apos;m a <span className='from-primary to-accent bg-clip-text text-transparent bg-gradient-120'>Full-Stack Developer</span> residing in&nbsp;
+            I&apos;m a{' '}
+            <span className='from-primary to-accent bg-clip-text text-transparent bg-gradient-120'>
+              Full-Stack Developer
+            </span>{' '}
+            residing in&nbsp;
             <br className='hidden sm:block' />
-            Trondheim, Norway<span className='xs:hidden landscape-sm:inline'>.</span>
+            Trondheim, Norway
+            <span className='xs:hidden landscape-sm:inline'>.</span>
             <span className='hidden xs:inline landscape-sm:hidden'>
               , seeking new opportunities&nbsp;
               <br className='hidden sm:block' />
@@ -196,7 +260,10 @@ const Hero = () => {
         </div>
       </div>
       <div className='absolute bottom-24 flex w-full items-center justify-center landscape-md:bottom-6'>
-        <a href='#about' className='scroll-button group pointer-events-auto transition-transform duration-200 hover:translate-y-2 focus:translate-y-2'>
+        <a
+          href='#about'
+          className='scroll-button group pointer-events-auto transition-transform duration-200 hover:translate-y-2 focus:translate-y-2'
+        >
           <div className='flex h-[64px] w-[35px] items-start justify-center rounded-3xl border-4 border-foreground p-2 transition-colors group-hover:border-primary group-focus:border-primary'>
             <motion.div
               animate={{
