@@ -5,6 +5,7 @@ import { m, Variants } from 'motion/react';
 import { fadeIn } from '../../utils/motion';
 import { Logo } from '@/components/assets/Logo';
 import { DarkModeButton } from '@/components/layout/DarkModeButton';
+import { ThemeButton } from '@/components/layout/ThemeButton';
 
 function Header() {
   return (
@@ -30,37 +31,48 @@ function Header() {
         </m.div>
         <ul className='hidden flex-row gap-10 sm:flex'>
           <m.li
-            className='font-sf-mono font-medium hover:text-primary focus:text-primary'
             variants={fadeIn('down', '', 0.25, 1) as Variants}
             initial='hidden'
             animate='show'
             whileHover={{ translateY: '-2px' }}
             transition={{ duration: 0.2 }}
           >
-            <Link href='#about'>About</Link>
+            <Link
+              className='font-sf-mono font-medium hover:text-primary focus:text-primary'
+              href='#about'
+            >
+              About
+            </Link>
           </m.li>
           <m.li
-            className='font-sf-mono font-medium hover:text-primary focus:text-primary'
             variants={fadeIn('down', '', 0.5, 1) as Variants}
             initial='hidden'
             animate='show'
             whileHover={{ translateY: '-2px' }}
             transition={{ duration: 0.2 }}
           >
-            <Link href='#work'>Work</Link>
+            <Link
+              className='font-sf-mono font-medium hover:text-primary focus:text-primary'
+              href='#work'
+            >
+              Work
+            </Link>
           </m.li>
           <m.li
-            className='font-sf-mono font-medium hover:text-primary focus:text-primary'
             variants={fadeIn('down', '', 0.75, 1) as Variants}
             initial='hidden'
             animate='show'
             whileHover={{ translateY: '-2px' }}
             transition={{ duration: 0.2 }}
           >
-            <Link href='#contact'>Contact</Link>
+            <Link
+              className='font-sf-mono font-medium hover:text-primary focus:text-primary'
+              href='#contact'
+            >
+              Contact
+            </Link>
           </m.li>
           <m.li
-            className='hover:text-primary focus:text-primary'
             variants={fadeIn('down', '', 1, 1)}
             initial='hidden'
             animate='show'
@@ -68,13 +80,11 @@ function Header() {
             <DarkModeButton />
           </m.li>
           <m.li
-            className='flex w-full cursor-pointer flex-row items-center gap-3 object-contain'
-            variants={fadeIn('down', '', 1, 1)}
+            variants={fadeIn('down', '', 1.25, 1)}
             initial='hidden'
             animate='show'
           >
-            {/* {isDarkMode ? <SunIcon tabIndex={0} /> : <MoonIcon tabIndex={0} />} */}
-            {/* <PaletteIcon tabIndex={0} /> */}
+            <ThemeButton />
           </m.li>
         </ul>
         <m.div

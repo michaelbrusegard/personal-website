@@ -23,7 +23,12 @@ function DarkModeButton() {
 
   const title = isDarkMode ? 'Switch to light mode' : 'Switch to dark mode';
   return (
-    <button title={title} aria-label={title} onClick={toggleDarkMode}>
+    <button
+      className='hover:text-primary focus:text-primary'
+      title={title}
+      aria-label={title}
+      onClick={toggleDarkMode}
+    >
       {isDarkMode ? (
         <SunIcon className='h-5 w-5' aria-hidden='true' />
       ) : (

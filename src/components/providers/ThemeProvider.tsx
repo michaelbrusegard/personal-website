@@ -5,6 +5,7 @@ import { ThemeProvider as NextThemeProvider } from 'next-themes';
 function ThemeProvider({ children }: { children: React.ReactNode }) {
   return (
     <NextThemeProvider
+      attribute='class'
       themes={[
         'light',
         'dark',
@@ -23,10 +24,6 @@ function ThemeProvider({ children }: { children: React.ReactNode }) {
         'light-red',
         'dark-red',
       ]}
-      themeColor={{
-        light: 'hsl(0 0% 100%)',
-        dark: 'hsl(0 0% 0%)',
-      }}
     >
       {children}
     </NextThemeProvider>
