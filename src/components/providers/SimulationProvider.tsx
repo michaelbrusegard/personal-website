@@ -56,6 +56,7 @@ function SimulationProvider({ children }: { children: React.ReactNode }) {
           hslToHex(...getCSSColorValue('--accent')),
         ],
         transparent: true,
+        brightness: 0.4,
       });
       simulation.current.start();
 
@@ -127,7 +128,7 @@ function SimulationProvider({ children }: { children: React.ReactNode }) {
       hoverTimer = setTimeout(() => {
         if (!isHovered && simulation.current) {
           simulation.current.setConfig({
-            brightness: 0.5,
+            brightness: 0.4,
           });
         }
       }, 1000);
