@@ -6,6 +6,7 @@ import { createContext, useContext, useEffect, useRef } from 'react';
 type SimulationContextType = {
   multipleSplats: (amount: number) => void;
   lowerBrightnessHover: (element: HTMLElement) => void;
+  updateColorTheme: () => void;
 };
 
 const SimulationContext = createContext<SimulationContextType | null>(null);
@@ -98,6 +99,18 @@ function SimulationProvider({ children }: { children: React.ReactNode }) {
     };
   }, []);
 
+  function updateColorTheme() {
+    setTimeout(() => {
+      simulation.current?.setConfig({
+        colorPalette: [
+          hslToHex(...getCSSColorValue('--primary')),
+          hslToHex(...getCSSColorValue('--secondary')),
+          hslToHex(...getCSSColorValue('--accent')),
+        ],
+      });
+    }, 0);
+  }
+
   function multipleSplats(amount: number) {
     simulation.current?.multipleSplats(amount);
   }
@@ -151,7 +164,7 @@ function SimulationProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <SimulationContext.Provider
-      value={{ multipleSplats, lowerBrightnessHover }}
+      value={{ multipleSplats, lowerBrightnessHover, updateColorTheme }}
     >
       <div className='fixed left-0 top-0 h-full w-full'>
         <div ref={containerRef} className='h-full w-full' />

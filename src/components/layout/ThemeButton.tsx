@@ -2,9 +2,11 @@
 
 import { useTheme } from 'next-themes';
 import { PaletteIcon } from '@/components/assets/PaletteIcon';
+import { useSimulation } from '@/components/providers/SimulationProvider';
 
 function ThemeButton() {
   const { resolvedTheme, setTheme } = useTheme();
+  const { updateColorTheme } = useSimulation();
 
   if (!resolvedTheme) return null;
 
@@ -31,6 +33,7 @@ function ThemeButton() {
     const nextType = themeTypes[nextIndex];
 
     setTheme(`${mode}${nextType}`);
+    updateColorTheme();
   }
 
   const title = 'Change color theme';

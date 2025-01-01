@@ -3,9 +3,11 @@
 import { useTheme } from 'next-themes';
 import { SunIcon } from '@/components/assets/SunIcon';
 import { MoonIcon } from '@/components/assets/MoonIcon';
+import { useSimulation } from '@/components/providers/SimulationProvider';
 
 function DarkModeButton() {
   const { resolvedTheme, setTheme } = useTheme();
+  const { updateColorTheme } = useSimulation();
 
   if (!resolvedTheme) return null;
 
@@ -19,6 +21,7 @@ function DarkModeButton() {
     } else {
       setTheme(resolvedTheme.replace('light', 'dark'));
     }
+    updateColorTheme();
   }
 
   const title = isDarkMode ? 'Switch to light mode' : 'Switch to dark mode';

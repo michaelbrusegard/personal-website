@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { m, Variants } from 'motion/react';
+import { m } from 'motion/react';
 import { fadeIn } from '../../utils/motion';
 import { Logo } from '@/components/assets/Logo';
 import { DarkModeButton } from '@/components/layout/DarkModeButton';
@@ -11,11 +11,7 @@ function Header() {
   return (
     <header className='fixed top-0 z-20 flex w-full items-center bg-secondary px-6 py-5 shadow-xl sm:px-11 md:px-16'>
       <div className='mx-auto flex w-full max-w-7xl select-none items-center justify-between'>
-        <m.div
-          variants={fadeIn('', '', 0, 1) as Variants}
-          initial='hidden'
-          animate='show'
-        >
+        <m.div variants={fadeIn('', '', 0, 1)} initial='hidden' animate='show'>
           <Link
             className='flex items-center gap-2'
             href='/'
@@ -31,7 +27,7 @@ function Header() {
         </m.div>
         <ul className='hidden flex-row gap-10 sm:flex'>
           <m.li
-            variants={fadeIn('down', '', 0.25, 1) as Variants}
+            variants={fadeIn('down', '', 0.25, 1)}
             initial='hidden'
             animate='show'
             whileHover={{ translateY: '-2px' }}
@@ -45,7 +41,7 @@ function Header() {
             </Link>
           </m.li>
           <m.li
-            variants={fadeIn('down', '', 0.5, 1) as Variants}
+            variants={fadeIn('down', '', 0.5, 1)}
             initial='hidden'
             animate='show'
             whileHover={{ translateY: '-2px' }}
@@ -59,7 +55,7 @@ function Header() {
             </Link>
           </m.li>
           <m.li
-            variants={fadeIn('down', '', 0.75, 1) as Variants}
+            variants={fadeIn('down', '', 0.75, 1)}
             initial='hidden'
             animate='show'
             whileHover={{ translateY: '-2px' }}
@@ -89,21 +85,13 @@ function Header() {
         </ul>
         <m.div
           className='flex flex-1 items-center justify-end sm:hidden'
-          variants={fadeIn('down', '', 0.25, 1) as Variants}
+          variants={fadeIn('down', '', 0.25, 1)}
           initial='hidden'
           animate='show'
         >
           {/* <MenuButton onClick={handleClick} isOpen={isOpen} /> */}
         </m.div>
       </div>
-      {/* <MobileMenu */}
-      {/*   isOpen={isOpen} */}
-      {/*   onClose={handleMenuItemClick} */}
-      {/*   isDarkMode={isDarkMode} */}
-      {/*   PaletteIcon={PaletteIcon} */}
-      {/*   SunIcon={SunIcon} */}
-      {/*   MoonIcon={MoonIcon} */}
-      {/* /> */}
     </header>
   );
 }
