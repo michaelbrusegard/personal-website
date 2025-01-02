@@ -1,5 +1,5 @@
 'use client';
-import Hero from '../components/hero';
+import { Hero } from '@/components/sections/hero/Hero';
 import About from '../components/about';
 import Experience from '../components/experience';
 import Works from '../components/works';

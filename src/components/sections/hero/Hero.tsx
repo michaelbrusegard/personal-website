@@ -3,10 +3,10 @@
 import { useEffect } from 'react';
 import { useSimulation } from '@/components/providers/SimulationProvider';
 import { motion, Variants } from 'motion/react';
-import { fadeIn, appear } from '@/utils/motion';
+import { fadeIn } from '@/utils/motion';
 import { HeroName } from '@/components/sections/hero/HeroName';
-import HeroImage from './HeroImage';
-import HeroSocial from './HeroSocial';
+import { HeroPhoto } from '@/components/sections/hero/HeroPhoto';
+import { HeroSocial } from '@/components/sections/hero/HeroSocial';
 
 function Hero() {
   const { multipleSplats, lowerBrightnessHover } = useSimulation();
@@ -25,9 +25,9 @@ function Hero() {
   }, []);
 
   return (
-    <section className='relative z-10 mx-auto h-screen-large w-full select-none'>
-      <HeroImage />
-      <div className='paddingX absolute inset-0 top-[80px] mx-auto flex max-w-7xl flex-row items-start gap-5 xs:top-[120px]'>
+    <section className='relative z-10 mx-auto h-screen w-full select-none'>
+      <HeroPhoto />
+      <div className='absolute inset-0 top-[80px] mx-auto flex max-w-7xl flex-row items-start gap-5 px-6 sm:px-11 md:px-16 xs:top-[120px]'>
         <div className='pointer-events-auto mt-5 flex flex-col items-center justify-center'>
           <div className='h-5 w-5 rounded-full bg-primary' />
           <div className='h-40 w-1 bg-gradient-to-b from-primary via-secondary to-transparent sm:h-80' />
@@ -81,4 +81,4 @@ function Hero() {
   );
 }
 
-export default Hero;
+export { Hero };

@@ -24,7 +24,7 @@ function ThemeButton() {
       '',
       '-pink',
       '-youtube',
-      '-chatgpt',
+      '-gpt',
       '-slack',
       '-green',
       '-blue',

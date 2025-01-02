@@ -27,11 +27,6 @@ const config = {
           raw: '(max-width: 1024px) and (orientation: landscape)',
         },
       },
-      height: {
-        screen: '100dvh',
-        'screen-small': '100svh',
-        'screen-large': '100lvh',
-      },
     },
     fontFamily: {
       'sf-pro-display': ['var(--font-sf-pro-display)', ...fontFamily.sans],

@@ -29,11 +29,6 @@
   }
 }
 
-.letterBounce {
-  -webkit-animation: letter 1s ease-out;
-  animation: letter 1s ease-out;
-}
-
 @-webkit-keyframes letter {
   20%,
   50%,
@@ -71,4 +66,3 @@
     transform: scale(1.15, 0.85);
   }
 }
-

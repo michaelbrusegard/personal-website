@@ -1,3 +1,4 @@
+import '@/styles/hero-name.css';
 import { m } from 'motion/react';
 import { appear } from '@/utils/motion';
 import { useSimulation } from '@/components/providers/SimulationProvider';
@@ -19,7 +20,7 @@ function HeroName() {
         const root = getComputedStyle(document.documentElement);
         span.style.color = `hsl(${root.getPropertyValue('--accent')})`;
       }
-      span.classList.add('letterBounce');
+      span.classList.add('bounce');
       lowerBrightnessHover(span);
       setTimeout(function () {
         span.classList.remove('bounce');

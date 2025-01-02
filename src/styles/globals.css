@@ -1,5 +1,4 @@
 @import '../styles/text.css';
-@import '../styles/hero.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -57,7 +56,7 @@
     --accent: 0 100% 50%;
   }
 
-  .light-chatgpt {
+  .light-gpt {
     --foreground: 0 0% 0%;
     --background: 0 0% 100%;
     --primary: 300 100% 77.25%;
@@ -65,7 +64,7 @@
     --accent: 117.58 38.82% 50%;
   }
 
-  .dark-chatgpt {
+  .dark-gpt {
     --foreground: 0 0% 100%;
     --background: 0 0% 0%;
     --primary: 300 100% 77.25%;

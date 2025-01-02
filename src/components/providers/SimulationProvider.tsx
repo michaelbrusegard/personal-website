@@ -50,14 +50,10 @@ function SimulationProvider({ children }: { children: React.ReactNode }) {
     if (containerRef.current) {
       simulation.current = new WebGLFluidEnhanced(containerRef.current);
       simulation.current.setConfig({
-        colorPalette: [
-          hslToHex(...getCSSColorValue('--primary')),
-          hslToHex(...getCSSColorValue('--secondary')),
-          hslToHex(...getCSSColorValue('--accent')),
-        ],
         transparent: true,
         brightness: 0.4,
       });
+      updateColorTheme();
       simulation.current.start();
 
       return () => {
@@ -109,6 +105,22 @@ function SimulationProvider({ children }: { children: React.ReactNode }) {
           hslToHex(...getCSSColorValue('--accent')),
         ],
       });
+      const root = getComputedStyle(document.documentElement);
+      const linearGradient = document.getElementById('gradient');
+      if (linearGradient) {
+        linearGradient
+          .querySelector('stop[offset="0%"]')
+          ?.setAttribute(
+            'stop-color',
+            `hsl(${root.getPropertyValue('--accent')})`,
+          );
+        linearGradient
+          .querySelector('stop[offset="100%"]')
+          ?.setAttribute(
+            'stop-color',
+            `hsl(${root.getPropertyValue('--primary')})`,
+          );
+      }
     }, 0);
   }
 

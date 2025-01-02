@@ -1,6 +1,9 @@
 .hero-draw {
   opacity: 0;
   transition: opacity 2000ms linear;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
 }
 
 .hero-image {
