@@ -24,7 +24,7 @@ function Nav({ isMobile = false, animate = 'show' }: NavProps) {
           transition={{ duration: 0.2 }}
         >
           <Link
-            className='font-sf-mono font-medium hover:text-primary'
+            className='font-sf-mono font-medium outline-2 outline-offset-2 outline-primary/60 hover:text-primary focus:outline'
             href='#about'
           >
             About
@@ -38,7 +38,7 @@ function Nav({ isMobile = false, animate = 'show' }: NavProps) {
           transition={{ duration: 0.2 }}
         >
           <Link
-            className='font-sf-mono font-medium hover:text-primary'
+            className='font-sf-mono font-medium outline-2 outline-offset-2 outline-primary/60 hover:text-primary focus:outline'
             href='#work'
           >
             Work
@@ -52,7 +52,7 @@ function Nav({ isMobile = false, animate = 'show' }: NavProps) {
           transition={{ duration: 0.2 }}
         >
           <Link
-            className='font-sf-mono font-medium hover:text-primary'
+            className='font-sf-mono font-medium outline-2 outline-offset-2 outline-primary/60 hover:text-primary focus:outline'
             href='#contact'
           >
             Contact

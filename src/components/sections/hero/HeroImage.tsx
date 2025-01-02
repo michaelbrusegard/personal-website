@@ -1,3 +1,4 @@
+import colors from '../utils/colors';
 import heroPhoto from '../../public/photos/hero/hero.png';
 import heroDraw from '../../public/photos/hero/draw.png';
 import Image from 'next/image';
@@ -41,14 +42,10 @@ const HeroImage = () => {
   useEffect(() => {
     const updateGradientColors = () => {
       const linearGradient = document.getElementById('gradient');
-      // if (linearGradient) {
-      //   linearGradient
-      //     .querySelector('stop[offset="0%"]')
-      //     ?.setAttribute('stop-color', colors.accentColor);
-      //   linearGradient
-      //     .querySelector('stop[offset="100%"]')
-      //     ?.setAttribute('stop-color', colors.primaryColor);
-      // }
+      if (linearGradient) {
+        linearGradient.querySelector('stop[offset="0%"]')?.setAttribute('stop-color', colors.accentColor);
+        linearGradient.querySelector('stop[offset="100%"]')?.setAttribute('stop-color', colors.primaryColor);
+      }
     };
 
     const handleColorsUpdated = () => {
@@ -83,11 +80,7 @@ const HeroImage = () => {
           variants={drawVariants as Variants}
         />
       </motion.svg>
-      <Image
-        src={heroPhoto}
-        alt='Michael'
-        className='hero-image absolute bottom-0 h-[60%] w-full object-contain xs:h-[75%]'
-      />
+      <Image src={heroPhoto} alt='Michael' className='hero-image absolute bottom-0 h-[60%] w-full object-contain xs:h-[75%]' />
       <div
         className='hero-draw absolute bottom-0 h-[60%] w-full bg-foreground object-contain xs:h-[75%]'
         style={{

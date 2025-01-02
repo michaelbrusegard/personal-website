@@ -13,7 +13,7 @@ function Header() {
       <div className='mx-auto flex w-full max-w-7xl select-none items-center justify-between'>
         <m.div variants={fadeIn('', '', 0, 1)} initial='hidden' animate='show'>
           <Link
-            className='flex items-center gap-2'
+            className='flex items-center gap-2 outline-2 outline-offset-2 outline-primary/60 hover:text-primary focus:outline'
             href='/'
             title='Go to top of page'
             aria-label='Go to top of page'

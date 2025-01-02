@@ -1,14 +1,19 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 import { PaletteIcon } from '@/components/assets/PaletteIcon';
 import { useSimulation } from '@/components/providers/SimulationProvider';
 
 function ThemeButton() {
+  const [isMounted, setIsMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
   const { updateColorTheme } = useSimulation();
 
-  if (!resolvedTheme) return null;
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+  if (!isMounted || !resolvedTheme) return null;
 
   const mode = resolvedTheme.split('-')[0];
 
@@ -39,7 +44,7 @@ function ThemeButton() {
   const title = 'Change color theme';
   return (
     <button
-      className='hover:text-primary'
+      className='outline-2 outline-offset-2 outline-primary/60 hover:text-primary focus:outline'
       title={title}
       aria-label={title}
       onClick={cycleTheme}
