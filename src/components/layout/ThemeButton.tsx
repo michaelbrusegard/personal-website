@@ -39,7 +39,7 @@ function ThemeButton() {
   const title = 'Change color theme';
   return (
     <button
-      className='hover:text-primary focus:text-primary'
+      className='hover:text-primary'
       title={title}
       aria-label={title}
       onClick={cycleTheme}

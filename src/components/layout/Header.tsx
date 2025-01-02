@@ -2,10 +2,10 @@
 
 import Link from 'next/link';
 import { m } from 'motion/react';
-import { fadeIn } from '../../utils/motion';
+import { fadeIn } from '@/utils/motion';
 import { Logo } from '@/components/assets/Logo';
-import { DarkModeButton } from '@/components/layout/DarkModeButton';
-import { ThemeButton } from '@/components/layout/ThemeButton';
+import { MobileMenu } from '@/components/layout/MobileMenu';
+import { Nav } from '@/components/layout/Nav';
 
 function Header() {
   return (
@@ -25,71 +25,14 @@ function Header() {
             </p>
           </Link>
         </m.div>
-        <ul className='hidden flex-row gap-10 sm:flex'>
-          <m.li
-            variants={fadeIn('down', '', 0.25, 1)}
-            initial='hidden'
-            animate='show'
-            whileHover={{ translateY: '-2px' }}
-            transition={{ duration: 0.2 }}
-          >
-            <Link
-              className='font-sf-mono font-medium hover:text-primary focus:text-primary'
-              href='#about'
-            >
-              About
-            </Link>
-          </m.li>
-          <m.li
-            variants={fadeIn('down', '', 0.5, 1)}
-            initial='hidden'
-            animate='show'
-            whileHover={{ translateY: '-2px' }}
-            transition={{ duration: 0.2 }}
-          >
-            <Link
-              className='font-sf-mono font-medium hover:text-primary focus:text-primary'
-              href='#work'
-            >
-              Work
-            </Link>
-          </m.li>
-          <m.li
-            variants={fadeIn('down', '', 0.75, 1)}
-            initial='hidden'
-            animate='show'
-            whileHover={{ translateY: '-2px' }}
-            transition={{ duration: 0.2 }}
-          >
-            <Link
-              className='font-sf-mono font-medium hover:text-primary focus:text-primary'
-              href='#contact'
-            >
-              Contact
-            </Link>
-          </m.li>
-          <m.li
-            variants={fadeIn('down', '', 1, 1)}
-            initial='hidden'
-            animate='show'
-          >
-            <DarkModeButton />
-          </m.li>
-          <m.li
-            variants={fadeIn('down', '', 1.25, 1)}
-            initial='hidden'
-            animate='show'
-          >
-            <ThemeButton />
-          </m.li>
-        </ul>
+        <Nav />
         <m.div
           className='flex flex-1 items-center justify-end sm:hidden'
           variants={fadeIn('down', '', 0.25, 1)}
           initial='hidden'
           animate='show'
         >
-          {/* <MenuButton onClick={handleClick} isOpen={isOpen} /> */}
+          <MobileMenu />
         </m.div>
       </div>
     </header>

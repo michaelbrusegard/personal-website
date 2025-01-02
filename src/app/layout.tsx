@@ -1,4 +1,4 @@
-import './globals.css';
+import '@/styles/globals.css';
 import { sfProDisplay, sfProText, sfMono } from '@/styles/fonts';
 import { ThemeProvider } from '@/components/providers/ThemeProvider';
 import { Header } from '@/components/layout/Header';
