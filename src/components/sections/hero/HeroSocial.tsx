@@ -6,8 +6,9 @@ import Link from 'next/link';
 
 function HeroSocial() {
   return (
-    <ul className='mt-5 flex flex-row gap-3'>
+    <ul className='mt-5 flex flex-row flex-wrap gap-3'>
       <m.li
+        className='flex-shrink-0'
         variants={fadeIn('left', '', 2.0, 0.5)}
         initial='hidden'
         animate='show'
@@ -24,6 +25,7 @@ function HeroSocial() {
         </Link>
       </m.li>
       <m.li
+        className='flex-shrink-0'
         variants={fadeIn('left', '', 2.5, 0.5)}
         initial='hidden'
         animate='show'
@@ -40,6 +42,7 @@ function HeroSocial() {
         </Link>
       </m.li>
       <m.li
+        className='w-full sm:w-auto'
         variants={fadeIn('left', '', 3.0, 0.5)}
         initial='hidden'
         animate='show'
@@ -48,7 +51,7 @@ function HeroSocial() {
       >
         <Link
           href='#contact'
-          className='flex h-9 items-center rounded-[3px] bg-primary px-4 font-semibold text-background outline-2 outline-offset-2 outline-primary/60 transition-[color,box-shadow] duration-200 hover:from-primary hover:to-accent hover:text-foreground hover:shadow-xl hover:shadow-primary hover:bg-gradient-30 focus-visible:outline'
+          className='flex h-9 w-fit items-center rounded-[3px] bg-primary px-4 font-semibold text-background outline-2 outline-offset-2 outline-primary/60 transition-[color,box-shadow] duration-200 hover:from-primary hover:to-accent hover:text-foreground hover:shadow-xl hover:shadow-primary hover:bg-gradient-30 focus-visible:outline'
         >
           Let&apos;s Talk
         </Link>
