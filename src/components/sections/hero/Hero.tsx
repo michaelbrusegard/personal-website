@@ -1,8 +1,7 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { m } from 'motion/react';
-import Link from 'next/link';
 import { useSimulation } from '@/components/providers/SimulationProvider';
 import { fadeIn } from '@/utils/motion';
 import { HeroName } from '@/components/sections/hero/HeroName';
@@ -11,14 +10,16 @@ import { HeroSocial } from '@/components/sections/hero/HeroSocial';
 
 function Hero() {
   const { multipleSplats, lowerBrightnessHover } = useSimulation();
+  const aboutTextRef = useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
-    const aboutText = document.querySelector('.about-text') as HTMLElement;
-    if (aboutText) lowerBrightnessHover(aboutText);
+    if (aboutTextRef.current) {
+      lowerBrightnessHover(aboutTextRef.current);
+    }
   }, []);
 
   return (
-    <section className='relative z-10 mx-auto h-screen w-full select-none'>
+    <section className='relative z-10 mx-auto h-screen w-full'>
       <HeroPhoto />
       <div className='absolute inset-0 top-[80px] mx-auto flex max-w-7xl flex-row items-start gap-5 px-6 sm:px-11 md:px-16 xs:top-[120px]'>
         <div className='mt-5 flex flex-col items-center justify-center'>
@@ -28,10 +29,11 @@ function Hero() {
         <div>
           <HeroName />
           <m.p
-            className='about-text leading[20px] mt-0 text-[16px] font-medium sm:text-[26px] lg:text-[30px] lg:leading-[40px] xs:mt-[2] xs:text-[20px] xs:leading-normal'
+            className='leading[20px] mt-0 text-[16px] font-medium sm:text-[26px] lg:text-[30px] lg:leading-[40px] xs:mt-[2] xs:text-[20px] xs:leading-normal'
             variants={fadeIn('', '', 1.5, 1)}
             initial='hidden'
             animate='show'
+            ref={aboutTextRef}
           >
             I&apos;m a{' '}
             <span className='from-primary to-accent bg-clip-text text-transparent bg-gradient-120'>
@@ -50,12 +52,14 @@ function Hero() {
           <HeroSocial />
         </div>
       </div>
-      <div className='pointer-events-none absolute bottom-24 flex w-full items-center justify-center landscape-md:bottom-6'>
-        <Link
-          href='#about'
+      <div className='absolute bottom-24 flex w-full items-center justify-center landscape-md:bottom-6'>
+        <button
           className='group pointer-events-auto transition-transform duration-200 hover:translate-y-2 focus-visible:translate-y-2'
           onClick={() => {
             multipleSplats(5);
+            document.querySelector('#about')?.scrollIntoView({
+              behavior: 'smooth',
+            });
           }}
         >
           <div className='flex h-[64px] w-[35px] items-start justify-center rounded-3xl border-4 border-foreground p-2 transition-colors group-hover:border-primary group-focus-visible:border-primary'>
@@ -71,7 +75,7 @@ function Hero() {
               className='mb-1 h-3 w-3 rounded-full bg-foreground transition-colors group-hover:bg-primary group-focus-visible:bg-primary'
             />
           </div>
-        </Link>
+        </button>
       </div>
     </section>
   );

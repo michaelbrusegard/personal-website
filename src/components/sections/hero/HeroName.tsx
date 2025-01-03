@@ -49,7 +49,7 @@ function HeroName() {
   }, []);
 
   return (
-    <h1 className='mt-2 flex flex-wrap font-sf-pro-display text-[40px] font-extrabold sm:text-[60px] lg:text-[80px] lg:leading-[98px] xs:text-[50px]'>
+    <h1 className='mt-2 flex select-none flex-wrap font-sf-pro-display text-[40px] font-extrabold sm:text-[60px] lg:text-[80px] lg:leading-[98px] xs:text-[50px]'>
       <div>
         <m.span
           ref={spanRef}
@@ -109,7 +109,7 @@ function HeroName() {
         </m.span>
       </div>
       <div className='flex'>
-        <span className='gradient-animation from-primary to-accent bg-big bg-clip-text text-transparent bg-gradient-120'>
+        <span className='gradient-animation from-primary to-accent bg-[length:200%] bg-clip-text text-transparent bg-gradient-120'>
           <m.span
             ref={spanRef}
             className='gradient-letter inline-block transition-colors hover:text-accent'

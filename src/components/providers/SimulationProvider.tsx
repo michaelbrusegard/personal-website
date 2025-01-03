@@ -88,6 +88,35 @@ function SimulationProvider({ children }: { children: React.ReactNode }) {
     const mainElement = mainRef.current;
     if (!mainElement) return;
 
+    function handleEvent(event: Event) {
+      if (containerRef.current) {
+        const canvas = containerRef.current.querySelector('canvas');
+        if (canvas) {
+          if (event instanceof MouseEvent) {
+            canvas.dispatchEvent(new MouseEvent(event.type, event));
+          } else if (event instanceof TouchEvent) {
+            const touch = event.touches[0];
+            if (touch) {
+              const rect = canvas.getBoundingClientRect();
+              const mouseEvent = new MouseEvent(
+                event.type === 'touchstart'
+                  ? 'mousedown'
+                  : event.type === 'touchend'
+                    ? 'mouseup'
+                    : 'mousemove',
+                {
+                  clientX: touch.clientX - rect.left,
+                  clientY: touch.clientY + window.scrollY - rect.top,
+                  bubbles: true,
+                },
+              );
+              canvas.dispatchEvent(mouseEvent);
+            }
+          }
+        }
+      }
+    }
+
     const eventTypes = [
       'mousemove',
       'mousedown',
@@ -97,22 +126,13 @@ function SimulationProvider({ children }: { children: React.ReactNode }) {
       'touchend',
     ];
 
-    function handleMouseEvent(event: Event) {
-      if (event instanceof MouseEvent && containerRef.current) {
-        const canvas = containerRef.current.querySelector('canvas');
-        if (canvas) {
-          canvas.dispatchEvent(new MouseEvent(event.type, event));
-        }
-      }
-    }
-
     eventTypes.forEach((eventType) => {
-      mainElement.addEventListener(eventType, handleMouseEvent);
+      mainElement.addEventListener(eventType, handleEvent, { passive: true });
     });
 
     return () => {
       eventTypes.forEach((eventType) => {
-        mainElement.removeEventListener(eventType, handleMouseEvent);
+        mainElement.removeEventListener(eventType, handleEvent);
       });
     };
   }, []);

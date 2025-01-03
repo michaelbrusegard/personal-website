@@ -19,12 +19,12 @@ const config = {
         card: `0 0 5px 1px hsl(var(--foreground))`,
       },
       screens: {
-        xs: '448px',
+        xs: '28rem',
         'landscape-sm': {
-          raw: '(max-width: 768px) and (orientation: landscape)',
+          raw: '(max-width: 48rem) and (orientation: landscape)',
         },
         'landscape-md': {
-          raw: '(max-width: 1024px) and (orientation: landscape)',
+          raw: '(max-width: 64rem) and (orientation: landscape)',
         },
       },
     },
@@ -32,9 +32,6 @@ const config = {
       'sf-pro-display': ['var(--font-sf-pro-display)', ...fontFamily.sans],
       'sf-pro-text': ['var(--font-sf-pro-text)', ...fontFamily.sans],
       'sf-mono': ['var(--font-sf-mono)', ...fontFamily.mono],
-    },
-    backgroundSize: {
-      big: '200%',
     },
   },
   plugins: [
