@@ -50,7 +50,7 @@ function HeroPhoto() {
     <div className='relative left-0 h-full w-full overflow-hidden md:left-[100px] md:w-[calc(100%-100px)] xl:left-[200px] xl:w-[calc(100%-200px)] landscape-md:left-[400px] landscape-md:w-[calc(100%-400px)]'>
       <m.svg
         ref={heroCurveRef}
-        className='hero-curve hero-opacity absolute bottom-0 h-[60%] w-full fill-none stroke-[14px] object-contain xs:h-[75%]'
+        className='hero-curve hero-opacity absolute bottom-0 h-[60%] w-full fill-none stroke-[14px] object-contain sm:h-[75%]'
         width='100%'
         height='100%'
         viewBox='0 0 1813 2468'
@@ -70,7 +70,7 @@ function HeroPhoto() {
         />
       </m.svg>
       <Image
-        className='hero-image absolute bottom-0 h-[60%] w-full object-contain xs:h-[75%]'
+        className='hero-image absolute bottom-0 h-[60%] w-full object-contain sm:h-[75%]'
         ref={heroImageRef}
         src={heroImage}
         width={1813}
@@ -81,7 +81,7 @@ function HeroPhoto() {
       />
       <div
         ref={heroDrawRef}
-        className='hero-draw absolute bottom-0 h-[60%] w-full bg-foreground object-contain xs:h-[75%]'
+        className='hero-draw absolute bottom-0 h-[60%] w-full bg-foreground object-contain sm:h-[75%]'
         style={{ maskImage: `url(${heroDraw.src})` }}
       />
     </div>

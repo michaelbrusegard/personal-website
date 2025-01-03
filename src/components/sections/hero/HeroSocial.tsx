@@ -1,12 +1,12 @@
+import Link from 'next/link';
 import { m } from 'motion/react';
 import { fadeIn } from '@/utils/motion';
 import { GitHubLogo } from '@/components/assets/GitHubLogo';
 import { LinkedInLogo } from '@/components/assets/LinkedInLogo';
-import Link from 'next/link';
 
 function HeroSocial() {
   return (
-    <ul className='mt-5 flex flex-row flex-wrap gap-3 overflow-hidden'>
+    <ul className='mt-5 flex flex-row flex-wrap gap-3'>
       <m.li
         className='flex-shrink-0'
         variants={fadeIn('left', '', 2.0, 0.5)}

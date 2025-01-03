@@ -26,7 +26,7 @@ function Hero() {
           <div className='h-5 w-5 rounded-full bg-primary' />
           <div className='h-40 w-1 bg-gradient-to-b from-primary via-secondary to-transparent sm:h-80' />
         </div>
-        <div>
+        <div className='overflow-hidden px-1 pb-1'>
           <HeroName />
           <m.p
             className='leading[20px] mt-0 text-[16px] font-medium sm:text-[26px] lg:text-[30px] lg:leading-[40px] xs:mt-[2] xs:text-[20px] xs:leading-normal'
@@ -54,7 +54,7 @@ function Hero() {
       </div>
       <div className='absolute bottom-24 flex w-full items-center justify-center landscape-md:bottom-6'>
         <button
-          className='group pointer-events-auto transition-transform duration-200 hover:translate-y-2 focus-visible:translate-y-2'
+          className='group pointer-events-auto rounded-md outline-2 outline-offset-2 outline-primary/60 transition-transform duration-200 hover:translate-y-2 focus-visible:outline'
           onClick={() => {
             multipleSplats(5);
             document.querySelector('#about')?.scrollIntoView({
@@ -62,7 +62,7 @@ function Hero() {
             });
           }}
         >
-          <div className='flex h-[64px] w-[35px] items-start justify-center rounded-3xl border-4 border-foreground p-2 transition-colors group-hover:border-primary group-focus-visible:border-primary'>
+          <div className='flex h-[64px] w-[35px] items-start justify-center rounded-3xl border-4 border-foreground p-2 transition-colors group-hover:border-primary'>
             <m.div
               animate={{
                 y: [0, 24, 0],
@@ -72,7 +72,7 @@ function Hero() {
                 repeat: Infinity,
                 repeatType: 'loop',
               }}
-              className='mb-1 h-3 w-3 rounded-full bg-foreground transition-colors group-hover:bg-primary group-focus-visible:bg-primary'
+              className='mb-1 h-3 w-3 rounded-full bg-foreground transition-colors group-hover:bg-primary'
             />
           </div>
         </button>
