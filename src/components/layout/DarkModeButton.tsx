@@ -32,7 +32,7 @@ function DarkModeButton() {
   const title = isDarkMode ? 'Switch to light mode' : 'Switch to dark mode';
   return (
     <button
-      className='outline-2 outline-offset-2 outline-primary/60 hover:text-primary focus:outline'
+      className='outline-2 outline-offset-2 outline-primary/60 hover:text-primary focus-visible:outline rounded-md'
       title={title}
       aria-label={title}
       onClick={toggleDarkMode}

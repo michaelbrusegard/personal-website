@@ -24,7 +24,9 @@ const Contact = () => {
       });
   }, []);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const { name, value } = e.target;
     setForm((prevForm) => ({ ...prevForm, [name]: value }));
   };
@@ -34,13 +36,16 @@ const Contact = () => {
     setLoading(true);
 
     try {
-      const response = await fetch('https://europe-north1-michaelbrusegard.cloudfunctions.net/emailSender', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
+      const response = await fetch(
+        'https://europe-north1-michaelbrusegard.cloudfunctions.net/emailSender',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(form),
         },
-        body: JSON.stringify(form),
-      });
+      );
 
       if (response.ok) {
         setFeedbackMessage('Email sent successfully');
@@ -61,10 +66,17 @@ const Contact = () => {
 
   return (
     <div className='pointer-events-auto flex flex-col-reverse gap-10 overflow-hidden xl:mt-12 xl:flex-row'>
-      <motion.div variants={slideIn('left', 'tween', 0.2, 1) as Variants} className='flex-[0.75] rounded-2xl bg-secondary p-8'>
+      <motion.div
+        variants={slideIn('left', 'tween', 0.2, 1) as Variants}
+        className='flex-[0.75] rounded-2xl bg-secondary p-8'
+      >
         <p className='section-subtitle'>Get in touch</p>
         <h3 className='section-title'>Contact.</h3>
-        <form ref={formRef} onSubmit={handleSubmit} className='mt-12 flex flex-col gap-8'>
+        <form
+          ref={formRef}
+          onSubmit={handleSubmit}
+          className='mt-12 flex flex-col gap-8'
+        >
           <label className='flex flex-col'>
             <span className='mb-4 font-medium'>Your Name</span>
             <input
@@ -111,19 +123,26 @@ const Contact = () => {
             className={`w-fit select-none rounded-xl bg-primary px-8 py-3 font-semibold text-background transition-all duration-200 ${
               loading
                 ? 'pointer-events-none'
-                : 'hover:-translate-y-1 hover:from-primary hover:to-accent hover:text-foreground hover:shadow-xl hover:shadow-primary hover:bg-gradient-30 focus:-translate-y-1 focus:from-primary focus:to-accent focus:text-foreground focus:shadow-xl focus:shadow-primary focus:bg-gradient-30'
+                : 'hover:-translate-y-1 hover:from-primary hover:to-accent hover:text-foreground hover:shadow-xl hover:shadow-primary hover:bg-gradient-30 focus-visible:-translate-y-1 focus-visible:from-primary focus-visible:to-accent focus-visible:text-foreground focus-visible:shadow-xl focus-visible:shadow-primary focus-visible:bg-gradient-30'
             }`}
             disabled={loading}
           >
             {loading ? 'Sending...' : 'Send Message'}
           </button>
           {feedbackMessage && (
-            <p className={`ml-1 font-semibold ${feedbackMessage === 'Email sent successfully' ? 'text-green-600' : 'text-red-600'}`}>{feedbackMessage}</p>
+            <p
+              className={`ml-1 font-semibold ${feedbackMessage === 'Email sent successfully' ? 'text-green-600' : 'text-red-600'}`}
+            >
+              {feedbackMessage}
+            </p>
           )}
         </form>
       </motion.div>
 
-      <motion.div variants={slideIn('right', 'tween', 0.2, 1) as Variants} className='h-[350px] md:h-[550px] xl:h-auto xl:w-[550px] xl:flex-1'>
+      <motion.div
+        variants={slideIn('right', 'tween', 0.2, 1) as Variants}
+        className='h-[350px] md:h-[550px] xl:h-auto xl:w-[550px] xl:flex-1'
+      >
         <DogCanvas />
       </motion.div>
     </div>

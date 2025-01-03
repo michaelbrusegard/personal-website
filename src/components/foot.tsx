@@ -10,7 +10,7 @@ const Foot = () => {
           {techUsed.map((icon) => (
             <div
               key={icon.name}
-              className='h-6 w-6 cursor-pointer transition-transform hover:scale-110 focus:scale-110'
+              className='h-6 w-6 cursor-pointer transition-transform hover:scale-110 focus-visible:scale-110'
               tabIndex={0}
               onClick={() => window.open(icon.link, '_blank')}
               onKeyDown={(event) => {
@@ -33,7 +33,7 @@ const Foot = () => {
         href='https://github.com/michaelbrusegard/personal-website'
         target='_blank'
         rel='noreferrer'
-        className='mt-4 flex cursor-pointer items-center gap-1 text-[18px] font-medium transition-transform duration-200 hover:-translate-y-[2px] hover:text-primary focus:-translate-y-[2px] focus:text-primary'
+        className='mt-4 flex cursor-pointer items-center gap-1 text-[18px] font-medium transition-transform duration-200 hover:-translate-y-[2px] hover:text-primary focus-visible:-translate-y-[2px] focus-visible:text-primary'
       >
         Code
         <svg height='1em' viewBox='0 0 496 512' className='text-current'>

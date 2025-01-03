@@ -39,7 +39,7 @@ function MobileMenu() {
   return (
     <>
       <button
-        className={`menu-button group flex h-9 w-9 translate-x-[-50%] justify-end object-contain ${
+        className={`menu-button group flex h-9 w-9 translate-x-[-50%] justify-end rounded-md object-contain outline-2 outline-offset-2 outline-primary/60 focus-visible:outline ${
           isOpen ? 'open' : ''
         }`}
         onClick={() => setIsOpen(!isOpen)}
@@ -64,6 +64,7 @@ function MobileMenu() {
         variants={foldOut(0.8, 0.2)}
         initial='hidden'
         animate={isOpen ? 'show' : 'hidden'}
+        inert={!isOpen}
       >
         <Nav isMobile animate={isOpen ? 'show' : 'hidden'} />
       </m.div>

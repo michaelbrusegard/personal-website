@@ -44,7 +44,7 @@ function ThemeButton() {
   const title = 'Change color theme';
   return (
     <button
-      className='outline-2 outline-offset-2 outline-primary/60 hover:text-primary focus:outline'
+      className='rounded-md outline-2 outline-offset-2 outline-primary/60 hover:text-primary focus-visible:outline'
       title={title}
       aria-label={title}
       onClick={cycleTheme}

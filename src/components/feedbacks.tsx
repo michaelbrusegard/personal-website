@@ -30,7 +30,7 @@ const FeedbackCard = ({
             window.location.href = `tel:${phone}`;
           }
         }}
-        className='m-1 flex h-7 w-7 cursor-pointer items-center justify-center text-background transition-transform duration-200 hover:-translate-y-[2px] hover:text-primary hover:opacity-100 focus:-translate-y-[2px] focus:text-primary focus:opacity-100'
+        className='m-1 flex h-7 w-7 cursor-pointer items-center justify-center text-background transition-transform duration-200 hover:-translate-y-[2px] hover:text-primary hover:opacity-100 focus-visible:-translate-y-[2px] focus-visible:text-primary focus-visible:opacity-100'
         tabIndex={0}
       >
         <svg width='100%' height='100%' viewBox='0 0 256 256' className='object-contain text-current opacity-80'>
@@ -49,7 +49,7 @@ const FeedbackCard = ({
             window.location.href = `mailto:${mail}`;
           }
         }}
-        className='m-1 flex h-7 w-7 cursor-pointer items-center justify-center text-background transition-transform duration-200 hover:-translate-y-[2px] hover:text-primary hover:opacity-100 focus:-translate-y-[2px] focus:text-primary focus:opacity-100'
+        className='m-1 flex h-7 w-7 cursor-pointer items-center justify-center text-background transition-transform duration-200 hover:-translate-y-[2px] hover:text-primary hover:opacity-100 focus-visible:-translate-y-[2px] focus-visible:text-primary focus-visible:opacity-100'
         tabIndex={0}
       >
         <svg width='100%' height='100%' viewBox='0 0 256 256' className='object-contain text-current opacity-80'>

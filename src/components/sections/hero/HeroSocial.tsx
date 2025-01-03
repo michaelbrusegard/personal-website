@@ -18,9 +18,9 @@ function HeroSocial() {
           href='https://www.linkedin.com/in/michaelbrusegard/'
           target='_blank'
           rel='noreferrer'
-          className='h-9 w-9 cursor-pointer hover:text-primary focus:text-primary'
+          className='block rounded-[3px] outline-2 outline-offset-2 outline-primary/60 hover:text-primary focus-visible:outline'
         >
-          <LinkedInLogo aria-hidden='true' />
+          <LinkedInLogo className='h-9 w-9' aria-hidden='true' />
         </Link>
       </m.li>
       <m.li
@@ -34,9 +34,9 @@ function HeroSocial() {
           href='https://github.com/michaelbrusegard/'
           target='_blank'
           rel='noreferrer'
-          className='h-9 w-9 cursor-pointer hover:text-primary focus:text-primary'
+          className='block rounded-[3px] outline-2 outline-offset-2 outline-primary/60 hover:text-primary focus-visible:outline'
         >
-          <GitHubLogo aria-hidden='true' />
+          <GitHubLogo className='h-9 w-9' aria-hidden='true' />
         </Link>
       </m.li>
       <m.li
@@ -48,7 +48,7 @@ function HeroSocial() {
       >
         <Link
           href='#contact'
-          className='ml-auto h-9 w-fit cursor-pointer rounded-[3px] bg-primary px-4 py-[6px] font-semibold text-background transition-[color,box-shadow] duration-200 hover:from-primary hover:to-accent hover:text-foreground hover:shadow-xl hover:shadow-primary hover:bg-gradient-30 focus:from-primary focus:to-accent focus:text-foreground focus:shadow-xl focus:shadow-primary focus:bg-gradient-30 xs:ml-0'
+          className='flex h-9 items-center rounded-[3px] bg-primary px-4 font-semibold text-background outline-2 outline-offset-2 outline-primary/60 transition-[color,box-shadow] duration-200 hover:from-primary hover:to-accent hover:text-foreground hover:shadow-xl hover:shadow-primary hover:bg-gradient-30 focus-visible:outline'
         >
           Let&apos;s Talk
         </Link>

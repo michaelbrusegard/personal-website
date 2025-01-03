@@ -26,7 +26,9 @@ const ProjectCard = ({
     <motion.div variants={fadeIn('up', 'spring', index * 0.5, 1) as Variants}>
       <Tilt
         className={`pointer-events-auto flex w-full max-w-[640px] flex-col rounded-2xl border-2 border-accent p-5 lg:max-w-none ${
-          (index + 1) % 2 === 0 ? 'from-secondary to-background bg-gradient-45 lg:flex-row-reverse' : 'from-background to-secondary bg-gradient-135 lg:flex-row'
+          (index + 1) % 2 === 0
+            ? 'from-secondary to-background bg-gradient-45 lg:flex-row-reverse'
+            : 'from-background to-secondary bg-gradient-135 lg:flex-row'
         }`}
         scale={1.05}
         transitionSpeed={450}
@@ -57,7 +59,7 @@ const ProjectCard = ({
             {techstack.map((icon) => (
               <div
                 key={icon.name}
-                className='h-6 w-6 cursor-pointer transition-transform hover:scale-110 focus:scale-110'
+                className='h-6 w-6 cursor-pointer transition-transform hover:scale-110 focus-visible:scale-110'
                 tabIndex={0}
                 onClick={() => window.open(icon.link, '_blank')}
                 onKeyDown={(event) => {
@@ -66,7 +68,11 @@ const ProjectCard = ({
                   }
                 }}
               >
-                <Image src={icon.icon} alt={icon.name} className='object-contain' />
+                <Image
+                  src={icon.icon}
+                  alt={icon.name}
+                  className='object-contain'
+                />
               </div>
             ))}
           </div>
@@ -75,7 +81,7 @@ const ProjectCard = ({
               href={srcLink}
               target='_blank'
               rel='noreferrer'
-              className='flex cursor-pointer items-center gap-1 transition-transform duration-200 hover:-translate-y-[2px] hover:text-primary focus:-translate-y-[2px] focus:text-primary'
+              className='flex cursor-pointer items-center gap-1 transition-transform duration-200 hover:-translate-y-[2px] hover:text-primary focus-visible:-translate-y-[2px] focus-visible:text-primary'
             >
               Code
               <svg height='1em' viewBox='0 0 496 512' className='text-current'>
@@ -89,7 +95,7 @@ const ProjectCard = ({
               href={prodLink}
               target='_blank'
               rel='noreferrer'
-              className='flex cursor-pointer items-center gap-1 transition-transform duration-200 hover:-translate-y-[2px] hover:text-primary focus:-translate-y-[2px] focus:text-primary'
+              className='flex cursor-pointer items-center gap-1 transition-transform duration-200 hover:-translate-y-[2px] hover:text-primary focus-visible:-translate-y-[2px] focus-visible:text-primary'
             >
               Live
               <svg height='1em' viewBox='0 0 512 512' className='text-current'>
@@ -115,10 +121,16 @@ const Works = () => {
       </motion.div>
 
       <div className='flex w-full'>
-        <motion.p variants={fadeIn('', '', 0.1, 1) as Variants} className='section-text pointer-events-auto mt-3 max-w-3xl text-[17px] leading-[30px]'>
-          I have a collection of projects that effectively demonstrate my skills and experience, showcasing real-world examples of my work. Each project has
-          live production links as well as repositories containing the source code. These projects serve as a testament to my proficiency in tackling different
-          challenges, adeptness with diverse technologies, and ability to efficiently manage projects.
+        <motion.p
+          variants={fadeIn('', '', 0.1, 1) as Variants}
+          className='section-text pointer-events-auto mt-3 max-w-3xl text-[17px] leading-[30px]'
+        >
+          I have a collection of projects that effectively demonstrate my skills
+          and experience, showcasing real-world examples of my work. Each
+          project has live production links as well as repositories containing
+          the source code. These projects serve as a testament to my proficiency
+          in tackling different challenges, adeptness with diverse technologies,
+          and ability to efficiently manage projects.
         </motion.p>
       </div>
 

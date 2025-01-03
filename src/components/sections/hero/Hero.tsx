@@ -60,9 +60,9 @@ function Hero() {
       <div className='absolute bottom-24 flex w-full items-center justify-center landscape-md:bottom-6'>
         <a
           href='#about'
-          className='scroll-button group pointer-events-auto transition-transform duration-200 hover:translate-y-2 focus:translate-y-2'
+          className='scroll-button group pointer-events-auto transition-transform duration-200 hover:translate-y-2 focus-visible:translate-y-2'
         >
-          <div className='flex h-[64px] w-[35px] items-start justify-center rounded-3xl border-4 border-foreground p-2 transition-colors group-hover:border-primary group-focus:border-primary'>
+          <div className='flex h-[64px] w-[35px] items-start justify-center rounded-3xl border-4 border-foreground p-2 transition-colors group-hover:border-primary group-focus-visible:border-primary'>
             <motion.div
               animate={{
                 y: [0, 24, 0],
@@ -72,7 +72,7 @@ function Hero() {
                 repeat: Infinity,
                 repeatType: 'loop',
               }}
-              className='mb-1 h-3 w-3 rounded-full bg-foreground transition-colors group-hover:bg-primary group-focus:bg-primary'
+              className='mb-1 h-3 w-3 rounded-full bg-foreground transition-colors group-hover:bg-primary group-focus-visible:bg-primary'
             />
           </div>
         </a>
