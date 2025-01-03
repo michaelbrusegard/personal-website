@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 function HeroSocial() {
   return (
-    <ul className='mt-5 flex flex-row flex-wrap gap-3'>
+    <ul className='mt-5 flex flex-row flex-wrap gap-3 overflow-hidden'>
       <m.li
         className='flex-shrink-0'
         variants={fadeIn('left', '', 2.0, 0.5)}
