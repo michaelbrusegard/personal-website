@@ -15,7 +15,7 @@ const ServiceCard = ({
   icons: any;
 }) => (
   <Tilt
-    className='pointer-events-auto w-full xs:w-[250px]'
+    className='w-full xs:w-[250px]'
     scale={1.1}
     transitionSpeed={450}
     tiltMaxAngleX={15}
@@ -60,7 +60,7 @@ const About = () => {
 
       <motion.p
         variants={fadeIn('', '', 0.1, 1) as Variants}
-        className='section-text pointer-events-auto mt-4 max-w-3xl text-[17px] leading-[30px]'
+        className='section-text mt-4 max-w-3xl text-[17px] leading-[30px]'
       >
         As a full-stack developer and a computer science student, I bring a
         strong foundation in TypeScript, JavaScript, Python, and Java.

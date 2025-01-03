@@ -65,7 +65,7 @@ const Contact = () => {
   };
 
   return (
-    <div className='pointer-events-auto flex flex-col-reverse gap-10 overflow-hidden xl:mt-12 xl:flex-row'>
+    <div className='flex flex-col-reverse gap-10 overflow-hidden xl:mt-12 xl:flex-row'>
       <motion.div
         variants={slideIn('left', 'tween', 0.2, 1) as Variants}
         className='flex-[0.75] rounded-2xl bg-secondary p-8'

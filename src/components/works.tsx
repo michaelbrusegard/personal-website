@@ -25,7 +25,7 @@ const ProjectCard = ({
   return (
     <motion.div variants={fadeIn('up', 'spring', index * 0.5, 1) as Variants}>
       <Tilt
-        className={`pointer-events-auto flex w-full max-w-[640px] flex-col rounded-2xl border-2 border-accent p-5 lg:max-w-none ${
+        className={`flex w-full max-w-[640px] flex-col rounded-2xl border-2 border-accent p-5 lg:max-w-none ${
           (index + 1) % 2 === 0
             ? 'from-secondary to-background bg-gradient-45 lg:flex-row-reverse'
             : 'from-background to-secondary bg-gradient-135 lg:flex-row'
@@ -123,7 +123,7 @@ const Works = () => {
       <div className='flex w-full'>
         <motion.p
           variants={fadeIn('', '', 0.1, 1) as Variants}
-          className='section-text pointer-events-auto mt-3 max-w-3xl text-[17px] leading-[30px]'
+          className='section-text mt-3 max-w-3xl text-[17px] leading-[30px]'
         >
           I have a collection of projects that effectively demonstrate my skills
           and experience, showcasing real-world examples of my work. Each
