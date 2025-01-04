@@ -13,6 +13,7 @@ type NavProps = {
 
 function Nav({ isMobile = false, animate = 'show' }: NavProps) {
   const duration = isMobile ? 0.2 : 1;
+
   return (
     <nav
       className={isMobile ? 'mb-6' : 'hidden sm:flex'}
@@ -34,7 +35,6 @@ function Nav({ isMobile = false, animate = 'show' }: NavProps) {
             className='rounded-md font-sf-mono font-medium outline-2 outline-offset-2 outline-primary/60 hover:text-primary focus-visible:outline'
             href='#about'
             role='menuitem'
-            aria-current={location.hash === '#about' ? 'page' : undefined}
           >
             About
           </Link>
@@ -51,7 +51,6 @@ function Nav({ isMobile = false, animate = 'show' }: NavProps) {
             className='rounded-md font-sf-mono font-medium outline-2 outline-offset-2 outline-primary/60 hover:text-primary focus-visible:outline'
             href='#work'
             role='menuitem'
-            aria-current={location.hash === '#work' ? 'page' : undefined}
           >
             Work
           </Link>
@@ -68,7 +67,6 @@ function Nav({ isMobile = false, animate = 'show' }: NavProps) {
             className='rounded-md font-sf-mono font-medium outline-2 outline-offset-2 outline-primary/60 hover:text-primary focus-visible:outline'
             href='#contact'
             role='menuitem'
-            aria-current={location.hash === '#contact' ? 'page' : undefined}
           >
             Contact
           </Link>
