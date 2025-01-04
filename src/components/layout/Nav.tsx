@@ -14,9 +14,16 @@ type NavProps = {
 function Nav({ isMobile = false, animate = 'show' }: NavProps) {
   const duration = isMobile ? 0.2 : 1;
   return (
-    <nav className={isMobile ? 'mb-6' : 'hidden sm:flex'}>
-      <ul className={isMobile ? 'flex flex-col gap-3' : 'flex gap-10'}>
+    <nav
+      className={isMobile ? 'mb-6' : 'hidden sm:flex'}
+      aria-label={isMobile ? 'Mobile navigation' : 'Main navigation'}
+    >
+      <ul
+        className={isMobile ? 'flex flex-col gap-3' : 'flex gap-10'}
+        role='menubar'
+      >
         <m.li
+          role='none'
           variants={fadeIn('down', '', isMobile ? 0.8 : 0.25, duration)}
           initial='hidden'
           animate={animate}
@@ -26,11 +33,14 @@ function Nav({ isMobile = false, animate = 'show' }: NavProps) {
           <Link
             className='rounded-md font-sf-mono font-medium outline-2 outline-offset-2 outline-primary/60 hover:text-primary focus-visible:outline'
             href='#about'
+            role='menuitem'
+            aria-current={location.hash === '#about' ? 'page' : undefined}
           >
             About
           </Link>
         </m.li>
         <m.li
+          role='none'
           variants={fadeIn('down', '', isMobile ? 0.8 : 0.5, duration)}
           initial='hidden'
           animate={animate}
@@ -40,11 +50,14 @@ function Nav({ isMobile = false, animate = 'show' }: NavProps) {
           <Link
             className='rounded-md font-sf-mono font-medium outline-2 outline-offset-2 outline-primary/60 hover:text-primary focus-visible:outline'
             href='#work'
+            role='menuitem'
+            aria-current={location.hash === '#work' ? 'page' : undefined}
           >
             Work
           </Link>
         </m.li>
         <m.li
+          role='none'
           variants={fadeIn('down', '', isMobile ? 0.8 : 0.75, duration)}
           initial='hidden'
           animate={animate}
@@ -54,12 +67,15 @@ function Nav({ isMobile = false, animate = 'show' }: NavProps) {
           <Link
             className='rounded-md font-sf-mono font-medium outline-2 outline-offset-2 outline-primary/60 hover:text-primary focus-visible:outline'
             href='#contact'
+            role='menuitem'
+            aria-current={location.hash === '#contact' ? 'page' : undefined}
           >
             Contact
           </Link>
         </m.li>
         <m.li
           className={`flex items-center ${isMobile ? 'gap-5' : 'gap-2'}`}
+          role='none'
           variants={fadeIn('down', '', isMobile ? 0.8 : 1, duration)}
           initial='hidden'
           animate={animate}

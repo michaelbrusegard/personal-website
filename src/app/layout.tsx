@@ -41,7 +41,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <html
       lang='en'
       dir='ltr'
-      className={`h-full w-full ${sfProDisplay.variable} ${sfProText.variable} ${sfMono.variable}`}
+      className={`h-full w-full scroll-smooth ${sfProDisplay.variable} ${sfProText.variable} ${sfMono.variable}`}
       suppressHydrationWarning
     >
       <body className='relative h-full w-full bg-background font-sf-pro-text text-foreground antialiased'>
