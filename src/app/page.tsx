@@ -1,6 +1,6 @@
 'use client';
 import { Hero } from '@/components/sections/hero/Hero';
-import About from '../components/about';
+import { About } from '@/components/sections/About';
 import Experience from '../components/experience';
 import Works from '../components/works';
 import Feedbacks from '../components/feedbacks';

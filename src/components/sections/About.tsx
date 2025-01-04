@@ -1,8 +1,8 @@
 import Tilt from 'react-parallax-tilt';
-import { motion, Variants } from 'motion/react';
+import { m } from 'motion/react';
 import Image from 'next/image';
-import { services } from '../constants';
-import { fadeIn, textVariant } from '../utils/motion';
+import { services } from '../../constants';
+import { fadeIn, textVariant } from '../../utils/motion';
 import { SectionHOC } from '@/components/layout/SectionHOC';
 
 const ServiceCard = ({
@@ -21,8 +21,8 @@ const ServiceCard = ({
     tiltMaxAngleX={15}
     tiltMaxAngleY={15}
   >
-    <motion.div
-      variants={fadeIn('right', 'spring', index * 0.5, 0.75) as Variants}
+    <m.div
+      variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
       className='w-full rounded-[20px] from-primary to-accent p-[2px] bg-gradient-90'
     >
       <h3 className='font-mono text-center text-[20px] font-bold'>{title}</h3>
@@ -46,20 +46,19 @@ const ServiceCard = ({
           </div>
         ))}
       </div>
-    </motion.div>
+    </m.div>
   </Tilt>
 );
 
-const About = () => {
+function AboutSection() {
   return (
     <>
-      <motion.div variants={textVariant() as Variants}>
+      <m.div variants={textVariant()}>
         <p className='section-subtitle'>Introduction</p>
         <h2 className='section-title'>Overview.</h2>
-      </motion.div>
-
-      <motion.p
-        variants={fadeIn('', '', 0.1, 1) as Variants}
+      </m.div>
+      <m.p
+        variants={fadeIn('', '', 0.1, 1)}
         className='section-text mt-4 max-w-3xl text-[17px] leading-[30px]'
       >
         As a full-stack developer and a computer science student, I bring a
@@ -71,7 +70,7 @@ const About = () => {
         work together and contribute my skills to bring your ideas to life. Feel
         free to reach out and let&apos;s explore how we can create something
         great together!
-      </motion.p>
+      </m.p>
 
       <div className='mt-20 flex select-none flex-wrap gap-10'>
         {services.map((service, index) => (
@@ -80,6 +79,8 @@ const About = () => {
       </div>
     </>
   );
-};
+}
 
-export default SectionHOC(About, 'about');
+const About = SectionHOC(AboutSection, 'about');
+
+export { About };

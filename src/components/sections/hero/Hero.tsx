@@ -33,7 +33,7 @@ function Hero() {
           <div className='h-5 w-5 rounded-full bg-primary' />
           <div className='h-40 w-1 bg-gradient-to-b from-primary via-secondary to-transparent sm:h-80' />
         </div>
-        <div className='overflow-hidden px-1 pb-1'>
+        <div className='overflow-hidden px-1 pb-10'>
           <HeroName />
           <m.p
             className='leading[20px] mt-0 text-[16px] font-medium sm:text-[26px] lg:text-[30px] lg:leading-[40px] xs:mt-[2] xs:text-[20px] xs:leading-normal'
@@ -47,17 +47,13 @@ function Hero() {
               className='from-primary to-accent bg-clip-text text-transparent bg-gradient-120'
               role='text'
             >
-              Software Developer
+              Software Engineer
             </span>{' '}
             residing in&nbsp;
-            <br className='hidden sm:block' aria-hidden='true' />
-            Trondheim, Norway
-            <span className='xs:hidden landscape-sm:inline'>.</span>
-            <span className='hidden xs:inline landscape-sm:hidden'>
-              , seeking new opportunities&nbsp;
-              <br className='hidden sm:block' aria-hidden='true' />
-              to contribute my skills and knowledge.
-            </span>
+            <br className='hidden xs:block' aria-hidden='true' />
+            Trondheim, Norway , who loves building{' '}
+            <br className='hidden xs:block' aria-hidden='true' />
+            meaningful applications.
           </m.p>
           <HeroSocial />
         </div>
