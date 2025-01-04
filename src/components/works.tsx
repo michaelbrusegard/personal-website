@@ -1,6 +1,6 @@
 import Tilt from 'react-parallax-tilt';
 import { Variants, motion } from 'motion/react';
-import SectionWrapper from '../components/sectionWrapper';
+import { SectionHOC } from '@/components/layout/SectionHOC';
 import { projects } from '../constants/index';
 import { fadeIn, textVariant } from '../utils/motion';
 import Image, { StaticImageData } from 'next/image';
@@ -143,4 +143,4 @@ const Works = () => {
   );
 };
 
-export default SectionWrapper(Works, '');
+export default SectionHOC(Works, '');

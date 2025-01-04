@@ -1,5 +1,5 @@
 import { Variants, motion } from 'motion/react';
-import SectionWrapper from './sectionWrapper';
+import { SectionHOC } from '@/components/layout/SectionHOC';
 import { fadeIn, textVariant } from '../utils/motion';
 import { testimonials } from '../constants/index';
 import Image, { StaticImageData } from 'next/image';
@@ -121,4 +121,4 @@ const Feedbacks = () => {
   );
 };
 
-export default SectionWrapper(Feedbacks, '');
+export default SectionHOC(Feedbacks, '');

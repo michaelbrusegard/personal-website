@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { Variants, motion } from 'motion/react';
-import SectionWrapper from './sectionWrapper';
+import { SectionHOC } from '@/components/layout/SectionHOC';
 import { slideIn } from '../utils/motion';
 import DogCanvas from './dog';
 
@@ -149,4 +149,4 @@ const Contact = () => {
   );
 };
 
-export default SectionWrapper(Contact, 'contact');
+export default SectionHOC(Contact, 'contact');

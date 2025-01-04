@@ -3,7 +3,7 @@ import { motion, Variants } from 'motion/react';
 import Image from 'next/image';
 import { services } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
-import SectionWrapper from '../components/sectionWrapper';
+import { SectionHOC } from '@/components/layout/SectionHOC';
 
 const ServiceCard = ({
   index,
@@ -82,4 +82,4 @@ const About = () => {
   );
 };
 
-export default SectionWrapper(About, 'about');
+export default SectionHOC(About, 'about');

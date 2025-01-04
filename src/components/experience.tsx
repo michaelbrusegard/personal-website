@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 import { Variants, motion } from 'framer-motion';
 import 'react-vertical-timeline-component/style.min.css';
 import { experiences } from '../constants';
-import SectionWrapper from '../components/sectionWrapper';
+import { SectionHOC } from '@/components/layout/SectionHOC';
 import { textVariant } from '../utils/motion';
 import Image from 'next/image';
 
@@ -98,4 +98,4 @@ const Experience = () => {
   );
 };
 
-export default SectionWrapper(Experience, 'work');
+export default SectionHOC(Experience, 'work');
