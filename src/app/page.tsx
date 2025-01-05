@@ -2,12 +2,11 @@
 
 import { Hero } from '@/components/sections/hero/Hero';
 import { About } from '@/components/sections/about/About';
-import Experience from '../components/experience';
+import { Experience } from '@/components/sections/experience/Experience';
 import Works from '../components/works';
 import Feedbacks from '../components/feedbacks';
 import Contact from '../components/contact';
 import StarsCanvas from '../components/stars';
-import Foot from '../components/foot';
 
 export default function Page() {
   return (

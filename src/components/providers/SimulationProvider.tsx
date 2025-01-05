@@ -6,26 +6,10 @@ import { createContext, useContext, useEffect, useRef } from 'react';
 type SimulationContextType = {
   multipleSplats: (amount: number) => void;
   lowerBrightnessHover: (element: HTMLElement) => void;
-  updateColorTheme: () => void;
+  updateColorPalette: () => void;
 };
 
 const SimulationContext = createContext<SimulationContextType | null>(null);
-
-function applyGradientColors() {
-  const root = getComputedStyle(document.documentElement);
-  const linearGradient = document.getElementById('gradient');
-  if (linearGradient) {
-    linearGradient
-      .querySelector('stop[offset="0%"]')
-      ?.setAttribute('stop-color', `hsl(${root.getPropertyValue('--accent')})`);
-    linearGradient
-      .querySelector('stop[offset="100%"]')
-      ?.setAttribute(
-        'stop-color',
-        `hsl(${root.getPropertyValue('--primary')})`,
-      );
-  }
-}
 
 function useSimulation() {
   const context = useContext(SimulationContext);
@@ -74,7 +58,6 @@ function SimulationProvider({ children }: { children: React.ReactNode }) {
         transparent: true,
         brightness: 0.4,
       });
-      applyGradientColors();
       simulation.current.start();
 
       return () => {
@@ -137,7 +120,7 @@ function SimulationProvider({ children }: { children: React.ReactNode }) {
     };
   }, []);
 
-  function updateColorTheme() {
+  function updateColorPalette() {
     setTimeout(() => {
       simulation.current?.setConfig({
         colorPalette: [
@@ -146,7 +129,6 @@ function SimulationProvider({ children }: { children: React.ReactNode }) {
           hslToHex(...getCSSColorValue('--accent')),
         ],
       });
-      applyGradientColors();
     }, 0);
   }
 
@@ -203,7 +185,7 @@ function SimulationProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <SimulationContext.Provider
-      value={{ multipleSplats, lowerBrightnessHover, updateColorTheme }}
+      value={{ multipleSplats, lowerBrightnessHover, updateColorPalette }}
     >
       <div className='fixed left-0 top-0 h-full w-full'>
         <div ref={containerRef} className='h-full w-full' />

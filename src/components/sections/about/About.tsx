@@ -17,7 +17,7 @@ function AboutSection() {
       </m.div>
       <m.p
         variants={fadeIn('', '', 0.1, 1)}
-        className='section-text mt-4 max-w-3xl text-[17px] leading-[30px]'
+        className='mt-4 max-w-3xl text-[17px] leading-[30px]'
       >
         I am currently most experienced in web development and prefer working as
         a full-stack developer for a complete understanding of the whole

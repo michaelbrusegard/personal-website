@@ -4,12 +4,12 @@ import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 import { SunIcon } from '@/components/assets/SunIcon';
 import { MoonIcon } from '@/components/assets/MoonIcon';
-import { useSimulation } from '@/components/providers/SimulationProvider';
+import { useThemeContext } from '@/components/providers/ThemeProvider';
 
 function DarkModeButton() {
   const [isMounted, setIsMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
-  const { updateColorTheme } = useSimulation();
+  const { updateTheme } = useThemeContext();
 
   useEffect(() => {
     setIsMounted(true);
@@ -26,13 +26,13 @@ function DarkModeButton() {
     } else {
       setTheme(resolvedTheme.replace('light', 'dark'));
     }
-    updateColorTheme();
+    updateTheme();
   }
 
   const title = isDarkMode ? 'Switch to light mode' : 'Switch to dark mode';
   return (
     <button
-      className='outline-2 outline-offset-2 outline-primary/60 hover:text-primary focus-visible:outline rounded-md'
+      className='rounded-md outline-2 outline-offset-2 outline-primary/60 hover:text-primary focus-visible:outline'
       title={title}
       aria-label={title}
       onClick={toggleDarkMode}

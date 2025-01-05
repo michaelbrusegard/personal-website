@@ -3,12 +3,12 @@
 import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 import { PaletteIcon } from '@/components/assets/PaletteIcon';
-import { useSimulation } from '@/components/providers/SimulationProvider';
+import { useThemeContext } from '@/components/providers/ThemeProvider';
 
 function ThemeButton() {
   const [isMounted, setIsMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
-  const { updateColorTheme } = useSimulation();
+  const { updateTheme } = useThemeContext();
 
   useEffect(() => {
     setIsMounted(true);
@@ -38,7 +38,7 @@ function ThemeButton() {
     const nextType = themeTypes[nextIndex];
 
     setTheme(`${mode}${nextType}`);
-    updateColorTheme();
+    updateTheme();
   }
 
   const title = 'Change color theme';

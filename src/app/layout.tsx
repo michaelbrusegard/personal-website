@@ -46,15 +46,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       suppressHydrationWarning
     >
       <body className='relative h-full w-full bg-background font-sf-pro-text text-foreground antialiased'>
-        <ThemeProvider>
-          <MotionProvider>
-            <SimulationProvider>
+        <SimulationProvider>
+          <ThemeProvider>
+            <MotionProvider>
               <Header />
               {children}
               <Footer />
-            </SimulationProvider>
-          </MotionProvider>
-        </ThemeProvider>
+            </MotionProvider>
+          </ThemeProvider>
+        </SimulationProvider>
       </body>
     </html>
   );
