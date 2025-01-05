@@ -1,7 +1,17 @@
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
-import Image from 'next/image';
 
-function WorkCard({ experience }: { experience: any }) {
+type WorkCardProps = {
+  work: {
+    date: string;
+    companyName: string;
+    title: string;
+    Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+    points: string[];
+  };
+};
+
+function WorkCard({ work }: WorkCardProps) {
+  const Icon = work.Icon;
   return (
     <VerticalTimelineElement
       contentStyle={{
@@ -9,27 +19,26 @@ function WorkCard({ experience }: { experience: any }) {
         color: 'hsl(var(--foreground))',
       }}
       contentArrowStyle={{ borderRight: '10px solid hsl(var(--secondary))' }}
-      date={experience.date}
+      date={work.date}
       iconStyle={{ background: 'hsl(var(--accent))' }}
       icon={
-        <Image
-          src={experience.icon}
-          alt={experience.companyName}
-          className='rounded-full object-contain shadow-timeline-border'
+        <Icon
+          className='absolute !left-3 !top-3 !h-[60px] !w-[60px] rounded-full object-contain shadow-timeline-border'
+          aria-hidden='true'
         />
       }
     >
       <div>
-        <h3 className='text-[24px] font-bold'>{experience.title}</h3>
+        <h3 className='text-[24px] font-bold'>{work.title}</h3>
         <p
           className='text-[16px] font-semibold opacity-75'
           style={{ margin: 0 }}
         >
-          {experience.companyName}
+          {work.companyName}
         </p>
       </div>
       <ul className='ml-5 mt-5 list-disc space-y-2'>
-        {experience.points.map((point: string, index: number) => (
+        {work.points.map((point: string, index: number) => (
           <li
             key={`experience-point-${index}`}
             className='pl-1 text-[14px] tracking-wider'

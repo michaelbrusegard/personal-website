@@ -1,7 +1,7 @@
 import { VerticalTimeline } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { m } from 'motion/react';
-import { experiences } from '@/constants';
+import { positions } from '@/constants';
 import { textVariant } from '@/utils/motion';
 import { SectionHOC } from '@/components/layout/SectionHOC';
 import { WorkCard } from '@/components/sections/experience/WorkCard';
@@ -20,8 +20,8 @@ function ExperienceSection() {
 
       <div className='mt-20 flex flex-col'>
         <VerticalTimeline lineColor='hsl(var(--accent))'>
-          {experiences.map((experience, index) => (
-            <WorkCard key={index} experience={experience} />
+          {positions.map((position, index) => (
+            <WorkCard key={index} work={position} />
           ))}
         </VerticalTimeline>
       </div>

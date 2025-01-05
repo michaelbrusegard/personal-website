@@ -1,8 +1,3 @@
-import biltema from '../../public/icons/companies/biltema.svg';
-import hydro from '../../public/icons/companies/hydro.svg';
-
-import hackerspace from '../../public/icons/companies/hackerspace.svg';
-import niclasNordlundPhotography from '../../public/icons/companies/niclasNordlundPhotography.svg';
 import niclasWebsitePhoto from '../../public/photos/projects/niclasnordlund.jpg';
 import webGLFluidEnhancedWebsitePhoto from '../../public/photos/projects/webgl-fluid-enhanced.jpg';
 import hackerspaceWebsitePhoto from '../../public/photos/projects/hackerspace-ntnu.jpg';
@@ -14,41 +9,20 @@ import html from '../../public/icons/tech/html.svg';
 import javascript from '../../public/icons/tech/javascript.svg';
 import typescript from '../../public/icons/tech/typescript.svg';
 import python from '../../public/icons/tech/python.svg';
-import java from '../../public/icons/tech/java.svg';
 import css from '../../public/icons/tech/css.svg';
 import tailwindcss from '../../public/icons/tech/tailwindcss.svg';
-import headlessui from '../../public/icons/tech/headlessui.svg';
-import radixui from '../../public/icons/tech/radixui.svg';
 import react from '../../public/icons/tech/react.svg';
 import vite from '../../public/icons/tech/vite.svg';
 import framermotion from '../../public/icons/tech/framermotion.svg';
 import threejs from '../../public/icons/tech/threejs.svg';
-import javafx from '../../public/icons/tech/javafx.svg';
 import expressjs from '../../public/icons/tech/expressjs.svg';
 import django from '../../public/icons/tech/django.svg';
-import spring from '../../public/icons/tech/spring.svg';
 import nextjs from '../../public/icons/tech/nextjs.svg';
-import trpc from '../../public/icons/tech/trpc.svg';
-import firebase from '../../public/icons/tech/firebase.svg';
-import authjs from '../../public/icons/tech/authjs.svg';
-import postgresql from '../../public/icons/tech/postgresql.svg';
-import mysql from '../../public/icons/tech/mysql.svg';
-import firestore from '../../public/icons/tech/firestore.svg';
-import drizzleorm from '../../public/icons/tech/drizzleorm.svg';
 import googlecloudplatform from '../../public/icons/tech/googlecloudplatform.svg';
 import docker from '../../public/icons/tech/docker.svg';
 import github from '../../public/icons/tech/github.svg';
-import gitlab from '../../public/icons/tech/gitlab.svg';
-import vercel from '../../public/icons/tech/vercel.svg';
 import stripe from '../../public/icons/tech/stripe.svg';
-import vscode from '../../public/icons/tech/vscode.svg';
-import chatgpt from '../../public/icons/tech/chatgpt.svg';
-import excalidraw from '../../public/icons/tech/excalidraw.svg';
-import figma from '../../public/icons/tech/figma.svg';
-import affinityphoto from '../../public/icons/tech/affinityphoto.svg';
-import affinitydesigner from '../../public/icons/tech/affinitydesigner.svg';
-import losslesscut from '../../public/icons/tech/losslesscut.svg';
-import git from '../../public/icons/tech/git.svg';
+
 import {
   Html,
   Java,
@@ -58,7 +32,8 @@ import {
   Css,
   Lua,
   Rust,
-} from './skills/languages';
+} from '@/constants/skills/languages';
+import { Biltema, Hydro, Hackerspace, Niclas } from '@/constants/positions';
 
 export const skills = [
   {
@@ -108,239 +83,11 @@ export const skills = [
   },
 ];
 
-export const services = [
-  {
-    title: 'LANGUAGES',
-    icons: [
-      {
-        name: 'HTML',
-        icon: html,
-        link: 'https://developer.mozilla.org/docs/Web/HTML/',
-      },
-      {
-        name: 'JavaScript',
-        icon: javascript,
-        link: 'https://developer.mozilla.org/docs/Web/javascript/',
-      },
-      {
-        name: 'TypeScript',
-        icon: typescript,
-        link: 'https://www.typescriptlang.org/',
-      },
-      {
-        name: 'Python',
-        icon: python,
-        link: 'https://www.python.org/',
-      },
-      {
-        name: 'Java',
-        icon: java,
-        link: 'https://www.java.com/',
-      },
-    ],
-  },
-  {
-    title: 'FRONTEND',
-    icons: [
-      {
-        name: 'CSS',
-        icon: css,
-        link: 'https://developer.mozilla.org/docs/Web/CSS/',
-      },
-      {
-        name: 'Tailwind CSS',
-        icon: tailwindcss,
-        link: 'https://tailwindcss.com/',
-      },
-      {
-        name: 'Headless UI',
-        icon: headlessui,
-        link: 'https://headlessui.com/',
-      },
-      {
-        name: 'Radix UI',
-        icon: radixui,
-        link: 'https://www.radix-ui.com/',
-      },
-      {
-        name: 'React',
-        icon: react,
-        link: 'https://react.dev/',
-      },
-      {
-        name: 'Vite',
-        icon: vite,
-        link: 'https://vitejs.dev/',
-      },
-      {
-        name: 'Framer Motion',
-        icon: framermotion,
-        link: 'https://www.framer.com/motion/',
-      },
-      {
-        name: 'Three.js',
-        icon: threejs,
-        link: 'https://threejs.org/',
-      },
-      {
-        name: 'JavaFX',
-        icon: javafx,
-        link: 'https://openjfx.io/',
-      },
-    ],
-  },
-  {
-    title: 'BACKEND',
-    icons: [
-      {
-        name: 'Express.js',
-        icon: expressjs,
-        link: 'https://expressjs.com/',
-      },
-      {
-        name: 'Django',
-        icon: django,
-        link: 'https://www.djangoproject.com/',
-      },
-      {
-        name: 'Spring',
-        icon: spring,
-        link: 'https://spring.io/',
-      },
-      {
-        name: 'Next.js',
-        icon: nextjs,
-        link: 'https://nextjs.org/',
-      },
-      {
-        name: 'tRPC',
-        icon: trpc,
-        link: 'https://trpc.io/',
-      },
-      {
-        name: 'Firebase',
-        icon: firebase,
-        link: 'https://firebase.google.com/',
-      },
-      {
-        name: 'Auth.js',
-        icon: authjs,
-        link: 'https://authjs.dev/',
-      },
-    ],
-  },
-  {
-    title: 'DATABASES',
-    icons: [
-      {
-        name: 'PostgreSQL',
-        icon: postgresql,
-        link: 'https://www.postgresql.org/',
-      },
-      {
-        name: 'MySQL',
-        icon: mysql,
-        link: 'https://www.mysql.com/',
-      },
-      {
-        name: 'Firestore',
-        icon: firestore,
-        link: 'https://cloud.google.com/firestore/',
-      },
-      {
-        name: 'Drizzle ORM',
-        icon: drizzleorm,
-        link: 'ttps://orm.drizzle.team/',
-      },
-    ],
-  },
-  {
-    title: 'INFRASTRUCTURE',
-    icons: [
-      {
-        name: 'Google Cloud Platform',
-        icon: googlecloudplatform,
-        link: 'https://cloud.google.com/',
-      },
-      {
-        name: 'Docker',
-        icon: docker,
-        link: 'https://www.docker.com/',
-      },
-      {
-        name: 'GitHub',
-        icon: github,
-        link: 'https://docs.github.com/',
-      },
-      {
-        name: 'GitLab',
-        icon: gitlab,
-        link: 'https://docs.gitlab.com/',
-      },
-      {
-        name: 'Vercel',
-        icon: vercel,
-        link: 'https://vercel.com/',
-      },
-      {
-        name: 'Stripe',
-        icon: stripe,
-        link: 'https://stripe.com/',
-      },
-    ],
-  },
-  {
-    title: 'TOOLS',
-    icons: [
-      {
-        name: 'Visual Studio Code',
-        icon: vscode,
-        link: 'https://code.visualstudio.com/',
-      },
-      {
-        name: 'ChatGPT',
-        icon: chatgpt,
-        link: 'https://openai.com/blog/chatgpt/',
-      },
-      {
-        name: 'Excalidraw',
-        icon: excalidraw,
-        link: 'https://excalidraw.com/',
-      },
-      {
-        name: 'Figma',
-        icon: figma,
-        link: 'https://www.figma.com/',
-      },
-      {
-        name: 'Affinity Photo',
-        icon: affinityphoto,
-        link: 'https://affinity.serif.com/photo/',
-      },
-      {
-        name: 'Affinity Designer',
-        icon: affinitydesigner,
-        link: 'https://affinity.serif.com/designer/',
-      },
-      {
-        name: 'Lossless Cut',
-        icon: losslesscut,
-        link: 'https://github.com/mifi/lossless-cut/',
-      },
-      {
-        name: 'Git',
-        icon: git,
-        link: 'https://git-scm.com/',
-      },
-    ],
-  },
-];
-
-export const experiences = [
+export const positions = [
   {
     title: 'DevOps Deputy Manager',
     companyName: 'Hackerspace NTNU',
-    icon: hackerspace,
+    Icon: Hackerspace,
     date: 'Feb 2023 - Present',
     points: [
       'Designing and managing web applications utilising JavaScript, Django, and other relevant technologies.',
@@ -352,8 +99,8 @@ export const experiences = [
   {
     title: 'Full stack Developer',
     companyName: 'Niclas Nordlund Photography',
-    icon: niclasNordlundPhotography,
-    date: 'Oct 2022 - Oct 2023 (Currently maintaining)',
+    Icon: Niclas,
+    date: 'Oct 2022 - Oct 2023',
     points: [
       'Developing and maintaining a professional personal website for photographer Niclas Nordlund.',
       'Scaleable backend for photo storage using Google Cloud and payments using Stripe.',
@@ -364,7 +111,7 @@ export const experiences = [
   {
     title: 'Logistics summer substitute',
     companyName: 'Hydro Aluminium',
-    icon: hydro,
+    Icon: Hydro,
     date: 'Jun 2022 - Aug 2023',
     points: [
       'Forklift driving for the relocation of anodes on cargo bins, general cleanup and sorting materials for storage. Terminal tractor driving for loading ships with cargo bins with aluminium blocks, containers or anodes.',
@@ -376,7 +123,7 @@ export const experiences = [
   {
     title: 'Shop assistant',
     companyName: 'Biltema',
-    icon: biltema,
+    Icon: Biltema,
     date: 'Apr 2020 - Aug 2021',
     points: [
       'Expedition and customer service (Mostly regarding auto detailing).',

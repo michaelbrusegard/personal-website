@@ -15,7 +15,7 @@ const config = {
         accent: 'hsl(var(--accent))',
       },
       boxShadow: {
-        'timeline-border': `0 0 0 4px hsl(var(--accent))`,
+        'timeline-border': `0 0 0 2px hsl(var(--accent))`,
         card: `0 0 5px 1px hsl(var(--foreground))`,
       },
       screens: {
