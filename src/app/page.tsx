@@ -12,18 +12,15 @@ import Foot from '../components/foot';
 export default function Page() {
   return (
     <>
-      <div className='h-screen-small w-full'>
-        <Hero />
-        <About />
-        <Experience />
-        <Works />
-        <Feedbacks />
-        {/* <div className='relative z-0'> */}
-        {/*   <Contact /> */}
-        {/*   <StarsCanvas /> */}
-        {/* </div> */}
-        <Foot />
-      </div>
+      <Hero />
+      <About />
+      <Experience />
+      <Works />
+      <Feedbacks />
+      {/* <div className='relative z-0'> */}
+      {/*   <Contact /> */}
+      {/*   <StarsCanvas /> */}
+      {/* </div> */}
     </>
   );
 }

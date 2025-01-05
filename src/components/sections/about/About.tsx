@@ -1,5 +1,5 @@
 import { m } from 'motion/react';
-import { services } from '../../../constants';
+import { skills } from '@/constants';
 import { fadeIn, textVariant } from '@/utils/motion';
 import { SectionHOC } from '@/components/layout/SectionHOC';
 import { SkillsCard } from '@/components/sections/about/SkillsCard';
@@ -20,7 +20,7 @@ function AboutSection() {
         className='section-text mt-4 max-w-3xl text-[17px] leading-[30px]'
       >
         I am currently most experienced in web development and prefer working as
-        a full-stack developer that has a complete understanding of the whole
+        a full-stack developer for a complete understanding of the whole
         project. My primary expertise lise in the React ecosystem, but I have
         also worked with Angular, Django and Spring Boot. In native development,
         I am particularly enthusiastic about React Native and have implemented
@@ -34,8 +34,8 @@ function AboutSection() {
       </m.p>
 
       <div className='mt-20 flex select-none flex-wrap gap-10'>
-        {services.map((service, index) => (
-          <SkillsCard key={service.title} index={index} {...service} />
+        {skills.map((skill, index) => (
+          <SkillsCard key={skill.title} index={index} {...skill} />
         ))}
       </div>
     </>

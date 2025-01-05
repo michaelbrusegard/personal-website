@@ -2,6 +2,7 @@ import '@/styles/globals.css';
 import { sfProDisplay, sfProText, sfMono } from '@/styles/fonts';
 import { ThemeProvider } from '@/components/providers/ThemeProvider';
 import { Header } from '@/components/layout/Header';
+import { Footer } from '@/components/layout/Footer';
 import { SimulationProvider } from '@/components/providers/SimulationProvider';
 import { MotionProvider } from '@/components/providers/MotionProvider';
 
@@ -50,6 +51,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <SimulationProvider>
               <Header />
               {children}
+              <Footer />
             </SimulationProvider>
           </MotionProvider>
         </ThemeProvider>

@@ -49,6 +49,64 @@ import affinityphoto from '../../public/icons/tech/affinityphoto.svg';
 import affinitydesigner from '../../public/icons/tech/affinitydesigner.svg';
 import losslesscut from '../../public/icons/tech/losslesscut.svg';
 import git from '../../public/icons/tech/git.svg';
+import {
+  Html,
+  Java,
+  JavaScript,
+  Python,
+  TypeScript,
+  Css,
+  Lua,
+  Rust,
+} from './skills/languages';
+
+export const skills = [
+  {
+    title: 'LANGUAGES',
+    tech: [
+      {
+        name: 'HTML',
+        Icon: Html,
+        link: 'https://developer.mozilla.org/docs/Web/HTML/',
+      },
+      {
+        name: 'CSS',
+        Icon: Css,
+        link: 'https://developer.mozilla.org/docs/Web/CSS/',
+      },
+      {
+        name: 'JavaScript',
+        Icon: JavaScript,
+        link: 'https://developer.mozilla.org/docs/Web/javascript/',
+      },
+      {
+        name: 'TypeScript',
+        Icon: TypeScript,
+        link: 'https://www.typescriptlang.org/',
+      },
+      {
+        name: 'Python',
+        Icon: Python,
+        link: 'https://www.python.org/',
+      },
+      {
+        name: 'Java',
+        Icon: Java,
+        link: 'https://www.java.com/',
+      },
+      {
+        name: 'Lua',
+        Icon: Lua,
+        link: 'https://www.lua.org',
+      },
+      {
+        name: 'Rust',
+        Icon: Rust,
+        link: 'https://www.rust-lang.org',
+      },
+    ],
+  },
+];
 
 export const services = [
   {

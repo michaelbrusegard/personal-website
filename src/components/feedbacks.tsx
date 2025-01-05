@@ -1,7 +1,7 @@
 import { Variants, motion } from 'motion/react';
 import { SectionHOC } from '@/components/layout/SectionHOC';
 import { fadeIn, textVariant } from '../utils/motion';
-import { testimonials } from '../constants/index';
+import { testimonials } from '@/constants';
 import Image, { StaticImageData } from 'next/image';
 
 const FeedbackCard = ({

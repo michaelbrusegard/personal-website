@@ -1,7 +1,7 @@
 import Tilt from 'react-parallax-tilt';
 import { Variants, motion } from 'motion/react';
 import { SectionHOC } from '@/components/layout/SectionHOC';
-import { projects } from '../constants/index';
+import { projects } from '@/constants';
 import { fadeIn, textVariant } from '../utils/motion';
 import Image, { StaticImageData } from 'next/image';
 

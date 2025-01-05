@@ -5,7 +5,7 @@ import {
 import { useState, useEffect } from 'react';
 import { Variants, motion } from 'framer-motion';
 import 'react-vertical-timeline-component/style.min.css';
-import { experiences } from '../constants';
+import { experiences } from '@/constants';
 import { SectionHOC } from '@/components/layout/SectionHOC';
 import { textVariant } from '../utils/motion';
 import Image from 'next/image';
