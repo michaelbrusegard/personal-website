@@ -10,7 +10,7 @@ function ExperienceSection() {
   return (
     <>
       <m.div variants={textVariant()}>
-        <p className='font-sf-pro-display text-[14px] uppercase tracking-wider opacity-75 sm:text-[18px]'>
+        <p className='font-sf-pro-display text-[14px] uppercase tracking-wider text-foreground/75 sm:text-[18px]'>
           What I have done so far
         </p>
         <h2 className='font-sf-pro-display text-[30px] font-black sm:text-[50px] md:text-[60px] xs:text-[40px]'>

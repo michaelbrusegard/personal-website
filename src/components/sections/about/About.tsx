@@ -8,7 +8,7 @@ function AboutSection() {
   return (
     <>
       <m.div variants={textVariant()}>
-        <p className='font-sf-pro-display text-[14px] uppercase tracking-wider opacity-75 sm:text-[18px]'>
+        <p className='font-sf-pro-display text-[14px] uppercase tracking-wider text-foreground/75 sm:text-[18px]'>
           Introduction
         </p>
         <h2 className='font-sf-pro-display text-[30px] font-black sm:text-[50px] md:text-[60px] xs:text-[40px]'>
@@ -24,13 +24,14 @@ function AboutSection() {
         project. My primary expertise lise in the React ecosystem, but I have
         also worked with Angular, Django and Spring Boot. In native development,
         I am particularly enthusiastic about React Native and have implemented
-        solutions building with Jetpack Compose for Android during my Bachelor's
-        thesis. I also have experience accross major cloud platforms like AWS,
-        Azure and GCP, but prefer using Virtual Private Servers where I have
-        more control over the environment and the cost. I am always looking to
-        improve my skills, and right now I am working on improving my algorithms
-        programming and learning Rust. Addintionally I am looking into getting
-        better at graphics programming and shader programming.
+        solutions building with Jetpack Compose for Android during my
+        Bachelor&apos;s thesis. I also have experience accross major cloud
+        platforms like AWS, Azure and GCP, but prefer using Virtual Private
+        Servers where I have more control over the environment and the cost. I
+        am always looking to improve my skills, and right now I am working on
+        improving my algorithms programming and learning Rust. Addintionally I
+        am looking into getting better at graphics programming and shader
+        programming.
       </m.p>
 
       <div className='mt-20 flex select-none flex-wrap gap-10'>

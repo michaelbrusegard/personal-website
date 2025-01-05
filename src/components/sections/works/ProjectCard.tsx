@@ -1,11 +1,9 @@
 import Tilt from 'react-parallax-tilt';
-import { Variants, motion } from 'motion/react';
-import { SectionHOC } from '@/components/layout/SectionHOC';
-import { projects } from '@/constants';
-import { fadeIn, textVariant } from '../utils/motion';
+import { m } from 'motion/react';
+import { fadeIn } from '@/utils/motion';
 import Image, { StaticImageData } from 'next/image';
 
-const ProjectCard = ({
+function ProjectCard({
   index,
   name,
   description,
@@ -21,9 +19,9 @@ const ProjectCard = ({
   image: StaticImageData;
   prodLink: string;
   srcLink: string;
-}) => {
+}) {
   return (
-    <motion.div variants={fadeIn('up', 'spring', index * 0.5, 1) as Variants}>
+    <m.div variants={fadeIn('up', 'spring', index * 0.5, 1)}>
       <Tilt
         className={`flex w-full max-w-[640px] flex-col rounded-2xl border-2 border-accent p-5 lg:max-w-none ${
           (index + 1) % 2 === 0
@@ -108,39 +106,8 @@ const ProjectCard = ({
           </div>
         </div>
       </Tilt>
-    </motion.div>
+    </m.div>
   );
-};
+}
 
-const Works = () => {
-  return (
-    <>
-      <motion.div variants={textVariant() as Variants}>
-        <p className='section-subtitle'>My work</p>
-        <h2 className='section-title'>Projects.</h2>
-      </motion.div>
-
-      <div className='flex w-full'>
-        <motion.p
-          variants={fadeIn('', '', 0.1, 1) as Variants}
-          className='section-text mt-3 max-w-3xl text-[17px] leading-[30px]'
-        >
-          I have a collection of projects that effectively demonstrate my skills
-          and experience, showcasing real-world examples of my work. Each
-          project has live production links as well as repositories containing
-          the source code. These projects serve as a testament to my proficiency
-          in tackling different challenges, adeptness with diverse technologies,
-          and ability to efficiently manage projects.
-        </motion.p>
-      </div>
-
-      <div className='mt-20 flex flex-col items-center gap-7'>
-        {projects.map((project, index) => (
-          <ProjectCard key={index} index={index} {...project} />
-        ))}
-      </div>
-    </>
-  );
-};
-
-export default SectionHOC(Works, '');
+export { ProjectCard };

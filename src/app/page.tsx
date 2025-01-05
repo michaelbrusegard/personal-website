@@ -3,7 +3,7 @@
 import { Hero } from '@/components/sections/hero/Hero';
 import { About } from '@/components/sections/about/About';
 import { Experience } from '@/components/sections/experience/Experience';
-import Works from '../components/works';
+import { Works } from '@/components/sections/works/Works';
 import Feedbacks from '../components/feedbacks';
 import Contact from '../components/contact';
 import StarsCanvas from '../components/stars';

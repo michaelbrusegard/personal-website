@@ -31,7 +31,7 @@ function WorkCard({ work }: WorkCardProps) {
       <div>
         <h3 className='text-[24px] font-bold'>{work.title}</h3>
         <p
-          className='text-[16px] font-semibold opacity-75'
+          className='text-[16px] font-semibold text-foreground/75'
           style={{ margin: 0 }}
         >
           {work.companyName}
