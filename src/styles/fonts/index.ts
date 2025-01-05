@@ -4,12 +4,20 @@ const sfProDisplay = localFont({
   variable: '--font-sf-pro-display',
   src: [
     {
+      path: './SF-Pro-Display-Regular.woff2',
+      weight: '400',
+    },
+    {
       path: './SF-Pro-Display-Semibold.woff2',
       weight: '600',
     },
     {
       path: './SF-Pro-Display-Heavy.woff2',
       weight: '800',
+    },
+    {
+      path: './SF-Pro-Display-Black.woff2',
+      weight: '900',
     },
   ],
 });

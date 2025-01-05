@@ -1,6 +1,7 @@
 'use client';
+
 import { Hero } from '@/components/sections/hero/Hero';
-import { About } from '@/components/sections/About';
+import { About } from '@/components/sections/about/About';
 import Experience from '../components/experience';
 import Works from '../components/works';
 import Feedbacks from '../components/feedbacks';
@@ -8,7 +9,7 @@ import Contact from '../components/contact';
 import StarsCanvas from '../components/stars';
 import Foot from '../components/foot';
 
-function Page() {
+export default function Page() {
   return (
     <>
       <div className='h-screen-small w-full'>
@@ -26,5 +27,3 @@ function Page() {
     </>
   );
 }
-
-export default Page;

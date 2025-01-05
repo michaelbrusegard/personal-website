@@ -50,21 +50,6 @@ import affinitydesigner from '../../public/icons/tech/affinitydesigner.svg';
 import losslesscut from '../../public/icons/tech/losslesscut.svg';
 import git from '../../public/icons/tech/git.svg';
 
-export const navLinks = [
-  {
-    id: 'about',
-    title: 'About',
-  },
-  {
-    id: 'work',
-    title: 'Work',
-  },
-  {
-    id: 'contact',
-    title: 'Contact',
-  },
-];
-
 export const services = [
   {
     title: 'LANGUAGES',
@@ -473,9 +458,11 @@ export const testimonials = [
     mail: 'nic.nord@hotmail.com',
   },
   {
-    testimonial: 'Currently aliasing ‘nano’ to ‘sudo rm -rf / —no-preserve-root’',
+    testimonial:
+      'Currently aliasing ‘nano’ to ‘sudo rm -rf / —no-preserve-root’',
     name: 'Carl Johan Güzkow',
-    designation: 'Deputy Commander at Hackerspace NTNU, Co-Founder and Backend Developer at EI Solutions',
+    designation:
+      'Deputy Commander at Hackerspace NTNU, Co-Founder and Backend Developer at EI Solutions',
     image: carlJohanGuzkow,
     phone: '+4741623507',
     mail: 'cjgutzkow@gmail.com',

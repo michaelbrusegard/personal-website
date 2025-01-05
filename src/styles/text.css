@@ -1,8 +1,0 @@
-.section-subtitle {
-  @apply text-[14px] uppercase tracking-wider opacity-75 sm:text-[18px];
-}
-
-.section-title {
-  @apply pointer-events-auto text-[30px] font-black sm:text-[50px] md:text-[60px] xs:text-[40px];
-}
-

@@ -6,7 +6,7 @@ import { SimulationProvider } from '@/components/providers/SimulationProvider';
 import { MotionProvider } from '@/components/providers/MotionProvider';
 
 export const metadata = {
-  title: 'Michael | Portifolio',
+  title: 'Michael | Portfolio',
   description:
     'My first website built with React. Showcasing some of my experience and projects.',
   icons: [
