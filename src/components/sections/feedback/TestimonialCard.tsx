@@ -34,9 +34,7 @@ function TestimonialCard({
             <p className='text-[16px] font-medium text-background'>
               <span className='text-accent'>@</span> {name}
             </p>
-            <p className='mt-1 text-[12px] text-background opacity-75'>
-              {designation}
-            </p>
+            <p className='mt-1 text-[12px] text-background/75'>{designation}</p>
           </div>
           <Image
             src={imageSrc}
