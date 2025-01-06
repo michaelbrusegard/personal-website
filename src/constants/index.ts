@@ -155,8 +155,9 @@ const positions = [
 
 const projects = [
   {
-    name: 'Lektr',
-    description: '',
+    name: 'Lektr (WiP)',
+    description:
+      'A learning platform for students and teachers. A place to share resources for university courses and collaborate. It is supposed to be a free alternative to similar solutions that encourages donating to GiveWell.',
     techstack: [
       {
         name: 'HTML',
@@ -164,13 +165,14 @@ const projects = [
         link: 'https://developer.mozilla.org/docs/Web/HTML',
       },
     ],
-    imageSrc: '/photos/projects/niclasnordlund.jpg',
-    prodLink: 'https://www.niclasnordlund.com',
-    srcLink: 'https://github.com/michaelbrusegard/NiclasNordlundPhotography',
+    imageSrc: '/photos/projects/lektr.jpg',
+    prodLink: 'https://lektr.michaelbrusegard.com/project2/en',
+    srcLink: '',
   },
   {
     name: 'Tabline',
-    description: '',
+    description:
+      'Tabline.wez is a versatile and easy to use tab-bar for the WezTerm terminal emulator, written in Lua. Tabline has an easy to use customisation and extensions API.',
     techstack: [
       {
         name: 'Lua',
@@ -178,13 +180,14 @@ const projects = [
         link: 'https://www.lua.org',
       },
     ],
-    imageSrc: '/photos/projects/niclasnordlund.jpg',
+    imageSrc: '/photos/projects/tabline.jpg',
     prodLink: '',
     srcLink: 'https://github.com/michaelbrusegard/tabline.wez',
   },
   {
-    name: 'New Hackerspace NTNU Website',
-    description: '',
+    name: 'New Hackerspace NTNU Website (WiP)',
+    description:
+      'The new hackerspace website is a complete rewrite of the old website. It is built with Next.js, tRPC, Tailwind CSS++. The goal is a code base that is easy to maintain and introduce beginners too.',
     techstack: [
       {
         name: 'HTML',
@@ -192,13 +195,14 @@ const projects = [
         link: 'https://developer.mozilla.org/docs/Web/HTML',
       },
     ],
-    imageSrc: '/photos/projects/niclasnordlund.jpg',
-    prodLink: 'https://www.niclasnordlund.com',
-    srcLink: 'https://github.com/michaelbrusegard/NiclasNordlundPhotography',
+    imageSrc: '/photos/projects/new-hackerspace-ntnu.jpg',
+    prodLink: 'https://beta.hackerspace-ntnu.no/en/storage',
+    srcLink: 'https://github.com/hackerspace-ntnu/website-next',
   },
   {
     name: 'Open Emoji Platform',
-    description: '',
+    description:
+      'Open Emoji Platform is an app for finding emojis and a first draft of the eventual emojipedia app. It has built in emoji guessing games, user customizable emoji sequences, favorites, news, events and more.',
     techstack: [
       {
         name: 'Jetpack Compose',
@@ -213,7 +217,8 @@ const projects = [
   },
   {
     name: 'Vector Globe',
-    description: '',
+    description:
+      'Vector Globe is an interactive 3D globe made with geojson data to display vectors of country or continent borders. It is also possible to supply custom vector data.',
     techstack: [
       {
         name: 'HTML',
@@ -236,23 +241,24 @@ const projects = [
         link: 'https://vitejs.dev',
       },
     ],
-    imageSrc: '/photos/projects/niclasnordlund.jpg',
+    imageSrc: '/photos/projects/vector-globe.jpg',
     prodLink: 'https://www.niclasnordlund.com',
     srcLink: 'https://github.com/michaelbrusegard/NiclasNordlundPhotography',
   },
   {
     name: 'GlobeHub',
-    description: '',
+    description:
+      'A norwegian website for finding new travel destinations. With built-in reviews, cached weather data and interactive map.',
     techstack: [
       {
-        name: 'HTML',
-        Icon: Html,
-        link: 'https://developer.mozilla.org/docs/Web/HTML',
+        name: 'TypeScript',
+        Icon: TypeScript,
+        link: 'https://www.typescriptlang.org',
       },
     ],
-    imageSrc: '/photos/projects/niclasnordlund.jpg',
-    prodLink: 'https://www.niclasnordlund.com',
-    srcLink: 'https://github.com/michaelbrusegard/NiclasNordlundPhotography',
+    imageSrc: '/photos/projects/globehub.jpg',
+    prodLink: 'https://globehub.michaelbrusegard.com',
+    srcLink: 'https://github.com/michaelbrusegard/Globehub',
   },
   {
     name: 'Niclas Nordlund Photography',
@@ -297,7 +303,7 @@ const projects = [
   {
     name: 'WebGL Fluid Enhanced',
     description:
-      'WebGL Fluid Enhanced is a fluid simulation that runs in your browser. It is based on WebGL Fluid Simulation by Pavel Dobryakov. The simulation is enhanced with ES module support, custom colors, and a few other features.',
+      'WebGL Fluid Enhanced is a fluid simulation that runs in your browser. It is based on WebGL Fluid Simulation by Pavel Dobryakov. The simulation is enhanced with TypeScript, ES module support, custom colors, and a few other features.',
     techstack: [
       {
         name: 'HTML',
