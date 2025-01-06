@@ -2,7 +2,7 @@ import '@/styles/hero-name.css';
 import { m } from 'motion/react';
 import { appear } from '@/utils/motion';
 import { useSimulation } from '@/components/providers/SimulationProvider';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useCallback } from 'react';
 
 function HeroName() {
   const spanRefs = useRef<Array<HTMLSpanElement>>([]);
@@ -14,39 +14,44 @@ function HeroName() {
     }
   }
 
-  function bounce(span: HTMLElement) {
-    if (!span.classList.contains('bounce')) {
-      if (span.classList.contains('gradient-letter')) {
-        const root = getComputedStyle(document.documentElement);
-        span.style.color = `hsl(${root.getPropertyValue('--accent')})`;
-      }
-      span.classList.add('bounce');
-      lowerBrightnessHover(span);
-      setTimeout(function () {
-        span.classList.remove('bounce');
+  const bounce = useCallback(
+    (span: HTMLElement | undefined) => {
+      if (!span) return;
+      if (!span.classList.contains('bounce')) {
         if (span.classList.contains('gradient-letter')) {
-          span.style.color = 'transparent';
+          const root = getComputedStyle(document.documentElement);
+          span.style.color = `hsl(${root.getPropertyValue('--accent')})`;
         }
-      }, 1000);
-    }
-  }
+        span.classList.add('bounce');
+        lowerBrightnessHover(span);
+        setTimeout(function () {
+          span.classList.remove('bounce');
+          if (span.classList.contains('gradient-letter')) {
+            span.style.color = 'transparent';
+          }
+        }, 1000);
+      }
+    },
+    [lowerBrightnessHover],
+  );
 
   useEffect(() => {
+    const spans = spanRefs.current;
     const handleMouseOver = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
       bounce(target);
     };
 
-    spanRefs.current.forEach((span) => {
+    spans.forEach((span) => {
       span.addEventListener('mouseover', handleMouseOver);
     });
 
     return () => {
-      spanRefs.current.forEach((span) => {
+      spans.forEach((span) => {
         span.removeEventListener('mouseover', handleMouseOver);
       });
     };
-  }, []);
+  }, [bounce]);
 
   return (
     <h1 className='mt-2 flex select-none flex-wrap font-sf-pro-display text-[40px] font-extrabold sm:text-[60px] lg:text-[80px] lg:leading-[98px] xs:text-[50px]'>

@@ -1,6 +1,6 @@
 import { m } from 'motion/react';
 import { fadeIn } from '@/utils/motion';
-import Image, { StaticImageData } from 'next/image';
+import Image, { type StaticImageData } from 'next/image';
 
 type TestimonialCardProps = {
   index: number;

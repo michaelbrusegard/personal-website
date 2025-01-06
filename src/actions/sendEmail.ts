@@ -9,7 +9,9 @@ type FormState = {
   message?: string;
 } | null;
 
+const MIN_NAME_LENGTH = 2;
 const MAX_NAME_LENGTH = 100;
+const MIN_MESSAGE_LENGTH = 50;
 const MAX_MESSAGE_LENGTH = 5000;
 
 function sanitizeInput(str: string): string {
@@ -30,7 +32,7 @@ function isValidEmail(email: string): boolean {
 
 const rateLimiter = new RateLimiter<string>(5, 120);
 
-async function sendEmail(formData: FormData): Promise<FormState> {
+async function sendEmail(_: FormState, formData: FormData): Promise<FormState> {
   try {
     const headerStore = headers();
     const clientIp =
@@ -54,8 +56,14 @@ async function sendEmail(formData: FormData): Promise<FormState> {
       return { success: false, message: 'All fields are required' };
     }
 
+    if (name.length < MIN_NAME_LENGTH) {
+      return { success: false, message: 'Name is too short' };
+    }
     if (name.length > MAX_NAME_LENGTH) {
       return { success: false, message: 'Name is too long' };
+    }
+    if (message.length < MIN_MESSAGE_LENGTH) {
+      return { success: false, message: 'Message is too short' };
     }
     if (message.length > MAX_MESSAGE_LENGTH) {
       return { success: false, message: 'Message is too long' };

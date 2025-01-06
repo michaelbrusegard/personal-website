@@ -21,15 +21,19 @@ function ContactSection() {
         <h2 className='font-sf-pro-display text-[30px] font-black sm:text-[50px] md:text-[60px] xs:text-[40px]'>
           Contact.
         </h2>
-        <form className='flex-cod mt-12 flex gap-8' action={formAction}>
+        <form className='mt-12 flex flex-col gap-8' action={formAction}>
           <label className='flex flex-col'>
             <span className='mb-4 font-medium'>Your Name</span>
             <input
               type='text'
               name='name'
               placeholder="What's your name?"
-              className='rounded-lg border-none bg-background px-6 py-4 font-medium placeholder:opacity-75'
+              className='rounded-lg border-none bg-background px-6 py-4 font-medium outline-2 outline-offset-2 outline-primary/60 placeholder:opacity-75 focus-visible:outline'
+              minLength={2}
+              maxLength={100}
+              pattern="/^[a-zA-Z\s-']+$/"
               required
+              title='Only letters, spaces, hyphens, and apostrophes are allowed'
             />
           </label>
           <label className='flex flex-col'>
@@ -38,8 +42,10 @@ function ContactSection() {
               type='email'
               name='email'
               placeholder="What's your Email?"
-              className='rounded-lg border-none bg-background px-6 py-4 font-medium placeholder:opacity-75'
+              className='rounded-lg border-none bg-background px-6 py-4 font-medium outline-2 outline-offset-2 outline-primary/60 placeholder:opacity-75 focus-visible:outline'
+              pattern='/^(?=[a-zA-Z0-9@._%+-]{6,254}$)[a-zA-Z0-9._%+-]{1,64}@(?:[a-zA-Z0-9-]{1,63}\.){1,8}[a-zA-Z]{2,63}$/'
               required
+              title='Please enter a valid email address'
             />
           </label>
           <label className='flex flex-col'>
@@ -47,9 +53,12 @@ function ContactSection() {
             <textarea
               rows={7}
               name='message'
+              minLength={50}
+              maxLength={5000}
               placeholder='What do you want to say?'
-              className='resize-none rounded-lg border-none bg-background px-6 py-4 font-medium placeholder:opacity-75'
+              className='resize-none rounded-lg border-none bg-background px-6 py-4 font-medium outline-2 outline-offset-2 outline-primary/60 placeholder:opacity-75 focus-visible:outline'
               required
+              title='Message must be at least 50 characters long and no more than 5000 characters'
             />
           </label>
           <SubmitButton />
@@ -64,7 +73,6 @@ function ContactSection() {
           )}
         </form>
       </m.div>
-
       <m.div
         variants={slideIn('right', 'tween', 0.2, 1)}
         className='h-[350px] md:h-[550px] xl:h-auto xl:w-[550px] xl:flex-1'
