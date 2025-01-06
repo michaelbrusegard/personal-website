@@ -19,7 +19,13 @@ import {
   Three,
   Next,
   JetpackCompose,
+  WezTerm,
+  GraphQl,
+  Postgres,
+  DrizzleOrm,
+  Trpc,
 } from '@/constants/tech-icons';
+
 import {
   Biltema,
   Hydro,
@@ -160,9 +166,39 @@ const projects = [
       'A learning platform for students and teachers. A place to share resources for university courses and collaborate. It is supposed to be a free alternative to similar solutions that encourages donating to GiveWell.',
     techstack: [
       {
-        name: 'HTML',
-        Icon: Html,
-        link: 'https://developer.mozilla.org/docs/Web/HTML',
+        name: 'TypeScript',
+        Icon: TypeScript,
+        link: 'https://www.typescriptlang.org',
+      },
+      {
+        name: 'Tailwind CSS',
+        Icon: Tailwind,
+        link: 'https://tailwindcss.com',
+      },
+      {
+        name: 'Next.js',
+        Icon: Next,
+        link: 'https://nextjs.org',
+      },
+      {
+        name: 'GraphQL',
+        Icon: GraphQl,
+        link: 'https://graphql.org',
+      },
+      {
+        name: 'Drizzle ORM',
+        Icon: DrizzleOrm,
+        link: 'https://orm.drizzle.team',
+      },
+      {
+        name: 'PostgreSQL',
+        Icon: Postgres,
+        link: 'https://www.postgresql.org',
+      },
+      {
+        name: 'Docker',
+        Icon: Docker,
+        link: 'https://docs.docker.com',
       },
     ],
     imageSrc: '/photos/projects/lektr.jpg',
@@ -174,6 +210,11 @@ const projects = [
     description:
       'Tabline.wez is a versatile and easy to use tab-bar for the WezTerm terminal emulator, written in Lua. Tabline has an easy to use customisation and extensions API.',
     techstack: [
+      {
+        name: 'WezTerm',
+        Icon: WezTerm,
+        link: 'https://wezfurlong.org/wezterm/index.html',
+      },
       {
         name: 'Lua',
         Icon: Lua,
@@ -190,9 +231,34 @@ const projects = [
       'The new hackerspace website is a complete rewrite of the old website. It is built with Next.js, tRPC, Tailwind CSS++. The goal is a code base that is easy to maintain and introduce beginners too.',
     techstack: [
       {
-        name: 'HTML',
-        Icon: Html,
-        link: 'https://developer.mozilla.org/docs/Web/HTML',
+        name: 'TypeScript',
+        Icon: TypeScript,
+        link: 'https://www.typescriptlang.org',
+      },
+      {
+        name: 'Tailwind CSS',
+        Icon: Tailwind,
+        link: 'https://tailwindcss.com',
+      },
+      {
+        name: 'Next.js',
+        Icon: Next,
+        link: 'https://nextjs.org',
+      },
+      {
+        name: 'Drizzle ORM',
+        Icon: DrizzleOrm,
+        link: 'https://orm.drizzle.team',
+      },
+      {
+        name: 'PostgreSQL',
+        Icon: Postgres,
+        link: 'https://www.postgresql.org',
+      },
+      {
+        name: 'Docker',
+        Icon: Docker,
+        link: 'https://docs.docker.com',
       },
     ],
     imageSrc: '/photos/projects/new-hackerspace-ntnu.jpg',
@@ -242,7 +308,7 @@ const projects = [
       },
     ],
     imageSrc: '/photos/projects/vector-globe.jpg',
-    prodLink: 'https://www.niclasnordlund.com',
+    prodLink: '',
     srcLink: 'https://github.com/michaelbrusegard/NiclasNordlundPhotography',
   },
   {
@@ -254,6 +320,31 @@ const projects = [
         name: 'TypeScript',
         Icon: TypeScript,
         link: 'https://www.typescriptlang.org',
+      },
+      {
+        name: 'Tailwind CSS',
+        Icon: Tailwind,
+        link: 'https://tailwindcss.com',
+      },
+      {
+        name: 'Next.js',
+        Icon: Next,
+        link: 'https://nextjs.org',
+      },
+      {
+        name: 'tRPC',
+        Icon: Trpc,
+        link: 'https://trpc.io',
+      },
+      {
+        name: 'PostgreSQL',
+        Icon: Postgres,
+        link: 'https://www.postgresql.org',
+      },
+      {
+        name: 'Docker',
+        Icon: Docker,
+        link: 'https://docs.docker.com',
       },
     ],
     imageSrc: '/photos/projects/globehub.jpg',
