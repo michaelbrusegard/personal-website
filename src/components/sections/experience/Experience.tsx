@@ -38,7 +38,6 @@ function ExperienceSection() {
       </m.div>
 
       <div className='mt-20 flex flex-col'>
-        {/* @ts-expect-error doesnt respect react version */}
         <VerticalTimeline lineColor='hsl(var(--accent))'>
           {positions.map((position, index) => (
             <WorkCard key={index} index={index} work={position} />

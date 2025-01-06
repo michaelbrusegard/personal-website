@@ -19,7 +19,6 @@ function WorkCard({ index, work }: WorkCardProps) {
   const Icon = work.Icon;
   return (
     <div ref={ref} className='my-4'>
-      {/* @ts-expect-error doesnt respect react version */}
       <VerticalTimelineElement
         position={index % 2 === 0 ? 'left' : 'right'}
         visible={inView}

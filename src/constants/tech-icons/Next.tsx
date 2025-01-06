@@ -30,8 +30,8 @@ function Next({ ...props }: React.SVGProps<SVGSVGElement>) {
           gradientUnits='userSpaceOnUse'
           gradientTransform='matrix(37.4838,62.5778,-62.5778,37.4838,152.368,165.689)'
         >
-          <stop offset='0' stop-color='#ffffff' stopOpacity='1' />
-          <stop offset='1' stop-color='#ffffff' stopOpacity='0' />
+          <stop offset='0' stopColor='#ffffff' stopOpacity='1' />
+          <stop offset='1' stopColor='#ffffff' stopOpacity='0' />
         </linearGradient>
         <linearGradient
           id='_Linear2'
@@ -42,8 +42,8 @@ function Next({ ...props }: React.SVGProps<SVGSVGElement>) {
           gradientUnits='userSpaceOnUse'
           gradientTransform='matrix(-0.00794074,75.2,-75.2,-0.00794074,172.089,76.8)'
         >
-          <stop offset='0' stop-color='#ffffff' stopOpacity='1' />
-          <stop offset='1' stop-color='#ffffff' stopOpacity='0' />
+          <stop offset='0' stopColor='#ffffff' stopOpacity='1' />
+          <stop offset='1' stopColor='#ffffff' stopOpacity='0' />
         </linearGradient>
       </defs>
     </svg>
