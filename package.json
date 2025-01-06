@@ -5,8 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
+    "prebuild": "next telemetry disable",
     "build": "next build",
-    "start": "next start",
+    "postbuild": "mkdir -p .next/standalone/public .next/standalone/.next/static && cp -r public/* .next/standalone/public && cp -r .next/static/* .next/standalone/.next/static",
+    "start": "bun run .next/standalone/server.js",
     "lint": "next lint"
   },
   "dependencies": {
