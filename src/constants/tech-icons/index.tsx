@@ -17,3 +17,4 @@ export * from './Three';
 export * from './Next';
 export * from './Docker';
 export * from './Motion';
+export * from './JetpackCompose';

@@ -2,14 +2,14 @@
 
 import { m } from 'motion/react';
 import { fadeIn } from '@/utils/motion';
-import Image, { type StaticImageData } from 'next/image';
+import Image from 'next/image';
 
 type TestimonialCardProps = {
   index: number;
   testimonial: string;
   name: string;
   designation: string;
-  imageSrc: StaticImageData;
+  imageSrc: string;
 };
 
 function TestimonialCard({

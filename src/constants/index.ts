@@ -18,6 +18,7 @@ import {
   Docker,
   Three,
   Next,
+  JetpackCompose,
 } from '@/constants/tech-icons';
 import {
   Biltema,
@@ -172,14 +173,14 @@ const projects = [
     description: '',
     techstack: [
       {
-        name: 'HTML',
-        Icon: Html,
-        link: 'https://developer.mozilla.org/docs/Web/HTML',
+        name: 'Lua',
+        Icon: Lua,
+        link: 'https://www.lua.org',
       },
     ],
     imageSrc: '/photos/projects/niclasnordlund.jpg',
-    prodLink: 'https://www.niclasnordlund.com',
-    srcLink: 'https://github.com/michaelbrusegard/NiclasNordlundPhotography',
+    prodLink: '',
+    srcLink: 'https://github.com/michaelbrusegard/tabline.wez',
   },
   {
     name: 'New Hackerspace NTNU Website',
@@ -200,13 +201,14 @@ const projects = [
     description: '',
     techstack: [
       {
-        name: 'HTML',
-        Icon: Html,
-        link: 'https://developer.mozilla.org/docs/Web/HTML',
+        name: 'Jetpack Compose',
+        Icon: JetpackCompose,
+        link: 'https://developer.android.com/compose',
       },
     ],
     imageSrc: '/photos/projects/open-emoji-platform.jpg',
-    prodLink: 'https://www.niclasnordlund.com',
+    prodLink:
+      'https://play.google.com/store/apps/details?id=net.zedge.emojipedia.wrapper',
     srcLink: '',
   },
   {
@@ -217,6 +219,21 @@ const projects = [
         name: 'HTML',
         Icon: Html,
         link: 'https://developer.mozilla.org/docs/Web/HTML',
+      },
+      {
+        name: 'CSS',
+        Icon: Css,
+        link: 'https://developer.mozilla.org/docs/Web/CSS',
+      },
+      {
+        name: 'TypeScript',
+        Icon: TypeScript,
+        link: 'https://www.typescriptlang.org',
+      },
+      {
+        name: 'Vite',
+        Icon: Vite,
+        link: 'https://vitejs.dev',
       },
     ],
     imageSrc: '/photos/projects/niclasnordlund.jpg',

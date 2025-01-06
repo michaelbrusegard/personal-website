@@ -3,7 +3,7 @@
 import Tilt from 'react-parallax-tilt';
 import { m } from 'motion/react';
 import Link from 'next/link';
-import Image, { type StaticImageData } from 'next/image';
+import Image from 'next/image';
 import { fadeIn } from '@/utils/motion';
 import { GitHubLinkIcon } from '@/components/assets/GitHubLinkIcon';
 import { ProductionLinkIcon } from '@/components/assets/ProductionLinkIcon';
@@ -18,7 +18,7 @@ type ProjectCardProps = {
 
     link: string;
   }[];
-  imageSrc: StaticImageData;
+  imageSrc: string;
   prodLink?: string;
   srcLink?: string;
 };
