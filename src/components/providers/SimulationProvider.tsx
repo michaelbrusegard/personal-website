@@ -2,6 +2,7 @@
 
 import WebGLFluidEnhanced from 'webgl-fluid-enhanced';
 import { createContext, useContext, useEffect, useRef } from 'react';
+import { hslToHex, getCSSColorValue } from '@/utils/color';
 
 type SimulationContextType = {
   multipleSplats: (amount: number) => void;
@@ -17,28 +18,6 @@ function useSimulation() {
     throw new Error('useSimulation must be used within a SimulationProvider');
   }
   return context;
-}
-
-function hslToHex(h: number, s: number, l: number) {
-  l /= 100;
-  const a = (s * Math.min(l, 1 - l)) / 100;
-  const f = (n: number) => {
-    const k = (n + h / 30) % 12;
-    const color = l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
-    return Math.round(255 * color)
-      .toString(16)
-      .padStart(2, '0');
-  };
-  const result = `#${f(0)}${f(8)}${f(4)}`;
-  return result;
-}
-
-function getCSSColorValue(propertyName: string): [number, number, number] {
-  const root = getComputedStyle(document.documentElement);
-  return (root
-    .getPropertyValue(propertyName)
-    .match(/[\d.]+/g)
-    ?.map((v) => Number(v)) ?? [0, 0, 0]) as [number, number, number];
 }
 
 function SimulationProvider({ children }: { children: React.ReactNode }) {

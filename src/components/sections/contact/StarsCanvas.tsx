@@ -3,6 +3,8 @@ import type { Mesh, MeshBasicMaterial, Group } from 'three';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Suspense } from 'react';
 import { Preload } from '@react-three/drei';
+import { useTheme } from 'next-themes';
+import { hslToHex, getCSSColorValue } from '@/utils/color';
 
 type Star = {
   position: [number, number, number];
@@ -12,7 +14,7 @@ type Star = {
 
 function Stars() {
   const starsRef = useRef<Group>(null);
-  const root = getComputedStyle(document.documentElement);
+  const { theme } = useTheme();
 
   const starPool = useMemo(() => {
     const pool = [];
@@ -20,22 +22,22 @@ function Stars() {
     for (let i = 0; i < 500; i++) {
       const isAccentColor = Math.random() < 0.3;
       const color = isAccentColor
-        ? root.getPropertyValue('--accent')
-        : root.getPropertyValue('--foreground');
+        ? hslToHex(...getCSSColorValue('--accent'))
+        : hslToHex(...getCSSColorValue('--foreground'));
       const star: Star = {
         position: [
           Math.random() * 100 - 50,
           Math.random() * 100 - 50,
           Math.random() * 100 - 50,
         ],
-        color: color,
+        color,
         mesh: null,
       };
       pool.push(star);
     }
 
     return pool;
-  }, [root]);
+  }, []);
 
   useFrame((_, delta) => {
     if (starsRef.current) {
@@ -45,27 +47,19 @@ function Stars() {
   });
 
   useEffect(() => {
-    const handleColorChange = () => {
-      starPool.forEach((star) => {
-        const isAccentColor = Math.random() < 0.3;
-        const color = isAccentColor
-          ? root.getPropertyValue('--accent')
-          : root.getPropertyValue('--foreground');
-        star.color = color;
+    starPool.forEach((star) => {
+      const isAccentColor = Math.random() < 0.3;
+      const color = isAccentColor
+        ? hslToHex(...getCSSColorValue('--accent'))
+        : hslToHex(...getCSSColorValue('--foreground'));
+      star.color = color;
 
-        if (star.mesh) {
-          const material = star.mesh.material as MeshBasicMaterial;
-          material.color.set(color);
-        }
-      });
-    };
-
-    window.addEventListener('colorsUpdated', handleColorChange);
-
-    return () => {
-      window.removeEventListener('colorsUpdated', handleColorChange);
-    };
-  }, [starPool, root]);
+      if (star.mesh) {
+        const material = star.mesh.material as MeshBasicMaterial;
+        material.color.set(color);
+      }
+    });
+  }, [theme, starPool]);
 
   return (
     <group ref={starsRef}>
