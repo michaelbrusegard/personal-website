@@ -1,3 +1,5 @@
+'use client';
+
 import { m } from 'motion/react';
 import { SectionHOC } from '@/components/layout/SectionHOC';
 import { textVariant } from '@/utils/motion';

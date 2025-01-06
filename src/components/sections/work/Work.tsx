@@ -1,3 +1,5 @@
+'use client';
+
 import { m } from 'motion/react';
 import { useEffect, useRef } from 'react';
 import { SectionHOC } from '@/components/layout/SectionHOC';

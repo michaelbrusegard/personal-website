@@ -1,3 +1,5 @@
+'use client';
+
 import '@/styles/hero-name.css';
 import { m } from 'motion/react';
 import { appear } from '@/utils/motion';

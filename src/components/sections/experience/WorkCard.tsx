@@ -1,3 +1,5 @@
+'use client';
+
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
 import { useInView } from 'react-intersection-observer';
 

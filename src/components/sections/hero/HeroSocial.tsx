@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import { m } from 'motion/react';
 import { fadeIn } from '@/utils/motion';

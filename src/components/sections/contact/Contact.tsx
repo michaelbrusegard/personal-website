@@ -1,3 +1,5 @@
+'use client';
+
 import { m } from 'motion/react';
 import { sendEmail } from '@/actions/sendEmail';
 import { SectionHOC } from '@/components/layout/SectionHOC';

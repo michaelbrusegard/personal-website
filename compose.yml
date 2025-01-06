@@ -2,8 +2,10 @@ services:
   app:
     build: .
     restart: unless-stopped
-    networks:
-      - nginx_default
-networks:
-  nginx_default:
-    external: true
+    ports:
+      - 3000:3000
+#     networks:
+#       - nginx_default
+# networks:
+#   nginx_default:
+#     external: true

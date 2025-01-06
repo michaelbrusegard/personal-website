@@ -1,3 +1,5 @@
+'use client';
+
 import '@/styles/hero-photo.css';
 import { useRef } from 'react';
 import Image from 'next/image';

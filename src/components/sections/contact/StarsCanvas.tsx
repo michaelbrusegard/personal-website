@@ -1,3 +1,5 @@
+'use client';
+
 import { useRef, useMemo, useEffect } from 'react';
 import type { Mesh, MeshBasicMaterial, Group } from 'three';
 import { Canvas, useFrame } from '@react-three/fiber';

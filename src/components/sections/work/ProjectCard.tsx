@@ -1,3 +1,5 @@
+'use client';
+
 import Tilt from 'react-parallax-tilt';
 import { m } from 'motion/react';
 import Link from 'next/link';

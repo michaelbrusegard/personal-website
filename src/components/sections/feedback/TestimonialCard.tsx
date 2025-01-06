@@ -1,3 +1,5 @@
+'use client';
+
 import { m } from 'motion/react';
 import { fadeIn } from '@/utils/motion';
 import Image, { type StaticImageData } from 'next/image';
