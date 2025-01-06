@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext } from 'react';
+import { createContext, useContext, useEffect } from 'react';
 import { ThemeProvider as NextThemeProvider } from 'next-themes';
 import { useSimulation } from '@/components/providers/SimulationProvider';
 
@@ -41,6 +41,10 @@ function ThemeProvider({ children }: { children: React.ReactNode }) {
     updateColorPalette();
     applyGradientColors();
   }
+
+  useEffect(() => {
+    applyGradientColors();
+  }, []);
 
   return (
     <ThemeContext.Provider value={{ updateTheme }}>
