@@ -1,6 +1,6 @@
 # Personal website
 
-<img width="1792" alt="portifolio" src="https://github.com/michaelbrusegard/personal-website/assets/56915010/09494597-30db-4e93-afa0-8d81b7f32e00">
+<img width="1792" alt="portfolio" src="https://github.com/michaelbrusegard/personal-website/assets/56915010/09494597-30db-4e93-afa0-8d81b7f32e00">
 This project showcases my tech skills, work experience and projects as a website. It serves as a central hub for anyone interested in knowing more about me and my work. This repository contains the source code and assets for the website. It is live and accessible at https://www.michaelbrusegard.com.
 
 ## Table of Contents
@@ -52,4 +52,4 @@ If you encounter any issues, have suggestions, or want to report bugs, please op
 
 This project is licensed under the Apache License, Version 2.0. See the [LICENSE](LICENSE) file for details.
 
-Thank you for visiting my personal website repository. If you find it useful or have any feedback, I'd love to hear from you. You can also explore my other projects on GitHub at https://github.com/michaelbrusegard.
+Thank you for visiting my personal website repository. If you find it useful or have any feedback, I'd love to hear from you. You can also explore my other projects on GitHub at <https://github.com/michaelbrusegard>.

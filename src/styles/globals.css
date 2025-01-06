@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply min-w-0;
+  }
+
+  :root {
+    --foreground: 0 0% 0%;
+    --background: 0 0% 100%;
+    --primary: 219.57 100% 63.73%;
+    --secondary: 0 0% 94.9%;
+    --accent: 21.46 100% 75.88%;
+  }
+
+  .dark {
+    --foreground: 0 0% 100%;
+    --background: 0 0% 0%;
+    --primary: 219.57 100% 63.73%;
+    --secondary: 0 0% 10.2%;
+    --accent: 21.46 100% 75.88%;
+  }
+
+  .light-pink {
+    --foreground: 0 0% 1.96%;
+    --background: 0 0% 98.04%;
+    --primary: 220.71 100% 78.04%;
+    --secondary: 222 100% 96.08%;
+    --accent: 333.77 75.93% 47.25%;
+  }
+
+  .dark-pink {
+    --foreground: 0 0% 98.04%;
+    --background: 0 0% 1.96%;
+    --primary: 219.57 100% 63.73%;
+    --secondary: 222.35 100% 10;
+    --accent: 333.85 76.47% 70%;
+  }
+
+  .light-youtube {
+    --foreground: 0 0% 1.96%;
+    --background: 0 0% 98.04%;
+    --primary: 30 7.14% 78.04%;
+    --secondary: 0 0% 90.2%;
+    --accent: 0 100% 50%;
+  }
+
+  .dark-youtube {
+    --foreground: 0 0% 98.04%;
+    --background: 0 0% 1.96%;
+    --primary: 30 7.14% 78.04%;
+    --secondary: 0 0% 15.29%;
+    --accent: 0 100% 50%;
+  }
+
+  .light-gpt {
+    --foreground: 0 0% 0%;
+    --background: 0 0% 100%;
+    --primary: 300 100% 77.25%;
+    --secondary: 117.39 100% 95.49%;
+    --accent: 117.58 38.82% 50%;
+  }
+
+  .dark-gpt {
+    --foreground: 0 0% 100%;
+    --background: 0 0% 0%;
+    --primary: 300 100% 77.25%;
+    --secondary: 118.06 39.24% 15.49%;
+    --accent: 117.39 100% 95.49%;
+  }
+
+  .light-slack {
+    --foreground: 300 1.75% 11.18%;
+    --background: 0 0% 100%;
+    --primary: 291.29 37.8% 32.16%;
+    --secondary: 33.75 42.11% 92.55%;
+    --accent: 41.68 83.33% 55.29%;
+  }
+
+  .dark-slack {
+    --foreground: 0 0% 100%;
+    --background: 300 1.75% 11.18%;
+    --primary: 291.29 37.8% 32.16%;
+    --secondary: 34.29 41.18% 10%;
+    --accent: 41.68 83.33% 55.29%;
+  }
+
+  .light-green {
+    --foreground: 225 9.52% 8.24%;
+    --background: 0 0% 100%;
+    --primary: 139.41 58.62% 54.51%;
+    --secondary: 222.86 13.73% 90%;
+    --accent: 55.87 74.77% 58.04%;
+  }
+
+  .dark-green {
+    --foreground: 0 0% 100%;
+    --background: 225 9.52% 8.24%;
+    --primary: 139.41 58.62% 54.51%;
+    --secondary: 222.86 13.73% 20%;
+    --accent: 55.87 74.77% 58.04%;
+  }
+
+  .light-blue {
+    --foreground: 320 7.32% 8.04%;
+    --background: 320 9.68% 93.92%;
+    --primary: 199.8 89.29% 78.04%;
+    --secondary: 170 7.32% 83.92%;
+    --accent: 106.67 8.04% 43.92%;
+  }
+
+  .dark-blue {
+    --foreground: 320 9.68% 93.92%;
+    --background: 320 7.32% 8.04%;
+    --primary: 199.8 89.29% 78.04%;
+    --secondary: 180 5.88% 10%;
+    --accent: 106.15 8.5% 70%;
+  }
+
+  .light-red {
+    --foreground: 306.67 90% 3.92%;
+    --background: 307.83 92% 95.1%;
+    --primary: 338.02 91.49% 36.86%;
+    --secondary: 6.67 88.24% 90%;
+    --accent: 7.98 91.37% 50%;
+  }
+
+  .dark-red {
+    --foreground: 307.83 92% 95.1%;
+    --background: 306.67 90% 3.92%;
+    --primary: 338.02 91.49% 36.86%;
+    --secondary: 7.06 89.47% 11.18%;
+    --accent: 8.16 91.2% 50.98%;
+  }
+
+  ::-moz-selection {
+    @apply bg-accent;
+  }
+
+  ::selection {
+    @apply bg-accent;
+  }
+}

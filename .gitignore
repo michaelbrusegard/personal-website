@@ -1,8 +1,19 @@
-node_modules
+# dependencies
+/node_modules
+
+# next.js
 /.next/
-/out/
-/build
-.DS_Store
-*.tsbuildinfo
 next-env.d.ts
-.vscode
+
+# misc
+.DS_Store
+
+# local env files
+.env
+
+# typescript
+*.tsbuildinfo
+
+# site map
+public/sitemap.xml
+public/robots.txt
