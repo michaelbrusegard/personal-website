@@ -1,11 +1,3 @@
-import niclasWebsite from '../../public/photos/projects/niclasnordlund.jpg';
-import webGLFluidEnhancedWebsite from '../../public/photos/projects/webgl-fluid-enhanced.jpg';
-import hackerspaceWebsite from '../../public/photos/projects/hackerspace-ntnu.jpg';
-
-import niclasNordlund from '../../public/photos/people/niclasNordlund.jpg';
-import carlJohanGuzkow from '../../public/photos/people/carlJohanGuzkow.jpg';
-import magnusLianes from '../../public/photos/people/magnusLianes.jpg';
-
 import {
   Html,
   Java,
@@ -27,7 +19,14 @@ import {
   Three,
   Next,
 } from '@/constants/tech-icons';
-import { Biltema, Hydro, Hackerspace, Niclas } from '@/constants/company-logos';
+import {
+  Biltema,
+  Hydro,
+  Hackerspace,
+  Niclas,
+  Sticos,
+  Zedge,
+} from '@/constants/company-logos';
 
 const skills = [
   {
@@ -78,6 +77,31 @@ const skills = [
 ];
 
 const positions = [
+  {
+    title: 'System Developer',
+    companyName: 'Sticos',
+    Icon: Sticos,
+    date: 'Jun 2024 - Aug 2024',
+    points: [
+      'Developing automations of reconciliation forms in Angular (mostly logic based).',
+      'Integration and cooperation in the existing economics development team.',
+      'Using various frontend technologies like Sass, RxJS and NgRx.',
+      'Participating in agile development processes with daily stand-ups and sprint planning.',
+      'Writing unit tests and implementing best practices for code quality and maintainability.',
+    ],
+  },
+  {
+    title: 'Bachelor Thesis',
+    companyName: 'Zedge',
+    Icon: Zedge,
+    date: 'Jan 2024 - May 2024',
+    points: [
+      'Developing Open Emoji Platform - a comprehensive web application for discovering and managing emojis, serving as a foundation for Emojipedia.',
+      'Implementing core features including an advanced search system, interactive grid view, and emoji sequence creation tools.',
+      'Building responsive navigation components and user interface elements focusing on intuitive user experience.',
+      'Collaborating closely with Zedge stakeholders through daily SCRUM meetings and sprint planning to align development with business objectives.',
+    ],
+  },
   {
     title: 'DevOps Deputy Manager',
     companyName: 'Hackerspace NTNU',
@@ -139,7 +163,7 @@ const projects = [
         link: 'https://developer.mozilla.org/docs/Web/HTML',
       },
     ],
-    imageSrc: niclasWebsite,
+    imageSrc: '/photos/projects/niclasnordlund.jpg',
     prodLink: 'https://www.niclasnordlund.com',
     srcLink: 'https://github.com/michaelbrusegard/NiclasNordlundPhotography',
   },
@@ -153,7 +177,7 @@ const projects = [
         link: 'https://developer.mozilla.org/docs/Web/HTML',
       },
     ],
-    imageSrc: niclasWebsite,
+    imageSrc: '/photos/projects/niclasnordlund.jpg',
     prodLink: 'https://www.niclasnordlund.com',
     srcLink: 'https://github.com/michaelbrusegard/NiclasNordlundPhotography',
   },
@@ -167,7 +191,7 @@ const projects = [
         link: 'https://developer.mozilla.org/docs/Web/HTML',
       },
     ],
-    imageSrc: niclasWebsite,
+    imageSrc: '/photos/projects/niclasnordlund.jpg',
     prodLink: 'https://www.niclasnordlund.com',
     srcLink: 'https://github.com/michaelbrusegard/NiclasNordlundPhotography',
   },
@@ -181,9 +205,9 @@ const projects = [
         link: 'https://developer.mozilla.org/docs/Web/HTML',
       },
     ],
-    imageSrc: niclasWebsite,
+    imageSrc: '/photos/projects/open-emoji-platform.jpg',
     prodLink: 'https://www.niclasnordlund.com',
-    srcLink: 'https://github.com/michaelbrusegard/NiclasNordlundPhotography',
+    srcLink: '',
   },
   {
     name: 'Vector Globe',
@@ -195,7 +219,7 @@ const projects = [
         link: 'https://developer.mozilla.org/docs/Web/HTML',
       },
     ],
-    imageSrc: niclasWebsite,
+    imageSrc: '/photos/projects/niclasnordlund.jpg',
     prodLink: 'https://www.niclasnordlund.com',
     srcLink: 'https://github.com/michaelbrusegard/NiclasNordlundPhotography',
   },
@@ -209,7 +233,7 @@ const projects = [
         link: 'https://developer.mozilla.org/docs/Web/HTML',
       },
     ],
-    imageSrc: niclasWebsite,
+    imageSrc: '/photos/projects/niclasnordlund.jpg',
     prodLink: 'https://www.niclasnordlund.com',
     srcLink: 'https://github.com/michaelbrusegard/NiclasNordlundPhotography',
   },
@@ -249,7 +273,7 @@ const projects = [
         link: 'https://stripe.com',
       },
     ],
-    imageSrc: niclasWebsite,
+    imageSrc: '/photos/projects/niclasnordlund.jpg',
     prodLink: 'https://www.niclasnordlund.com',
     srcLink: 'https://github.com/michaelbrusegard/NiclasNordlundPhotography',
   },
@@ -279,7 +303,7 @@ const projects = [
         link: 'https://vitejs.dev',
       },
     ],
-    imageSrc: webGLFluidEnhancedWebsite,
+    imageSrc: '/photos/projects/webgl-fluid-enhanced.jpg',
     prodLink: 'https://webgl-fluid-enhanced.michaelbrusegard.com/play',
     srcLink: 'https://github.com/michaelbrusegard/WebGL-Fluid-Enhanced',
   },
@@ -319,7 +343,7 @@ const projects = [
         link: 'https://www.djangoproject.com',
       },
     ],
-    imageSrc: hackerspaceWebsite,
+    imageSrc: '/photos/projects/hackerspace-ntnu.jpg',
     prodLink: 'https://www.hackerspace-ntnu.no',
     srcLink: 'https://github.com/hackerspace-ntnu/website',
   },
@@ -331,7 +355,7 @@ const testimonials = [
       "Honestly, it's the nicest website I've seen and I mean it.....I don't know how to thank you!? I'll be back with some more feedback and some questions tomorrow, but as I said, I'm very impressed with what you've come up with 🙂 !",
     name: 'Niclas Nordlund',
     designation: 'Freelance photographer at Niclas Nordlund Photography',
-    imageSrc: niclasNordlund,
+    imageSrc: '/photos/people/niclasNordlund.jpg',
   },
   {
     testimonial:
@@ -339,14 +363,14 @@ const testimonials = [
     name: 'Carl Johan Güzkow',
     designation:
       'Deputy Commander at Hackerspace NTNU, Co-Founder and Backend Developer at EI Solutions',
-    imageSrc: carlJohanGuzkow,
+    imageSrc: '/photos/people/carlJohanGuzkow.jpg',
   },
   {
     testimonial:
       "Michael quickly got up to speed with our Angular solution despite little prior experience. He's eager to learn and passionate about technology, which helps greatly when learning new things. A curious young man with a love for the craft and great potential to become a skilled developer.",
     name: 'Magnus Lianes',
     designation: 'Senior IT Developer and Tech Lead at Sticos Reconciliation',
-    imageSrc: magnusLianes,
+    imageSrc: '/photos/people/magnusLianes.jpg',
   },
 ];
 
