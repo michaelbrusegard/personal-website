@@ -48,24 +48,24 @@ function HeroSocial() {
             <GitHubLogo className='h-9 w-9' aria-hidden='true' />
           </Link>
         </m.li>
-        <m.li
-          className='flex-shrink-0'
-          variants={fadeIn('left', '', 3.0, 0.5)}
-          initial='hidden'
-          animate='show'
-          whileHover={{ translateY: '-2px' }}
-          transition={{ duration: 0.2 }}
-        >
-          <Link
-            href='/cv.pdf'
-            download='michael-brusegard-cv.pdf'
-            className='block rounded-[3px] outline-2 outline-offset-2 outline-primary/60 hover:text-primary focus-visible:outline'
-            title='Download my CV'
-            aria-label='Download my CV'
-          >
-            <CVLogo className='h-9 w-9' aria-hidden='true' />
-          </Link>
-        </m.li>
+        {/* <m.li */}
+        {/*   className='flex-shrink-0' */}
+        {/*   variants={fadeIn('left', '', 3.0, 0.5)} */}
+        {/*   initial='hidden' */}
+        {/*   animate='show' */}
+        {/*   whileHover={{ translateY: '-2px' }} */}
+        {/*   transition={{ duration: 0.2 }} */}
+        {/* > */}
+        {/*   <Link */}
+        {/*     href='/cv.pdf' */}
+        {/*     download='michael-brusegard-cv.pdf' */}
+        {/*     className='block rounded-[3px] outline-2 outline-offset-2 outline-primary/60 hover:text-primary focus-visible:outline' */}
+        {/*     title='Download my CV' */}
+        {/*     aria-label='Download my CV' */}
+        {/*   > */}
+        {/*     <CVLogo className='h-9 w-9' aria-hidden='true' /> */}
+        {/*   </Link> */}
+        {/* </m.li> */}
         <m.li
           className='w-full sm:w-auto'
           variants={fadeIn('left', '', 3.5, 0.5)}
