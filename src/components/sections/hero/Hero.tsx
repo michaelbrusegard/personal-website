@@ -17,7 +17,7 @@ function Hero() {
     if (aboutTextRef.current) {
       lowerBrightnessHover(aboutTextRef.current);
     }
-  }, []);
+  }, [lowerBrightnessHover]);
 
   return (
     <section

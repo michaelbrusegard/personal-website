@@ -1,6 +1,6 @@
 import React, { useRef, useMemo, useEffect } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Mesh, MeshBasicMaterial } from 'three';
+import { Mesh, MeshBasicMaterial, type Group } from 'three';
 import { Suspense } from 'react';
 import { Preload } from '@react-three/drei';
 
@@ -12,7 +12,7 @@ const StarsCanvas = () => {
   }
 
   const Stars = () => {
-    const starsRef = useRef<THREE.Group>(null);
+    const starsRef = useRef<Group>(null);
     const root = getComputedStyle(document.documentElement);
 
     const starPool = useMemo(() => {
@@ -20,9 +20,15 @@ const StarsCanvas = () => {
 
       for (let i = 0; i < 500; i++) {
         const isAccentColor = Math.random() < 0.3;
-        const color = isAccentColor ? root.getPropertyValue('--accent') : root.getPropertyValue('--foreground');
+        const color = isAccentColor
+          ? root.getPropertyValue('--accent')
+          : root.getPropertyValue('--foreground');
         const star: Star = {
-          position: [Math.random() * 100 - 50, Math.random() * 100 - 50, Math.random() * 100 - 50],
+          position: [
+            Math.random() * 100 - 50,
+            Math.random() * 100 - 50,
+            Math.random() * 100 - 50,
+          ],
           color: color,
           mesh: null,
         };
@@ -43,7 +49,9 @@ const StarsCanvas = () => {
       const handleColorChange = () => {
         starPool.forEach((star) => {
           const isAccentColor = Math.random() < 0.3;
-          const color = isAccentColor ? root.getPropertyValue('--accent') : root.getPropertyValue('--foreground');
+          const color = isAccentColor
+            ? root.getPropertyValue('--accent')
+            : root.getPropertyValue('--foreground');
           star.color = color;
 
           if (star.mesh) {
@@ -66,7 +74,11 @@ const StarsCanvas = () => {
           const { position, color } = star;
 
           return (
-            <mesh key={index} position={position} ref={(mesh) => (star.mesh = mesh)}>
+            <mesh
+              key={index}
+              position={position}
+              ref={(mesh) => (star.mesh = mesh)}
+            >
               <sphereGeometry args={[0.1, 8, 8]} attach='geometry' />
               <meshBasicMaterial color={color} />
             </mesh>
@@ -88,4 +100,4 @@ const StarsCanvas = () => {
   );
 };
 
-export default StarsCanvas;
+export { StarsCanvas as Stars };

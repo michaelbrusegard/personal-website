@@ -1,5 +1,11 @@
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Html, useProgress, useGLTF, Preload } from '@react-three/drei';
+import {
+  OrbitControls,
+  Html,
+  useProgress,
+  useGLTF,
+  Preload,
+} from '@react-three/drei';
 import { Suspense, useEffect, useState } from 'react';
 
 const CanvasLoader = () => {
@@ -15,23 +21,14 @@ const CanvasLoader = () => {
         flexDirection: 'column',
       }}
     >
-      <p className='section-subtitle pointer-events-none rounded-xl bg-secondary px-1 pt-[1px] opacity-100'>
+      <p className='rounded-xl bg-secondary px-1 pt-[1px]'>
         {progress ? `${(progress * 100).toFixed(2)}%` : 'Loading...'}
       </p>
     </Html>
   );
 };
 
-interface DogProps {
-  scale: number;
-}
-
-const Dog = ({ scale }: DogProps) => {
-  const dog = useGLTF('/models/dog.glb');
-  return <primitive object={dog.scene} scale={scale} position-y={0} rotation-y={0} />;
-};
-
-const DogCanvas = () => {
+function Dog() {
   const [scale, setScale] = useState(1.15);
 
   const updateScale = () => {
@@ -49,18 +46,33 @@ const DogCanvas = () => {
       window.removeEventListener('resize', updateScale);
     };
   }, []);
+
   return (
     <Canvas>
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls autoRotate autoRotateSpeed={-4} enablePan={false} enableZoom={false} maxPolarAngle={Math.PI / 4} minPolarAngle={Math.PI / 4} />
+        <OrbitControls
+          autoRotate
+          autoRotateSpeed={-4}
+          enablePan={false}
+          enableZoom={false}
+          maxPolarAngle={Math.PI / 4}
+          minPolarAngle={Math.PI / 4}
+        />
         <pointLight position={[15, 10, 15]} intensity={1.5} />
         <pointLight position={[-15, 10, -15]} intensity={1.5} />
         <pointLight position={[-15, 0, 0]} intensity={1.5} />
-        <Dog scale={scale} />
+        <DogScene scale={scale} />
         <Preload all />
       </Suspense>
     </Canvas>
   );
-};
+}
 
-export default DogCanvas;
+function DogScene({ scale }: { scale: number }) {
+  const dog = useGLTF('/models/dog.glb');
+  return (
+    <primitive object={dog.scene} scale={scale} position-y={0} rotation-y={0} />
+  );
+}
+
+export { Dog };

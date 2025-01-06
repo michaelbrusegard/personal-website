@@ -108,7 +108,7 @@ function staggerContainer(staggerChildren?: number, delayChildren?: number) {
     show: {
       transition: {
         staggerChildren: staggerChildren,
-        delayChildren: delayChildren || 0,
+        delayChildren: delayChildren ?? 0,
       },
     },
   };

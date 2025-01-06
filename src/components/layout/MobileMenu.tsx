@@ -64,7 +64,6 @@ function MobileMenu() {
         variants={foldOut(0.8, 0.2)}
         initial='hidden'
         animate={isOpen ? 'show' : 'hidden'}
-        inert={!isOpen}
       >
         <Nav isMobile animate={isOpen ? 'show' : 'hidden'} />
       </m.div>
