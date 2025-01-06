@@ -1,5 +1,7 @@
+'use client';
+
 import { m } from 'motion/react';
-import { ComponentType, PropsWithoutRef } from 'react';
+import type { ComponentType, PropsWithoutRef } from 'react';
 import { staggerContainer } from '@/utils/motion';
 
 function SectionHOC<T extends object>(Component: ComponentType<T>, id: string) {
@@ -18,7 +20,7 @@ function SectionHOC<T extends object>(Component: ComponentType<T>, id: string) {
     );
   }
 
-  Wrapper.displayName = `SectionWrapper(${Component.displayName || Component.name || 'Component'})`;
+  Wrapper.displayName = `SectionWrapper(${Component.displayName ?? Component.name ?? 'Component'})`;
 
   return Wrapper;
 }

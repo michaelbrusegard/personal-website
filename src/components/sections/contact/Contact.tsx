@@ -1,10 +1,14 @@
 import { m } from 'motion/react';
+import { sendEmail } from '@/actions/sendEmail';
 import { SectionHOC } from '@/components/layout/SectionHOC';
+import { useFormState } from 'react-dom';
 import { slideIn } from '@/utils/motion';
 import { DogCanvas } from '@/components/sections/contact/DogCanvas';
 import { StarsCanvas } from '@/components/sections/contact/StarsCanvas';
+import { SubmitButton } from '@/components/sections/contact/SubmitButton';
 
 function ContactSection() {
+  const [state, formAction] = useFormState(sendEmail, null);
   return (
     <div className='flex flex-col-reverse gap-10 overflow-hidden xl:mt-12 xl:flex-row'>
       <m.div
@@ -17,7 +21,7 @@ function ContactSection() {
         <h2 className='font-sf-pro-display text-[30px] font-black sm:text-[50px] md:text-[60px] xs:text-[40px]'>
           Contact.
         </h2>
-        <form className='mt-12 flex flex-col gap-8'>
+        <form className='flex-cod mt-12 flex gap-8' action={formAction}>
           <label className='flex flex-col'>
             <span className='mb-4 font-medium'>Your Name</span>
             <input
@@ -48,24 +52,16 @@ function ContactSection() {
               required
             />
           </label>
-
-          {/* <button */}
-          {/*   type='submit' */}
-          {/*   className={`w-fit select-none rounded-xl bg-primary px-8 py-3 font-semibold text-background transition-all duration-200 ${ */}
-          {/*     loading */}
-          {/*       ? 'pointer-events-none' */}
-          {/*       : 'hover:-translate-y-1 hover:from-primary hover:to-accent hover:text-foreground hover:shadow-xl hover:shadow-primary hover:bg-gradient-30 focus-visible:-translate-y-1 focus-visible:from-primary focus-visible:to-accent focus-visible:text-foreground focus-visible:shadow-xl focus-visible:shadow-primary focus-visible:bg-gradient-30' */}
-          {/*   }`} */}
-          {/* > */}
-          {/*   {loading ? 'Sending...' : 'Send Message'} */}
-          {/* </button> */}
-          {/* {feedbackMessage && ( */}
-          {/*   <p */}
-          {/*     className={`ml-1 font-semibold ${feedbackMessage === 'Email sent successfully' ? 'text-green-600' : 'text-red-600'}`} */}
-          {/*   > */}
-          {/*     {feedbackMessage} */}
-          {/*   </p> */}
-          {/* )} */}
+          <SubmitButton />
+          {state && (
+            <p
+              className={`ml-1 font-semibold ${
+                state.success ? 'text-green-600' : 'text-red-600'
+              }`}
+            >
+              {state.message}
+            </p>
+          )}
         </form>
       </m.div>
 

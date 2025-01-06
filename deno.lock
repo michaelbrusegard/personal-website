@@ -7,6 +7,7 @@
     "npm:@types/eslint@^8.56.12": "8.56.12",
     "npm:@types/eslint__eslintrc@^2.1.2": "2.1.2",
     "npm:@types/node@^20.17.11": "20.17.11",
+    "npm:@types/nodemailer@^6.4.17": "6.4.17",
     "npm:@types/react-dom@^18.3.5": "18.3.5_@types+react@18.3.18",
     "npm:@types/react-vertical-timeline-component@^3.3.6": "3.3.6",
     "npm:@types/react@18": "18.3.18",
@@ -22,6 +23,7 @@
     "npm:motion@^11.15.0": "11.15.0_react@18.3.1_react-dom@18.3.1__react@18.3.1",
     "npm:next-themes@~0.4.4": "0.4.4_react@18.3.1_react-dom@18.3.1__react@18.3.1",
     "npm:next@^14.2.22": "14.2.22_react@18.3.1_react-dom@18.3.1__react@18.3.1",
+    "npm:nodemailer@^6.9.16": "6.9.16",
     "npm:postcss@^8.4.49": "8.4.49",
     "npm:prettier-plugin-tailwindcss@~0.6.9": "0.6.9_prettier@3.4.2",
     "npm:prettier@^3.4.2": "3.4.2",
@@ -908,6 +910,18 @@
       "integrity": "sha512-Ept5glCK35R8yeyIeYlRIZtX6SLRyqMhOFTgj5SOkMpLTdw3SEHI9fHx60xaUZ+V1aJxQJODE+7/j5ocZydYTg==",
       "dependencies": [
         "undici-types"
+      ]
+    },
+    "@types/node@22.5.4": {
+      "integrity": "sha512-FDuKUJQm/ju9fT/SeX/6+gBzoPzlVCzfzmGkwKvRHQVxi4BntVbyIwf6a4Xn62mrvndLiml6z/UBXIdEVjQLXg==",
+      "dependencies": [
+        "undici-types"
+      ]
+    },
+    "@types/nodemailer@6.4.17": {
+      "integrity": "sha512-I9CCaIp6DTldEg7vyUTZi8+9Vo0hi1/T8gv3C89yk1rSAAzoKQ8H8ki/jBYJSFoH/BisgLP8tkZMlQ91CIquww==",
+      "dependencies": [
+        "@types/node@22.5.4"
       ]
     },
     "@types/offscreencanvas@2019.7.3": {
@@ -2548,6 +2562,9 @@
     "node-releases@2.0.19": {
       "integrity": "sha512-xxOWJsBKtzAq7DY0J+DTzuz58K8e7sJbdgwkbMWQe8UYB6ekmsQ45q0M/tJDsGaZmbC+l7n57UV8Hl5tHxO9uw=="
     },
+    "nodemailer@6.9.16": {
+      "integrity": "sha512-psAuZdTIRN08HKVd/E8ObdV6NO7NTBY3KsC30F7M4H1OnmLCUNaS56FpYxyb26zWLSyYF9Ozch9KYHhHegsiOQ=="
+    },
     "normalize-path@3.0.0": {
       "integrity": "sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA=="
     },
@@ -3594,6 +3611,7 @@
         "npm:@types/eslint@^8.56.12",
         "npm:@types/eslint__eslintrc@^2.1.2",
         "npm:@types/node@^20.17.11",
+        "npm:@types/nodemailer@^6.4.17",
         "npm:@types/react-dom@^18.3.5",
         "npm:@types/react-vertical-timeline-component@^3.3.6",
         "npm:@types/react@^18.3.18",
@@ -3607,6 +3625,7 @@
         "npm:motion@^11.15.0",
         "npm:next-themes@~0.4.4",
         "npm:next@^14.2.22",
+        "npm:nodemailer@^6.9.16",
         "npm:postcss@^8.4.49",
         "npm:prettier-plugin-tailwindcss@~0.6.9",
         "npm:prettier@^3.4.2",

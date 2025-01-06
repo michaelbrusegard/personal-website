@@ -130,6 +130,90 @@ const positions = [
 
 const projects = [
   {
+    name: 'Lektr',
+    description: '',
+    techstack: [
+      {
+        name: 'HTML',
+        Icon: Html,
+        link: 'https://developer.mozilla.org/docs/Web/HTML',
+      },
+    ],
+    imageSrc: niclasWebsite,
+    prodLink: 'https://www.niclasnordlund.com',
+    srcLink: 'https://github.com/michaelbrusegard/NiclasNordlundPhotography',
+  },
+  {
+    name: 'Tabline',
+    description: '',
+    techstack: [
+      {
+        name: 'HTML',
+        Icon: Html,
+        link: 'https://developer.mozilla.org/docs/Web/HTML',
+      },
+    ],
+    imageSrc: niclasWebsite,
+    prodLink: 'https://www.niclasnordlund.com',
+    srcLink: 'https://github.com/michaelbrusegard/NiclasNordlundPhotography',
+  },
+  {
+    name: 'New Hackerspace NTNU Website',
+    description: '',
+    techstack: [
+      {
+        name: 'HTML',
+        Icon: Html,
+        link: 'https://developer.mozilla.org/docs/Web/HTML',
+      },
+    ],
+    imageSrc: niclasWebsite,
+    prodLink: 'https://www.niclasnordlund.com',
+    srcLink: 'https://github.com/michaelbrusegard/NiclasNordlundPhotography',
+  },
+  {
+    name: 'Open Emoji Platform',
+    description: '',
+    techstack: [
+      {
+        name: 'HTML',
+        Icon: Html,
+        link: 'https://developer.mozilla.org/docs/Web/HTML',
+      },
+    ],
+    imageSrc: niclasWebsite,
+    prodLink: 'https://www.niclasnordlund.com',
+    srcLink: 'https://github.com/michaelbrusegard/NiclasNordlundPhotography',
+  },
+  {
+    name: 'Vector Globe',
+    description: '',
+    techstack: [
+      {
+        name: 'HTML',
+        Icon: Html,
+        link: 'https://developer.mozilla.org/docs/Web/HTML',
+      },
+    ],
+    imageSrc: niclasWebsite,
+    prodLink: 'https://www.niclasnordlund.com',
+    srcLink: 'https://github.com/michaelbrusegard/NiclasNordlundPhotography',
+  },
+  {
+    name: 'GlobeHub',
+    description: '',
+    techstack: [
+      {
+        name: 'HTML',
+        Icon: Html,
+        link: 'https://developer.mozilla.org/docs/Web/HTML',
+      },
+    ],
+    imageSrc: niclasWebsite,
+    prodLink: 'https://www.niclasnordlund.com',
+    srcLink: 'https://github.com/michaelbrusegard/NiclasNordlundPhotography',
+  },
+  {
     name: 'Niclas Nordlund Photography',
     description:
       'A photography website that provides a convenient way for Niclas Nordlund to showcase his photos and connect with clients. It also provides a shop to sell photos from his extensive library.',
