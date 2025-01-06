@@ -19,8 +19,8 @@ type ProjectCardProps = {
     link: string;
   }[];
   imageSrc: StaticImageData;
-  prodLink: string;
-  srcLink: string;
+  prodLink?: string;
+  srcLink?: string;
 };
 
 function ProjectCard({
@@ -47,11 +47,19 @@ function ProjectCard({
       >
         <Link
           className='relative h-60 w-full max-w-[576px] flex-shrink-0 overflow-hidden rounded-2xl shadow-card outline-2 outline-offset-2 outline-primary/60 transition-transform focus-visible:outline xs:h-80'
-          href={prodLink}
+          href={prodLink ?? '#'}
           target='_blank'
           rel='noreferrer'
-          title={`Open the production link for ${name}`}
-          aria-label={`Open the production link for ${name}`}
+          title={
+            prodLink
+              ? `Open the production link for ${name}`
+              : 'Live site not available'
+          }
+          aria-label={
+            prodLink
+              ? `Open the production link for ${name}`
+              : 'Live site not available'
+          }
         >
           <Image
             src={imageSrc}
@@ -80,23 +88,43 @@ function ProjectCard({
           </div>
           <div className='mt-4 flex flex-row justify-center gap-9 text-[18px] font-medium'>
             <Link
-              href={srcLink}
+              href={srcLink ?? '#'}
               target='_blank'
               rel='noreferrer'
-              className='flex cursor-pointer items-center gap-1 rounded-md outline-2 outline-offset-2 outline-primary/60 transition-transform duration-200 hover:-translate-y-[2px] hover:text-primary focus-visible:outline'
-              aria-label={`Open the source code link for ${name}`}
-              title={`Open the source code link for ${name}`}
+              className={`flex cursor-pointer items-center gap-1 rounded-md outline-2 outline-offset-2 outline-primary/60 transition-transform duration-200 hover:-translate-y-[2px] hover:text-primary focus-visible:outline ${
+                !srcLink ? 'pointer-events-none opacity-50' : ''
+              }`}
+              aria-label={
+                srcLink
+                  ? `Open the source code link for ${name}`
+                  : 'Source code not available'
+              }
+              title={
+                srcLink
+                  ? `Open the source code link for ${name}`
+                  : 'Source code not available'
+              }
             >
               Code
               <GitHubLinkIcon className='h-4 w-4' aria-hidden='true' />
             </Link>
             <Link
-              href={prodLink}
+              href={prodLink ?? '#'}
               target='_blank'
               rel='noreferrer'
-              className='flex cursor-pointer items-center gap-1 rounded-md outline-2 outline-offset-2 outline-primary/60 transition-transform duration-200 hover:-translate-y-[2px] hover:text-primary focus-visible:outline'
-              aria-label={`Open the production link for ${name}`}
-              title={`Open the production link for ${name}`}
+              className={`flex cursor-pointer items-center gap-1 rounded-md outline-2 outline-offset-2 outline-primary/60 transition-transform duration-200 hover:-translate-y-[2px] hover:text-primary focus-visible:outline ${
+                !prodLink ? 'pointer-events-none opacity-50' : ''
+              }`}
+              aria-label={
+                prodLink
+                  ? `Open the production link for ${name}`
+                  : 'Live site not available'
+              }
+              title={
+                prodLink
+                  ? `Open the production link for ${name}`
+                  : 'Live site not available'
+              }
             >
               Live
               <ProductionLinkIcon className='h-4 w-4' aria-hidden='true' />
