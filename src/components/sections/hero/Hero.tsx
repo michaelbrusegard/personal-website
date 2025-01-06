@@ -14,9 +14,7 @@ function Hero() {
   const aboutTextRef = useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
-    if (aboutTextRef.current) {
-      lowerBrightnessHover(aboutTextRef.current);
-    }
+    lowerBrightnessHover(aboutTextRef.current);
   }, [lowerBrightnessHover]);
 
   return (

@@ -6,7 +6,7 @@ import { hslToHex, getCSSColorValue } from '@/utils/color';
 
 type SimulationContextType = {
   multipleSplats: (amount: number) => void;
-  lowerBrightnessHover: (element: HTMLElement) => void;
+  lowerBrightnessHover: (element: HTMLElement | null) => void;
   updateColorPalette: () => void;
 };
 
@@ -115,7 +115,8 @@ function SimulationProvider({ children }: { children: React.ReactNode }) {
     simulation.current?.multipleSplats(amount);
   }
 
-  function lowerBrightnessHover(element: HTMLElement) {
+  function lowerBrightnessHover(element: HTMLElement | null) {
+    if (!element) return;
     let hoverTimer: NodeJS.Timeout | null = null;
     let isHovered = false;
 
