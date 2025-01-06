@@ -20,6 +20,7 @@ const config = {
       },
       screens: {
         xs: '28rem',
+        timeline: '1170px',
         'landscape-sm': {
           raw: '(max-width: 48rem) and (orientation: landscape)',
         },
@@ -35,7 +36,7 @@ const config = {
     },
   },
   plugins: [
-    plugin(function ({ matchUtilities, theme }) {
+    plugin(({ matchUtilities, theme }) => {
       matchUtilities(
         {
           'bg-gradient': (angle) => ({

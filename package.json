@@ -16,8 +16,10 @@
     "next": "^14.2.22",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-intersection-observer": "^9.14.1",
     "react-parallax-tilt": "^1.7.268",
     "react-vertical-timeline-component": "^3.5.3",
+    "sharp": "^0.33.5",
     "three": "~0.154.0",
     "webgl-fluid-enhanced": "^0.8.0"
   },
