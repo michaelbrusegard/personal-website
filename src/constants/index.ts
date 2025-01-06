@@ -1,9 +1,10 @@
-import niclasWebsitePhoto from '../../public/photos/projects/niclasnordlund.jpg';
-import webGLFluidEnhancedWebsitePhoto from '../../public/photos/projects/webgl-fluid-enhanced.jpg';
-import hackerspaceWebsitePhoto from '../../public/photos/projects/hackerspace-ntnu.jpg';
+import niclasWebsite from '../../public/photos/projects/niclasnordlund.jpg';
+import webGLFluidEnhancedWebsite from '../../public/photos/projects/webgl-fluid-enhanced.jpg';
+import hackerspaceWebsite from '../../public/photos/projects/hackerspace-ntnu.jpg';
 
 import niclasNordlund from '../../public/photos/people/niclasNordlund.jpg';
 import carlJohanGuzkow from '../../public/photos/people/carlJohanGuzkow.jpg';
+import magnusLianes from '../../public/photos/people/magnusLianes.jpg';
 
 import {
   Html,
@@ -35,32 +36,32 @@ const skills = [
       {
         name: 'HTML',
         Icon: Html,
-        link: 'https://developer.mozilla.org/docs/Web/HTML/',
+        link: 'https://developer.mozilla.org/docs/Web/HTML',
       },
       {
         name: 'CSS',
         Icon: Css,
-        link: 'https://developer.mozilla.org/docs/Web/CSS/',
+        link: 'https://developer.mozilla.org/docs/Web/CSS',
       },
       {
         name: 'JavaScript',
         Icon: JavaScript,
-        link: 'https://developer.mozilla.org/docs/Web/javascript/',
+        link: 'https://developer.mozilla.org/docs/Web/javascript',
       },
       {
         name: 'TypeScript',
         Icon: TypeScript,
-        link: 'https://www.typescriptlang.org/',
+        link: 'https://www.typescriptlang.org',
       },
       {
         name: 'Python',
         Icon: Python,
-        link: 'https://www.python.org/',
+        link: 'https://www.python.org',
       },
       {
         name: 'Java',
         Icon: Java,
-        link: 'https://www.java.com/',
+        link: 'https://www.java.com',
       },
       {
         name: 'Lua',
@@ -136,37 +137,37 @@ const projects = [
       {
         name: 'HTML',
         Icon: Html,
-        link: 'https://developer.mozilla.org/docs/Web/HTML/',
+        link: 'https://developer.mozilla.org/docs/Web/HTML',
       },
       {
         name: 'CSS',
         Icon: Css,
-        link: 'https://developer.mozilla.org/docs/Web/CSS/',
+        link: 'https://developer.mozilla.org/docs/Web/CSS',
       },
       {
         name: 'JavaScript',
         Icon: JavaScript,
-        link: 'https://developer.mozilla.org/docs/Web/javascript/',
+        link: 'https://developer.mozilla.org/docs/Web/javascript',
       },
       {
         name: 'Express.js',
         Icon: Express,
-        link: 'https://expressjs.com/',
+        link: 'https://expressjs.com',
       },
       {
         name: 'Google Cloud Platform',
         Icon: Gcp,
-        link: 'https://cloud.google.com/',
+        link: 'https://cloud.google.com',
       },
       {
         name: 'Stripe',
         Icon: Stripe,
-        link: 'https://stripe.com/',
+        link: 'https://stripe.com',
       },
     ],
-    imageSrc: niclasWebsitePhoto,
-    prodLink: 'https://www.niclasnordlund.com/',
-    srcLink: 'https://github.com/michaelbrusegard/NiclasNordlundPhotography/',
+    imageSrc: niclasWebsite,
+    prodLink: 'https://www.niclasnordlund.com',
+    srcLink: 'https://github.com/michaelbrusegard/NiclasNordlundPhotography',
   },
   {
     name: 'WebGL Fluid Enhanced',
@@ -176,27 +177,27 @@ const projects = [
       {
         name: 'HTML',
         Icon: Html,
-        link: 'https://developer.mozilla.org/docs/Web/HTML/',
+        link: 'https://developer.mozilla.org/docs/Web/HTML',
       },
       {
         name: 'CSS',
         Icon: Css,
-        link: 'https://developer.mozilla.org/docs/Web/CSS/',
+        link: 'https://developer.mozilla.org/docs/Web/CSS',
       },
       {
         name: 'TypeScript',
         Icon: TypeScript,
-        link: 'https://www.typescriptlang.org/',
+        link: 'https://www.typescriptlang.org',
       },
       {
         name: 'Vite',
         Icon: Vite,
-        link: 'https://vitejs.dev/',
+        link: 'https://vitejs.dev',
       },
     ],
-    imageSrc: webGLFluidEnhancedWebsitePhoto,
-    prodLink: 'https://michaelbrusegard.github.io/WebGL-Fluid-Enhanced/',
-    srcLink: 'https://github.com/michaelbrusegard/WebGL-Fluid-Enhanced/',
+    imageSrc: webGLFluidEnhancedWebsite,
+    prodLink: 'https://webgl-fluid-enhanced.michaelbrusegard.com/play',
+    srcLink: 'https://github.com/michaelbrusegard/WebGL-Fluid-Enhanced',
   },
   {
     name: 'Hackerspace NTNU',
@@ -206,37 +207,37 @@ const projects = [
       {
         name: 'HTML',
         Icon: Html,
-        link: 'https://developer.mozilla.org/docs/Web/HTML/',
+        link: 'https://developer.mozilla.org/docs/Web/HTML',
       },
       {
         name: 'CSS',
         Icon: Css,
-        link: 'https://developer.mozilla.org/docs/Web/CSS/',
+        link: 'https://developer.mozilla.org/docs/Web/CSS',
       },
       {
         name: 'JavaScript',
         Icon: JavaScript,
-        link: 'https://developer.mozilla.org/docs/Web/javascript/',
+        link: 'https://developer.mozilla.org/docs/Web/javascript',
       },
       {
         name: 'TypeScript',
         Icon: TypeScript,
-        link: 'https://www.typescriptlang.org/',
+        link: 'https://www.typescriptlang.org',
       },
       {
         name: 'Python',
         Icon: Python,
-        link: 'https://www.python.org/',
+        link: 'https://www.python.org',
       },
       {
         name: 'Django',
         Icon: Django,
-        link: 'https://www.djangoproject.com/',
+        link: 'https://www.djangoproject.com',
       },
     ],
-    imageSrc: hackerspaceWebsitePhoto,
-    prodLink: 'https://www.hackerspace-ntnu.no/',
-    srcLink: 'https://github.com/hackerspace-ntnu/website/',
+    imageSrc: hackerspaceWebsite,
+    prodLink: 'https://www.hackerspace-ntnu.no',
+    srcLink: 'https://github.com/hackerspace-ntnu/website',
   },
 ];
 
@@ -246,19 +247,22 @@ const testimonials = [
       "Honestly, it's the nicest website I've seen and I mean it.....I don't know how to thank you!? I'll be back with some more feedback and some questions tomorrow, but as I said, I'm very impressed with what you've come up with 🙂 !",
     name: 'Niclas Nordlund',
     designation: 'Freelance photographer at Niclas Nordlund Photography',
-    image: niclasNordlund,
-    phone: '+358400193300',
-    mail: 'nic.nord@hotmail.com',
+    imageSrc: niclasNordlund,
   },
   {
     testimonial:
-      'Currently aliasing ‘nano’ to ‘sudo rm -rf / —no-preserve-root’',
+      'Currently aliasing ‘nano’ to ‘sudo rm -rf / —no-preserve-root’. Based.',
     name: 'Carl Johan Güzkow',
     designation:
       'Deputy Commander at Hackerspace NTNU, Co-Founder and Backend Developer at EI Solutions',
-    image: carlJohanGuzkow,
-    phone: '+4741623507',
-    mail: 'cjgutzkow@gmail.com',
+    imageSrc: carlJohanGuzkow,
+  },
+  {
+    testimonial:
+      "Michael quickly got up to speed with our Angular solution despite little prior experience. He's eager to learn and passionate about technology, which helps greatly when learning new things. A curious young man with a love for the craft and great potential to become a skilled developer.",
+    name: 'Magnus Lianes',
+    designation: 'Senior IT Developer and Tech Lead at Sticos Reconciliation',
+    imageSrc: magnusLianes,
   },
 ];
 
@@ -266,22 +270,22 @@ const techUsed = [
   {
     name: 'CSS',
     Icon: Css,
-    link: 'https://developer.mozilla.org/docs/Web/CSS/',
+    link: 'https://developer.mozilla.org/docs/Web/CSS',
   },
   {
     name: 'Tailwind CSS',
     Icon: Tailwind,
-    link: 'https://tailwindcss.com/',
+    link: 'https://tailwindcss.com',
   },
   {
     name: 'TypeScript',
     Icon: TypeScript,
-    link: 'https://www.typescriptlang.org/',
+    link: 'https://www.typescriptlang.org',
   },
   {
     name: 'React',
     Icon: React,
-    link: 'https://react.dev/',
+    link: 'https://react.dev',
   },
   {
     name: 'Motion',
@@ -291,12 +295,12 @@ const techUsed = [
   {
     name: 'Three.js',
     Icon: Three,
-    link: 'https://threejs.org/',
+    link: 'https://threejs.org',
   },
   {
     name: 'Next.js',
     Icon: Next,
-    link: 'https://nextjs.org/',
+    link: 'https://nextjs.org',
   },
   {
     name: 'Docker',

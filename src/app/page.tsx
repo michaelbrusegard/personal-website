@@ -3,8 +3,8 @@
 import { Hero } from '@/components/sections/hero/Hero';
 import { About } from '@/components/sections/about/About';
 import { Experience } from '@/components/sections/experience/Experience';
-import { Works } from '@/components/sections/works/Works';
-import Feedbacks from '../components/feedbacks';
+import { Work } from '@/components/sections/work/Work';
+import { Feedback } from '@/components/sections/feedback/Feedback';
 import Contact from '../components/contact';
 import StarsCanvas from '../components/stars';
 
@@ -14,8 +14,8 @@ export default function Page() {
       <Hero />
       <About />
       <Experience />
-      <Works />
-      <Feedbacks />
+      <Work />
+      <Feedback />
       {/* <div className='relative z-0'> */}
       {/*   <Contact /> */}
       {/*   <StarsCanvas /> */}

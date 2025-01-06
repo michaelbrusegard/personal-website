@@ -2,9 +2,9 @@ import { m } from 'motion/react';
 import { SectionHOC } from '@/components/layout/SectionHOC';
 import { projects } from '@/constants';
 import { fadeIn, textVariant } from '@/utils/motion';
-import { ProjectCard } from '@/components/sections/works/ProjectCard';
+import { ProjectCard } from '@/components/sections/work/ProjectCard';
 
-function WorksSection() {
+function WorkSection() {
   return (
     <>
       <m.div variants={textVariant()}>
@@ -37,6 +37,6 @@ function WorksSection() {
   );
 }
 
-const Works = SectionHOC(WorksSection, 'projects');
+const Work = SectionHOC(WorkSection, 'projects');
 
-export { Works };
+export { Work };

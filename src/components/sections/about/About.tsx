@@ -21,7 +21,7 @@ function AboutSection() {
       >
         I am currently most experienced in web development and prefer working
         full-stack where I can have a complete understanding of the whole
-        project. My primary expertise lise in the React ecosystem, but I have
+        project. My primary expertise lies in the React ecosystem, but I have
         also worked with Angular, Django and Spring Boot. In native development,
         I am particularly enthusiastic about React Native and I have used
         Jetpack Compose for Android development during my Bachelor&apos;s
