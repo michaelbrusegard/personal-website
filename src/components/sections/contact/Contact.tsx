@@ -2,6 +2,7 @@ import { m } from 'motion/react';
 import { SectionHOC } from '@/components/layout/SectionHOC';
 import { slideIn } from '@/utils/motion';
 import { DogCanvas } from '@/components/sections/contact/DogCanvas';
+import { StarsCanvas } from '@/components/sections/contact/StarsCanvas';
 
 function ContactSection() {
   return (
@@ -84,6 +85,7 @@ function Contact() {
   return (
     <div className='relative z-0'>
       <WrappedContact />
+      <StarsCanvas />
     </div>
   );
 }

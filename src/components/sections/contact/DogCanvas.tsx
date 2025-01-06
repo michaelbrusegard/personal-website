@@ -1,6 +1,14 @@
-import { useEffect, useState } from 'react';
+'use client';
+
+import { Suspense, useEffect, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { useGLTF, Preload, OrbitControls } from '@react-three/drei';
+import {
+  useGLTF,
+  Preload,
+  OrbitControls,
+  Html,
+  useProgress,
+} from '@react-three/drei';
 
 useGLTF.preload('/models/dog.glb');
 
@@ -8,13 +16,13 @@ function Model() {
   const { scene } = useGLTF('/models/dog.glb');
   const [scale, setScale] = useState(1.15);
 
-  const updateScale = () => {
+  function updateScale() {
     if (window.innerWidth >= 1280) {
       setScale(1.15);
     } else {
       setScale(1.5);
     }
-  };
+  }
 
   useEffect(() => {
     updateScale();
@@ -23,8 +31,20 @@ function Model() {
       window.removeEventListener('resize', updateScale);
     };
   }, []);
+
   return (
     <primitive object={scene} scale={scale} position-y={0} rotation-y={0} />
+  );
+}
+
+function LoadingScreen() {
+  const { progress } = useProgress();
+  return (
+    <Html center>
+      <p className='rounded-xl bg-secondary px-1 pt-[1px]'>
+        {Math.round(progress)}%
+      </p>
+    </Html>
   );
 }
 
@@ -39,11 +59,12 @@ function DogCanvas() {
         maxPolarAngle={Math.PI / 4}
         minPolarAngle={Math.PI / 4}
       />
-      <ambientLight intensity={0.5} />
       <pointLight position={[15, 10, 15]} intensity={1.5} />
       <pointLight position={[-15, 10, -15]} intensity={1.5} />
       <pointLight position={[-15, 0, 0]} intensity={1.5} />
-      <Model />
+      <Suspense fallback={<LoadingScreen />}>
+        <Model />
+      </Suspense>
       <Preload all />
     </Canvas>
   );
