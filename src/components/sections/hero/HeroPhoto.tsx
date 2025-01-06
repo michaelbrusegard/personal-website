@@ -4,8 +4,6 @@ import '@/styles/hero-photo.css';
 import { useRef } from 'react';
 import Image from 'next/image';
 import { m } from 'motion/react';
-import heroImage from '../../../../public/photos/hero/hero.png';
-import heroDraw from '../../../../public/photos/hero/draw.png';
 import { useSimulation } from '@/components/providers/SimulationProvider';
 
 const drawVariants = {
@@ -74,7 +72,7 @@ function HeroPhoto() {
       <Image
         className='hero-image absolute bottom-0 h-[60%] w-full object-contain sm:h-[75%]'
         ref={heroImageRef}
-        src={heroImage}
+        src='/photos/hero/hero.png'
         width={1813}
         height={2468}
         alt='Photo of Michael'
@@ -84,7 +82,7 @@ function HeroPhoto() {
       <div
         ref={heroDrawRef}
         className='hero-draw absolute bottom-0 h-[60%] w-full bg-foreground object-contain sm:h-[75%]'
-        style={{ maskImage: `url(${heroDraw.src})` }}
+        style={{ maskImage: 'url(/photos/hero/draw.png)' }}
       />
     </div>
   );
