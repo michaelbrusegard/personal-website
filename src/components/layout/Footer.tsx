@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { techUsed } from '@/constants';
 import { GitHubLinkIcon } from '@/components/assets/GitHubLinkIcon';
 
@@ -11,26 +10,18 @@ function Footer() {
       <div className='flex flex-col items-center xs:flex-row'>
         Made with
         <div className='ml-3 mt-2 flex gap-2 text-[17px] xs:mt-0'>
-          {techUsed.map((icon) => (
-            <div
-              key={icon.name}
-              className='h-6 w-6 cursor-pointer transition-transform hover:scale-110 focus-visible:scale-110'
-              tabIndex={0}
-              onClick={() => window.open(icon.link, '_blank')}
-              onKeyDown={(event) => {
-                if (event.key === 'Enter') {
-                  window.open(icon.link, '_blank');
-                }
-              }}
+          {techUsed.map(({ name, Icon, link }) => (
+            <Link
+              className='rounded-md outline-2 outline-offset-2 outline-primary/60 transition-transform hover:scale-110 focus-visible:outline'
+              key={name}
+              href={link}
+              target='_blank'
+              rel='noreferrer'
+              aria-label={`Open link to ${name}`}
+              title={`Open link to ${name}`}
             >
-              <Image
-                src={icon.icon}
-                alt={icon.name}
-                className='object-contain'
-                width={32}
-                height={32}
-              />
-            </div>
+              <Icon className='h-6 w-6' aria-hidden='true' />
+            </Link>
           ))}
         </div>
         <span className='ml-3 mt-2 xs:mt-0'>&amp; lots of ❤️ !</span>

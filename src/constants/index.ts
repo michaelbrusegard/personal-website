@@ -5,15 +5,6 @@ import hackerspaceWebsitePhoto from '../../public/photos/projects/hackerspace-nt
 import niclasNordlund from '../../public/photos/people/niclasNordlund.jpg';
 import carlJohanGuzkow from '../../public/photos/people/carlJohanGuzkow.jpg';
 
-import typescript from '../../public/icons/tech/typescript.svg';
-import css from '../../public/icons/tech/css.svg';
-import tailwindcss from '../../public/icons/tech/tailwindcss.svg';
-import react from '../../public/icons/tech/react.svg';
-import framermotion from '../../public/icons/tech/framermotion.svg';
-import threejs from '../../public/icons/tech/threejs.svg';
-import nextjs from '../../public/icons/tech/nextjs.svg';
-import github from '../../public/icons/tech/github.svg';
-
 import {
   Html,
   Java,
@@ -28,6 +19,12 @@ import {
   Stripe,
   Vite,
   Django,
+  Tailwind,
+  React,
+  Motion,
+  Docker,
+  Three,
+  Next,
 } from '@/constants/tech-icons';
 import { Biltema, Hydro, Hackerspace, Niclas } from '@/constants/company-logos';
 
@@ -268,43 +265,43 @@ const testimonials = [
 const techUsed = [
   {
     name: 'CSS',
-    icon: css,
+    Icon: Css,
     link: 'https://developer.mozilla.org/docs/Web/CSS/',
   },
   {
     name: 'Tailwind CSS',
-    icon: tailwindcss,
+    Icon: Tailwind,
     link: 'https://tailwindcss.com/',
   },
   {
     name: 'TypeScript',
-    icon: typescript,
+    Icon: TypeScript,
     link: 'https://www.typescriptlang.org/',
   },
   {
     name: 'React',
-    icon: react,
+    Icon: React,
     link: 'https://react.dev/',
   },
   {
-    name: 'Framer Motion',
-    icon: framermotion,
-    link: 'https://www.framer.com/motion/',
+    name: 'Motion',
+    Icon: Motion,
+    link: 'https://motion.dev/docs',
   },
   {
     name: 'Three.js',
-    icon: threejs,
+    Icon: Three,
     link: 'https://threejs.org/',
   },
   {
     name: 'Next.js',
-    icon: nextjs,
+    Icon: Next,
     link: 'https://nextjs.org/',
   },
   {
-    name: 'GitHub',
-    icon: github,
-    link: 'https://docs.github.com/',
+    name: 'Docker',
+    Icon: Docker,
+    link: 'https://docs.docker.com',
   },
 ];
 
