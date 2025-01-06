@@ -8,6 +8,9 @@ next-env.d.ts
 # misc
 .DS_Store
 
+# local env files
+.env
+
 # typescript
 *.tsbuildinfo
 
