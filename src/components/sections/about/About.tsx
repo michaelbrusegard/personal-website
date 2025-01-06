@@ -19,19 +19,18 @@ function AboutSection() {
         variants={fadeIn('', '', 0.1, 1)}
         className='mt-4 max-w-3xl text-[17px] leading-[30px]'
       >
-        I am currently most experienced in web development and prefer working as
-        a full-stack developer for a complete understanding of the whole
+        I am currently most experienced in web development and prefer working
+        full-stack where I can have a complete understanding of the whole
         project. My primary expertise lise in the React ecosystem, but I have
         also worked with Angular, Django and Spring Boot. In native development,
-        I am particularly enthusiastic about React Native and have implemented
-        solutions building with Jetpack Compose for Android during my
-        Bachelor&apos;s thesis. I also have experience accross major cloud
-        platforms like AWS, Azure and GCP, but prefer using Virtual Private
-        Servers where I have more control over the environment and the cost. I
-        am always looking to improve my skills, and right now I am working on
-        improving my algorithms programming and learning Rust. Addintionally I
-        am looking into getting better at graphics programming and shader
-        programming.
+        I am particularly enthusiastic about React Native and I have used
+        Jetpack Compose for Android development during my Bachelor&apos;s
+        thesis. I also have experience accross major cloud platforms like AWS,
+        Azure and GCP, but prefer using Virtual Private Servers where I have
+        more control over the environment and the cost. I am always looking to
+        improve my skills, and right now I am working on improving my algorithms
+        programming and learning Rust. Addintionally I am looking into getting
+        better at graphics programming and shader programming.
       </m.p>
 
       <div className='mt-20 flex select-none flex-wrap gap-10'>

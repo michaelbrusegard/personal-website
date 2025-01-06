@@ -33,10 +33,11 @@ function SkillsCard({ index, title, tech }: SkillsCardProps) {
           {tech.map(({ name, link, Icon }) => (
             <Link
               key={name}
-              className='flex cursor-pointer items-center rounded-md outline-2 outline-offset-2 outline-primary/60 transition-transform hover:scale-110 focus-visible:outline'
+              className='flex items-center rounded-md outline-2 outline-offset-2 outline-primary/60 transition-transform hover:scale-110 focus-visible:outline'
               target='_blank'
               rel='noreferrer'
               href={link}
+              aria-label={`Open link to ${name}`}
             >
               <Icon className='h-6 w-6' aria-hidden='true' />
               <span className='ml-2 py-1 font-sf-mono text-sm font-medium'>

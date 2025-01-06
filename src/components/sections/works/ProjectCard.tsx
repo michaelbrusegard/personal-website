@@ -2,24 +2,32 @@ import Tilt from 'react-parallax-tilt';
 import { m } from 'motion/react';
 import { fadeIn } from '@/utils/motion';
 import Image, { StaticImageData } from 'next/image';
+import Link from 'next/link';
+
+type ProjectCardProps = {
+  index: number;
+  name: string;
+  description: string;
+  techstack: {
+    name: string;
+    Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+
+    link: string;
+  }[];
+  imageSrc: StaticImageData;
+  prodLink: string;
+  srcLink: string;
+};
 
 function ProjectCard({
   index,
   name,
   description,
   techstack,
-  image,
+  imageSrc,
   prodLink,
   srcLink,
-}: {
-  index: number;
-  name: string;
-  description: string;
-  techstack: { name: string; icon: StaticImageData; link: string }[];
-  image: StaticImageData;
-  prodLink: string;
-  srcLink: string;
-}) {
+}: ProjectCardProps) {
   return (
     <m.div variants={fadeIn('up', 'spring', index * 0.5, 1)}>
       <Tilt
@@ -33,45 +41,37 @@ function ProjectCard({
         tiltMaxAngleX={7}
         tiltMaxAngleY={7}
       >
-        <div
-          className='relative h-60 w-full max-w-[576px] flex-shrink-0 cursor-pointer overflow-hidden rounded-2xl shadow-card xs:h-80'
-          tabIndex={0}
-          onClick={() => window.open(prodLink, '_blank')}
-          onKeyDown={(event) => {
-            if (event.key === 'Enter') {
-              window.open(prodLink, '_blank');
-            }
-          }}
+        <Link
+          className='relative h-60 w-full max-w-[576px] flex-shrink-0 overflow-hidden rounded-2xl shadow-card outline-2 outline-offset-2 outline-primary/60 transition-transform focus-visible:outline xs:h-80'
+          href={prodLink}
+          target='_blank'
+          rel='noreferrer'
+          title={`Open the production link for ${name}`}
+          aria-label={`Open the production link for ${name}`}
         >
           <Image
-            src={image}
+            src={imageSrc}
             alt={name}
             className='h-auto w-full object-cover transition-transform duration-[2000ms] hover:-translate-y-[calc(100%-320px)] hover:duration-[8000ms]'
           />
-        </div>
+        </Link>
 
         <div className='px-2 py-5 text-center lg:px-5 lg:py-2 xl:px-10 xl:py-8'>
-          <h3 className='text-[24px] font-bold'>{name}</h3>
+          <h3 className='font-sf-pro-display text-[24px] font-bold'>{name}</h3>
           <p className='mt-2 text-[17px] opacity-75'>{description}</p>
           <div className='mt-3 flex flex-wrap justify-center gap-2'>
-            {techstack.map((icon) => (
-              <div
-                key={icon.name}
-                className='h-6 w-6 cursor-pointer transition-transform hover:scale-110 focus-visible:scale-110'
-                tabIndex={0}
-                onClick={() => window.open(icon.link, '_blank')}
-                onKeyDown={(event) => {
-                  if (event.key === 'Enter') {
-                    window.open(icon.link, '_blank');
-                  }
-                }}
+            {techstack.map(({ name, Icon, link }) => (
+              <Link
+                className='rounded-md outline-2 outline-offset-2 outline-primary/60 transition-transform hover:scale-110 focus-visible:outline'
+                key={name}
+                href={link}
+                target='_blank'
+                rel='noreferrer'
+                aria-label={`Open link to ${name}`}
+                title={`Open link to ${name}`}
               >
-                <Image
-                  src={icon.icon}
-                  alt={icon.name}
-                  className='object-contain'
-                />
-              </div>
+                <Icon className='h-6 w-6' aria-hidden='true' />
+              </Link>
             ))}
           </div>
           <div className='mt-4 flex flex-row justify-center gap-9 text-[18px] font-medium'>

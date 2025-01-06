@@ -5,23 +5,14 @@ import hackerspaceWebsitePhoto from '../../public/photos/projects/hackerspace-nt
 import niclasNordlund from '../../public/photos/people/niclasNordlund.jpg';
 import carlJohanGuzkow from '../../public/photos/people/carlJohanGuzkow.jpg';
 
-import html from '../../public/icons/tech/html.svg';
-import javascript from '../../public/icons/tech/javascript.svg';
 import typescript from '../../public/icons/tech/typescript.svg';
-import python from '../../public/icons/tech/python.svg';
 import css from '../../public/icons/tech/css.svg';
 import tailwindcss from '../../public/icons/tech/tailwindcss.svg';
 import react from '../../public/icons/tech/react.svg';
-import vite from '../../public/icons/tech/vite.svg';
 import framermotion from '../../public/icons/tech/framermotion.svg';
 import threejs from '../../public/icons/tech/threejs.svg';
-import expressjs from '../../public/icons/tech/expressjs.svg';
-import django from '../../public/icons/tech/django.svg';
 import nextjs from '../../public/icons/tech/nextjs.svg';
-import googlecloudplatform from '../../public/icons/tech/googlecloudplatform.svg';
-import docker from '../../public/icons/tech/docker.svg';
 import github from '../../public/icons/tech/github.svg';
-import stripe from '../../public/icons/tech/stripe.svg';
 
 import {
   Html,
@@ -32,10 +23,15 @@ import {
   Css,
   Lua,
   Rust,
-} from '@/constants/skills/languages';
-import { Biltema, Hydro, Hackerspace, Niclas } from '@/constants/positions';
+  Express,
+  Gcp,
+  Stripe,
+  Vite,
+  Django,
+} from '@/constants/tech-icons';
+import { Biltema, Hydro, Hackerspace, Niclas } from '@/constants/company-logos';
 
-export const skills = [
+const skills = [
   {
     title: 'LANGUAGES',
     tech: [
@@ -83,7 +79,7 @@ export const skills = [
   },
 ];
 
-export const positions = [
+const positions = [
   {
     title: 'DevOps Deputy Manager',
     companyName: 'Hackerspace NTNU',
@@ -134,7 +130,7 @@ export const positions = [
   },
 ];
 
-export const projects = [
+const projects = [
   {
     name: 'Niclas Nordlund Photography',
     description:
@@ -142,36 +138,36 @@ export const projects = [
     techstack: [
       {
         name: 'HTML',
-        icon: html,
+        Icon: Html,
         link: 'https://developer.mozilla.org/docs/Web/HTML/',
       },
       {
         name: 'CSS',
-        icon: css,
+        Icon: Css,
         link: 'https://developer.mozilla.org/docs/Web/CSS/',
       },
       {
         name: 'JavaScript',
-        icon: javascript,
+        Icon: JavaScript,
         link: 'https://developer.mozilla.org/docs/Web/javascript/',
       },
       {
         name: 'Express.js',
-        icon: expressjs,
+        Icon: Express,
         link: 'https://expressjs.com/',
       },
       {
         name: 'Google Cloud Platform',
-        icon: googlecloudplatform,
+        Icon: Gcp,
         link: 'https://cloud.google.com/',
       },
       {
         name: 'Stripe',
-        icon: stripe,
+        Icon: Stripe,
         link: 'https://stripe.com/',
       },
     ],
-    image: niclasWebsitePhoto,
+    imageSrc: niclasWebsitePhoto,
     prodLink: 'https://www.niclasnordlund.com/',
     srcLink: 'https://github.com/michaelbrusegard/NiclasNordlundPhotography/',
   },
@@ -182,26 +178,26 @@ export const projects = [
     techstack: [
       {
         name: 'HTML',
-        icon: html,
+        Icon: Html,
         link: 'https://developer.mozilla.org/docs/Web/HTML/',
       },
       {
         name: 'CSS',
-        icon: css,
+        Icon: Css,
         link: 'https://developer.mozilla.org/docs/Web/CSS/',
       },
       {
-        name: 'JavaScript',
-        icon: javascript,
-        link: 'https://developer.mozilla.org/docs/Web/javascript/',
+        name: 'TypeScript',
+        Icon: TypeScript,
+        link: 'https://www.typescriptlang.org/',
       },
       {
         name: 'Vite',
-        icon: vite,
+        Icon: Vite,
         link: 'https://vitejs.dev/',
       },
     ],
-    image: webGLFluidEnhancedWebsitePhoto,
+    imageSrc: webGLFluidEnhancedWebsitePhoto,
     prodLink: 'https://michaelbrusegard.github.io/WebGL-Fluid-Enhanced/',
     srcLink: 'https://github.com/michaelbrusegard/WebGL-Fluid-Enhanced/',
   },
@@ -212,47 +208,42 @@ export const projects = [
     techstack: [
       {
         name: 'HTML',
-        icon: html,
+        Icon: Html,
         link: 'https://developer.mozilla.org/docs/Web/HTML/',
       },
       {
         name: 'CSS',
-        icon: css,
+        Icon: Css,
         link: 'https://developer.mozilla.org/docs/Web/CSS/',
       },
       {
         name: 'JavaScript',
-        icon: javascript,
+        Icon: JavaScript,
         link: 'https://developer.mozilla.org/docs/Web/javascript/',
       },
       {
         name: 'TypeScript',
-        icon: typescript,
+        Icon: TypeScript,
         link: 'https://www.typescriptlang.org/',
       },
       {
         name: 'Python',
-        icon: python,
+        Icon: Python,
         link: 'https://www.python.org/',
       },
       {
         name: 'Django',
-        icon: django,
+        Icon: Django,
         link: 'https://www.djangoproject.com/',
       },
-      {
-        name: 'Docker',
-        icon: docker,
-        link: 'https://www.docker.com/',
-      },
     ],
-    image: hackerspaceWebsitePhoto,
+    imageSrc: hackerspaceWebsitePhoto,
     prodLink: 'https://www.hackerspace-ntnu.no/',
     srcLink: 'https://github.com/hackerspace-ntnu/website/',
   },
 ];
 
-export const testimonials = [
+const testimonials = [
   {
     testimonial:
       "Honestly, it's the nicest website I've seen and I mean it.....I don't know how to thank you!? I'll be back with some more feedback and some questions tomorrow, but as I said, I'm very impressed with what you've come up with 🙂 !",
@@ -274,7 +265,7 @@ export const testimonials = [
   },
 ];
 
-export const techUsed = [
+const techUsed = [
   {
     name: 'CSS',
     icon: css,
@@ -316,3 +307,5 @@ export const techUsed = [
     link: 'https://docs.github.com/',
   },
 ];
+
+export { skills, positions, projects, testimonials, techUsed };
