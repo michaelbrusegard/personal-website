@@ -251,6 +251,11 @@ const projects = [
         link: 'https://orm.drizzle.team',
       },
       {
+        name: 'tRPC',
+        Icon: Trpc,
+        link: 'https://trpc.io',
+      },
+      {
         name: 'PostgreSQL',
         Icon: Postgres,
         link: 'https://www.postgresql.org',
@@ -309,7 +314,7 @@ const projects = [
     ],
     imageSrc: '/photos/projects/vector-globe.jpg',
     prodLink: '',
-    srcLink: 'https://github.com/michaelbrusegard/NiclasNordlundPhotography',
+    srcLink: 'https://github.com/michaelbrusegard/vector-globe',
   },
   {
     name: 'GlobeHub',
@@ -330,11 +335,6 @@ const projects = [
         name: 'Next.js',
         Icon: Next,
         link: 'https://nextjs.org',
-      },
-      {
-        name: 'tRPC',
-        Icon: Trpc,
-        link: 'https://trpc.io',
       },
       {
         name: 'PostgreSQL',

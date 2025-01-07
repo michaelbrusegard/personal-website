@@ -65,6 +65,8 @@ function ProjectCard({
             src={imageSrc}
             alt={name}
             className='h-auto w-full object-cover transition-transform duration-[2000ms] hover:-translate-y-[calc(100%-320px)] hover:duration-[8000ms]'
+            width={576}
+            height={320}
           />
         </Link>
 
