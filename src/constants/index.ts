@@ -25,6 +25,7 @@ import {
   DrizzleOrm,
   Trpc,
   Sql,
+  Kotlin,
 } from '@/constants/tech-icons';
 
 import {
@@ -74,6 +75,11 @@ const skills = [
         name: 'SQL',
         Icon: Sql,
         link: 'https://en.wikipedia.org/wiki/SQL',
+      },
+      {
+        name: 'Kotlin',
+        Icon: Kotlin,
+        link: 'https://kotlinlang.org',
       },
       {
         name: 'Lua',
@@ -214,6 +220,11 @@ const projects = [
         Icon: Docker,
         link: 'https://docs.docker.com',
       },
+      {
+        name: 'Stripe',
+        Icon: Stripe,
+        link: 'https://stripe.com',
+      },
     ],
     imageSrc: '/photos/projects/lektr.jpg',
     prodLink: 'https://lektr.michaelbrusegard.com/project2/en',
@@ -242,7 +253,7 @@ const projects = [
   {
     name: 'New Hackerspace NTNU Website (WiP)',
     description:
-      'The new hackerspace website is a complete rewrite of the old website. It is built with Next.js, tRPC, Tailwind CSS++. The goal is a code base that is easy to maintain and introduce beginners too.',
+      'The new hackerspace website is a complete rewrite of the old website. It is built with Next.js, tRPC, Tailwind, etc.. The goal is a code base that is easy to maintain and introduce beginners too.',
     techstack: [
       {
         name: 'TypeScript',
@@ -294,6 +305,11 @@ const projects = [
     description:
       'Open Emoji Platform is an app for finding emojis and a first draft of the eventual emojipedia app. It has built in emoji guessing games, user customizable emoji sequences, favorites, news, events and more.',
     techstack: [
+      {
+        name: 'Kotlin',
+        Icon: Kotlin,
+        link: 'https://kotlinlang.org',
+      },
       {
         name: 'Jetpack Compose',
         Icon: JetpackCompose,
@@ -364,6 +380,11 @@ const projects = [
         name: 'Next.js',
         Icon: Next,
         link: 'https://nextjs.org',
+      },
+      {
+        name: 'SQL',
+        Icon: Sql,
+        link: 'https://en.wikipedia.org/wiki/SQL',
       },
       {
         name: 'PostgreSQL',

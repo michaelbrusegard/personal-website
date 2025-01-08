@@ -24,3 +24,4 @@ export * from './DrizzleOrm';
 export * from './Postgres';
 export * from './Trpc';
 export * from './Sql';
+export * from './Kotlin';
