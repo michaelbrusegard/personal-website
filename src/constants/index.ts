@@ -398,6 +398,11 @@ const projects = [
         link: 'https://www.postgresql.org',
       },
       {
+        name: 'Amazon Web Services',
+        Icon: Aws,
+        link: 'https://aws.amazon.com',
+      },
+      {
         name: 'Docker',
         Icon: Docker,
         link: 'https://docs.docker.com',
@@ -572,6 +577,11 @@ const projects = [
         name: 'PostgreSQL',
         Icon: Postgres,
         link: 'https://www.postgresql.org',
+      },
+      {
+        name: 'Amazon Web Services',
+        Icon: Aws,
+        link: 'https://aws.amazon.com',
       },
       {
         name: 'Docker',
