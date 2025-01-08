@@ -26,6 +26,18 @@ import {
   Trpc,
   Sql,
   Kotlin,
+  SpringBoot,
+  Angular,
+  MySql,
+  FireStore,
+  Sqlite,
+  Aws,
+  Nginx,
+  Azure,
+  AffinityDesigner,
+  AffinityPhoto,
+  Figma,
+  Neovim,
 } from '@/constants/tech-icons';
 
 import {
@@ -90,6 +102,176 @@ const skills = [
         name: 'Rust',
         Icon: Rust,
         link: 'https://www.rust-lang.org',
+      },
+    ],
+  },
+  {
+    title: 'FRAMEWORKS',
+    tech: [
+      {
+        name: 'React',
+        Icon: React,
+        link: 'https://react.dev',
+      },
+      {
+        name: 'Next.js',
+        Icon: Next,
+        link: 'https://nextjs.org',
+      },
+      {
+        name: 'Express',
+        Icon: Express,
+        link: 'https://expressjs.com',
+      },
+      {
+        name: 'Django',
+        Icon: Django,
+        link: 'https://www.djangoproject.com',
+      },
+      {
+        name: 'Springboot',
+        Icon: SpringBoot,
+        link: 'https://docs.spring.io/spring-boot/index.html',
+      },
+      {
+        name: 'Jetpack Compose',
+        Icon: JetpackCompose,
+        link: 'https://developer.android.com/compose',
+      },
+      {
+        name: 'Angular',
+        Icon: Angular,
+        link: 'https://angular.dev',
+      },
+    ],
+  },
+  {
+    title: 'DATABASES & API',
+    tech: [
+      {
+        name: 'PostgreSQL',
+        Icon: Postgres,
+        link: 'https://www.postgresql.org',
+      },
+      {
+        name: 'MySQL',
+        Icon: MySql,
+        link: 'https://www.mysql.com',
+      },
+      {
+        name: 'SQLite',
+        Icon: Sqlite,
+        link: 'https://www.sqlite.org/index.html',
+      },
+      {
+        name: 'Firestore',
+        Icon: FireStore,
+        link: 'https://firebase.google.com/docs/firestore',
+      },
+      {
+        name: 'Drizzle ORM',
+        Icon: DrizzleOrm,
+        link: 'https://orm.drizzle.team',
+      },
+      {
+        name: 'tRPC',
+        Icon: Trpc,
+        link: 'https://trpc.io',
+      },
+      {
+        name: 'GraphQL',
+        Icon: GraphQl,
+        link: 'https://graphql.org',
+      },
+    ],
+  },
+  {
+    title: 'INFRASTRUCTURE',
+    tech: [
+      {
+        name: 'Nginx',
+        Icon: Nginx,
+        link: 'https://nginx.org',
+      },
+      {
+        name: 'Docker',
+        Icon: Docker,
+        link: 'https://docs.docker.com',
+      },
+      {
+        name: 'Stripe',
+        Icon: Stripe,
+        link: 'https://stripe.com',
+      },
+      {
+        name: 'Google Cloud Platform',
+        Icon: Gcp,
+        link: 'https://cloud.google.com',
+      },
+      {
+        name: 'Amazon Web Services',
+        Icon: Aws,
+        link: 'https://aws.amazon.com',
+      },
+      {
+        name: 'Azure',
+        Icon: Azure,
+        link: 'https://azure.microsoft.com',
+      },
+      {
+        name: 'Vite',
+        Icon: Vite,
+        link: 'https://vitejs.dev',
+      },
+    ],
+  },
+  {
+    title: 'STYLING & UI',
+    tech: [
+      {
+        name: 'Tailwind CSS',
+        Icon: Tailwind,
+        link: 'https://tailwindcss.com',
+      },
+      {
+        name: 'Motion',
+        Icon: Motion,
+        link: 'https://motion.dev/docs',
+      },
+      {
+        name: 'Three.js',
+        Icon: Three,
+        link: 'https://threejs.org',
+      },
+    ],
+  },
+  {
+    title: 'TOOLS',
+    tech: [
+      {
+        name: 'WezTerm',
+        Icon: WezTerm,
+        link: 'https://wezfurlong.org/wezterm/index.html',
+      },
+      {
+        name: 'Neovim',
+        Icon: Neovim,
+        link: 'https://neovim.io',
+      },
+      {
+        name: 'Affinity Designer',
+        Icon: AffinityDesigner,
+        link: 'https://affinity.serif.com/designer',
+      },
+      {
+        name: 'Affinity Photo',
+        Icon: AffinityPhoto,
+        link: 'https://affinity.serif.com/photo',
+      },
+      {
+        name: 'Figma',
+        Icon: Figma,
+        link: 'https://www.figma.com',
       },
     ],
   },
