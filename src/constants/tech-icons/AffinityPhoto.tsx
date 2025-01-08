@@ -25,8 +25,8 @@ function AffinityPhoto({ ...props }: React.SVGProps<SVGSVGElement>) {
           gradientUnits='userSpaceOnUse'
           gradientTransform='matrix(259.563,0,0,259.562,185.757,-22.3146)'
         >
-          <stop offset='0' stopColor='#f9a6ff' stopOpacity='1' />
-          <stop offset='1' stopColor='#ea73ff' stopOpacity='1' />
+          <stop offset='0' stopColor='#f9a6ff' />
+          <stop offset='1' stopColor='#ea73ff' />
         </radialGradient>
       </defs>
     </svg>
