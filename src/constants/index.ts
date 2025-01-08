@@ -24,6 +24,7 @@ import {
   Postgres,
   DrizzleOrm,
   Trpc,
+  Sql,
 } from '@/constants/tech-icons';
 
 import {
@@ -70,6 +71,11 @@ const skills = [
         link: 'https://www.java.com',
       },
       {
+        name: 'SQL',
+        Icon: Sql,
+        link: 'https://en.wikipedia.org/wiki/SQL',
+      },
+      {
         name: 'Lua',
         Icon: Lua,
         link: 'https://www.lua.org',
@@ -103,26 +109,29 @@ const positions = [
     Icon: Zedge,
     date: 'Jan 2024 - May 2024',
     points: [
-      'Developing Open Emoji Platform - a comprehensive web application for discovering and managing emojis, serving as a foundation for Emojipedia.',
-      'Implementing core features including an advanced search system, interactive grid view, and emoji sequence creation tools.',
-      'Building responsive navigation components and user interface elements focusing on intuitive user experience.',
-      'Collaborating closely with Zedge stakeholders through daily SCRUM meetings and sprint planning to align development with business objectives.',
+      'Developing Open Emoji Platform - an Android application for discovering emojis, serving as a first draft for Emojipedia.',
+      'Implementing core features like a search system, interactive grid view and emoji sequence creation.',
+      'Building a navigation component and user interface elements focusing on an intuitive user experience.',
+      'Responsible for customer/client communication and communication with Zedge.',
+      'Daily SCRUM meetings and sprint planning to align development with business objectives.',
     ],
   },
   {
-    title: 'DevOps Deputy Manager',
+    title: 'DevOps Manager',
     companyName: 'Hackerspace NTNU',
     Icon: Hackerspace,
     date: 'Feb 2023 - Present',
     points: [
-      'Designing and managing web applications utilising JavaScript, Django, and other relevant technologies.',
       'Managing the DevOps team while fostering a culture of constructive feedback and continuous improvement.',
-      'Actively exploring and incorporating new features to enhance user experience.',
-      'Creating a typescript game  for the 404 error page.',
+      'Responsible for 7 linux servers and their services (Web, Docker Compose, Nginx reverse-proxy, workflow runners, translations, analytics, Minecraft and backup solutions)',
+      'Designing and managing the old web application utilising JavaScript, Django, and other technologies.',
+      'Participating in multiple weekly group meetings aswell as monthly organisational meetings.',
+      'Interviewing and onboarding new members to the DevOps group to expand the team and ensure a good fit.',
+      'Holding courses and teaching the team the tools we use.',
     ],
   },
   {
-    title: 'Full stack Developer',
+    title: 'Full-Stack Developer',
     companyName: 'Niclas Nordlund Photography',
     Icon: Niclas,
     date: 'Oct 2022 - Oct 2023',
@@ -134,7 +143,7 @@ const positions = [
     ],
   },
   {
-    title: 'Logistics summer substitute',
+    title: 'Logistics Summer Substitute',
     companyName: 'Hydro Aluminium',
     Icon: Hydro,
     date: 'Jun 2022 - Aug 2023',
@@ -146,7 +155,7 @@ const positions = [
     ],
   },
   {
-    title: 'Shop assistant',
+    title: 'Shop Assistant',
     companyName: 'Biltema',
     Icon: Biltema,
     date: 'Apr 2020 - Aug 2021',
@@ -174,6 +183,11 @@ const projects = [
         name: 'Tailwind CSS',
         Icon: Tailwind,
         link: 'https://tailwindcss.com',
+      },
+      {
+        name: 'React',
+        Icon: React,
+        link: 'https://react.dev',
       },
       {
         name: 'Next.js',
@@ -239,6 +253,11 @@ const projects = [
         name: 'Tailwind CSS',
         Icon: Tailwind,
         link: 'https://tailwindcss.com',
+      },
+      {
+        name: 'React',
+        Icon: React,
+        link: 'https://react.dev',
       },
       {
         name: 'Next.js',
@@ -307,6 +326,11 @@ const projects = [
         link: 'https://www.typescriptlang.org',
       },
       {
+        name: 'Three.js',
+        Icon: Three,
+        link: 'https://threejs.org',
+      },
+      {
         name: 'Vite',
         Icon: Vite,
         link: 'https://vitejs.dev',
@@ -330,6 +354,11 @@ const projects = [
         name: 'Tailwind CSS',
         Icon: Tailwind,
         link: 'https://tailwindcss.com',
+      },
+      {
+        name: 'React',
+        Icon: React,
+        link: 'https://react.dev',
       },
       {
         name: 'Next.js',
