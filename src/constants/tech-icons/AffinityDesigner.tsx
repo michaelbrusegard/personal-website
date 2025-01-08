@@ -25,8 +25,8 @@ function AffinityDesigner({ ...props }: React.SVGProps<SVGSVGElement>) {
           gradientUnits='userSpaceOnUse'
           gradientTransform='matrix(259.547,0,0,-259.547,185.854,-22.4529)'
         >
-          <stop offset='0' stopColor='#6be1fb' />
-          <stop offset='1' stopColor='#134881' />
+          <stop offset='0' stopColor='#6be1fb' stopOpacity='1' />
+          <stop offset='1' stopColor='#134881' stopOpacity='1' />
         </radialGradient>
       </defs>
     </svg>
