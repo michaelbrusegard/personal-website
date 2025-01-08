@@ -39,7 +39,7 @@ function ExperienceSection() {
         </h2>
       </m.div>
 
-      <div className='mt-20 flex flex-col'>
+      <div className='mt-20 flex flex-col overflow-hidden'>
         <VerticalTimeline lineColor='hsl(var(--accent))'>
           {positions.map((position, index) => (
             <WorkCard key={index} index={index} work={position} />
