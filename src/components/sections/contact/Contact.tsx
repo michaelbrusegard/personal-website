@@ -91,7 +91,7 @@ function Contact() {
   return (
     <div className='relative z-0'>
       <WrappedContact />
-      <StarsCanvas />
+      {/* <StarsCanvas /> */}
     </div>
   );
 }
