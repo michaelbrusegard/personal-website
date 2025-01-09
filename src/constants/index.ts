@@ -440,7 +440,7 @@ const projects = [
   {
     name: 'New Hackerspace NTNU Website (WiP)',
     description:
-      'The new hackerspace website is a complete rewrite of the old website. It is built with Next.js, tRPC, Tailwind, etc.. The goal is a code base that is easy to maintain and introduce beginners too.',
+      'The new hackerspace website is a complete rewrite of the old website. It is built with Next.js, tRPC, Tailwind, etc.. The goal is a code base that is easy to maintain and introduce beginners too. We integrate with many self-hosted services as well as external ones like Feide.',
     techstack: [
       {
         name: 'TypeScript',
