@@ -79,7 +79,7 @@ function ContactSection() {
         variants={slideIn('right', 'tween', 0.2, 1)}
         className='h-[350px] md:h-[550px] xl:h-auto xl:w-[550px] xl:flex-1'
       >
-        {/* <DogCanvas /> */}
+        <DogCanvas />
       </m.div>
     </div>
   );

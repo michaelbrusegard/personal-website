@@ -57,7 +57,7 @@ function AboutSection() {
         Azure and GCP, but prefer using Virtual Private Servers where I have
         more control over the environment and the cost. I am always looking to
         improve my skills, and right now I am working on improving my algorithms
-        programming and learning Rust. Addintionally I am looking into getting
+        programming and learning Rust. Additionally I am looking into getting
         better at graphics programming and shader programming.
       </m.p>
 
