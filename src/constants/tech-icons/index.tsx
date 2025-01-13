@@ -37,3 +37,4 @@ export * from './AffinityDesigner';
 export * from './AffinityPhoto';
 export * from './Figma';
 export * from './Neovim';
+export * from './JavaFx';

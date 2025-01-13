@@ -38,6 +38,7 @@ import {
   AffinityPhoto,
   Figma,
   Neovim,
+  JavaFx,
 } from '@/constants/tech-icons';
 
 import {
@@ -129,9 +130,14 @@ const skills = [
         link: 'https://www.djangoproject.com',
       },
       {
-        name: 'Springboot',
+        name: 'Spring Boot',
         Icon: SpringBoot,
         link: 'https://docs.spring.io/spring-boot/index.html',
+      },
+      {
+        name: 'JavaFX',
+        Icon: JavaFx,
+        link: 'https://openjfx.io',
       },
       {
         name: 'Jetpack Compose',
@@ -592,6 +598,31 @@ const projects = [
     imageSrc: '/photos/projects/globehub.jpg',
     prodLink: 'https://globehub.michaelbrusegard.com',
     srcLink: 'https://github.com/michaelbrusegard/Globehub',
+  },
+  {
+    name: 'Workout Planner',
+    description:
+      'A workout planner app made with JavaFX and Spring Boot. You can add exercices and sets, reorder exercices and save workouts on the backend.',
+    techstack: [
+      {
+        name: 'Java',
+        Icon: Java,
+        link: 'https://www.java.com',
+      },
+      {
+        name: 'Spring Boot',
+        Icon: SpringBoot,
+        link: 'https://docs.spring.io/spring-boot/index.html',
+      },
+      {
+        name: 'JavaFX',
+        Icon: JavaFx,
+        link: 'https://openjfx.io',
+      },
+    ],
+    imageSrc: '/photos/projects/workoutplanner.jpg',
+    prodLink: '',
+    srcLink: 'https://github.com/michaelbrusegard/WorkoutPlanner',
   },
   {
     name: 'Niclas Nordlund Photography',
