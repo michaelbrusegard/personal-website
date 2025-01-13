@@ -39,6 +39,7 @@ import {
   Figma,
   Neovim,
   JavaFx,
+  Maven,
 } from '@/constants/tech-icons';
 
 import {
@@ -618,6 +619,11 @@ const projects = [
         name: 'JavaFX',
         Icon: JavaFx,
         link: 'https://openjfx.io',
+      },
+      {
+        name: 'Maven',
+        Icon: Maven,
+        link: 'https://maven.apache.org',
       },
     ],
     imageSrc: '/photos/projects/workoutplanner.jpg',
