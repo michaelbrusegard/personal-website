@@ -3,6 +3,7 @@
 import { createContext, useContext, useEffect } from 'react';
 import { ThemeProvider as NextThemeProvider } from 'next-themes';
 import { useSimulation } from '@/components/providers/SimulationProvider';
+import { hslToHex, getCSSColorValue } from '@/utils/color';
 
 type ThemeContextType = {
   updateTheme: () => void;
@@ -34,16 +35,33 @@ function applyGradientColors() {
   }
 }
 
+function updateThemeColor() {
+  const backgroundColor = hslToHex(...getCSSColorValue('--background'));
+  const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+
+  if (!metaThemeColor) {
+    const meta = document.createElement('meta');
+    meta.name = 'theme-color';
+    document.head.appendChild(meta);
+  }
+
+  document
+    .querySelector('meta[name="theme-color"]')
+    ?.setAttribute('content', backgroundColor);
+}
+
 function ThemeProvider({ children }: { children: React.ReactNode }) {
   const { updateColorPalette } = useSimulation();
 
   function updateTheme() {
     updateColorPalette();
     applyGradientColors();
+    updateThemeColor();
   }
 
   useEffect(() => {
     applyGradientColors();
+    updateThemeColor();
   }, []);
 
   return (
