@@ -34,6 +34,11 @@ const rateLimiter = new RateLimiter<string>(5, 120);
 
 async function sendEmail(_: FormState, formData: FormData): Promise<FormState> {
   try {
+    const honeypot = formData.get('website') as string;
+    if (honeypot) {
+      return { success: true, message: 'Thank you for your message' };
+    }
+
     const headerStore = headers();
     const clientIp =
       headerStore.get('X-Real-IP') ??

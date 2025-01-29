@@ -24,6 +24,14 @@ function ContactSection() {
           Contact.
         </h2>
         <form className='mt-12 flex flex-col gap-8' action={formAction}>
+          <input
+            type='text'
+            name='website'
+            className='absolute left-[-9999px] hidden'
+            tabIndex={-1}
+            autoComplete='off'
+            aria-hidden='true'
+          />
           <label className='flex flex-col'>
             <span className='mb-4 font-medium'>Your Name</span>
             <input
