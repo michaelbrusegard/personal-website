@@ -35,7 +35,7 @@ function ProjectCard({
   return (
     <m.div variants={fadeIn('up', 'spring', index * 0.5, 1)}>
       <Tilt
-        className={`flex w-full max-w-[640px] flex-col rounded-2xl border-2 border-accent p-5 lg:max-w-none ${
+        className={`a flex w-full max-w-[640px] flex-col rounded-2xl border-2 border-accent p-5 lg:max-w-none ${
           (index + 1) % 2 === 0
             ? 'from-secondary to-background bg-gradient-45 lg:flex-row-reverse'
             : 'from-background to-secondary bg-gradient-135 lg:flex-row'
@@ -45,30 +45,34 @@ function ProjectCard({
         tiltMaxAngleX={7}
         tiltMaxAngleY={7}
       >
-        <Link
-          className='relative h-60 w-full max-w-[576px] flex-shrink-0 overflow-hidden rounded-2xl shadow-card outline-2 outline-offset-2 outline-primary/60 transition-transform focus-visible:outline xs:h-80'
-          href={prodLink ?? '#'}
-          target='_blank'
-          rel='noreferrer'
-          title={
-            prodLink
-              ? `Open the production link for ${name}`
-              : 'Live site not available'
-          }
-          aria-label={
-            prodLink
-              ? `Open the production link for ${name}`
-              : 'Live site not available'
-          }
-        >
-          <Image
-            src={imageSrc}
-            alt={name}
-            className='h-auto w-full object-cover transition-transform duration-[2000ms] hover:-translate-y-[calc(100%-320px)] hover:duration-[8000ms]'
-            width={576}
-            height={320}
-          />
-        </Link>
+        {prodLink ? (
+          <Link
+            className='relative h-60 w-full max-w-[576px] flex-shrink-0 overflow-hidden rounded-2xl shadow-card outline-2 outline-offset-2 outline-primary/60 transition-transform focus-visible:outline xs:h-80'
+            href={prodLink}
+            target='_blank'
+            rel='noreferrer'
+            title={`Open the production link for ${name}`}
+            aria-label={`Open the production link for ${name}`}
+          >
+            <Image
+              src={imageSrc}
+              alt={name}
+              className='h-auto w-full object-cover transition-transform duration-[2000ms] hover:-translate-y-[calc(100%-320px)] hover:duration-[8000ms]'
+              width={576}
+              height={320}
+            />
+          </Link>
+        ) : (
+          <div className='relative h-60 w-full max-w-[576px] flex-shrink-0 overflow-hidden rounded-2xl shadow-card xs:h-80'>
+            <Image
+              src={imageSrc}
+              alt={name}
+              className='h-auto w-full object-cover transition-transform duration-[2000ms] hover:-translate-y-[calc(100%-320px)] hover:duration-[8000ms]'
+              width={576}
+              height={320}
+            />
+          </div>
+        )}
 
         <div className='px-2 py-5 text-center lg:px-5 lg:py-2 xl:px-10 xl:py-8'>
           <h3 className='font-sf-pro-display text-[24px] font-bold'>{name}</h3>

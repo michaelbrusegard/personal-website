@@ -425,7 +425,7 @@ const projects = [
     srcLink: '',
   },
   {
-    name: 'Tabline',
+    name: 'Tabline.wez',
     description:
       'Tabline.wez is a versatile and easy to use tab-bar for the WezTerm terminal emulator, written in Lua. Tabline has an easy to use customisation and extensions API.',
     techstack: [
@@ -443,6 +443,26 @@ const projects = [
     imageSrc: '/photos/projects/tabline.jpg',
     prodLink: '',
     srcLink: 'https://github.com/michaelbrusegard/tabline.wez',
+  },
+  {
+    name: 'Sticos Reconciliation',
+    description:
+      "The reconciliation tool from Sticos manages reonciliation forms for wages, employer's national insurance contributions, holiday pay, value added tax, accruals, fixed assets, accrued expenses and more. I worked on the frontend creating automatic suggestions and automatically filling out fields to make the process faster.",
+    techstack: [
+      {
+        name: 'TypeScript',
+        Icon: TypeScript,
+        link: 'https://www.typescriptlang.org',
+      },
+      {
+        name: 'Angular',
+        Icon: Angular,
+        link: 'https://angular.dev',
+      },
+    ],
+    imageSrc: '/photos/projects/sticos-reconciliation.jpg',
+    prodLink: 'https://www.sticos.no/produkter/sticos-oversikt/avstemming',
+    srcLink: '',
   },
   {
     name: 'New Hackerspace NTNU Website (WiP)',
@@ -701,7 +721,7 @@ const projects = [
     srcLink: 'https://github.com/michaelbrusegard/WebGL-Fluid-Enhanced',
   },
   {
-    name: 'Hackerspace NTNU',
+    name: 'Hackerspace NTNU Website',
     description:
       'Web application that drives an arena for students to 3D-print, borrow tools or get help to realise any creative ideas. Providing a reservation system, inventory management, news, events and more. ',
     techstack: [
@@ -739,6 +759,26 @@ const projects = [
     imageSrc: '/photos/projects/hackerspace-ntnu.jpg',
     prodLink: 'https://www.hackerspace-ntnu.no',
     srcLink: 'https://github.com/hackerspace-ntnu/website',
+  },
+  {
+    name: 'Chinese Checkers',
+    description:
+      'Chinese Checkers board game programmed with JavaFX. Features saving/loading the gamestate from .chc files, highlighting legal moves and enforcing legal moves. ',
+    techstack: [
+      {
+        name: 'Java',
+        Icon: Java,
+        link: 'https://www.java.com',
+      },
+      {
+        name: 'JavaFX',
+        Icon: JavaFx,
+        link: 'https://openjfx.io',
+      },
+    ],
+    imageSrc: '/photos/projects/chinese-checkers.jpg',
+    prodLink: '',
+    srcLink: 'https://github.com/michaelbrusegard/ChineseCheckers',
   },
 ];
 
