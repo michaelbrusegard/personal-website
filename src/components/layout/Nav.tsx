@@ -32,7 +32,7 @@ function Nav({ isMobile = false, animate = 'show' }: NavProps) {
           transition={{ duration: 0.2 }}
         >
           <Link
-            className='rounded-md font-sf-mono font-medium outline-2 outline-offset-2 outline-primary/60 hover:text-primary focus-visible:outline'
+            className='rounded-md font-mono font-medium outline-2 outline-offset-2 outline-primary/60 hover:text-primary focus-visible:outline'
             href='#about'
             role='menuitem'
             aria-label='Navigate to about section'
@@ -50,7 +50,7 @@ function Nav({ isMobile = false, animate = 'show' }: NavProps) {
           transition={{ duration: 0.2 }}
         >
           <Link
-            className='rounded-md font-sf-mono font-medium outline-2 outline-offset-2 outline-primary/60 hover:text-primary focus-visible:outline'
+            className='rounded-md font-mono font-medium outline-2 outline-offset-2 outline-primary/60 hover:text-primary focus-visible:outline'
             href='#work'
             role='menuitem'
             aria-label='Navigate to work section'
@@ -68,7 +68,7 @@ function Nav({ isMobile = false, animate = 'show' }: NavProps) {
           transition={{ duration: 0.2 }}
         >
           <Link
-            className='rounded-md font-sf-mono font-medium outline-2 outline-offset-2 outline-primary/60 hover:text-primary focus-visible:outline'
+            className='rounded-md font-mono font-medium outline-2 outline-offset-2 outline-primary/60 hover:text-primary focus-visible:outline'
             href='#contact'
             role='menuitem'
             aria-label='Navigate to contact section'

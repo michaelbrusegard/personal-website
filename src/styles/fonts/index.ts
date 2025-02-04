@@ -1,50 +1,50 @@
 import localFont from 'next/font/local';
 
 const sfProDisplay = localFont({
-  variable: '--font-sf-pro-display',
+  variable: '--font-display',
   src: [
     {
-      path: './SF-Pro-Display-Regular.woff2',
+      path: './display-regular.woff2',
       weight: '400',
     },
     {
-      path: './SF-Pro-Display-Semibold.woff2',
+      path: './display-semibold.woff2',
       weight: '600',
     },
     {
-      path: './SF-Pro-Display-Heavy.woff2',
+      path: './display-heavy.woff2',
       weight: '800',
     },
     {
-      path: './SF-Pro-Display-Black.woff2',
+      path: './display-black.woff2',
       weight: '900',
     },
   ],
 });
 
 const sfProText = localFont({
-  variable: '--font-sf-pro-text',
+  variable: '--font-text',
   src: [
     {
-      path: './SF-Pro-Text-Regular.woff2',
+      path: './text-regular.woff2',
       weight: '400',
     },
     {
-      path: './SF-Pro-Text-Medium.woff2',
+      path: './text-medium.woff2',
       weight: '500',
     },
   ],
 });
 
 const sfMono = localFont({
-  variable: '--font-sf-mono',
+  variable: '--font-mono',
   src: [
     {
-      path: './SF-Mono-Medium.woff2',
+      path: './mono-medium.woff2',
       weight: '500',
     },
     {
-      path: './SF-Mono-Bold.woff2',
+      path: './mono-bold.woff2',
       weight: '700',
     },
   ],

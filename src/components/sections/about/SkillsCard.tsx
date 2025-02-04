@@ -28,7 +28,7 @@ function SkillsCard({ index, title, tech }: SkillsCardProps) {
         variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
         className='w-full rounded-[20px] from-primary to-accent p-[2px] bg-gradient-90'
       >
-        <h3 className='text-center font-sf-mono text-[20px] font-bold'>
+        <h3 className='text-center font-mono text-[20px] font-bold'>
           {title}
         </h3>
         <div className='flex min-h-[280px] flex-col justify-evenly rounded-[20px] bg-secondary px-8 py-3'>
@@ -42,7 +42,7 @@ function SkillsCard({ index, title, tech }: SkillsCardProps) {
               aria-label={`Open link to ${name}`}
             >
               <Icon className='h-6 w-6' aria-hidden='true' />
-              <span className='ml-2 py-1 font-sf-mono text-sm font-medium'>
+              <span className='ml-2 py-1 font-mono text-sm font-medium'>
                 {name}
               </span>
             </Link>

@@ -75,7 +75,7 @@ function ProjectCard({
         )}
 
         <div className='px-2 py-5 text-center lg:px-5 lg:py-2 xl:px-10 xl:py-8'>
-          <h3 className='font-sf-pro-display text-[24px] font-bold'>{name}</h3>
+          <h3 className='font-display text-[24px] font-bold'>{name}</h3>
           <p className='mt-2 text-[17px] text-foreground/75'>{description}</p>
           <div className='mt-3 flex flex-wrap justify-center gap-2'>
             {techstack.map(({ name, Icon, link }) => (

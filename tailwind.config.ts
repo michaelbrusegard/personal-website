@@ -30,9 +30,9 @@ const config = {
       },
     },
     fontFamily: {
-      'sf-pro-display': ['var(--font-sf-pro-display)', ...fontFamily.sans],
-      'sf-pro-text': ['var(--font-sf-pro-text)', ...fontFamily.sans],
-      'sf-mono': ['var(--font-sf-mono)', ...fontFamily.mono],
+      'sf-pro-display': ['var(--font-display)', ...fontFamily.sans],
+      'sf-pro-text': ['var(--font-text)', ...fontFamily.sans],
+      'sf-mono': ['var(--font-mono)', ...fontFamily.mono],
     },
   },
   plugins: [

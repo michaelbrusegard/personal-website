@@ -56,7 +56,7 @@ function HeroName() {
   }, [bounce]);
 
   return (
-    <h1 className='mt-2 flex select-none flex-wrap font-sf-pro-display text-[40px] font-extrabold sm:text-[60px] lg:text-[80px] lg:leading-[98px] xs:text-[50px]'>
+    <h1 className='mt-2 flex select-none flex-wrap font-display text-[40px] font-extrabold sm:text-[60px] lg:text-[80px] lg:leading-[98px] xs:text-[50px]'>
       <div>
         <m.span
           ref={spanRef}

@@ -17,10 +17,10 @@ function ContactSection() {
         variants={slideIn('left', 'tween', 0.2, 1)}
         className='flex-[0.75] rounded-2xl bg-secondary p-8'
       >
-        <p className='font-sf-pro-display text-[14px] uppercase tracking-wider text-foreground/75 sm:text-[18px]'>
+        <p className='font-display text-[14px] uppercase tracking-wider text-foreground/75 sm:text-[18px]'>
           Get in touch
         </p>
-        <h2 className='font-sf-pro-display text-[30px] font-black sm:text-[50px] md:text-[60px] xs:text-[40px]'>
+        <h2 className='font-display text-[30px] font-black sm:text-[50px] md:text-[60px] xs:text-[40px]'>
           Contact.
         </h2>
         <form className='mt-12 flex flex-col gap-8' action={formAction}>

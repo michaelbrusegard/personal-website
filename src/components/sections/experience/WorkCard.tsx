@@ -39,7 +39,7 @@ function WorkCard({ index, work }: WorkCardProps) {
         }
       >
         <div>
-          <h3 className='font-sf-pro-display text-[24px] font-bold'>
+          <h3 className='font-display text-[24px] font-bold'>
             {work.title}
           </h3>
           <p

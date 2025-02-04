@@ -19,7 +19,7 @@ function Header() {
             aria-label='Go to top of page'
           >
             <Logo className='h-9 w-9' aria-hidden='true' />
-            <p className='flex font-sf-mono text-lg font-bold'>
+            <p className='flex font-mono text-lg font-bold'>
               Brusegard.&nbsp;
               <span className='hidden md:block'>Michael</span>
             </p>

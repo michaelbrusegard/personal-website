@@ -26,13 +26,13 @@ function ExperienceSection() {
     <>
       <m.div variants={textVariant()}>
         <p
-          className='font-sf-pro-display text-[14px] uppercase tracking-wider text-foreground/75 sm:text-[18px]'
+          className='font-display text-[14px] uppercase tracking-wider text-foreground/75 sm:text-[18px]'
           ref={subtitleRef}
         >
           What I have done so far
         </p>
         <h2
-          className='font-sf-pro-display text-[30px] font-black sm:text-[50px] md:text-[60px] xs:text-[40px]'
+          className='font-display text-[30px] font-black sm:text-[50px] md:text-[60px] xs:text-[40px]'
           ref={titleRef}
         >
           Work Experience.
