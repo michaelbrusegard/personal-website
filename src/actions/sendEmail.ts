@@ -79,6 +79,9 @@ async function sendEmail(_: FormState, formData: FormData): Promise<FormState> {
 
     const transporter = nodemailer.createTransport({
       service: 'gmail',
+      host: 'smtp.gmail.com',
+      port: 465,
+      secure: true,
       auth: {
         user: process.env.SENDING_EMAIL,
         pass: process.env.SENDING_PASS,
