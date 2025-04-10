@@ -1,0 +1,136 @@
+function Nix({ ...props }: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      width='100%'
+      height='100%'
+      viewBox='0 0 256 256'
+      version='1.1'
+      xmlns='http://www.w3.org/2000/svg'
+      {...props}
+    >
+      <path
+        d='M78.201,130.739l62.338,107.984l-28.648,0.269l-16.643,-29.011l-16.761,28.856l-14.234,-0.006l-7.291,-12.595l23.88,-41.061l-16.952,-29.5l14.311,-24.936Z'
+        fill='url(#_Linear32)'
+      />
+      <path
+        d='M100.701,86.259l-62.348,107.978l-14.557,-24.676l16.803,-28.918l-33.371,-0.088l-7.112,-12.33l7.263,-12.611l47.5,0.15l17.071,-29.431l28.751,-0.074Z'
+        fill='url(#_Linear33)'
+      />
+      <path
+        d='M105.485,172.575l124.686,0.006l-14.091,24.945l-33.446,-0.093l16.609,28.944l-7.122,12.324l-14.553,0.016l-23.62,-41.211l-34.023,-0.069l-14.44,-24.862Z'
+        fill='url(#_Linear34)'
+      />
+      <path
+        d='M178.056,125.261l-62.337,-107.984l28.648,-0.269l16.642,29.011l16.762,-28.856l14.234,0.006l7.29,12.595l-23.88,41.061l16.952,29.5l-14.311,24.936Z'
+        fill='url(#_Linear35)'
+      />
+      <path
+        d='M78.201,130.739l62.338,107.984l-28.648,0.269l-16.643,-29.011l-16.761,28.856l-14.234,-0.006l-7.291,-12.595l23.88,-41.061l-16.952,-29.5l14.311,-24.936Z'
+        fill='url(#_Linear36)'
+      />
+      <path
+        d='M150.516,83.177l-124.687,-0.006l14.092,-24.945l33.446,0.093l-16.61,-28.944l7.122,-12.324l14.553,-0.016l23.62,41.211l34.023,0.069l14.441,24.862Z'
+        fill='url(#_Linear37)'
+      />
+      <path
+        d='M155.415,169.725l62.348,-107.979l14.557,24.676l-16.803,28.919l33.371,0.087l7.112,12.33l-7.263,12.612l-47.5,-0.15l-17.071,29.43l-28.751,0.075Z'
+        fill='url(#_Linear38)'
+      />
+      <defs>
+        <linearGradient
+          id='_Linear32'
+          x1='0'
+          y1='0'
+          x2='1'
+          y2='0'
+          gradientUnits='userSpaceOnUse'
+          gradientTransform='matrix(45.6529,78.9585,-78.9585,45.6529,58.6617,134.13)'
+        >
+          <stop offset='0' stopColor='#699ad7' />
+          <stop offset='0.24' stopColor='#7eb1dd' />
+          <stop offset='1' stopColor='#7ebae4' />
+        </linearGradient>
+        <linearGradient
+          id='_Linear33'
+          x1='0'
+          y1='0'
+          x2='1'
+          y2='0'
+          gradientUnits='userSpaceOnUse'
+          gradientTransform='matrix(-45.5536,79.0158,-79.0158,-45.5536,87.9945,71.0327)'
+        >
+          <stop offset='0' stopColor='#699ad7' />
+          <stop offset='0.24' stopColor='#7eb1dd' />
+          <stop offset='1' stopColor='#7ebae4' />
+        </linearGradient>
+        <linearGradient
+          id='_Linear34'
+          x1='0'
+          y1='0'
+          x2='1'
+          y2='0'
+          gradientUnits='userSpaceOnUse'
+          gradientTransform='matrix(91.2065,-0.0573448,0.0573448,91.2065,98.652,191.192)'
+        >
+          <stop offset='0' stopColor='#699ad7' />
+          <stop offset='0.24' stopColor='#7eb1dd' />
+          <stop offset='1' stopColor='#7ebae4' />
+        </linearGradient>
+        <linearGradient
+          id='_Linear35'
+          x1='0'
+          y1='0'
+          x2='1'
+          y2='0'
+          gradientUnits='userSpaceOnUse'
+          gradientTransform='matrix(-45.6529,-78.9585,78.9585,-45.6529,197.596,121.87)'
+        >
+          <stop offset='0' stopColor='#699ad7' />
+          <stop offset='0.24' stopColor='#7eb1dd' />
+          <stop offset='1' stopColor='#7ebae4' />
+        </linearGradient>
+        <linearGradient
+          id='_Linear36'
+          x1='0'
+          y1='0'
+          x2='1'
+          y2='0'
+          gradientUnits='userSpaceOnUse'
+          gradientTransform='matrix(44.8428,79.2652,-79.2652,44.8428,63.3803,131.444)'
+        >
+          <stop offset='0' stopColor='#415e9a' />
+          <stop offset='0.23' stopColor='#4a6baf' />
+          <stop offset='1' stopColor='#5277c3' />
+        </linearGradient>
+        <linearGradient
+          id='_Linear37'
+          x1='0'
+          y1='0'
+          x2='1'
+          y2='0'
+          gradientUnits='userSpaceOnUse'
+          gradientTransform='matrix(-91.0671,-0.797633,0.797633,-91.0671,157.315,69.9889)'
+        >
+          <stop offset='0' stopColor='#415e9a' />
+          <stop offset='0.23' stopColor='#4a6baf' />
+          <stop offset='1' stopColor='#5277c3' />
+        </linearGradient>
+        <linearGradient
+          id='_Linear38'
+          x1='0'
+          y1='0'
+          x2='1'
+          y2='0'
+          gradientUnits='userSpaceOnUse'
+          gradientTransform='matrix(46.2243,-78.4676,78.4676,46.2243,163.436,182.207)'
+        >
+          <stop offset='0' stopColor='#415e9a' />
+          <stop offset='0.23' stopColor='#4a6baf' />
+          <stop offset='1' stopColor='#5277c3' />
+        </linearGradient>
+      </defs>
+    </svg>
+  );
+}
+
+export { Nix };
