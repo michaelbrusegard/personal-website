@@ -39,3 +39,4 @@ export * from './Figma';
 export * from './Neovim';
 export * from './JavaFx';
 export * from './Maven';
+export * from './Nix';

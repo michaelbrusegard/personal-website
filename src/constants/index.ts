@@ -40,6 +40,7 @@ import {
   Neovim,
   JavaFx,
   Maven,
+  Nix,
 } from '@/constants/tech-icons';
 
 import {
@@ -104,6 +105,11 @@ const skills = [
         name: 'Rust',
         Icon: Rust,
         link: 'https://www.rust-lang.org',
+      },
+      {
+        name: 'Nix',
+        Icon: Nix,
+        link: 'https://nix.dev/manual/nix/2.24/introduction',
       },
     ],
   },
