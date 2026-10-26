@@ -1,7 +1,7 @@
 # Personal website
 
 <img width="1792" alt="portfolio" src="https://github.com/michaelbrusegard/personal-website/assets/56915010/09494597-30db-4e93-afa0-8d81b7f32e00">
-This project showcases my tech skills, work experience and projects as a website. It serves as a central hub for anyone interested in knowing more about me and my work. This repository contains the source code and assets for the website. It is live and accessible at https://www.michaelbrusegard.com.
+This project showcases my tech skills, work experience and projects as a website. It serves as a central hub for anyone interested in knowing more about me and my work. This repository contains the source code and assets for the website. It is archived and served as a static site at https://old.michaelbrusegard.com.
 
 ## Table of Contents
 
@@ -9,6 +9,7 @@ This project showcases my tech skills, work experience and projects as a website
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Usage](#usage)
+- [Building and deployment](#building-and-deployment)
 - [License](#license)
 
 ## Sections
@@ -18,7 +19,7 @@ This project showcases my tech skills, work experience and projects as a website
 - **Work:** Summary of my previous work experience.
 - **Projects:** Showcase of my notable projects with descriptions and links.
 - **Testimonials:** Testimonials from people I have worked with.
-- **Contact:** A way for visitors to get in touch with me.
+- **Contact:** How to reach me. The contact form is turned off now that the site is archived.
 
 ## Features
 
@@ -38,14 +39,28 @@ This project showcases my tech skills, work experience and projects as a website
 - React: A JavaScript library for building user interfaces.
 - Motion: An animation library for creating smooth and interactive animations in React applications.
 - Three.js: A JavaScript library for 3D graphics and animations on the web.
-- Next.js: A React framework for building server-side rendered and statically generated websites.
-- Docker/Nginx: Hosting solution to deploy the website to production.
+- Next.js: A React framework, used here to export the site as static files.
+- Docker/Nginx: The static export is served by unprivileged nginx in a container.
 
 ## Usage
 
 Feel free to explore the website to learn more about me and my projects. The website is straightforward to navigate, and you can click on the different sections in the navigation bar to jump to specific parts of the page.
 
 If you encounter any issues, have suggestions, or want to report bugs, please open an issue on this GitHub repository.
+
+## Building and deployment
+
+The site is built with `next build` as a static export (`output: 'export'`), so no Next.js server runs in production.
+
+```sh
+bun install
+bun run dev    # local development
+bun run build  # writes the static site to out/
+```
+
+The `Dockerfile` builds the export with Bun and serves `out/` with `nginxinc/nginx-unprivileged` on port 8080, using the config in `nginx/default.conf`. It runs as a non-root user with a read-only root filesystem, as long as `/tmp` is writable.
+
+On every push to `main`, `.github/workflows/image.yaml` pushes the image to `ghcr.io/michaelbrusegard/personal-website` and pins the new tag and digest in `deploy/helm-release.yaml`. Flux applies `deploy/` to a k3s cluster, where the bjw-s app-template chart runs the container behind the cluster's Gateway API gateway.
 
 ## License
 
