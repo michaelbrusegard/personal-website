@@ -1,40 +1,29 @@
-FROM imbios/bun-node:22-slim AS base
+# syntax=docker/dockerfile:1
 
-FROM base AS deps
+FROM oven/bun:1.4.4-slim@sha256:1846adf22496bd711036aae8be147e57bdebbaea2e5264e3e0b5af1db187d9a4 AS build
 
 WORKDIR /app
 
-ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
 
-COPY package.json bun.lockb ./
-RUN bun install  --frozen-lockfile
+COPY package.json bun.lock ./
+RUN bun install --frozen-lockfile
 
-FROM base AS builder
-WORKDIR /app
-COPY --from=deps /app/node_modules ./node_modules
 COPY . .
+RUN bun run build \
+  && find out -type f \( -name '*.html' -o -name '*.txt' -o -name '*.js' \
+    -o -name '*.css' -o -name '*.json' -o -name '*.svg' -o -name '*.webmanifest' \
+    -o -name '*.glb' \) -size +1k -exec gzip -9 -k {} +
 
-ENV NODE_ENV=production
-ENV SKIP_ENV_VALIDATION=true
+FROM nginxinc/nginx-unprivileged:1.30.6-alpine@sha256:f5116ed4606f3eb015dd4a8e28cb9b351476dc0ad4bc6e9f93b19cec130cdf03
 
-RUN bun run build
+# One worker per node core is wasteful for a small static site under a
+# 128Mi memory limit; the read-only root rules out the entrypoint autotune.
+RUN sed -i "s/^worker_processes .*/worker_processes  2;/" /etc/nginx/nginx.conf
 
-FROM base AS runner
-WORKDIR /app
+COPY nginx/default.conf /etc/nginx/conf.d/default.conf
+COPY --from=build /app/out /usr/share/nginx/html
 
-ENV NODE_ENV=production
-ENV NEXT_TELEMETRY_DISABLED=true
-ENV SKIP_ENV_VALIDATION=true
+USER 101
 
-RUN addgroup --system --gid 1002 nodejs && \
-  adduser --system --uid 1002 nextjs
-
-RUN mkdir .next && chown nextjs:nodejs .next
-
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-
-USER nextjs
-
-EXPOSE 3000
-
-CMD ["bun", "run", "server.js"]
+EXPOSE 8080

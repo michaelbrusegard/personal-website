@@ -1,0 +1,14 @@
+.git
+.github
+.next
+out
+node_modules
+deploy
+Dockerfile
+.dockerignore
+README.md
+LICENSE
+.env
+.env.*
+*.tsbuildinfo
+.DS_Store
