@@ -58,6 +58,7 @@ function HeroSocial() {
         >
           <Link
             href='/cv.pdf'
+            prefetch={false}
             target='_blank'
             rel='noopener noreferrer'
             download
