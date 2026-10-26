@@ -38,8 +38,8 @@ spec:
             # the image digest after each build on main.
             image:
               repository: ghcr.io/michaelbrusegard/personal-website
-              tag: sha-d5b9b028df93f1730710609553114333fee6c969
-              digest: sha256:1871d44ad36d1513cf321fe89601fe84574a7eac58b313345d715a07880ba722
+              tag: sha-d7ca64f835293062d5cae6256fca1ae4fe58a33f
+              digest: sha256:c8c3781a26d027baaa9ce6fa2c8fa3cdc3df26e39ac98ea6a56e686f65d86290
               pullPolicy: IfNotPresent
             securityContext:
               allowPrivilegeEscalation: false
