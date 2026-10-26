@@ -1,0 +1,14 @@
+apiVersion: externaldns.k8s.io/v1alpha1
+kind: DNSEndpoint
+metadata:
+  name: personal-website
+  namespace: personal-website
+spec:
+  endpoints:
+    - dnsName: old.michaelbrusegard.com
+      recordType: CNAME
+      targets:
+        - router.asgard.michaelbrusegard.com
+      providerSpecific:
+        - name: external-dns.alpha.kubernetes.io/cloudflare-proxied
+          value: "true"
