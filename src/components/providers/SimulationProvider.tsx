@@ -27,17 +27,24 @@ function SimulationProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     if (containerRef.current) {
-      simulation.current = new WebGLFluidEnhanced(containerRef.current);
-      simulation.current.setConfig({
-        colorPalette: [
-          hslToHex(...getCSSColorValue('--primary')),
-          hslToHex(...getCSSColorValue('--secondary')),
-          hslToHex(...getCSSColorValue('--accent')),
-        ],
-        transparent: true,
-        brightness: 0.4,
-      });
-      simulation.current.start();
+      // Devices without WebGL or float render targets (Lockdown Mode, some
+      // mobile GPUs) throw here; skip the background instead of the page.
+      try {
+        simulation.current = new WebGLFluidEnhanced(containerRef.current);
+        simulation.current.setConfig({
+          colorPalette: [
+            hslToHex(...getCSSColorValue('--primary')),
+            hslToHex(...getCSSColorValue('--secondary')),
+            hslToHex(...getCSSColorValue('--accent')),
+          ],
+          transparent: true,
+          brightness: 0.4,
+        });
+        simulation.current.start();
+      } catch {
+        simulation.current = null;
+        return;
+      }
 
       return () => {
         simulation.current?.stop();
