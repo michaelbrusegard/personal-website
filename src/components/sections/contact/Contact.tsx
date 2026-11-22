@@ -7,6 +7,7 @@ import { slideIn } from '@/utils/motion';
 import { DogCanvas } from '@/components/sections/contact/DogCanvas';
 import { StarsCanvas } from '@/components/sections/contact/StarsCanvas';
 import { LinkedInLogo } from '@/components/assets/LinkedInLogo';
+import { CanvasBoundary } from '@/components/sections/contact/CanvasBoundary';
 
 const linkClassName =
   'flex h-12 w-fit items-center gap-3 rounded-xl bg-background px-6 font-medium outline-2 outline-offset-2 outline-primary/60 transition duration-200 hover:-translate-y-1 hover:text-primary focus-visible:outline';
@@ -94,7 +95,9 @@ function ContactSection() {
         variants={slideIn('right', 'tween', 0.2, 1)}
         className='h-[350px] md:h-[550px] xl:h-auto xl:w-[550px] xl:flex-1'
       >
-        <DogCanvas />
+        <CanvasBoundary>
+          <DogCanvas />
+        </CanvasBoundary>
       </m.div>
     </div>
   );
@@ -106,7 +109,9 @@ function Contact() {
   return (
     <div className='relative z-0'>
       <WrappedContact />
-      <StarsCanvas />
+      <CanvasBoundary>
+        <StarsCanvas />
+      </CanvasBoundary>
     </div>
   );
 }
